@@ -1,0 +1,11 @@
+{
+  "cSpell.words": ["backnumber", "backnumbers", "Kissaten"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css",
+      "savePathReplacementPairs": null
+    }
+  ]
+}
