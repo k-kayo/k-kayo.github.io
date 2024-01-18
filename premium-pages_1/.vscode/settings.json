@@ -1,0 +1,39 @@
+{
+  "cSpell.words": ["backnumber", "backnumbers", "fadeup", "Kissaten"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css",
+      // 👆挙動悪ければ「null」に戻した方がいいかも。先生の授業では👆「"~/../css"」だった
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveSassCompile.settings.autoprefix": [],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.includeItems": [
+    
+  ]
+}
+
+// "liveSassCompile.settings.formats": [
+//     // 確認用の読みやすいフォーマット
+//     {
+//         "format": "expanded",
+//         "extensionName": ".css",
+//         "savePath": "/css/"
+//     },
+
+//     // 読み込み用の軽量化されたフォーマット
+//     {
+//         "format": "compressed",
+//         "extensionName": ".min.css",
+//         "savePath": "/css/"
+//     }
+// ]
+
+// formatはexpanded、compact、compressed、nestedの4種類から選択できます。デフォルト設定はexpandedです。元のSassファイルとコンパイル後のCSSファイルの例を示します。
+// extensionName
+// extensionNameには拡張子を指定できます。デフォルト設定は.cssです。
+
+// formatでcompressedを指定している場合に.min.cssを指定しておくと、軽量化されているコードというのが一目でわかります。
