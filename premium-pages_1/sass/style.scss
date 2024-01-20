@@ -336,6 +336,7 @@ img {
 .mv {
   // height: calc(100vh - 60px);
   margin-top: 60px;
+  // 👇先生はハンバーガーを画像でコーディングしていなかったので、下は違うと思う
   background: url(../img/mv-bg@2x.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
