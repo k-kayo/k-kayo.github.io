@@ -9,109 +9,105 @@
 </head>
 
 <body>
-
-  <nav class="navbar bg-light navbar-expand-md">
+  <!-- position-fixed top-0 z-1 w-100 -->
+  <nav class="navbar bg-light navbar-expand-md fixed-top">
     <div class="container">
       <a href="#" class="navbar-brand">Personal Blog</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-nav"
+        aria-controls="global-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapser navbar-collapse" id="global-nav"></div>
+      <div class="navbar-nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Profile</a>
+        <a href="#" class="nav-link">contact</a>
+      </div>
     </div>
   </nav>
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-    <div class="container">
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#global-nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="global-nav">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></ a>
-            <a class="nav-item nav-link" href="#">アーカイブ</a>
-            <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-              <div class="container">
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#global-nav">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="global-nav">
-                  <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></ a>
-                      <a class="nav-item nav-link" href="#">アーカイブ</a>
 
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-md-6 col-lg-3">
-                            <div class="card">
-                              <img src="https://picsum.photos/id/572/400/300" alt="" class="card-img-top">
-                              <div class="card-body">
-                                <h3 class="h5 card-title">私のカメラで撮った写真</h3>
-                                <p class="card-text">ダミー文章です。ダミー文章です。ダミー文章です。</p>
-                                <a href="#" class="btn btn-outline-primary">more</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-lg-3 mt-3 mt-md-0">
-                            <div class="card">
-                              <img src="https://picsum.photos/id/32/400/300" alt="" class="card-img-top">
-                              <div class="card-body">
-                                <h3 class="h5 card-title">私のカメラで撮った写真</h3>
-                                <p class="card-text">ダミー文章です。ダミー文章です。ダミー文章です。</p>
-                                <a href="#" class="btn btn-outline-primary">more</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-lg-3 mt-3 mt-lg-0">
-                            <div class="card">
-                              <img src="https://picsum.photos/id/772/400/300" alt="" class="card-img-top">
-                              <div class="card-body">
-                                <h3 class="h5 card-title">私のカメラで撮った写真</h3>
-                                <p class="card-text">ダミー文章です。ダミー文章です。ダミー文章です。</p>
-                                <a href="#" class="btn btn-outline-primary">more</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-lg-3 mt-3 mt-lg-0">
-                            <div class="card">
-                              <img src="https://picsum.photos/id/184/400/300" alt="" class="card-img-top">
-                              <div class="card-body">
-                                <h3 class="h5 card-title">私のカメラで撮った写真</h3>
-                                <p class="card-text">ダミー文章です。ダミー文章です。ダミー文章です。</p>
-                                <a href="#" class="btn btn-outline-primary">more</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+  <div class="p-5 my-5 bg-primary-subtle rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Main Visual</h1>
+      <p class="w-75 fs-4">ダミーテキスト、ダミーテキスト、ダミーテキスト、ダミーテキスト、ダミーテキスト、ダミーテキスト、ダミーテキスト、ダミーテキスト、ダミーテキスト、</p>
+      <button class="btn btn-primary btn-lg">ボタンテキスト</button>
+    </div>
+  </div>
 
-                      <section class="container">
-                        <h2 class="display-4 text-center my-5">My Profile</h2>
-                        <nav class="nav justify-content-center nav-pills">
-                          <a href="#profile" class="nav-link active" data-bs-toggle="tab" aria-selected="true">自己紹介</a>
-                          <a href="#skill" class="nav-link" data-bs-toggle="tab" aria-selected="false">スキル</a>
-                          <a href="#works" class="nav-link" data-bs-toggle="tab" aria-selected="false">作品集</a>
-                          <a href="#history" class="nav-link" data-bs-toggle="tab" aria-selected="false">経歴</a>
-                        </nav>
-                        <div class="tab-content py-5">
-                          <div class="tab-pane fade show active" id="profile">
-                            <h3>自己紹介</h3>
-                            <p>ダミー文章です。ダミー文章です。ダミー文章です。</p>
-                          </div>
-                          <div class="tab-pane fade" id="skill">
-                            <h3>スキル</h3>
-                            <p>ダミー文章です。ダミー文章です。ダミー文章です。</p>
-                          </div>
-                          <div class="tab-pane fade" id="works">
-                            <h3>作品集</h3>
-                            <p>ダミー文章です。ダミー文章です。ダミー文章です。</p>
-                          </div>
-                          <div class="tab-pane fade" id="history">
-                            <h3>経歴</h3>
-                            <p>ダミー文章です。ダミー文章です。ダミー文章です。</p>
-                          </div>
-                        </div>
-                      </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <div class="card">
+          <img src="https://picsum.photos/id/572/400/300" alt="" class="card-img-top">
+          <div class="card-body">
+            <h3 class="h5 card-title">私のカメラで撮った写真</h3>
+            <p class="card-text">ダミー文章です。ダミー文章です。ダミー文章です。</p>
+            <a href="#" class="btn btn-outline-primary">more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mt-3 mt-md-0">
+        <div class="card">
+          <img src="https://picsum.photos/id/32/400/300" alt="" class="card-img-top">
+          <div class="card-body">
+            <h3 class="h5 card-title">私のカメラで撮った写真</h3>
+            <p class="card-text">ダミー文章です。ダミー文章です。ダミー文章です。</p>
+            <a href="#" class="btn btn-outline-primary">more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mt-3 mt-lg-0">
+        <div class="card">
+          <img src="https://picsum.photos/id/772/400/300" alt="" class="card-img-top">
+          <div class="card-body">
+            <h3 class="h5 card-title">私のカメラで撮った写真</h3>
+            <p class="card-text">ダミー文章です。ダミー文章です。ダミー文章です。</p>
+            <a href="#" class="btn btn-outline-primary">more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mt-3 mt-lg-0">
+        <div class="card">
+          <img src="https://picsum.photos/id/184/400/300" alt="" class="card-img-top">
+          <div class="card-body">
+            <h3 class="h5 card-title">私のカメラで撮った写真</h3>
+            <p class="card-text">ダミー文章です。ダミー文章です。ダミー文章です。</p>
+            <a href="#" class="btn btn-outline-primary">more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                      <script src="js/bootstrap.bundle.min.js"></script>
+  <section class="container">
+    <h2 class="display-4 text-center my-5">My Profile</h2>
+    <nav class="nav justify-content-center nav-pills">
+      <a href="#profile" class="nav-link active" data-bs-toggle="tab" aria-selected="true">自己紹介</a>
+      <a href="#skill" class="nav-link" data-bs-toggle="tab" aria-selected="false">スキル</a>
+      <a href="#works" class="nav-link" data-bs-toggle="tab" aria-selected="false">作品集</a>
+      <a href="#history" class="nav-link" data-bs-toggle="tab" aria-selected="false">経歴</a>
+    </nav>
+    <div class="tab-content py-5">
+      <div class="tab-pane fade show active" id="profile">
+        <h3>自己紹介</h3>
+        <p>ダミー文章です。ダミー文章です。ダミー文章です。</p>
+      </div>
+      <div class="tab-pane fade" id="skill">
+        <h3>スキル</h3>
+        <p>ダミー文章です。ダミー文章です。ダミー文章です。</p>
+      </div>
+      <div class="tab-pane fade" id="works">
+        <h3>作品集</h3>
+        <p>ダミー文章です。ダミー文章です。ダミー文章です。</p>
+      </div>
+      <div class="tab-pane fade" id="history">
+        <h3>経歴</h3>
+        <p>ダミー文章です。ダミー文章です。ダミー文章です。</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

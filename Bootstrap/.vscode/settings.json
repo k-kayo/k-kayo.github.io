@@ -1,0 +1,13 @@
+{
+  "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**", "/**/bootstrap/**"],
+  "liveSassCompile.settings.formats": [
+    
+
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/~/../css",
+      "savePathReplacementPairs": null
+    }
+  ]
+}
