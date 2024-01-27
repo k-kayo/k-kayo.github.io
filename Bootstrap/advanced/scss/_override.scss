@@ -1,1 +1,14 @@
-$blue: blue;
+@forward './bootstrap/bootstrap' with (
+  $primary: #213C57,
+);
+
+
+// 👇グループ化をする時に下記のような使い方をする
+// $test: (
+//   primary: black,
+//   second: green,
+// );
+
+// .test {
+//   color: map-get ($test, second);
+// }
