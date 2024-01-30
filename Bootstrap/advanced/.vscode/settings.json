@@ -1,6 +1,5 @@
 {
   "liveSassCompile.settings.formats": [
-    
     {
       "format": "compressed",
       "extensionName": ".min.css",
@@ -8,5 +7,6 @@
       "savePathReplacementPairs": null
     }
   ],
-  "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**", "/**/bootstrap/**"]
+  "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**", "/**/bootstrap/**"],
+  "cSpell.words": ["datatarget"]
 }
