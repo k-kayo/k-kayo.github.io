@@ -7,24 +7,29 @@
   <title>新宿区曙橋駅のお花屋さん｜sunday flour</title>
   <meta name="description"
     content="東京都新宿区「曙橋駅」にある、町のお花屋さんです。お花や鉢物の他、日持ちするプリザーブドフラワーや石鹸で出来たソープフラワー、園芸用品や花瓶などの雑貨も取り扱っております。大切な贈り物はもちろん、切り花１輪から是非ご相談ください。">
+
+  <!-- Googleフォント -->
+
+  <!-- 自動リンクを無効にする -->
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- header -->
-  <header class="site-header">
-    <h1 class="site-header_logo">
+  <header class="header-nav">
+    <h1 class="header-nav_logo">
       <a href="#">
         <img src="./img/img/mv_logo.png" alt="sunday flour">
       </a>
     </h1>
-    <input type="checkbox" id="nav-toggle" class="site-nav-checkbox">
-    <label for="nav-toggle" class="site-nav-toggle">
+    <input type="checkbox" id="nav-toggle" class="header-nav-checkbox">
+    <label for="nav-toggle" class="header-nav-toggle">
       <span></span>
     </label>
-    <div class="site-header_nav-container site-nav-container">
-      <nav class="site-nav-sontainer_nav">
+    <div class="header-nav_container">
+      <nav class="header-nav_container_gnav">
         <ul>
           <li><a href="#">お知らせ</a></li>
           <li><a href="#">催し物</a></li>
@@ -36,7 +41,8 @@
 
   <!------------- main -------------->
   <main>
-    <section class="mv-area">
+    <!-- パターン1　前回分 -->
+    <!-- <section class="mv-area">
       <img src="./img/img/mv_logo.png" alt="" class="main-visual_cover">
       <h2 class="mv-title">
         <span>日曜日の彩りを、今日も。</span>
@@ -44,7 +50,15 @@
       =====
       【スクロールアニメーション】
       Scroll
-    </section>
+    </section> -->
+
+    <!-- レッスン9 -->
+    <!-- ヒーロー -->
+    <!-- <div class="hero">
+    <h2>曜日の彩りを、今日も。</h2>
+    ※background-imgで画像など入れる
+  </div> -->
+
 
     <section>
       <div class="introduction">
@@ -82,28 +96,50 @@
   お花教室のお申し込みはこちらから、メールにてお願いします。
 
   =====
-  【店舗情報】
-  店舗情報
+  <section class="store-info">
 
-  店名
-  sunday flower
-  営業時間
-  10時～18時半
-  定休日
-  年末年始及びお盆明け
-  住所
-  〒160-0005
-  東京都新宿区愛住町22
-  第三山田ビル2F
-  Google Maps
-  電話/FAX
-  03-1234-5678
+    【店舗情報】
+    店舗情報
 
-  お問い合わせ
+    店名
+    sunday flower
+    営業時間
+    10時～18時半
+    定休日
+    年末年始及びお盆明け
+    住所
+    〒160-0005
+    東京都新宿区愛住町22
+    第三山田ビル2F
+    Google Maps
 
-  =====
-  【コピーライト】
-  sunday flower All Rights Reserved.
+
+    電話/FAX
+    03-1234-5678
+    <!-- <a href="tel:000-1234-5678">000-1234-5678</a>
+    <a>〜</a>の中には自由なテキスト or 画像でもOK -->
+
+    <!-- 👆JavaScriptで設定が必要 -->
+    <!-- var ua = navigator.userAgent.toLowerCase();
+    var isMobile = /iphone/.test(ua)||/android(.+)?mobile/.test(ua);
+    
+    if (!isMobile) {
+    $('a[href^="tel:"]').on('click', function(e) {
+    e.preventDefault();
+    });
+    }
+ -->
+
+    お問い合わせ
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <small>&copy; sunday flower All Rights Reserved.</small>
+  </footer>
+  <script src="./js/script.js"></script>
+
+
 </body>
 
 </html>
