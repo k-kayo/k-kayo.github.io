@@ -1,4 +1,4 @@
-@use './override' as *;
+@use "./override" as *;
 
 .showcase {
   background: url(../img/space_mountain.jpg) no-repeat center bottom;
@@ -14,9 +14,8 @@
     // height: 100%;
     // top: 0;
     // left: 0;
-    // 👇上4つのtop,left,right,bottomを0にするショートハンド
-    inset: 0;
-    background-color: rgba($primary, .5);
+    inset: 0; //top,left,right,bottom を0
+    background-color: rgba($primary, 0.5);
     z-index: -1;
   }
 
@@ -29,5 +28,37 @@
       font-size: 2.3rem;
     }
   }
+}
 
+//.showcase
+
+// 本の内容
+.about {
+  .accordion-button {
+
+    // .accordion-button:not(.collapsed)
+    &:not(.collapsed) {
+      background: $primary;
+      color: $white;
+    }
+
+    &::after {
+      background: none;
+      content: "\F282";
+      font-family: bootstrap-icons !important;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.author {
+  &-sns {
+    i {
+      font-size: 1.2rem;
+    }
+  }
+
+  &-card {
+    height: 100%;
+  }
 }
