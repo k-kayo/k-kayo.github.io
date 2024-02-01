@@ -1,12 +1,13 @@
 @charset "UTF-8";
 :root {
-  --font-primary: font-family: "Shippori Mincho", serif;
+  --font-primary: "Shippori Mincho", serif;
   --main-color: #F1A78C;
   --main-color-green: #8DB66E;
   --main-color-green: #91BC6F;
   --main-color-green: #F9AA8F;
   --bg-color: #fff;
   --text-color: #333;
+  --easing: cubic-bezier(.69, 0, .18, 1);
 }
 
 * {
@@ -37,18 +38,10 @@ h2 {
   text-align: center;
 }
 
-ul {
-  list-style: none;
-}
-
 p {
   margin-top: 0;
   margin-bottom: 1.5em;
   text-align: justify;
-}
-
-section {
-  padding: 60px 0;
 }
 
 /* ボタン共通設定 */
@@ -90,8 +83,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  font-size: 1.4rem;
   -webkit-transition: 0.8s var(--easing);
   transition: 0.8s var(--easing);
 }
@@ -101,32 +93,24 @@ section {
 }
 .header-nav_container_gnav {
   text-align: center;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 .header-nav_container_gnav li {
-  margin-bottom: 2em;
+  padding: 15px 0;
+  list-style: none;
 }
-.header-nav_container_gnav li:last-child {
-  margin-bottom: 0;
-}
-.header-nav_container_gnav a {
+.header-nav_container_gnav li a {
   text-decoration: none;
-  font-size: 1.2rem;
+  color: var(--text-color);
 }
 
 .header-nav-toggle {
   position: fixed;
   width: 40px;
   height: 40px;
-  z-index: 1;
+  z-index: 5;
   top: 40px;
   right: 20px;
   display: -webkit-box;
@@ -138,6 +122,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 .header-nav-toggle::before, .header-nav-toggle::after,
 .header-nav-toggle span {
@@ -165,11 +150,15 @@ section {
 }
 .header-nav-checkbox:checked ~ .header-nav-toggle::before {
   top: 50%;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .header-nav-checkbox:checked ~ .header-nav-toggle::after {
   top: 50%;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.section.info::after {
+  content: url(../img/img/1541987-1.png);
 }/*# sourceMappingURL=style.css.map */

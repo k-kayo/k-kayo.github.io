@@ -1,5 +1,5 @@
 :root {
-  --font-primary: font-family: 'Shippori Mincho', serif;
+  --font-primary: 'Shippori Mincho', serif;
   --main-color: #F1A78C;
   // 👇葉っぱの色
   --main-color-green: #8DB66E;
@@ -8,5 +8,5 @@
   --main-color-green: #F9AA8F;
   --bg-color: #fff;
   --text-color: #333;
-  // --easing: cubic-bezier(.69, 0, .18, 1);
+  --easing: cubic-bezier(.69, 0, .18, 1);
 }

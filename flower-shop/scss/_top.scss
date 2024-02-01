@@ -30,19 +30,11 @@ h2 {
   text-align: center;
 }
 
-ul {
-  list-style: none;
-}
-
 p {
   margin-top: 0;
   margin-bottom: 1.5em;
   text-align: justify;
   // 文字数を均等にしてくれる
-}
-
-section {
-  padding: 60px 0;
 }
 
 /* ボタン共通設定 */
@@ -78,7 +70,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: transparentize(255, 255, 255, .5);
 }
 
 // ナビゲーションコンテナ(3点セット)
@@ -92,7 +83,8 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateX(100%);
+  font-size: 1.4rem;
+  // transform: translateX(105%);
   transition: 0.8s var(--easing);
 
   .header-nav-checkbox:checked~& {
@@ -102,22 +94,19 @@ section {
   //ナビゲーション（gnav）
   &_gnav {
     text-align: center;
-    flex-grow: 2;
-    display: flex;
+    // flex-grow: 2;
+    // display: flex;
     align-items: center;
 
     li {
-      margin-bottom: 2em;
+      padding: 15px 0;
+      list-style: none;
 
-      &:last-child {
-        margin-bottom: 0;
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+
       }
-
-    }
-
-    a {
-      text-decoration: none;
-      font-size: 1.2rem;
     }
   }
 }
@@ -127,12 +116,13 @@ section {
   position: fixed;
   width: 40px;
   height: 40px;
-  z-index: 1;
+  z-index: 5;
   top: 40px;
   right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   &::before,
   &::after,
@@ -165,12 +155,12 @@ section {
 
     &::before {
       top: 50%;
-      transform: rotate(45deg);
+      transform: rotate(-45deg);
     }
 
     &::after {
       top: 50%;
-      transform: rotate(-45deg);
+      transform: rotate(45deg);
     }
   }
 
@@ -187,8 +177,12 @@ section {
 // パターン1  前回//
 // メインビジュアル
 
+.section.info {
+  &::after {
+    content: url(../img/img/1541987-1.png);
+  }
 
-
+}
 
 //---------------- ここから  PC 600px～ /--------------------------//
 // @include mq {
