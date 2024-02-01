@@ -32,7 +32,7 @@ ol {
   list-style: none;
 }
 
-// ------------ ヘッダー------------//
+// ヘッダー
 .site-header {
   position: fixed;
   left: 0;
@@ -79,7 +79,6 @@ ol {
 }
 
 //.site-header
-
 
 // ナビゲーションコンテナ
 .site-nav-container {
@@ -246,7 +245,7 @@ ol {
   display: none;
 }
 
-// -------------------- main --------------------//
+// メイン
 main {
   @include mq {
     margin-left: 200px;
