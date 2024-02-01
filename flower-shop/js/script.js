@@ -1,3 +1,6 @@
+AOS.init();
+
+// ---------------授業の内容---------------------------------//
 // $(document).ready(function () {
 //   alert("jQuery動作テスト");
 // });
@@ -279,11 +282,10 @@ $(window).on("load", () => {
   );
 });
 
-
 // jQuery２１
 /* ナビゲーションの開閉 */
-$('.site-header-navbtn').on('click', () => {
-  $('body').toggleClass('is-nav-open');
+$(".site-header-navbtn").on("click", () => {
+  $("body").toggleClass("is-nav-open");
 });
 
 $(".site-header-nav").on("click", "a", () => {

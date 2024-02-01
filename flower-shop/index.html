@@ -8,28 +8,40 @@
   <meta name="description"
     content="東京都新宿区「曙橋駅」にある、町のお花屋さんです。お花や鉢物の他、日持ちするプリザーブドフラワーや石鹸で出来たソープフラワー、園芸用品や花瓶などの雑貨も取り扱っております。大切な贈り物はもちろん、切り花１輪から是非ご相談ください。">
 
-  <!-- Googleフォント -->
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- 自動リンクを無効にする -->
   <meta name="format-detection" content="telephone=no">
+
+  <!-- Googleフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <!-- <link rel="stylesheet" href="./css/aos.css">
+  <script src="./js/aos.js" defer></script> -->
+
+  <!-- slick -->
+  <!-- <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <script src="./js/slick.min.js" defer></script> -->
+
+
+  <!-- ノーマライズ -->
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <!-- header -->
+  <!-- header/ナビゲーション -->
   <header class="header-nav">
-    <h1 class="header-nav_logo">
-      <a href="#">
-        <img src="./img/img/mv_logo.png" alt="sunday flour">
-      </a>
-    </h1>
     <input type="checkbox" id="nav-toggle" class="header-nav-checkbox">
     <label for="nav-toggle" class="header-nav-toggle">
       <span></span>
     </label>
+    <!--  ナビ・コンテナ-->
     <div class="header-nav_container">
-      <nav class="header-nav_container_gnav">
+      <nav class="header-nav_container_gnav header-nav_container">
         <ul>
           <li><a href="#">お知らせ</a></li>
           <li><a href="#">催し物</a></li>
@@ -39,18 +51,18 @@
     </div>
   </header>
 
-  <!------------- main -------------->
+  <!-------------------- main --------------------->
   <main>
-    <!-- パターン1　前回分 -->
-    <!-- <section class="mv-area">
+    <!-- パターン1    前回分 -->
+    <section class="mv-area">
       <img src="./img/img/mv_logo.png" alt="" class="main-visual_cover">
-      <h2 class="mv-title">
+      <h1 class="mv-title">
         <span>日曜日の彩りを、今日も。</span>
-      </h2>
-      =====
-      【スクロールアニメーション】
-      Scroll
-    </section> -->
+      </h1>
+      <!-- =====
+    【スクロールアニメーション slick】
+    Scroll -->
+    </section>
 
     <!-- レッスン9 -->
     <!-- ヒーロー -->
@@ -60,14 +72,16 @@
   </div> -->
 
 
-    <section>
+    <!-- <section>
       <div class="introduction">
         【イントロダクション】
         私たちは東京都新宿区「曙橋駅」にある、町のお花屋さんです。
         お花や鉢物の他、日持ちするプリザーブドフラワーや石鹸で出来たソープフラワー、
         園芸用品や花瓶などの雑貨も取り扱っております。
         大切な贈り物はもちろん、切り花１輪から是非ご相談ください。
-        スタッフ一同、心よりお待ちしております。
+        スタッフ一同、心よりお待ちしております。 -->
+    <!-- 花のアニメーションはAOSから -->
+    <!-- 
       </div>
     </section>
 
@@ -115,7 +129,7 @@
 
 
     電話/FAX
-    03-1234-5678
+    03-1234-5678 -->
     <!-- <a href="tel:000-1234-5678">000-1234-5678</a>
     <a>〜</a>の中には自由なテキスト or 画像でもOK -->
 
@@ -130,13 +144,17 @@
     }
  -->
 
-    お問い合わせ
+    <!-- お問い合わせ
   </section>
+ -->
+    <!----------- footer ------------->
+    <footer>
+      <small>&copy; sunday flower All Rights Reserved.</small>
+    </footer>
+  </main>
 
-  <!-- footer -->
-  <footer>
-    <small>&copy; sunday flower All Rights Reserved.</small>
-  </footer>
+
+
   <script src="./js/script.js"></script>
 
 

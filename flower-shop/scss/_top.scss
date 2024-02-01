@@ -1,55 +1,97 @@
-@use 'mixins' as *;
+@use './mixins' as *;
+
+// リセット
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//--------------------- 共通設定 ---------------------//
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  text-align: justify;
+  // 文字数を均等にしてくれる
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* ボタン共通設定 */
+.btn {
+  display: block;
+  padding: 20px 35px;
+  border-radius: 8px;
+  margin: 0 auto;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+  }
+
+  /* Web予約ボタン */
+  // &-reserve {
+  //   color: var();
+  //   background: var();
+  // }
+}
 
 
-// ヘッダー
+//----------------- ヘッダー ------------------//
 .header-nav {
   position: fixed;
   left: 0;
   top: 0;
   z-index: 1;
-  background: #fff;
   width: 100%;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  // ロゴ
-  &_logo {
-    img {
-      width: 140px;
-    }
-  }
-
-  // ナビゲーション
-  &_container {
+  ナビゲーション &_container {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
   }
-
-  // PC ======
-  @include mq {
-    width: 200px;
-    height: 100vh; //100%でも可
-    flex-direction: column;
-
-    // ロゴ
-    &_logo {
-      margin: 40px 0 80px;
-
-      img {
-        width: 160px;
-      }
-    }
-  }
 }
 
 // ナビゲーションコンテナ
 .header-nav_container {
-  background-color: #fff;
+  background: var(--bg-color 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +103,7 @@
     transform: translateX(0);
   }
 
-  //ナビゲーション/gnav
+  //ナビゲーション（gnav）
   &_gnav {
     text-align: center;
     flex-grow: 2;
@@ -77,54 +119,10 @@
     }
 
     a {
-      color: var(--color-primary);
+      // color: var(--color-primary);
       text-decoration: none;
       font-size: 1.2rem;
-      text-transform: uppercase;
-    }
-  }
-
-  // PC =====
-  @include mq {
-    position: static;
-    transform: translateX(0) !important;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-    //ナビゲーション
-    &_gnav {
-      align-items: flex-start;
-      text-align: start;
-      padding: 0 15px;
-
-      li {
-        margin-bottom: 1.5em;
-      }
-
-      a {
-        font-size: 1rem;
-        position: relative;
-        display: inline-block;
-        padding-bottom: 3px;
-
-        &::after {
-          content: "";
-          height: 1px;
-          width: 100%;
-          position: absolute;
-          background-color: var(--color-primary);
-          left: 0;
-          bottom: 0;
-          transform: scaleX(0);
-          transition: transform 0.4s var(--easing);
-          transform-origin: right center;
-        }
-
-        &:hover::after {
-          transform: scaleX(1);
-          transform-origin: left center;
-        }
-      }
+      // text-transform: uppercase;
     }
   }
 }
@@ -147,7 +145,7 @@
     content: "";
     height: 1px;
     width: 30px;
-    background-color: var(--color-primary);
+    // background-color: var(--color-primary);
     position: absolute;
     transition: 0.4s var(--easing);
   }
@@ -180,40 +178,88 @@
     }
   }
 
-  // PC =====
-  @include mq {
+  //.header-nav-toggle ここまで
+  .header-nav-checkbox {
     display: none;
   }
 }
 
-//.header-nav-toggle
 
-//--------- メイン ----------//
-main {
-  @include mq {
-    margin-left: 200px;
-  }
-}
+//-------------------- メイン --------------------//
+
 
 // パターン1  前回//
 // メインビジュアル
-.main-visual {
-  // background: url(../img/mv-bg@2x.jpg) no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  // height: calc(100vh - 60px);
+// 
 
-  // タイトル
-  &_title {
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 
-  }
-}
+
+//---------------- ここから  PC 600px～ /--------------------------//
+// @include mq {
+// body {
+//   padding-top: 0;
+// }
+
+// .header-nav {
+//   width: 200px;
+//   height: 100vh; //100%でも可
+//   flex-direction: column;
+
+// ロゴ
+// &_logo {}
+
+
+
+// img {
+//   width: 160px;
+// }
+// }
+
+// PC =====
+// @include mq {
+//   position: static;
+//   transform: translateX(0) !important;
+//   align-items: flex-start;
+//   justify-content: flex-start;
+
+//   //ナビゲーション
+//   &_gnav {
+//     align-items: flex-start;
+//     text-align: start;
+//     padding: 0 15px;
+
+//     li {
+//       margin-bottom: 1.5em;
+//     }
+
+//     a {
+//       font-size: 1rem;
+//       position: relative;
+//       display: inline-block;
+//       padding-bottom: 3px;
+
+//       &::after {
+//         content: "";
+//         height: 1px;
+//         width: 100%;
+//         position: absolute;
+//         background-color: var(--color-primary);
+//         left: 0;
+//         bottom: 0;
+//         transform: scaleX(0);
+//         transition: transform 0.4s var(--easing);
+//         transform-origin: right center;
+//       }
+
+//       &:hover::after {
+//         transform: scaleX(1);
+//         transform-origin: left center;
+//       }
+//     }
+//   }
+// }
+// ハンバーガーボタン
+// .header-nav-toggle {
+//   display: none;
+// }
+// }
