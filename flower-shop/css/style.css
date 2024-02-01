@@ -44,56 +44,13 @@ p {
   text-align: justify;
 }
 
-ul,
-ol {
-  list-style: none;
-}
-
 section {
   padding: 60px 0;
 }
 
 /* ボタン共通設定 */
-.btn {
-  display: block;
-  padding: 20px 35px;
-  border-radius: 8px;
-  margin: 0 auto;
-  border: none;
-  /* Web予約ボタン */
-}
-.btn:hover, .btn:focus {
-  background: rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-}
-
-.header-nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-ナビゲーション .header-nav_container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
+/* Web予約ボタン */
 .header-nav_container {
-  background: var(--bg-color 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,9 +75,6 @@ section {
 }
 .header-nav_container_gnav {
   text-align: center;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,22 +82,12 @@ section {
       -ms-flex-align: center;
           align-items: center;
 }
-.header-nav_container_gnav li {
-  margin-bottom: 2em;
-}
-.header-nav_container_gnav li:last-child {
-  margin-bottom: 0;
-}
-.header-nav_container_gnav a {
-  text-decoration: none;
-  font-size: 1.2rem;
-}
 
 .header-nav-toggle {
   position: fixed;
   width: 40px;
   height: 40px;
-  z-index: 1;
+  z-index: 100;
   top: 10px;
   right: 10px;
   display: -webkit-box;
