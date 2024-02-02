@@ -32,7 +32,7 @@ ol {
   list-style: none;
 }
 
-// ヘッダー
+// ヘッダー header
 .site-header {
   position: fixed;
   left: 0;
@@ -52,7 +52,7 @@ ol {
     }
   }
 
-  // ナビゲーション
+  // ナビ・コンテナ １
   &__nav-container {
     position: fixed;
     width: 100%;
@@ -80,7 +80,7 @@ ol {
 
 //.site-header
 
-// ナビゲーションコンテナ
+// ナビ・コンテナ ２
 .site-nav-container {
   background-color: #fff;
   display: flex;
@@ -94,7 +94,7 @@ ol {
     transform: translateX(0);
   }
 
-  //ナビゲーション
+  //ナビ・コンテナ ３
   &__nav {
     text-align: center;
     flex-grow: 2;
@@ -134,7 +134,7 @@ ol {
     align-items: flex-start;
     justify-content: flex-start;
 
-    //ナビゲーション
+    //ナビ・コンテナ ３
     &__nav {
       align-items: flex-start;
       text-align: start;
