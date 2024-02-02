@@ -213,13 +213,14 @@ img {
 .introduction-inner img {
   width: 50%;
   margin-left: auto;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .scroll-box {
   height: 55vh;
   -webkit-clip-path: inset(0);
           clip-path: inset(0);
+  margin-bottom: 90px;
 }
 .scroll-box img {
   position: fixed;
@@ -232,7 +233,6 @@ img {
 }
 
 .info {
-  margin-top: 90px;
   width: 100%;
   text-align: center;
 }
@@ -255,16 +255,22 @@ img {
   background: repeating-linear-gradient(-45deg, rgb(139, 204, 139), rgb(117, 190, 117) 2px, white 2px, white 4px);
 }
 
-.info-list {
-  height: 100%;
-  width: 100%;
+.info-list_items {
   padding: 0 20px 50px;
-  display: block;
+  margin-top: 50px;
 }
-.info-list-list_items a {
+.info-list_items:last-child {
+  margin-right: auto;
+  width: 60%;
+}
+.info-list_items a {
   background-color: var(--text-color);
   color: var(--main-color);
   cursor: pointer;
   padding: 0 0 10px;
   text-decoration: none;
+  display: block;
+}
+.info-list_items a span {
+  vertical-align: middle;
 }/*# sourceMappingURL=style.css.map */

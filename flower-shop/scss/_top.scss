@@ -172,7 +172,7 @@ img {
 
 
 //-------------------- メイン --------------------//
-// メインビジュアル
+// メインビジュアル（カーブの部分）
 .mv-area {
   position: relative;
   overflow: hidden;
@@ -203,9 +203,6 @@ img {
   flex-direction: column;
   padding: 15px;
 
-  // nth-last-of-type (
-  // )
-
   h2 {
     font-weight: 400;
     line-height: 3rem;
@@ -220,7 +217,7 @@ img {
   img {
     width: 50%;
     margin-left: auto;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
 }
@@ -229,6 +226,7 @@ img {
 .scroll-box {
   height: 55vh;
   clip-path: inset(0);
+  margin-bottom: 90px;
 
   img {
     position: fixed;
@@ -244,7 +242,7 @@ img {
 
 // ここから info
 .info {
-  margin-top: 90px;
+  // margin-top: 90px;
   width: 100%;
   text-align: center;
 
@@ -273,15 +271,19 @@ img {
 }
 
 .info-list {
-  height: 100%;
-  width: 100%;
-  padding: 0 20px 50px;
-  display: block;
+  // width: 100%;
+  // display: block;
 
-  &-list_items {
-    // margin-top: 90px;
-    // padding: 0 20px 50px;
-    // margin-bottom: 50px;
+  &_items {
+    padding: 0 20px 50px;
+    margin-top: 50px;
+
+    &:last-child {
+      margin-right: auto;
+      width: 60%;
+
+    }
+
 
     a {
       background-color: var(--text-color);
@@ -289,21 +291,18 @@ img {
       cursor: pointer;
       padding: 0 0 10px;
       text-decoration: none;
+      display: block;
 
-
-      
-
-      // &_span {
-      // justify-content: center;
-      // vertical-align: middle;
-      // margin: 0 auto;
-      // align-items: center;
-      // }
+      span {
+        vertical-align: middle;
+      }
     }
+
 
   }
 
 }
+
 
 // ここまでinfo
 
