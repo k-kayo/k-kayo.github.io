@@ -254,23 +254,17 @@ img {
   height: 7px;
   background: repeating-linear-gradient(-45deg, rgb(139, 204, 139), rgb(117, 190, 117) 2px, white 2px, white 4px);
 }
-.info-list_items {
+
+.info-list {
+  height: 100%;
+  width: 100%;
   padding: 0 20px 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
-.info-list_items a {
+.info-list-list_items a {
   background-color: var(--text-color);
   color: var(--main-color);
   cursor: pointer;
-  height: auto;
   padding: 0 0 10px;
   text-decoration: none;
-}
-.info-list_items a span {
-  display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }/*# sourceMappingURL=style.css.map */

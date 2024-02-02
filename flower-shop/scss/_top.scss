@@ -270,29 +270,40 @@ img {
 
   }
 
+}
+
+.info-list {
+  height: 100%;
+  width: 100%;
+  padding: 0 20px 50px;
+  display: block;
+
   &-list_items {
-    padding: 0 20px 50px;
-    display: flex;
+    // margin-top: 90px;
+    // padding: 0 20px 50px;
+    // margin-bottom: 50px;
 
     a {
       background-color: var(--text-color);
       color: var(--main-color);
       cursor: pointer;
-      height: auto;
-      // margin: 20px;
       padding: 0 0 10px;
       text-decoration: none;
 
-      span {
-        display: block;
-        justify-content: center;
-      }
+
+      
+
+      // &_span {
+      // justify-content: center;
+      // vertical-align: middle;
+      // margin: 0 auto;
+      // align-items: center;
+      // }
     }
 
   }
+
 }
-
-
 
 // ここまでinfo
 
