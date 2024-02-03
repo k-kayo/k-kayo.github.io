@@ -2,9 +2,8 @@
 :root {
   --font-primary: "Shippori Mincho", serif;
   --main-color: #F1A78C;
-  --main-color-green: #8DB66E;
   --main-color-green: #91BC6F;
-  --main-color-green: #F9AA8F;
+  --sub-color: #F9AA8F;
   --bg-color: #fff;
   --text-color: #333;
   --easing: cubic-bezier(.69, 0, .18, 1);
@@ -23,7 +22,6 @@ html {
 
 body {
   font-family: var(--font-primary);
-  color: var(--text-color);
 }
 
 img {
@@ -31,8 +29,65 @@ img {
   max-width: 100%;
 }
 
+h2,
+p {
+  opacity: 0.8;
+}
+
+h3 {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
 /* ボタン共通設定 */
-/* Web予約ボタン */
+.btn {
+  border: none;
+  background: var(--sub-color);
+}
+.btn a {
+  display: block;
+  padding: 10px 10px;
+  width: 200px;
+  border-radius: 8px;
+  margin: 0 auto;
+  border: none;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  font-family: var(--font-primary);
+  text-decoration: none;
+  color: var(--bg-color);
+  cursor: pointer;
+}
+.btn a:hover, .btn a:focus {
+  background: var(---main-color-green);
+}
+
+.stripe-line {
+  position: relative;
+  padding: 0.2em;
+  width: 240px;
+}
+.stripe-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: repeating-linear-gradient(-45deg, rgb(139, 204, 139), rgb(117, 190, 117) 2px, white 2px, white 4px);
+}
+
+.dotted-line {
+  background-image: linear-gradient(to right, #F9AA8F 1px, transparent 1px);
+  background-size: 2px 1px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  padding: 1px;
+}
+
 .header nav {
   position: fixed;
   left: 0;
@@ -92,18 +147,6 @@ img {
 .header-nav_container_gnav li {
   margin-bottom: 25px;
   list-style: none;
-  position: relative;
-  padding: 0.3em;
-  width: 240px;
-}
-.header-nav_container_gnav li::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 7px;
-  background: repeating-linear-gradient(-45deg, rgb(139, 204, 139), rgb(117, 190, 117) 2px, white 2px, white 4px);
 }
 .header-nav_container_gnav li a {
   text-decoration: none;
@@ -190,8 +233,7 @@ img {
 }
 
 .introduction-inner {
-  margin: 60px 5px 0 3px;
-  margin-left: 3px;
+  margin: 60px 5px 0 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,6 +242,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 15px;
+  width: 100%;
 }
 .introduction-inner h2 {
   font-weight: 400;
@@ -236,41 +279,100 @@ img {
   width: 100%;
   text-align: center;
 }
-.info h3 {
-  margin: 40px auto;
-  font-size: 1.5rem;
-  font-weight: 400;
-  width: 240px;
-  position: relative;
-  left: 0;
-  padding: 0.2em;
-}
-.info h3::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 7px;
-  background: repeating-linear-gradient(-45deg, rgb(139, 204, 139), rgb(117, 190, 117) 2px, white 2px, white 4px);
-}
 
 .info-list_items {
-  padding: 0 20px 50px;
-  margin-top: 50px;
+  padding: 0 20px;
+  margin: 50px 0;
 }
 .info-list_items:last-child {
   margin-right: auto;
   width: 60%;
+  margin-bottom: 50px;
 }
 .info-list_items a {
   background-color: var(--text-color);
   color: var(--main-color);
   cursor: pointer;
-  padding: 0 0 10px;
-  text-decoration: none;
   display: block;
+  padding-bottom: 10px;
+  text-decoration: none;
 }
 .info-list_items a span {
   vertical-align: middle;
+}
+
+.info-blog {
+  padding: 0 20px;
+}
+.info-blog .info-school {
+  padding: 50px 0 40px;
+}
+.info-blog .info-title {
+  text-align: left;
+  line-height: 1.8rem;
+  padding-bottom: 10px;
+}
+.info-blog .info-text {
+  text-align: left;
+  line-height: 1.8rem;
+  padding: 2px 0 30px;
+}
+.info-blog .btn-info {
+  margin-bottom: 80px;
+}
+.info-blog .info-flower {
+  margin: -20px 0 70px;
+}
+.info-blog .info-admission {
+  color: var(--main-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+.info-blog .info-admission:hover, .info-blog .info-admission:focus {
+  color: var(---main-color-green);
+}
+
+.store-info h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.store-info_container {
+  margin: 0 20px;
+  font-size: 1rem;
+  line-height: 2.2rem;
+  list-style: none;
+}
+.store-info_container p:nth-of-type(2) {
+  font-size: 1.1rem;
+}
+.store-info_container .dotted-line {
+  background-image: linear-gradient(to right, #8DB66E 1px, transparent 1px);
+}
+.store-info_container .btn {
+  display: inline-block;
+  border: 1px solid #000;
+  background-color: var(--bg-color);
+  width: 150px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.store-info_container .btn a {
+  color: var(--main-color);
+  padding: 10px 10px;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+iframe {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

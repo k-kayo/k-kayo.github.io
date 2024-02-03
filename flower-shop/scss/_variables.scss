@@ -1,12 +1,10 @@
 :root {
   --font-primary: 'Shippori Mincho', serif;
   --main-color: #F1A78C;
-  // 👇葉っぱの色
-  --main-color-green: #8DB66E;
-  // 👇ボタンの色
   --main-color-green: #91BC6F;
-  --main-color-green: #F9AA8F;
+  --sub-color: #F9AA8F;
   --bg-color: #fff;
+  // --white-color: #fef9eb;
   --text-color: #333;
   --easing: cubic-bezier(.69, 0, .18, 1);
 }
