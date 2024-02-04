@@ -3,10 +3,9 @@
   --font-primary: "Shippori Mincho", serif;
   --main-color: #F1A78C;
   --main-color-green: #91BC6F;
-  --sub-color: #F9AA8F;
+  --sub-color: #f9aa8f;
   --bg-color: #fff;
   --text-color: #333;
-  --easing: cubic-bezier(.69, 0, .18, 1);
 }
 
 * {
@@ -44,13 +43,13 @@ h3 {
 /* ボタン共通設定 */
 .btn {
   border: none;
-  background: var(--sub-color);
+  background-color: var(--sub-color);
+  border-radius: 6px;
 }
 .btn a {
   display: block;
-  padding: 10px 10px;
+  padding: 12px 12px;
   width: 200px;
-  border-radius: 8px;
   margin: 0 auto;
   border: none;
   font-weight: 400;
@@ -59,10 +58,12 @@ h3 {
   font-family: var(--font-primary);
   text-decoration: none;
   color: var(--bg-color);
-  cursor: pointer;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
-.btn a:hover, .btn a:focus {
-  background: var(---main-color-green);
+.btn a:hover {
+  background-color: var(--main-color-green);
+  border-radius: 6px;
 }
 
 .stripe-line {
@@ -342,37 +343,89 @@ h3 {
   line-height: 2.2rem;
   list-style: none;
 }
-.store-info_container p:nth-of-type(2) {
-  font-size: 1.1rem;
-}
 .store-info_container .dotted-line {
   background-image: linear-gradient(to right, #8DB66E 1px, transparent 1px);
 }
-.store-info_container .btn {
+.store-info_container .dotted-line p:nth-of-type(2) {
+  font-size: 1.1rem;
+}
+.store-info_container .dotted-line .btn {
   display: inline-block;
-  border: 1px solid #000;
+  border: 1px solid var(--text-color);
   background-color: var(--bg-color);
   width: 150px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 400;
-  font-size: 1rem;
+  border-radius: 6px;
   letter-spacing: 0.02rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.store-info_container .btn a {
-  color: var(--main-color);
-  padding: 10px 10px;
-  cursor: pointer;
-  margin: 0 auto;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.store-info_container .dotted-line .btn a {
+  color: #fca98c;
+  padding: 9px 9px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+.store-info_container .dotted-line .btn a:hover {
+  background-color: var(--bg-color);
+  color: #90c16a;
+}
+.store-info_container .dotted-line .material-symbols-outlined {
+  vertical-align: text-top;
 }
 
 iframe {
   display: none;
+}
+
+.store-info_btn {
+  text-align: center;
+  margin: 30px 0 90px;
+}
+
+.footer {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer a {
+  width: 13%;
+  margin-left: auto;
+  -webkit-transform: translate(-15px, -35px);
+          transform: translate(-15px, -35px);
+}
+.footer-logo {
+  width: 40%;
+}
+.footer small {
+  font-size: 1rem;
+  opacity: 0.75;
+  padding: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  .header-nav-toggle {
+    display: none;
+  }
+  .mv-area {
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+    border-bottom-right-radius: 50% 10px;
+    border-bottom-left-radius: 50% 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

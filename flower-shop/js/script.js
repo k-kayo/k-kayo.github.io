@@ -1,5 +1,6 @@
 AOS.init();
 
+
 // window.addEventListener("load", () => {
 //   AOS.init({
 //     // initClassName: "abcedf",
@@ -7,6 +8,5 @@ AOS.init();
 //     // useClassNames: true,
 //   });
 // });
-
 
 // {/* <script>AOS.init();</script>; */}

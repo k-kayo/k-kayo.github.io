@@ -17,17 +17,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
   <!-- AOS -->
   <link rel="stylesheet" href="./AOS/aos.css">
-  <!-- <script src="./AOS/aos.js" defer></script> -->
-
   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-
 
   <!-- slick -->
   <link rel="stylesheet" href="./slick/slick.css">
   <link rel="stylesheet" href="./slick/slick-theme.css">
-  <script src="./js/slick.min.js" defer></script>
 
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -144,33 +145,43 @@
         </li>
         <li class="dotted-line">
           <p>定休日</p>
-          <p class="dotted-line">年末年始及びお盆明け</p>
+          <p>年末年始及びお盆明け</p>
         </li>
         <li class="dotted-line">
           <p>住所<br>〒160-0005</p>
           <p>東京都新宿区愛住町22 第三山田ビル2F</p>
-          <button type="button" class="btn"><a href="https://maps.app.goo.gl/SapgjjEmH624MDLF7">Google
-              Maps</a></button>
+          <button type="button" class="btn"><a href="https://maps.app.goo.gl/SapgjjEmH624MDLF7">Google Maps</a></button>
         </li>
         <li class="dotted-line">
           <p>電話/FAX</p>
-          <p>03-1234-5678</p>
+          <!-- <p>03-1234-5678</p> -->
+          <p>
+            <span class="material-symbols-outlined">
+              call
+            </span>
+            <a href="tel:03-1234-5678">03-1234-5678</a>
+          </p>
         </li>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.3977290262865!2d139.71786267560304!3d35.69182902939207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5bce063c37%3A0xb548b9250334152f!2z44Kk44Oz44K_44O844OX44Op44OzSVTjgrnjgq_jg7zjg6s!5e0!3m2!1sja!2sjp!4v1706964492344!5m2!1sja!2sjp"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
       </ul>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.3977290262865!2d139.71786267560304!3d35.69182902939207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5bce063c37%3A0xb548b9250334152f!2z44Kk44Oz44K_44O844OX44Op44OzSVTjgrnjgq_jg7zjg6s!5e0!3m2!1sja!2sjp!4v1706964492344!5m2!1sja!2sjp"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="store-info_btn">
+        <button type="button" class="btn"><a href="#">お問い合わせ</a></button>
+      </div>
       <div class="scroll-box">
         <img src=".//img/img/bg_img04.jpg" alt="">
       </div>
-
     </section>
-    <footer>
-      <small>&copy;sunday flower All Rights Reserved.</small>
 
+    <!----------- footer ------------->
+    <footer>
+      <div class="footer">
+        <a href="#"><img src="./img/img/to_top.png" alt=""></a>
+        <img src="./img/img/bottom_logo.png" alt="sunday flowerのロゴ" class="footer-logo">
+        <small>&copy;sunday flower All Rights Reserved.</small>
+      </div>
     </footer>
 
 
@@ -180,8 +191,6 @@
 
 
 
-    <!-- <a href="tel:000-1234-5678">000-1234-5678</a>
-    <a>〜</a>の中には自由なテキスト or 画像でもOK -->
 
     <!-- 👆JavaScriptで設定が必要 -->
     <!-- var ua = navigator.userAgent.toLowerCase();
@@ -194,18 +203,13 @@
     }
  -->
 
-    <!-- お問い合わせ
-  </section>
- -->
-    <!----------- footer ------------->
-    <!-- <footer>
-      <small>&copy; sunday flower All Rights Reserved.</small>
-    </footer> -->
+
+
   </main>
 
 
   <script src="./AOS/aos.js"></script>
-
+  <script src="./js/slick.min.js"></script>
   <script src="./js/script.js"></script>
 
 
