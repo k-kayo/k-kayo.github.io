@@ -34,10 +34,13 @@ h3 {
   opacity: 0.7;
 }
 
+ul {
+  list-style: none;
+}
+
 /* ボタン共通設定 */
 .btn {
   border: none;
-  // background-color: saturate(#f9aa8f, 50%);
   background-color: var(--sub-color);
   border-radius: 6px;
 
@@ -53,7 +56,7 @@ h3 {
     font-family: var(--font-primary);
     text-decoration: none;
     color: var(--bg-color);
-    transition: 0.1s ease-in-out;
+    transition: 0.1s var(--easing);
 
     &:hover {
       background-color: var(--main-color-green);
@@ -80,7 +83,7 @@ h3 {
   }
 }
 
-// 👇点線のコード //
+// 点線のコード //
 .dotted-line {
   background-image: linear-gradient(to right, #F9AA8F 1px, transparent 1px);
   background-size: 2px 1px;
@@ -90,9 +93,9 @@ h3 {
 }
 
 //----------------- ヘッダー ------------------//
-.header nav {
+.header-nav {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   z-index: 1;
   width: 100%;
@@ -114,8 +117,25 @@ h3 {
   justify-content: center;
   align-items: center;
   transform: translateX(100%);
-  transition: 0.8s var(--easing);
+  transition: 0.6s ease-in-out;
   background: rgba(255, 255, 255, 0.9);
+
+  text-align: center;
+  // display: flex;
+  // align-items: center;
+
+
+  li {
+    margin-bottom: 25px;
+    list-style: none;
+
+
+    a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-size: 1.5rem;
+    }
+  }
 
   .header-nav-checkbox:checked~& {
     transform: translateX(0);
@@ -388,7 +408,7 @@ h3 {
     margin: 0 20px;
     font-size: 1rem;
     line-height: 2.2rem;
-    list-style: none;
+    // list-style: none;
 
     .dotted-line {
       background-image: linear-gradient(to right, #8DB66E 1px, transparent 1px);
@@ -440,7 +460,6 @@ iframe {
 }
 
 //---------- フッター ------------//
-
 .footer {
   max-width: 100%;
   display: flex;
@@ -463,82 +482,66 @@ iframe {
     opacity: 0.75;
     padding: 5px;
   }
-
-  // &-reverse {
-  //   display: flex;
-  // }
-
-
 }
 
-//---------------- ここから  PC 600px～ /--------------------------//
+//---------------- ここから  PC 600px～ /------------------//
 @include mq {
+  .header-nav {
 
-  // ハンバーガーボタン
-  .header-nav-toggle {
-    display: none;
-  }
+    // ハンバーガーボタン
+    &-toggle {
+      display: none;
+    }
 
-  .mv-area {
-    position: relative;
-    overflow: hidden;
-    height: 700px;
-    border-bottom-right-radius: 50% 10px;
-    border-bottom-left-radius: 50% 10px;
+    &_container {
+      transform: translateX(0) !important;
+      background-color: transparent;
+
+
+      &_nav {
+
+        ul {
+          // height: 60px;
+          width: 400px;
+          display: flex;
+          flex-direction: row;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          margin-left: auto;
+        }
+
+        li a {
+          color: var(--main-color);
+          font-size: 1.25rem;
+        }
+
+
+      }
+    }
+
+    .stripe-line {
+
+      &::after {
+        display: none;
+      }
+    }
+
+
+
+
   }
 }
 
-// .header-nav {
-//   width: 200px;
-//   height: 100vh; //100%でも可
-//   flex-direction: column;
-
-// ロゴ
-// &_logo {}
-
-
-
-
-// PC =====
-// @include mq {
-//   position: static;
-//   transform: translateX(0) !important;
-//   align-items: flex-start;
-//   justify-content: flex-start;
-
-//   //ナビゲーション
-//   &_gnav {
-//     align-items: flex-start;
-//     text-align: start;
-//     padding: 0 15px;
-
-//     li {
-//       margin-bottom: 1.5em;
-//     }
-
-//     a {
-//       font-size: 1rem;
-//       position: relative;
-//       display: inline-block;
-//       padding-bottom: 3px;
-
-//       &::after {
-//         content: "";
-//         height: 1px;
-//         width: 100%;
-//         position: absolute;
-//         background-color: var(--color-primary);
-//         left: 0;
-//         bottom: 0;
-//         transform: scaleX(0);
-//         transition: transform 0.4s var(--easing);
-//         transform-origin: right center;
-//       }
-
-//       &:hover::after {
-//         transform: scaleX(1);
-//         transform-origin: left center;
-//       }
-//     }
+//   .mv-area {
+//     position: relative;
+//     overflow: hidden;
+//     height: 700px;
+//     max-width: 1200px;
+//     border-bottom-right-radius: 50% 10px;
+//     border-bottom-left-radius: 50% 10px;
 //   }
+
 // }
+
+

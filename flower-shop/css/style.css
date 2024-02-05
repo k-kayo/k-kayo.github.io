@@ -6,6 +6,7 @@
   --sub-color: #f9aa8f;
   --bg-color: #fff;
   --text-color: #333;
+  --easing: cubic-bezier(.69, 0, .18, 1);
 }
 
 * {
@@ -40,6 +41,10 @@ h3 {
   opacity: 0.7;
 }
 
+ul {
+  list-style: none;
+}
+
 /* ボタン共通設定 */
 .btn {
   border: none;
@@ -58,8 +63,8 @@ h3 {
   font-family: var(--font-primary);
   text-decoration: none;
   color: var(--bg-color);
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
+  -webkit-transition: 0.1s var(--easing);
+  transition: 0.1s var(--easing);
 }
 .btn a:hover {
   background-color: var(--main-color-green);
@@ -89,9 +94,9 @@ h3 {
   padding: 1px;
 }
 
-.header nav {
+.header-nav {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   z-index: 1;
   width: 100%;
@@ -128,9 +133,19 @@ h3 {
           align-items: center;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: 0.8s var(--easing);
-  transition: 0.8s var(--easing);
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
   background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+.header-nav_container li {
+  margin-bottom: 25px;
+  list-style: none;
+}
+.header-nav_container li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
 }
 .header-nav-checkbox:checked ~ .header-nav_container {
   -webkit-transform: translateX(0);
@@ -341,7 +356,6 @@ h3 {
   margin: 0 20px;
   font-size: 1rem;
   line-height: 2.2rem;
-  list-style: none;
 }
 .store-info_container .dotted-line {
   background-image: linear-gradient(to right, #8DB66E 1px, transparent 1px);
@@ -421,11 +435,30 @@ iframe {
   .header-nav-toggle {
     display: none;
   }
-  .mv-area {
-    position: relative;
-    overflow: hidden;
-    height: 700px;
-    border-bottom-right-radius: 50% 10px;
-    border-bottom-left-radius: 50% 10px;
+  .header-nav_container {
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+    background-color: transparent;
+  }
+  .header-nav_container_nav ul {
+    width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin-left: auto;
+  }
+  .header-nav_container_nav li a {
+    color: var(--main-color);
+    font-size: 1.25rem;
+  }
+  .header-nav .stripe-line::after {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
