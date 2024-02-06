@@ -57,6 +57,7 @@ ul {
     text-decoration: none;
     color: var(--bg-color);
     transition: 0.1s var(--easing);
+    cursor: pointer;
 
     &:hover {
       background-color: var(--main-color-green);
@@ -70,7 +71,7 @@ ul {
 .stripe-line {
   position: relative;
   padding: 0.2em;
-  width: 240px;
+  width: 320px;
 
   &::after {
     content: '';
@@ -119,16 +120,11 @@ ul {
   transform: translateX(100%);
   transition: 0.6s ease-in-out;
   background: rgba(255, 255, 255, 0.9);
-
   text-align: center;
-  // display: flex;
-  // align-items: center;
-
 
   li {
     margin-bottom: 25px;
     list-style: none;
-
 
     a {
       text-decoration: none;
@@ -176,16 +172,22 @@ ul {
   align-items: center;
   cursor: pointer;
 
+
   &::before,
   &::after,
   span {
     content: "";
-    height: 2px;
-    width: 30px;
-    background-color: var(--bg-color);
+    height: 3px;
+    width: 35px;
+    background-color: #ccc;
     opacity: 0.7;
     position: absolute;
     transition: 0.5s var(--easing);
+    text-shadow:
+      1px 1px 2px rgb(53, 49, 49),
+      0 0 1em rgb(43, 43, 45),
+      0 0 0.2em rgb(24, 24, 25);
+
   }
 
 
@@ -361,6 +363,13 @@ ul {
 }
 
 //---- 今月のお花教室 -----//
+article {
+  h3 {
+    text-align: center;
+    font-size: 1.9rem;
+  }
+}
+
 .info-blog {
   padding: 0 20px;
 
@@ -370,18 +379,29 @@ ul {
 
   .info-title {
     text-align: left;
-    line-height: 1.8rem;
+    line-height: 2.4rem;
     padding-bottom: 10px;
+    font-size: 1.2rem;
   }
 
   .info-text {
     text-align: left;
-    line-height: 1.8rem;
+    line-height: 2.4rem;
     padding: 2px 0 30px;
+    font-size: 1.3rem;
   }
 
   .btn-info {
     margin-bottom: 80px;
+    width: 240px;
+    // padding: 0 10px;
+
+    a {
+      font-size: 1.2rem;
+      letter-spacing: 0.03rem;
+      text-align: center;
+      padding: 15px 0;
+    }
   }
 
   .info-flower {
@@ -488,9 +508,21 @@ iframe {
   }
 }
 
-//---------------- ここから  PC 600px～ /------------------//
+//---------------------------------- ここから  PC 600px～ /------------------------------------//
 @include mq {
+  h3 {
+    font-size: 1.8rem;
+  }
 
+  .stripe-line {
+    width: 300px;
+
+    &::after {
+      // content: '';
+      height: 10px;
+      background: repeating-linear-gradient(-45deg, rgb(100, 164, 100), rgb(70, 169, 70) 2px, white 4px, white 6px);
+    }
+  }
 
   .header-nav {
 
@@ -507,18 +539,23 @@ iframe {
       &_nav {
 
         ul {
-          width: 320px;
+          width: 400px;
           display: flex;
           flex-direction: row;
           position: absolute;
           top: 20px;
-          right: 55px;
+          margin: 0 220px;
 
           li {
 
             a {
               color: var(--main-color);
-              font-size: 1.25rem;
+              font-size: 1.4rem;
+              padding: 17px;
+              text-shadow:
+                1px 1px 2px rgb(214, 213, 213),
+                // 0 0 1em rgb(161, 161, 168),
+                0 0 0.1em rgb(253, 230, 230);
             }
           }
         }
@@ -535,39 +572,125 @@ iframe {
 
     &-inner {
       margin-bottom: 40px;
+      margin-top: 40px;
       flex-direction: row;
-      // margin: 0 30px;
-      margin-top: 50px;
+      align-items: center;
 
-      h2 {
-        // width: 420px;
-        font-size: 2.2rem;
-        line-height: 4.4rem;
-        margin-left: 20px;
-      }
+      &_container {
+        flex-basis: 60%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
 
-      p {
-        width: 460px;
-        font-size: 1.1rem;
-        line-height: 2.4rem;
-        letter-spacing: 0.01rem;
-        margin-bottom: 40px;
-        margin-left: 20px;
+        h2 {
+          font-size: 2.6rem;
+          line-height: 4.4rem;
+        }
+
+        p {
+          width: 500px;
+          font-size: 1.2rem;
+          line-height: 2.4rem;
+          letter-spacing: 0.01rem;
+        }
       }
 
       .content {
-        justify-content: center;
-        text-align: center;
-        height: 100%;
-        align-items: center;
-
-        // img {
-        // width: 80%;
-        // width: auto;
-        // height: auto;
-        // }
+        justify-content: start;
+        flex-basis: 40%;
       }
-
     }
   }
+
+  .info {
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 55%;
+      margin: 0 auto;
+
+
+      &_items {
+
+        &:last-child {
+          width: 100%;
+          position: relative;
+          right: 450px;
+        }
+      }
+    }
+  }
+
+  .info-blog {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+
+    &_container {
+      justify-content: center;
+      width: 50%;
+
+      .info-school {
+        width: 65%;
+      }
+
+      .info-blog_left {
+        position: relative;
+        right: 70px;
+        top: 40px;
+      }
+
+
+      &_right {
+        position: relative;
+        top: 50px;
+        left: 50px;
+        width: 50%;
+
+        img {
+          width: 60%;
+          position: absolute;
+          bottom: -10px;
+          left: 90px;
+        }
+      }
+
+      .info-text {
+        padding-top: 40px;
+      }
+    }
+
+    .info-title {
+      font-size: 1.4rem;
+    }
+  }
+
+  .store-info_container {
+    display: flex;
+    
+    li {
+      display: flex;
+      flex-direction: column;
+      vertical-align: middle;
+      align-items: center;
+      margin: 0 auto;
+
+
+    }
+    
+    
+    
+    
+    iframe {
+      display: block;
+    }
+
+  }
+
+
 }
