@@ -58,9 +58,15 @@
   <!-------------------- main --------------------->
   <main>
     <!-- パターン1    前回分 -->
-    <!-- メインビジュアル　写真5枚切り替わり（slick） -->
+    <!-- メインビジュアル 写真5枚切り替わり（slick） -->
     <section class="mv-area">
-      <img src="./img/img/top_01.jpg" alt="">
+      <div class="mv-area_photo">
+        <div><img src="./img/img/top_01.jpg" alt=""></div>
+        <div><img src="./img/img/top_02.jpg" alt=""></div>
+        <div><img src="./img/img/top_03.jpg" alt=""></div>
+        <div><img src="./img/img/top_04.jpg" alt=""></div>
+        <div><img src="./img/img/top_05.jpg" alt=""></div>
+      </div>
       <h1 class="mv-area_title">
         <img src=".//img/img/mv_logo.png" alt="">
         日曜日の彩りを、今日も。
@@ -70,18 +76,20 @@
     <!-- イントロダクション（私たちは～） -->
     <section class="introduction">
       <div class="introduction-inner">
-        <h2>私たちは東京都新宿区<br>「曙橋駅」にある、<br>町のお花屋さんです。</h2>
-        <p>お花や鉢物の他、日持ちするプリザーブドフラワーや石鹸で出来たソープフラワー、
-          園芸用品や花瓶などの雑貨も取り扱っております。
-          大切な贈り物はもちろん、切り花１輪から是非ご相談ください。<br>スタッフ一同、心よりお待ちしております。</p>
+        <div class="introduction-inner_container">
+          <h2>私たちは東京都新宿区<br>「曙橋駅」にある、<br>町のお花屋さんです。</h2>
+          <p>お花や鉢物の他、日持ちするプリザーブドフラワーや石鹸で出来たソープフラワー、
+            園芸用品や花瓶などの雑貨も取り扱っております。
+            大切な贈り物はもちろん、切り花１輪から是非ご相談ください。<br>スタッフ一同、心よりお待ちしております。</p>
+        </div>
         <div class="content">
-          <div data-aos="fade-up" data-aos-duration="1000">
+          <!-- <div data-aos="fade-up" data-aos-duration="1000"> -->
             <img src="./img/img/hana_right.png" alt="" ata-aos="fade-up">
-          </div>
+          <!-- </div> -->
         </div>
-        <div class="scroll-box">
-          <img src=".//img/img/bg_img01.jpg" alt="">
-        </div>
+      </div>
+      <div class="scroll-box">
+        <img src=".//img/img/bg_img01.jpg" alt="">
       </div>
     </section>
 
@@ -185,13 +193,6 @@
     </footer>
 
 
-
-
-
-
-
-
-
     <!-- 👆JavaScriptで設定が必要 -->
     <!-- var ua = navigator.userAgent.toLowerCase();
     var isMobile = /iphone/.test(ua)||/android(.+)?mobile/.test(ua);
@@ -208,8 +209,12 @@
   </main>
 
 
+  <script src="./slick/jquery-3.7.1.min.js"></script>
+  <!-- <script src="./slick/jQuery-inView.min.js"></script> -->
+  <script src="./slick/slick.min.js"></script>
   <script src="./AOS/aos.js"></script>
-  <script src="./js/slick.min.js"></script>
+
+
   <script src="./js/script.js"></script>
 
 

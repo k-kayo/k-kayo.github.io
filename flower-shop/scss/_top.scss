@@ -170,7 +170,7 @@ ul {
   height: 40px;
   z-index: 10;
   top: 40px;
-  right: 20px;
+  right: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,35 +227,44 @@ ul {
 // メインビジュアル（カーブの部分）
 .mv-area {
   position: relative;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
   overflow: hidden;
-  height: 700px;
-  border-bottom-right-radius: 50% 10px;
-  border-bottom-left-radius: 50% 10px;
 
-  img {
-    height: 100%;
-    object-fit: cover;
-    object-position: 25%;
+  &_photo {
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      height: 84vh;
+    }
   }
+
 
   &_title {
     color: var(--bg-color);
     position: absolute;
     top: 45%;
+    left: 1%;
     font-size: 1.2rem;
     text-align: center;
+
   }
 }
 
 //--- イントロダクション（私たちは～） ---//
 .introduction-inner {
-  margin: 60px 5px 0 5px;
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 0 15px;
   width: 100%;
 
   h2 {
+    margin-top: 100px;
     font-weight: 400;
     line-height: 3rem;
   }
@@ -266,10 +275,14 @@ ul {
     letter-spacing: 0.01em;
   }
 
-  img {
-    width: 50%;
-    margin-left: auto;
-    margin-bottom: 50px;
+  .content {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 40px;
+
+    img {
+      width: 50%;
+    }
   }
 }
 
@@ -360,15 +373,6 @@ ul {
     line-height: 1.8rem;
     padding-bottom: 10px;
   }
-
-  // // 👇点線のコード //
-  // .dotted-line {
-  //   background-image: linear-gradient(to right, #F9AA8F 1px, transparent 1px);
-  //   background-size: 2px 1px;
-  //   background-repeat: repeat-x;
-  //   background-position: left bottom;
-  //   padding: 1px;
-  // }
 
   .info-text {
     text-align: left;
@@ -486,6 +490,8 @@ iframe {
 
 //---------------- ここから  PC 600px～ /------------------//
 @include mq {
+
+
   .header-nav {
 
     // ハンバーガーボタン
@@ -501,47 +507,70 @@ iframe {
       &_nav {
 
         ul {
-          // height: 60px;
-          width: 400px;
+          width: 320px;
           display: flex;
           flex-direction: row;
           position: absolute;
           top: 20px;
-          right: 20px;
-          margin-left: auto;
+          right: 55px;
+
+          li {
+
+            a {
+              color: var(--main-color);
+              font-size: 1.25rem;
+            }
+          }
         }
-
-        li a {
-          color: var(--main-color);
-          font-size: 1.25rem;
-        }
-
-
       }
     }
 
-    .stripe-line {
-
-      &::after {
-        display: none;
-      }
+    .stripe-line::after {
+      display: none;
     }
+  }
 
+  // ---------------- main ------------------ //
+  .introduction {
 
+    &-inner {
+      margin-bottom: 40px;
+      flex-direction: row;
+      // margin: 0 30px;
+      margin-top: 50px;
 
+      h2 {
+        // width: 420px;
+        font-size: 2.2rem;
+        line-height: 4.4rem;
+        margin-left: 20px;
+      }
 
+      p {
+        width: 460px;
+        font-size: 1.1rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.01rem;
+        margin-bottom: 40px;
+        margin-left: 20px;
+      }
+
+      .content {
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        align-items: center;
+
+        img {
+          // width: 80%;
+          // width: auto;
+          // height: auto;
+          // position: absolute;
+          // top: 50%;
+          // left: 50%;
+        }
+      }
+
+    }
   }
 }
-
-//   .mv-area {
-//     position: relative;
-//     overflow: hidden;
-//     height: 700px;
-//     max-width: 1200px;
-//     border-bottom-right-radius: 50% 10px;
-//     border-bottom-left-radius: 50% 10px;
-//   }
-
-// }
-
-

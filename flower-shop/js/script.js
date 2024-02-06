@@ -1,12 +1,12 @@
 AOS.init();
 
-
-// window.addEventListener("load", () => {
-//   AOS.init({
-//     // initClassName: "abcedf",
-//     // animatedClassName: "xyz",
-//     // useClassNames: true,
-//   });
-// });
-
-// {/* <script>AOS.init();</script>; */}
+$(function () {
+  $(".mv-area_photo").slick({
+    autoplay: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: "linear",
+    adaptiveHeight: true,
+  });
+});
