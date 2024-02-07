@@ -1,3 +1,13 @@
 {
-  "cSpell.words": ["abcedf", "hana", "pathmove", "scrolldown", "Shippori", "windowwidth"]
+  "cSpell.words": ["abcedf", "hana", "pathmove", "scrolldown", "Shippori", "windowwidth"],
+  "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**", "/js/**"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed", // 👈一行にまとめてくれる
+      "extensionName": ".min.css",
+      "savePath": "/~/../css",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveSassCompile.settings.autoprefix": []
 }
