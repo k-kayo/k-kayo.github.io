@@ -9,7 +9,6 @@
     content="東京都新宿区「曙橋駅」にある、町のお花屋さんです。お花や鉢物の他、日持ちするプリザーブドフラワーや石鹸で出来たソープフラワー、園芸用品や花瓶などの雑貨も取り扱っております。大切な贈り物はもちろん、切り花１輪から是非ご相談ください。">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- 自動リンクを無効にする -->
   <meta name="format-detection" content="telephone=no">
 
   <!-- Googleフォント -->
@@ -24,12 +23,9 @@
 
   <!-- AOS -->
   <link rel="stylesheet" href="./AOS/aos.css">
-  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-
   <!-- slick -->
   <link rel="stylesheet" href="./slick/slick.css">
-  <!-- <link rel="stylesheet" href="./slick/slick-theme.css"> -->
-
+  <!-- CSSスタイルシート -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -41,11 +37,9 @@
       <span></span>
     </label>
 
-    <!--  ナビ・コンテナ 1-->
-    <!--  ナビ・コンテナ 2 👇から外したheader-nav_container_gnav -->
+    <!--  ナビ/コンテナ-->
     <div class="header-nav_container">
-      <!--  ナビ・コンテナ ３-->
-      <nav class="header-nav_container_nav">
+      <nav class="header-nav_container_nav header-nav_container_gnav">
         <ul>
           <li class="stripe-line"><a href="#news">お知らせ</a></li>
           <li class="stripe-line"><a href="#event">催し物</a></li>
@@ -55,9 +49,8 @@
     </div>
   </header>
 
-  <!-------------------- main --------------------->
+  <!------------------------ main ----------------------->
   <main>
-    <!-- パターン1    前回分 -->
     <!-- メインビジュアル 写真5枚切り替わり（slick） -->
     <section class="mv-area">
       <div class="mv-area_photo">
@@ -71,6 +64,9 @@
         <img src=".//img/img/mv_logo.png" alt="">
         日曜日の彩りを、今日も。
       </h1>
+      <!-- <h1>Scroll me</h1> -->
+      <div class="scrolldown1"><span>Scroll</span></div>
+
     </section>
 
     <!-- イントロダクション（私たちは～） -->
@@ -83,9 +79,9 @@
             大切な贈り物はもちろん、切り花１輪から是非ご相談ください。<br>スタッフ一同、心よりお待ちしております。</p>
         </div>
         <div class="content">
-          <!-- <div data-aos="fade-up" data-aos-duration="1000"> -->
-          <img src="./img/img/hana_right.png" alt="" ata-aos="fade-up">
-          <!-- </div> -->
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <img src="./img/img/hana_right.png" alt="" ata-aos="fade-up">
+          </div>
         </div>
       </div>
       <div class="scroll-box">
@@ -149,33 +145,34 @@
     <section class="store-info" id="#access">
       <h3 class="stripe-line">店舗情報</h3>
       <ul class="store-info_container">
-        <li class="dotted-line">
-          <p>店名</p>
-          <p>sunday flower</p>
-        </li>
-        <li class="dotted-line">
-          <p>営業時間</p>
-          <p>10時～18時半</p>
-        </li>
-        <li class="dotted-line">
-          <p>定休日</p>
-          <p>年末年始及びお盆明け</p>
-        </li>
-        <li class="dotted-line">
-          <p>住所<br>〒160-0005</p>
-          <p>東京都新宿区愛住町22 第三山田ビル2F</p>
-          <button type="button" class="btn"><a href="#">Google Maps</a></button>
-        </li>
-        <li class="dotted-line">
-          <p>電話/FAX</p>
-          <!-- <p>03-1234-5678</p> -->
-          <p>
-            <span class="material-symbols-outlined">
-              call
-            </span>
-            <a href="tel:03-1234-5678">03-1234-5678</a>
-          </p>
-        </li>
+        <div class="store-info_container_list">
+          <li class="dotted-line">
+            <p>店名</p>
+            <p>sunday flower</p>
+          </li>
+          <li class="dotted-line">
+            <p>営業時間</p>
+            <p>10時～18時半</p>
+          </li>
+          <li class="dotted-line">
+            <p>定休日</p>
+            <p>年末年始及びお盆明け</p>
+          </li>
+          <li class="dotted-line">
+            <p>住所<br>〒160-0005</p>
+            <p>東京都新宿区愛住町22 第三山田ビル2F</p>
+            <button type="button" class="btn"><a href="#">Google Maps</a></button>
+          </li>
+          <li class="dotted-line">
+            <p>電話/FAX</p>
+            <p>
+              <span class="material-symbols-outlined">
+                call
+              </span>
+              <a href="tel:03-1234-5678">03-1234-5678</a>
+            </p>
+          </li>
+        </div>
         <div class="google-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12961.591619667677!2d139.7204376!3d35.6918247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5bce063c37%3A0xb548b9250334152f!2z44Kk44Oz44K_44O844OX44Op44OzSVTjgrnjgq_jg7zjg6s!5e0!3m2!1sja!2sjp!4v1707229964890!5m2!1sja!2sjp"
@@ -199,33 +196,11 @@
         <small>&copy;sunday flower All Rights Reserved.</small>
       </div>
     </footer>
-
-
-    <!-- 👆JavaScriptで設定が必要 -->
-    <!-- var ua = navigator.userAgent.toLowerCase();
-    var isMobile = /iphone/.test(ua)||/android(.+)?mobile/.test(ua);
-    
-    if (!isMobile) {
-    $('a[href^="tel:"]').on('click', function(e) {
-    e.preventDefault();
-    });
-    }
- -->
-
-
-
   </main>
-
-
   <script src="./slick/jquery-3.7.1.min.js"></script>
-  <!-- <script src="./slick/jQuery-inView.min.js"></script> -->
   <script src="./slick/slick.min.js"></script>
   <script src="./AOS/aos.js"></script>
-
-
   <script src="./js/script.js"></script>
-
-
 </body>
 
 </html>

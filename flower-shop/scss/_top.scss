@@ -16,7 +16,6 @@ body {
   font-family: var(--font-primary);
 }
 
-
 img {
   display: block;
   max-width: 100%;
@@ -38,7 +37,7 @@ ul {
   list-style: none;
 }
 
-/* ボタン共通設定 */
+/* ボタン */
 .btn {
   border: none;
   background-color: var(--sub-color);
@@ -63,7 +62,6 @@ ul {
       background-color: var(--main-color-green);
       border-radius: 6px;
     }
-
   }
 }
 
@@ -93,6 +91,8 @@ ul {
   padding: 1px;
 }
 
+//-------------- 共通設定 ここまで-----------//
+
 //----------------- ヘッダー ------------------//
 .header-nav {
   position: fixed;
@@ -106,7 +106,7 @@ ul {
   align-items: center;
 }
 
-// ナビ/コンテナ 2 (3点セット)
+// ナビ/コンテナ
 .header-nav_container {
   position: fixed;
   width: 100%;
@@ -147,7 +147,6 @@ ul {
     li {
       margin-bottom: 25px;
       list-style: none;
-
 
       a {
         text-decoration: none;
@@ -190,7 +189,6 @@ ul {
 
   }
 
-
   &::before {
     top: calc(50% - 14px);
   }
@@ -226,7 +224,7 @@ ul {
 
 
 //-------------------- メイン --------------------//
-// メインビジュアル（カーブの部分）
+// メインビジュアル
 .mv-area {
   position: relative;
   top: 0;
@@ -246,7 +244,6 @@ ul {
     }
   }
 
-
   &_title {
     color: var(--bg-color);
     position: absolute;
@@ -256,7 +253,59 @@ ul {
     text-align: center;
 
   }
+
+  /*スクロールダウン*/
+  .scrolldown1 {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    height: 50px;
+  }
+
+  .scrolldown1 span {
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    font-size: 1rem;
+    writing-mode: vertical-rl;
+
+  }
+
+  .scrolldown1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1.5px;
+    height: 50px;
+    background: #eee;
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  @keyframes pathmove {
+    0% {
+      height: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    30% {
+      height: 50px;
+      opacity: 1;
+    }
+
+    100% {
+      height: 0;
+      top: 50px;
+      opacity: 0;
+    }
+  }
 }
+
+// メインビジュアル ここまで
 
 //--- イントロダクション（私たちは～） ---//
 .introduction-inner {
@@ -301,38 +350,15 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // object-position: center;
-    // opacity: .2;
   }
 }
 
+// イントロダクション ここまで
 
 // info-お知らせ//
 .info {
-  // margin-top: 90px;
   width: 100%;
   text-align: center;
-
-  // h3 {
-  //   margin: 0 auto;
-  //   font-size: 1.5rem;
-  //   font-weight: 400;
-
-  //   position: relative;
-  //   width: 240px;
-  //   padding: 0.2em;
-
-
-  //   &::after {
-  //     content: '';
-  //     position: absolute;
-  //     left: 0;
-  //     bottom: 0;
-  //     width: 100%;
-  //     height: 7px;
-  //     background: repeating-linear-gradient(-45deg, rgb(139, 204, 139), rgb(117, 190, 117) 2px, white 2px, white 4px);
-  //   }
-  // }
 }
 
 .info-list {
@@ -361,6 +387,8 @@ ul {
     }
   }
 }
+
+// info-お知らせ ここまで//
 
 //---- 今月のお花教室 -----//
 article {
@@ -394,7 +422,6 @@ article {
   .btn-info {
     margin-bottom: 80px;
     width: 240px;
-    // padding: 0 10px;
 
     a {
       font-size: 1.2rem;
@@ -420,6 +447,8 @@ article {
   }
 }
 
+// 今月のお花教室 ここまで//
+
 // ------ 店舗情報 ------ //
 .store-info {
 
@@ -441,7 +470,6 @@ article {
         font-size: 1.1rem;
       }
 
-
       .btn {
         display: inline-block;
         border: 1px solid var(--text-color);
@@ -451,7 +479,6 @@ article {
         letter-spacing: 0.02rem;
         display: flex;
         justify-content: center;
-
 
         a {
           color: saturate(#f9aa8f, 5%);
@@ -483,6 +510,9 @@ iframe {
   margin: 30px 0 90px;
 }
 
+// 店舗情報 ここまで//
+
+
 //---------- フッター ------------//
 .footer {
   max-width: 100%;
@@ -508,7 +538,9 @@ iframe {
   }
 }
 
-//---------------------------------- ここから  PC 600px～ /------------------------------------//
+// フッター ここまで//
+
+//----------------- ここから  PC 600px～ /-------------------------//
 @include mq {
   h3 {
     font-size: 1.8rem;
@@ -524,6 +556,7 @@ iframe {
     }
   }
 
+  // ヘッダー//
   .header-nav {
 
     // ハンバーガーボタン
@@ -535,162 +568,224 @@ iframe {
       transform: translateX(0) !important;
       background-color: transparent;
 
-
-      &_nav {
-
-        ul {
-          width: 400px;
-          display: flex;
-          flex-direction: row;
-          position: absolute;
-          top: 20px;
-          margin: 0 220px;
-
-          li {
-
-            a {
-              color: var(--main-color);
-              font-size: 1.4rem;
-              padding: 17px;
-              text-shadow:
-                1px 1px 2px rgb(214, 213, 213),
-                // 0 0 1em rgb(161, 161, 168),
-                0 0 0.1em rgb(253, 230, 230);
-            }
-          }
-        }
-      }
-    }
-
-    .stripe-line::after {
-      display: none;
-    }
-  }
-
-  // ---------------- main ------------------ //
-  .introduction {
-
-    &-inner {
-      margin-bottom: 40px;
-      margin-top: 40px;
-      flex-direction: row;
-      align-items: center;
-
-      &_container {
-        flex-basis: 60%;
-        flex-direction: column;
+      &_nav ul {
+        width: 400px;
         display: flex;
-        align-items: center;
+        flex-direction: row;
+        position: absolute;
+        top: 20px;
+        margin: 0 220px;
 
-        h2 {
-          font-size: 2.6rem;
-          line-height: 4.4rem;
-        }
-
-        p {
-          width: 500px;
-          font-size: 1.2rem;
-          line-height: 2.4rem;
-          letter-spacing: 0.01rem;
-        }
-      }
-
-      .content {
-        justify-content: start;
-        flex-basis: 40%;
-      }
-    }
-  }
-
-  .info {
-    &-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      width: 55%;
-      margin: 0 auto;
-
-
-      &_items {
-
-        &:last-child {
-          width: 100%;
-          position: relative;
-          right: 450px;
+        li a {
+          color: var(--main-color);
+          font-size: 1.4rem;
+          padding: 17px;
+          text-shadow:
+            1px 1px 2px rgb(214, 213, 213),
+            // 0 0 1em rgb(161, 161, 168),
+            0 0 0.1em rgb(253, 230, 230);
         }
       }
     }
   }
 
-  .info-blog {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 80px;
-    display: flex;
-    width: 50%;
-    flex-wrap: wrap;
+  .stripe-line::after {
+    display: none;
+  }
+}
+
+// ヘッダー ここまで//
+
+
+// ---------------- main ------------------ //
+// イントロダクション//
+.introduction {
+
+  &-inner {
+    margin-top: 40px;
+    flex-direction: row;
+    margin-bottom: 90px;
 
     &_container {
-      justify-content: center;
+      flex-basis: 60%;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+
+      h2 {
+        font-size: 2.6rem;
+        line-height: 4.4rem;
+        padding-left: 40px;
+      }
+
+      p {
+        width: 500px;
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.01rem;
+        padding-left: 60px;
+
+      }
+    }
+
+    .content {
+      justify-content: start;
+      flex-basis: 40%;
+
+    }
+  }
+}
+
+// イントロダクション ここまで//
+
+// info-お知らせ ここまで//
+.info {
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 55%;
+    margin: 0 auto;
+
+    &_items {
+
+      &:last-child {
+        width: 100%;
+        position: relative;
+        right: 450px;
+      }
+    }
+  }
+}
+
+// 今月のお花教室 ここまで//
+.info-blog {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+
+  &_container {
+    justify-content: center;
+    width: 50%;
+
+    .info-school {
+      width: 65%;
+    }
+
+    .info-blog_left {
+      position: relative;
+      right: 70px;
+      top: 40px;
+    }
+
+    &_right {
+      position: relative;
+      top: 50px;
+      left: 50px;
       width: 50%;
 
-      .info-school {
-        width: 65%;
-      }
-
-      .info-blog_left {
-        position: relative;
-        right: 70px;
-        top: 40px;
-      }
-
-
-      &_right {
-        position: relative;
-        top: 50px;
-        left: 50px;
-        width: 50%;
-
-        img {
-          width: 60%;
-          position: absolute;
-          bottom: -10px;
-          left: 90px;
-        }
-      }
-
-      .info-text {
-        padding-top: 40px;
+      img {
+        width: 60%;
+        position: absolute;
+        bottom: -10px;
+        left: 90px;
       }
     }
 
-    .info-title {
-      font-size: 1.4rem;
+    .info-text {
+      padding-top: 40px;
     }
+  }
+
+  .info-title {
+    font-size: 1.4rem;
+  }
+}
+
+// ------ 店舗情報 ------//
+.store-info {
+  margin-top: 120px;
+  width: 100%;
+
+  h3 {
+    font-size: 1.9rem;
   }
 
   .store-info_container {
+    justify-content: space-around;
     display: flex;
-    
-    li {
+
+    &_list {
+      position: relative;
+      left: 175px;
+
+      li p {
+        font-size: 1.3rem;
+        padding-top: 12px;
+
+        &:nth-child(n+2) {
+          font-size: 1.4rem;
+          padding-bottom: 5px;
+        }
+      }
+
+      .btn {
+        width: 180px;
+        padding: 5px;
+
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .google-map {
       display: flex;
-      flex-direction: column;
-      vertical-align: middle;
-      align-items: center;
-      margin: 0 auto;
+      width: 20%;
+      position: relative;
+      right: 80px;
+      top: 75px;
 
-
+      iframe {
+        display: block;
+        width: 80%;
+        height: 350px;
+      }
     }
-    
-    
-    
-    
-    iframe {
-      display: block;
-    }
-
   }
 
+  .store-info_btn {
 
+    a {
+      width: 250px;
+      font-size: 1.2rem;
+      padding: 18px 50px;
+    }
+  }
 }
+
+// 店舗情報 ここまで//
+
+// フッター//
+.footer {
+  position: relative;
+  width: 26.5%;
+  padding-top: 90px;
+
+  a img {
+    width: 74.5%;
+    position: absolute;
+    left: 350px;
+    top: -80px;
+  }
+
+  small {
+    font-size: 1.25rem
+  }
+}
+
+// フッター ここまで//
