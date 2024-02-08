@@ -23,16 +23,10 @@ img {
   max-width: 100%;
 }
 
-h2,
-p {
-  opacity: 0.8;
-}
-
-h3 {
+h2 {
   margin: 0 auto;
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 400;
-  opacity: 0.7;
 }
 
 ul {
@@ -70,7 +64,7 @@ ul {
     letter-spacing: 0.02rem;
     font-family: var(--font-primary);
     text-decoration: none;
-    color: var(--bg-color);
+    color: #ccc;
     transition: 0.1s var(--easing);
 
   }
@@ -89,7 +83,7 @@ ul {
     bottom: 0;
     width: 100%;
     height: 10px;
-    background: repeating-linear-gradient(-45deg, rgb(139, 204, 139), rgb(117, 190, 117) 2px, white 2px, white 4px);
+    background: repeating-linear-gradient(-45deg, rgb(70, 236, 70), rgb(117, 190, 117) 1px, #fef9eb 2px, white 4px);
   }
 }
 
@@ -158,13 +152,13 @@ ul {
 // ハンバーガーボタン
 .header-nav-toggle {
   position: fixed;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   z-index: 10;
-  top: 40px;
-  right: 40px;
+  top: 5%;
+  right: 5%;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   cursor: pointer;
 
@@ -174,9 +168,8 @@ ul {
   span {
     content: "";
     height: 3px;
-    width: 35px;
+    width: 100%;
     background-color: #ccc;
-    opacity: 0.7;
     position: absolute;
     transition: 0.5s var(--easing);
     text-shadow:
@@ -187,11 +180,11 @@ ul {
   }
 
   &::before {
-    top: calc(50% - 14px);
+    top: calc(50% - 15px);
   }
 
   &::after {
-    top: calc(50% + 14px);
+    top: calc(50% + 15px);
   }
 
   .header-nav-checkbox:checked~& {
@@ -241,13 +234,24 @@ ul {
   }
 
 
-  &_title {
-    color: var(--bg-color);
+  h1 {
     position: absolute;
     top: 45%;
-    left: 1%;
+    // left: 0;
     font-size: 1.2rem;
     text-align: center;
+    width: 100%;
+
+    img {
+      display: inline;
+      justify-content: center;
+      width: 98%;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: var(--bg-color);
+    }
 
   }
 
@@ -262,11 +266,10 @@ ul {
   .scrolldown1 span {
     position: absolute;
     left: -20px;
-    top: -10px;
-    color: #eee;
-    font-size: 0.7rem;
+    top: 0;
+    color: var(--bg-color);
     letter-spacing: 0.04em;
-    font-size: 1rem;
+    font-size: 0.9rem;
     writing-mode: vertical-rl;
 
   }
@@ -302,42 +305,40 @@ ul {
   }
 }
 
-// メインビジュアル ここまで
 
 //--- イントロダクション（私たちは～） ---//
 .introduction-inner {
   display: flex;
   flex-direction: column;
-  padding: 0 15px;
+  padding: 0 20px;
   width: 100%;
 
   &_container {
 
     h2 {
-      margin-top: 100px;
+      margin-top: 130px;
       font-weight: 400;
-      line-height: 3rem;
-      font-size: 1.8rem;
+      line-height: 3.8rem;
+      font-size: 1.9rem;
     }
 
     p {
-      margin-top: 50px;
-      line-height: 2rem;
-      letter-spacing: 0.01em;
-      font-size: 1.2rem;
+      margin-top: 60px;
+      line-height: 2.6rem;
+      font-size: 1.25rem;
     }
 
   }
 
   &_content {
-    max-width: 100%;
     display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-left: 250px;
+    width: 100%;
 
     img {
-      margin-bottom: 40px;
+      margin: 20px;
+      width: 50%;
+      margin-left: auto;
+      margin-right: -10px;
     }
   }
 }
@@ -358,12 +359,15 @@ ul {
   }
 }
 
-// イントロダクション ここまで
 
 // info-お知らせ//
 .info {
   width: 100%;
   text-align: center;
+
+  h2 {
+    padding-top: 40px;
+  }
 }
 
 .info-list {
@@ -400,13 +404,12 @@ ul {
   margin-left: 20px;
 }
 
-// info-お知らせ ここまで//
+
 
 //---- 今月のお花教室 -----//
 article {
-  h3 {
+  h2 {
     text-align: center;
-    font-size: 1.9rem;
   }
 }
 
@@ -440,6 +443,7 @@ article {
       letter-spacing: 0.03rem;
       text-align: center;
       padding: 15px 0;
+      color: #fff;
     }
   }
 
@@ -459,16 +463,14 @@ article {
   }
 }
 
-// 今月のお花教室 ここまで//
-
-
 
 // ------ 店舗情報 ------ //
 .store-info {
 
-  h3 {
+  h2 {
     text-align: center;
     margin-bottom: 50px;
+    align-items: center;
   }
 
   &_container {
@@ -490,7 +492,7 @@ article {
       .btn {
         display: inline-block;
         border: 1px solid var(--text-color);
-        background-color: var(--bg-color);
+        background-color: #fff;
         width: 180px;
         border-radius: 6px;
         letter-spacing: 0.02rem;
@@ -526,9 +528,15 @@ article {
     margin: 30px 0 90px;
 
     a {
-      width: 260px;
-      padding: 15px;
+      width: 250px;
+      height: 60px;
+      padding: 16px;
       font-size: 1.3rem;
+      color: #fff;
+      font-weight: 400;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 1.2rem;
     }
   }
 }
@@ -568,7 +576,7 @@ article {
 
 //----------------- ここから  PC 600px～ /-------------------------//
 @include mq {
-  h3 {
+  h2 {
     font-size: 1.8rem;
   }
 
@@ -577,8 +585,8 @@ article {
 
     &::after {
       // content: '';
-      height: 10px;
-      background: repeating-linear-gradient(-45deg, rgb(100, 164, 100), rgb(70, 169, 70) 2px, white 4px, white 6px);
+      height: 8px;
+      background: repeating-linear-gradient(-45deg, rgb(100, 164, 100), rgb(70, 169, 70) 1px, white 2px, white 4px);
     }
   }
 
@@ -620,9 +628,18 @@ article {
     }
   }
 
+  .mv-area {
+    position: relative;
 
+    h1 {
+      position: absolute;
+      right: 40%;
 
-  // ヘッダー ここまで//
+      img {
+        width: 20%;
+      }
+    }
+  }
 
 
   // ---------------- main ------------------ //
@@ -630,44 +647,43 @@ article {
   .introduction {
 
     &-inner {
-      margin-top: 40px;
+      margin: 40px 0 90px;
       flex-direction: row;
-      margin-bottom: 90px;
       width: 100%;
 
       &_container {
-        flex-basis: 60%;
+        flex-basis: 55%;
         flex-direction: column;
         display: flex;
         align-items: center;
-        position: relative;
         top: 0;
-        left: 6%;
+        position: relative;
+        right: -10%;
+        margin-left: auto;
+
 
         h2 {
           font-size: 2.6rem;
-          line-height: 4.4rem;
-          padding-left: 40px;
+          line-height: 4.6rem;
+          padding-right: 100px;
         }
 
         p {
-          width: 500px;
+          width: 530px;
           font-size: 1.2rem;
           line-height: 2.4rem;
           letter-spacing: 0.01rem;
-          padding-left: 60px;
-
         }
       }
 
       &_content {
+        flex-basis: 45%;
+        position: relative;
         justify-content: start;
-        flex-basis: 40%;
-        position: absolute;
-        right: 20%;
+        // left: 10%;
 
         img {
-          width: 80%;
+          width: 79%;
         }
       }
     }
@@ -678,7 +694,7 @@ article {
   // info-お知らせ//
   .info {
 
-    h3 {
+    h2 {
       font-size: 2rem;
       margin-bottom: 25px;
     }
@@ -709,6 +725,10 @@ article {
   // info-お知らせ ここまで//
 
   // 今月のお花教室 //
+  #event {
+    padding-top: 30px;
+  }
+
   .info-blog {
     grid-template-columns: 1fr 1fr;
     display: grid;
@@ -735,20 +755,22 @@ article {
 
       &_right {
         position: relative;
-        top: 50px;
+        top: 90px;
         left: 50px;
-        width: 50%;
+        justify-content: center;
+        margin-bottom: 10px;
 
         .info-flower {
           width: 70%;
           position: absolute;
-          bottom: -10px;
+          bottom: -20px;
           left: 90px;
         }
       }
 
       .info-text {
         padding-top: 40px;
+        width: 550px;
       }
     }
 
@@ -757,14 +779,13 @@ article {
     }
   }
 
-  // 今月のお花教室 ここまで//
 
   // ------ 店舗情報 ------//
   .store-info {
     margin-top: 120px;
     width: 100%;
 
-    h3 {
+    h2 {
       font-size: 1.9rem;
     }
 
