@@ -38,6 +38,8 @@ ul {
   border: none;
   background-color: var(--sub-color);
   border-radius: 6px;
+  position: relative;
+  z-index: 100;
   // 先生の見本
   // .btn {
   // position: relative;
@@ -50,7 +52,6 @@ ul {
   &:hover {
     background-color: var(--main-color-green);
     cursor: pointer;
-    border-radius: 6px;
   }
 
   a {
@@ -58,7 +59,6 @@ ul {
     padding: 12px 12px;
     width: 200px;
     margin: 0 auto;
-    // border: none;
     font-weight: 400;
     font-size: 1rem;
     letter-spacing: 0.02rem;
@@ -146,6 +146,9 @@ ul {
 
   .header-nav-checkbox:checked~& {
     transform: translateX(0);
+    // opacity: 1;
+    // z-index: 1;
+
   }
 }
 
@@ -230,7 +233,7 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // height: 84vh;
+    height: 84vh;
   }
 
 
@@ -486,22 +489,21 @@ article {
     .btn {
       display: inline-block;
       border: 1px solid var(--text-color);
-      background-color: #fff;
       width: 180px;
       border-radius: 6px;
       letter-spacing: 0.02rem;
       display: flex;
       justify-content: center;
+      background-color: #fff;
 
       a {
         color: saturate(#f9aa8f, 5%);
         padding: 9px 9px;
         font-weight: 400;
         font-size: 1.4rem;
-        transition: 0.1s ease-in;
+        transition: 0.3s ease-in;
 
         &:hover {
-          background-color: var(--bg-color);
           color: saturate(#91BC6F, 5%);
         }
       }
