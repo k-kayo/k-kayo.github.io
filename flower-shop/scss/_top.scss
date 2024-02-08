@@ -44,13 +44,27 @@ ul {
   border: none;
   background-color: var(--sub-color);
   border-radius: 6px;
+  // 先生の見本
+  // .btn {
+  // position: relative;
+  //   display: inline-block;
+  //   border-radius: 5px;
+  //   padding: 1rem;
+  //   line-height: 1rem; // 👈bodyタグに元々設定しているので変更
+  // }
+
+  &:hover {
+    background-color: var(--main-color-green);
+    cursor: pointer;
+    border-radius: 6px;
+  }
 
   a {
     display: block;
     padding: 12px 12px;
     width: 200px;
     margin: 0 auto;
-    border: none;
+    // border: none;
     font-weight: 400;
     font-size: 1rem;
     letter-spacing: 0.02rem;
@@ -58,12 +72,7 @@ ul {
     text-decoration: none;
     color: var(--bg-color);
     transition: 0.1s var(--easing);
-    cursor: pointer;
 
-    &:hover {
-      background-color: var(--main-color-green);
-      border-radius: 6px;
-    }
   }
 }
 
@@ -97,7 +106,8 @@ ul {
 
 //----------------- ヘッダー ------------------//
 .header-nav {
-  position: fixed;
+  // position: fixed;👈もしくは
+  // position: relative;👈もしくは？？
   right: 0;
   top: 0;
   z-index: 1;
@@ -124,6 +134,9 @@ ul {
   transition: 0.6s ease-in-out;
   background: rgba(255, 255, 255, 0.9);
   text-align: center;
+  backdrop-filter: blur(4px);
+  // 👆  ぼやけた感じになる
+
 
   li {
     margin-bottom: 30px;
@@ -184,16 +197,19 @@ ul {
   .header-nav-checkbox:checked~& {
     span {
       transform: scaleX(0);
+      // opacity: 0; 👈もしくは
     }
 
     &::before {
       top: 50%;
+      // transform: translateY(-50%);👈もしくは
       transform: rotate(-45deg);
       background-color: var(--text-color);
     }
 
     &::after {
       top: 50%;
+      // transform: translateY(-50%);👈もしくは
       transform: rotate(45deg);
       background-color: var(--text-color);
     }
@@ -577,6 +593,7 @@ article {
     &_container {
       transform: translateX(0) !important;
       background-color: transparent;
+      backdrop-filter: blur(0px); // 👈追加 先生の解説見て
 
       &_nav ul {
         width: 400px;
