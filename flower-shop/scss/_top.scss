@@ -102,6 +102,7 @@ ul {
 .header-nav {
   // position: fixed;👈もしくは
   // position: relative;👈もしくは？？
+  position: fixed;
   right: 0;
   top: 0;
   z-index: 1;
@@ -114,7 +115,7 @@ ul {
 
 // ナビ/コンテナ
 .header-nav_container {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%;
   top: 0;
@@ -158,7 +159,6 @@ ul {
   top: 5%;
   right: 5%;
   display: flex;
-  // justify-content: center;
   align-items: center;
   cursor: pointer;
 
@@ -230,14 +230,13 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    height: 84vh;
+    // height: 84vh;
   }
 
 
   h1 {
     position: absolute;
     top: 45%;
-    // left: 0;
     font-size: 1.2rem;
     text-align: center;
     width: 100%;
@@ -260,25 +259,25 @@ ul {
     position: absolute;
     left: 50%;
     bottom: 50px;
-    height: 50px;
+    height: 20px;
   }
 
   .scrolldown1 span {
     position: absolute;
-    left: -20px;
+    left: -23px;
     top: 0;
     color: var(--bg-color);
     letter-spacing: 0.04em;
-    font-size: 0.9rem;
+    font-size: 1rem;
     writing-mode: vertical-rl;
-
+    text-shadow: 0 0 5px #ccc;
   }
 
   .scrolldown1::after {
     content: "";
     position: absolute;
     top: 0;
-    width: 1.5px;
+    width: 1px;
     height: 50px;
     background: #eee;
     animation: pathmove 1.4s ease-in-out infinite;
@@ -375,12 +374,6 @@ ul {
   &_items {
     padding: 0 20px;
     margin: 50px 0;
-
-    // &:last-child {
-    //   margin-right: auto;
-    //   width: 60%;
-    //   margin-bottom: 50px;
-    // }
 
     a {
       background-color: var(--text-color);
@@ -480,42 +473,43 @@ article {
 
     .dotted-line {
       background-image: linear-gradient(to right, #8DB66E 1px, transparent 1px);
+    }
 
-      p:nth-of-type(2) {
+    p:nth-of-type(2) {
+      font-size: 1.4rem;
+    }
+
+    p:last-child {
+      font-size: 1.4rem;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 1px solid var(--text-color);
+      background-color: #fff;
+      width: 180px;
+      border-radius: 6px;
+      letter-spacing: 0.02rem;
+      display: flex;
+      justify-content: center;
+
+      a {
+        color: saturate(#f9aa8f, 5%);
+        padding: 9px 9px;
+        font-weight: 400;
         font-size: 1.4rem;
-      }
+        transition: 0.1s ease-in;
 
-      p:last-child {
-        font-size: 1.4rem;
-      }
-
-      .btn {
-        display: inline-block;
-        border: 1px solid var(--text-color);
-        background-color: #fff;
-        width: 180px;
-        border-radius: 6px;
-        letter-spacing: 0.02rem;
-        display: flex;
-        justify-content: center;
-
-        a {
-          color: saturate(#f9aa8f, 5%);
-          padding: 9px 9px;
-          font-weight: 400;
-          font-size: 1.4rem;
-          transition: 0.1s ease-in;
-
-          &:hover {
-            background-color: var(--bg-color);
-            color: saturate(#91BC6F, 5%);
-          }
+        &:hover {
+          background-color: var(--bg-color);
+          color: saturate(#91BC6F, 5%);
         }
       }
+    }
 
-      .material-symbols-outlined {
-        vertical-align: text-top;
-      }
+    // 電話アイコン//
+    .material-symbols-outlined {
+      vertical-align: text-bottom;
     }
 
     iframe {
@@ -540,11 +534,6 @@ article {
     }
   }
 }
-
-
-
-// 店舗情報 ここまで//
-
 
 //---------- フッター ------------//
 .footer {
@@ -571,8 +560,6 @@ article {
     opacity: 0.75;
   }
 }
-
-// フッター ここまで//
 
 //----------------- ここから  PC 600px～ /-------------------------//
 @include mq {
@@ -632,7 +619,7 @@ article {
     position: relative;
 
     h1 {
-      position: absolute;
+
       right: 40%;
 
       img {
@@ -689,29 +676,27 @@ article {
     }
   }
 
-  // イントロダクション ここまで//
-
   // info-お知らせ//
   .info {
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.9rem;
       margin-bottom: 25px;
     }
 
     &-list {
-      display: grid;
       display: flex;
       justify-content: center;
       align-items: center;
-      display: flex;
       flex-direction: row;
-      width: 50%;
+      width: 75%;
       margin-left: auto;
       margin-right: auto;
 
+
       &_items {
-        width: 55%;
+        width: 100%;
+        padding: 0 30px;
       }
     }
 
@@ -751,12 +736,17 @@ article {
         position: relative;
         right: 70px;
         top: 40px;
+
+        button {
+          cursor: pointer;
+          z-index: 10;
+        }
       }
 
       &_right {
         position: relative;
         top: 90px;
-        left: 50px;
+        left: 70px;
         justify-content: center;
         margin-bottom: 10px;
 
@@ -776,9 +766,9 @@ article {
 
     .info-title {
       font-size: 1.4rem;
+
     }
   }
-
 
   // ------ 店舗情報 ------//
   .store-info {
@@ -804,6 +794,10 @@ article {
           &:nth-child(n+2) {
             font-size: 1.4rem;
             padding-bottom: 4px;
+          }
+
+          span a {
+            cursor: pointer;
           }
         }
 
@@ -843,8 +837,6 @@ article {
     }
   }
 
-  // 店舗情報 ここまで//
-
   // フッター//
   .footer {
     position: relative;
@@ -862,6 +854,4 @@ article {
       font-size: 1.25rem
     }
   }
-
-  // フッター ここまで//
 }
