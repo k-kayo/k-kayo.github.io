@@ -40,7 +40,7 @@ ul {
   border-radius: 6px;
   position: relative;
   z-index: 100;
-  // 先生の見本
+  // 👇先生の見本
   // .btn {
   // position: relative;
   //   display: inline-block;
@@ -130,7 +130,7 @@ ul {
   background: rgba(255, 255, 255, 0.9);
   text-align: center;
   backdrop-filter: blur(4px);
-  // 👆  ぼやけた感じになる
+  // 👆  ぼやけた感じになるフィルター
 
 
   li {
@@ -146,9 +146,8 @@ ul {
 
   .header-nav-checkbox:checked~& {
     transform: translateX(0);
-    // opacity: 1;
+    // opacity: 1; // 👈 先生の解説
     // z-index: 1;
-
   }
 }
 
@@ -216,11 +215,8 @@ ul {
   display: none;
 }
 
-// /ハンバーガーボタン ここまで //
-
-
-//-------------------- メイン --------------------//
-// メインビジュアル 自作
+//-------------------- main --------------------//
+// メインビジュアル
 .mv-area {
   position: relative;
   left: 0;
@@ -587,7 +583,7 @@ article {
 
   // ヘッダー//
   .header-nav {
-    // position: relative; 👈先生
+    // position: relative; // 👈 先生の解説
 
     // ハンバーガーボタン
     &-toggle {
@@ -599,9 +595,7 @@ article {
       background-color: transparent;
 
       // 👇下からは先生の解説
-      backdrop-filter: blur(0px); // 👈追加 先生の解説見て
-
-      // 👇下からは先生の解説
+      backdrop-filter: blur(0px);
       // position: absolute;
 
       &_nav ul {
@@ -637,8 +631,8 @@ article {
     // z-index: 1;
     // bottom: 25%;
     // left: 0;
-    h1 {
 
+    h1 {
       right: 40%;
 
       img {
@@ -648,7 +642,7 @@ article {
   }
 
 
-  // ---------------- main ------------------ //
+  // ---------------- main/PC ------------------ //
   // イントロダクション//
   .introduction {
 
@@ -666,7 +660,6 @@ article {
         position: relative;
         right: -10%;
         margin-left: auto;
-
 
         h2 {
           font-size: 2.6rem;
@@ -725,8 +718,6 @@ article {
       left: 9%;
     }
   }
-
-  // info-お知らせ ここまで//
 
   // 今月のお花教室 //
   #event {
@@ -823,7 +814,6 @@ article {
         //  Googleマップ//
         .btn {
           width: 200px;
-          // padding: 3px;
 
           a {
             font-size: 1.4rem;
