@@ -220,7 +220,7 @@ ul {
 
 
 //-------------------- メイン --------------------//
-// メインビジュアル
+// メインビジュアル 自作
 .mv-area {
   position: relative;
   left: 0;
@@ -229,13 +229,18 @@ ul {
   border-bottom-left-radius: var(--radius);
   overflow: hidden;
 
-  &_photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    height: 84vh;
-  }
+  &_photo {
+    margin: 0 -30px;
+    // 👇下からは先生の解説 ／薄暗いフィルター
+    filter: brightness(70%);
 
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      height: 85vh;
+    }
+  }
 
   h1 {
     position: absolute;
@@ -512,6 +517,7 @@ article {
     // 電話アイコン//
     .material-symbols-outlined {
       vertical-align: text-bottom;
+      cursor: pointer;
     }
 
     iframe {
@@ -581,6 +587,7 @@ article {
 
   // ヘッダー//
   .header-nav {
+    // position: relative; 👈先生
 
     // ハンバーガーボタン
     &-toggle {
@@ -590,7 +597,12 @@ article {
     &_container {
       transform: translateX(0) !important;
       background-color: transparent;
+
+      // 👇下からは先生の解説
       backdrop-filter: blur(0px); // 👈追加 先生の解説見て
+
+      // 👇下からは先生の解説
+      // position: absolute;
 
       &_nav ul {
         width: 400px;
@@ -620,6 +632,11 @@ article {
   .mv-area {
     position: relative;
 
+    // 👇下からは先生の解説
+    // position: absolute;
+    // z-index: 1;
+    // bottom: 25%;
+    // left: 0;
     h1 {
 
       right: 40%;

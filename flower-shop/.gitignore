@@ -2,3 +2,4 @@
 .DS_Store
 aos/**
 slick/**
+slick/jquery/**
