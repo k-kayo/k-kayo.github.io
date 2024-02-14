@@ -239,6 +239,10 @@ ul {
     height: 100%;
     object-fit: cover;
     height: 84vh;
+    // 👇先生の解説
+    // height: 85dvh;　👈こちらだとアドレスバーが隠れたら画像が大きくなってしまう
+    height: 85svh; // 👈こっちがいいかもと。（アドレスバーが含まれない高さ）
+
   }
 
 
@@ -553,10 +557,17 @@ iframe {
     width: 13%;
     margin-left: auto;
     transform: translate(-15px, -35px);
+    // 👇先生の解説/aタグの左側もａタグの適用範囲になるためmargin-left: autoではない方法で
+    // display: flex;
+    // justify-content: flex-end;
+    // margin-bottom: 50px;
   }
 
   &-logo {
     width: 40%;
+    // 👇先生の解説/ing要素に
+    // margin-left: auto;
+    // margin-right: auto;
   }
 
   small {
@@ -566,7 +577,6 @@ iframe {
   }
 }
 
-// フッター ここまで//
 
 //----------------- ここから  PC 600px～ /-------------------------//
 @include mq {

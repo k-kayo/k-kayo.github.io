@@ -4,3 +4,30 @@
     @content;
   }
 }
+
+/*ミックスインを定義*/
+// @mixin box001 {
+//   padding: 20px;
+//   margin-top: 30px;
+//   background-color: #ededed;
+// }
+
+// /*定義したミックスインを呼び出し*/
+// .sample-box {
+//   @include box001;
+// }
+
+
+/*引数を使ったミックスインの定義*/
+// @mixin box002($value) {
+//   border: solid 2px #666;
+//   border-radius: $value;
+// }
+
+// .sample-box {
+//   @include box002(10px);
+// }
+
+// .test-box {
+//   @include box002(7px 5px);
+// }
