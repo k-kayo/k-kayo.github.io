@@ -1,0 +1,640 @@
+@use "./mixins" as *;
+
+// 共通設定
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  line-height: 2;
+  font-family: "Shippori Mincho", serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--secondary);
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// 共通パーツ
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  &__head {
+    width: 250px;
+    padding-bottom: 8px;
+    position: relative;
+    text-align: center;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 7px;
+
+      --size: 2px;
+      background: repeating-linear-gradient(
+        -45deg,
+        #ffffff 0,
+        #ffffff var(--size),
+        var(--secondary) var(--size),
+        var(--secondary) calc(var(--size) * 2)
+      );
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1rem;
+  line-height: 1;
+  transition: 0.3s;
+  min-width: 200px;
+  text-align: center;
+
+  &-primary {
+    background-color: var(--primary);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--secondary);
+      color: #fff;
+    }
+  }
+
+  &-primary-line {
+    border: 1px solid #333;
+    color: var(--primary);
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+}
+
+.bg-inbetween {
+  height: 55vh;
+  position: relative;
+
+  &__inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    clip-path: inset(0 0 0 0);
+  }
+
+  img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+}
+
+// ヘッダー
+.global-nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(#fff, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // display: none;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+
+  ul {
+    li {
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+
+      a {
+        display: block;
+        width: 240px;
+        padding-bottom: 8px;
+        text-align: center;
+        position: relative;
+        color: var(--text);
+        font-size: 1.5rem;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 7px;
+
+          --size: 2px;
+          background: repeating-linear-gradient(
+            -45deg,
+            #ffffff 0,
+            #ffffff var(--size),
+            var(--secondary) var(--size),
+            var(--secondary) calc(var(--size) * 2)
+          );
+        }
+      }
+    }
+  }
+
+  // チェックボックス
+  &-toggler {
+    display: none;
+  }
+
+  // ボタン
+  &-btn {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+
+    span {
+      text-indent: 100%;
+      white-space: nowrap;
+      display: block;
+      overflow: hidden;
+      height: 2px;
+      width: 100%;
+      background-color: #ccc;
+      transition: opacity 0.3s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: #ccc;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      transition: transform 0.3s;
+    }
+
+    &::before {
+      transform: translateY(calc(-50% - 10px));
+    }
+    &::after {
+      transform: translateY(calc(-50% + 10px));
+    }
+  }
+
+  &-toggler:checked ~ & {
+    // display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  &-toggler:checked ~ &-btn span {
+    opacity: 0;
+  }
+  &-toggler:checked ~ &-btn::before {
+    transform: translateY(-50%) rotate(45deg);
+    background-color: var(--text);
+  }
+  &-toggler:checked ~ &-btn::after {
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: var(--text);
+  }
+
+  // PC =====
+  @include mq {
+    // グローバルナビゲーション
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    opacity: 1;
+    z-index: 2;
+    backdrop-filter: blur(0px);
+    background-color: transparent;
+    display: block;
+    padding: 1rem 0;
+
+    ul {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        &:not(:first-child) {
+          margin-top: 0;
+          margin-left: 4rem;
+        }
+
+        a {
+          font-size: 1rem;
+          width: auto;
+          padding-bottom: 0;
+          color: var(--primary);
+          text-shadow: 0 0 5px #ccc;
+
+          &::after {
+            content: none;
+          }
+        }
+      }
+    }
+
+    // ボタン
+    &-btn {
+      display: none;
+    }
+  }
+} //.global-nav
+
+.mv {
+  // height: 85vh;
+  // height: 85dvh;
+  height: 85svh;
+
+  // slick
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
+
+  &__panel {
+    // border-bottom-right-radius: 50% 30px;
+    // border-bottom-left-radius: 50% 30px;
+    // overflow: hidden;
+    height: 100%;
+    position: relative;
+    filter: brightness(70%);
+
+    img {
+      clip-path: inset(0 0 15px 0);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      // object-position: center center;
+    }
+
+    &::after {
+      content: "";
+      background: var(--image) no-repeat center center;
+      background-size: cover;
+      mask-image: url(../img/curve.svg);
+      mask-repeat: no-repeat;
+      mask-position: center bottom;
+      mask-size: 100% calc(15px + 0.08%);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.site-header {
+  position: relative;
+}
+
+.site-logo {
+  position: absolute;
+  z-index: 1;
+  bottom: 25%;
+  left: 0;
+
+  p {
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  color: #fff;
+  font-size: 0.8rem;
+  z-index: 1;
+  animation: scroll-indicator 1s infinite;
+
+  &::before {
+    content: "";
+    height: 1px;
+    width: 110%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: -10%;
+    background: #fff;
+    transform: rotate(30deg);
+    transform-origin: right bottom;
+  }
+}
+
+@keyframes scroll-indicator {
+  0%,
+  100% {
+    transform: translateY(0) translateX(-50%) rotate(90deg);
+  }
+  50% {
+    transform: translateY(15px) translateX(-50%) rotate(90deg);
+  }
+}
+
+// イントロダクション
+.introduction {
+  margin-top: 100px;
+  padding-bottom: 50px;
+
+  &__head {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 50px;
+  }
+
+  &__img {
+    img {
+      width: 50%;
+      margin-left: auto;
+    }
+  }
+
+  // PC =====
+  @include mq {
+    &__container {
+      display: flex;
+    }
+
+    &__text {
+      flex-basis: 65%;
+      flex-shrink: 0;
+    }
+
+    &__lead {
+      max-width: 25rem;
+    }
+
+    &__img {
+      img {
+        width: auto;
+        margin-left: 0;
+      }
+    }
+  }
+} //.introduction
+
+// ニュース
+.news {
+  &__list {
+    overflow: hidden;
+
+    li {
+      &:not(:first-child) {
+        margin-top: 50px;
+      }
+
+      a {
+        background: #333;
+        text-align: center;
+        display: block;
+      }
+
+      a img {
+        transition: 0.3s;
+      }
+
+      a:hover img {
+        filter: brightness(90%);
+      }
+    }
+  }
+
+  &__img {
+    margin-top: 50px;
+
+    img {
+      width: 50%;
+      margin-right: auto;
+    }
+  }
+
+  // PC =====
+  @include mq {
+    &__list {
+      display: flex;
+      gap: 5%;
+      // justify-content: space-between;
+
+      li {
+        flex-basis: 33.333%;
+        // flex-basis: 30%;
+
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+    } //list
+
+    &__img {
+      img {
+        width: 30%;
+        translate: -20% 0;
+      }
+    }
+  }
+} //.news
+
+// イベント（今月のお花教室）
+.event {
+  &__container {
+    > div:first-child {
+      margin-bottom: 60px;
+    }
+  }
+
+  &-article {
+    &__img {
+      margin-bottom: 2rem;
+    }
+
+    &__head {
+      font-weight: normal;
+      border-bottom: 1px dotted var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    &__text {
+      max-width: 400px;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__btn-area {
+    text-align: center;
+  }
+
+  // PC =====
+  @include mq {
+    &__container {
+      display: flex;
+      // justify-content: space-between;
+      gap: 10%;
+
+      > div {
+        // width: 45%;
+        flex-basis: 50%;
+      }
+    }
+
+    &-article {
+      &__img {
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+} //.event
+
+// 店舗情報
+.access {
+  &__container {
+    > div:first-child {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__shopinfo {
+    dd {
+      font-size: 1.125rem;
+      border-bottom: 1px dotted var(--primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__map {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+  }
+
+  &__contact {
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  // PC =====
+  @include mq {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > div:first-child {
+        width: 40%;
+      }
+
+      > div:nth-child(2) {
+        width: 300px;
+      }
+    }
+  }
+}
+
+// フッター
+.site-footer {
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  .pagetop {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  &__logo {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .copyright {
+    display: block;
+    text-align: center;
+  }
+}
