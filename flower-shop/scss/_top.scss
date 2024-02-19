@@ -98,7 +98,7 @@ ul {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: -1;
   width: 100%;
   height: 100%;
   display: flex;
@@ -108,7 +108,7 @@ ul {
 
 // ナビ/コンテナ
 .header-nav_container {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%;
   top: 0;
@@ -239,10 +239,7 @@ ul {
     height: 100%;
     object-fit: cover;
     height: 84vh;
-    // 👇先生の解説
-    // height: 85dvh;　👈こちらだとアドレスバーが隠れたら画像が大きくなってしまう
-    // height: 85svh;    // 👈こっちがいいかもと。（アドレスバーが含まれない高さ）
-
+    // height: 85svh;
   }
 
 
@@ -256,7 +253,7 @@ ul {
 
   }
 
-  /*スクロールダウン*/
+  /*スクロールダウン（矢印）*/
   .scrolldown1 {
     position: absolute;
     left: 50%;
@@ -307,21 +304,24 @@ ul {
   }
 }
 
-// メインビジュアル ここまで
 
 //--- イントロダクション（私たちは～） ---//
 .introduction-inner {
-  display: flex;
-  flex-direction: column;
-  padding: 0 15px;
+  // display: flex;
+  // flex-direction: column;
+  // padding: 0 15px;
+  margin-top: 100px;
+  padding-bottom: 50px;
 
   &_container {
+    padding: 20px;
 
     h2 {
-      margin-top: 100px;
+      // margin-top: 100px;
       font-weight: 400;
       line-height: 3rem;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+      margin-bottom: 50px;
     }
 
     p {
@@ -334,14 +334,16 @@ ul {
   }
 
   &_content {
-    max-width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-left: 250px;
+    // max-width: 100%;
+    // display: flex;
+    // justify-content: end;
+    // align-items: center;
+    // margin-left: 250px;
 
     img {
-      margin-bottom: 40px;
+      // margin-bottom: 40px;
+      width: 50%;
+      margin-left: auto;
     }
   }
 }
@@ -351,13 +353,6 @@ ul {
   height: 55vh;
   clip-path: inset(0);
   margin-bottom: 90px;
-  // 👇先生の解説
-  // position: absolute;
-  // width: 100%;
-  // height: 100%;
-  // top: 0;
-  // left: 0;
-  // clip-path: inset(0 0 0 0);
 
   img {
     position: fixed;
@@ -369,6 +364,8 @@ ul {
   }
 }
 
+// イントロダクション ここまで
+
 // info-お知らせ//
 .info {
   width: 100%;
@@ -376,22 +373,10 @@ ul {
 }
 
 .info-list {
-  // 👇 先生の解説
-  // display: flex; 👈先生の設定
-  // gap: 5%; 👈先生の設定
-  // display：gridを使ってgapで要素同士の間隔を開けて上げるのも良い。flex-shrinkを0で設定していればgapを設定していても縮まず間隔は開かない）
-  // justify-content: space-between; 👈flex-basis: 30%;を指定すること方法ならこっち.但し、お知らせ（NEWSなど）の要素が６つであれば、二行目の間隔が左右開いてしまう
 
   &_items {
     padding: 0 20px;
     margin: 50px 0;
-    // flex-basis: 33.333%; 👈先生の設定
-    // flex-basis: 30%; 👈先生の解説
-
-    // 👇 先生の解説
-    // &:not(:first-child) {
-    //   margin-top: 0;
-    // }
 
     &:last-child {
       margin-right: auto;
@@ -407,20 +392,14 @@ ul {
       padding-bottom: 10px;
       text-decoration: none;
 
-      img {
-        transition: 03s;
-      }
-
-      &:hover img {
-        filter: brightness(90%);
-      }
-
       span {
         vertical-align: middle;
       }
     }
   }
 }
+
+// info-お知らせ ここまで//
 
 //---- 今月のお花教室 -----//
 article {
@@ -542,6 +521,7 @@ iframe {
   margin: 30px 0 90px;
 }
 
+// 店舗情報 ここまで//
 
 
 //---------- フッター ------------//
@@ -556,17 +536,10 @@ iframe {
     width: 13%;
     margin-left: auto;
     transform: translate(-15px, -35px);
-    // 👇先生の解説/aタグの左側もａタグの適用範囲になるためmargin-left: autoではない方法で
-    // display: flex;
-    // justify-content: flex-end;
-    // margin-bottom: 50px;
   }
 
   &-logo {
     width: 40%;
-    // 👇先生の解説/ing要素に
-    // margin-left: auto;
-    // margin-right: auto;
   }
 
   small {
@@ -576,6 +549,7 @@ iframe {
   }
 }
 
+// フッター ここまで//
 
 //----------------- ここから  PC 600px～ /-------------------------//
 @include mq {
@@ -587,7 +561,7 @@ iframe {
     width: 300px;
 
     &::after {
-      content: '';
+      // content: '';
       height: 10px;
       background: repeating-linear-gradient(-45deg, rgb(100, 164, 100), rgb(70, 169, 70) 2px, white 4px, white 6px);
     }
@@ -631,6 +605,9 @@ iframe {
   }
 
 
+  // ヘッダー ここまで//
+
+
   // ---------------- main ------------------ //
   // イントロダクション//
   .introduction {
@@ -642,13 +619,13 @@ iframe {
       width: 100%;
 
       &_container {
-        flex-basis: 60%;
+        flex-basis: 55%;
         flex-direction: column;
         display: flex;
         align-items: center;
         position: relative;
         top: 0;
-        left: 6%;
+        left: 10%;
 
         h2 {
           font-size: 2.6rem;
@@ -668,16 +645,15 @@ iframe {
 
       &_content {
         justify-content: start;
-        flex-basis: 40%;
-        position: absolute;
-        right: 20%;
+        flex-basis: 45%;
 
         img {
-          width: 80%;
+          width: 70%;
         }
       }
     }
   }
+
 
 
   // info-お知らせ ここまで//
@@ -810,6 +786,7 @@ iframe {
     }
   }
 
+  // 店舗情報 ここまで//
 
   // フッター//
   .footer {
@@ -829,4 +806,5 @@ iframe {
     }
   }
 
+  // フッター ここまで//
 }
