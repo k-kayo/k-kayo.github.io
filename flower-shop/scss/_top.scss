@@ -578,6 +578,7 @@ iframe {
     &_container {
       transform: translateX(0) !important;
       background-color: transparent;
+      z-index: -1;
 
       &_nav ul {
         width: 400px;
