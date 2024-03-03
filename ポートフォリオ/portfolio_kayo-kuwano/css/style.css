@@ -1,5 +1,8 @@
 body {
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  /* font-family: "Montserrat", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; */
+  font-family: "Shippori Mincho", serif;
+
+
   font-size: 15px;
   letter-spacing: .05em;
   color: #333;
@@ -40,7 +43,7 @@ img {
 }
 
 .section:nth-of-type(odd) {
-  background-color: #f7f7f7;
+  background-color: #fffdec;
 }
 
 .container {
@@ -76,9 +79,12 @@ img {
   top: 0;
   z-index: 1;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+  background-color: #fdeff2;
+  box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .1);
+  -webkit-backdrop-filter: brightness(50%);
+  backdrop-filter: brightness(50%);
 }
+
 
 .header .container {
   display: flex;
@@ -88,7 +94,7 @@ img {
 }
 
 .header-logo {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
   line-height: 1.2;
   margin-right: 20px;
@@ -111,7 +117,7 @@ img {
 
 .gnav-item a {
   position: relative;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: bold;
   display: inline-block;
   padding: 5px 0;
@@ -119,6 +125,7 @@ img {
   letter-spacing: .05em;
   color: #333;
 }
+
 .gnav-item a:after {
   position: absolute;
   bottom: 0;
@@ -145,6 +152,7 @@ img {
   justify-content: center;
   height: 85vh;
   text-align: center;
+  background: url();
 }
 
 .mv-container {
@@ -152,12 +160,13 @@ img {
 }
 
 .mv-title {
-  font-size: 60px;
+  font-size: 64px;
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 5px;
   letter-spacing: .1em;
 }
+
 .mv-subtitle {
   font-size: 20px;
   font-weight: bold;
@@ -167,7 +176,7 @@ img {
 }
 
 .mv-text {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.8;
 }
 
@@ -197,6 +206,7 @@ img {
 
 .works-img img {
   border: 1px solid #e6e6e6;
+
 }
 
 .works-name {
@@ -250,20 +260,27 @@ img {
 /*--------------------------------
  About
 ---------------------------------*/
+.about {
+  background: url(/img/tesukiwashi-pattern-08.jpg);
+}
+
 .profile {
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
   margin: 0 auto;
 }
+
 .profile-img {
   width: 20%;
   margin-right: 30px;
   border-radius: 50%;
 }
+
 .profile-img img {
   border-radius: 50%;
 }
+
 .profile-body {
   flex: 1;
 }
@@ -291,6 +308,7 @@ img {
 .contact-text {
   margin-top: 10px;
 }
+
 /*--------------------------------
  ページトップ
 ---------------------------------*/
@@ -299,7 +317,7 @@ img {
   padding: 10px;
   cursor: pointer;
   text-align: center;
-  background-color: #4c4c4c;
+  background-color: #fffdec;
 }
 
 .page-top .material-icons-outlined {
@@ -312,7 +330,7 @@ img {
 ---------------------------------*/
 .footer {
   padding: 30px;
-  background-color: #333;
+  background-color: #e7fbe7;
 }
 
 .copyright {
@@ -451,6 +469,7 @@ img {
   .mv-title {
     font-size: 30px;
   }
+
   .mv-subtitle {
     font-size: 16px;
     margin-bottom: 20px;
@@ -508,6 +527,7 @@ img {
   .profile {
     display: block;
   }
+
   .profile-img {
     width: 150px;
     margin: 0 auto;
