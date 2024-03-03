@@ -1,0 +1,535 @@
+@charset "UTF-8";
+:root {
+  --primary: #f9aa8f;
+  --secondary: #91bc6f;
+  --text: #333;
+  --accent: #1ca9e3
+  --bg-color: #f7f7f7;
+}
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: #333;
+}
+
+a {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-style: none;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+/*--------------------------------
+ レイアウト
+---------------------------------*/
+.wrapper {
+  padding-top: 73px;
+}
+
+.section {
+  padding: 90px 0;
+}
+.section:nth-of-type(odd) {
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/*--------------------------------
+ 見出し
+---------------------------------*/
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.lead {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/*--------------------------------
+ヘッダー
+---------------------------------*/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.1);
+}
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 40px;
+}
+.header .container h1 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-right: 20px;
+  letter-spacing: 0.05em;
+}
+.header .container h1 a {
+  color: #333;
+}
+
+.gnav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+.gnav-list .gnav-item:not(:last-child) {
+  margin-right: 20px;
+}
+.gnav-list a {
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  letter-spacing: 0.05em;
+  color: #333;
+}
+.gnav-list a_::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  content: "";
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333;
+}
+.gnav-list a:hover::after {
+  width: 100%;
+}
+
+/*--------------------------------
+ メインビジュアル
+---------------------------------*/
+.mv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 85vh;
+  text-align: center;
+}
+.mv-container {
+  padding: 0 40px;
+}
+.mv-container .mv-title {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  letter-spacing: 0.1em;
+}
+.mv-container .mv-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  letter-spacing: 0.08em;
+}
+.mv-container .mv-text {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/*--------------------------------
+ Works
+---------------------------------*/
+.works-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: -40px;
+}
+.works-list .works-item {
+  width: 31.74603%;
+  margin-right: 1.5873%;
+  margin-bottom: 40px;
+  color: #333;
+}
+.works-list .works-item:hover {
+  opacity: 0.9;
+}
+.works-list .works-item:nth-of-type(3n) {
+  margin-right: 0;
+}
+.works-list .works-item .works-img img {
+  border: 1px solid #e6e6e6;
+}
+.works-list .works-item .works-name {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+.works-list .works-item .works-info {
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+/*--------------------------------
+ Skill
+---------------------------------*/
+.skill-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: -50px;
+}
+.skill-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 48%;
+  margin-bottom: 50px;
+}
+.skill-img {
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+}
+.skill-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.skill* name {
+  margin-bottom: 10px;
+}
+.skill-text {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/*--------------------------------
+ About
+---------------------------------*/
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.profile-img {
+  width: 20%;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+.profile-img img {
+  border-radius: 50%;
+}
+.profile-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.profile-body p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.profile-body p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/*--------------------------------
+ Contact
+---------------------------------*/
+.contact {
+  text-align: center;
+}
+.contact-item:not:last-child {
+  margin-right: 10px;
+}
+.contact-text {
+  margin-top: 10px;
+}
+
+/*--------------------------------
+ ページトップ
+---------------------------------*/
+.page-top {
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #4c4c4c;
+}
+.page-top .material-icons-outlined {
+  vertical-align: bottom;
+  color: #fff;
+}
+
+/*--------------------------------
+ フッター
+---------------------------------*/
+.footer {
+  padding: 30px;
+  background-color: #333;
+}
+.footer .copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+/*--------------------------------
+ 下層：Worksページ
+---------------------------------*/
+.article {
+  padding: 80px 0;
+}
+.article-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.article-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.article-body {
+  max-width: 720px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.article-body h3 {
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 5px;
+  padding-left: 1em;
+}
+.article-body h3:not(:first-child) {
+  margin-top: 50px;
+}
+.article-body h3::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  content: "";
+  border-radius: 3px;
+  background-color: #333;
+}
+.article-body p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.article .home-link {
+  text-align: center;
+}
+
+/*media Queries 767
+----------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+    /* 見出し */
+    /* レイアウト */
+    /* ヘッダー */
+    /*  メインビジュアル */
+    /* Works */
+  }
+  body .pc-only {
+    display: none;
+  }
+  body .sp-only {
+    display: block;
+  }
+  body .title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  body .lead {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  body .wrapper {
+    padding-top: 57px;
+  }
+  body .section {
+    padding: 60px 0;
+  }
+  body .container {
+    padding: 0 20px;
+  }
+  body .container {
+    padding: 15px;
+  }
+  body .container .header-logo {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+  body .container .gnav-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  body .container .gnav-item:not(:last-child) a {
+    font-size: 10px;
+  }
+  body .container .gnav-item:not(:last-child)::after {
+    display: none;
+  }
+  body .mv {
+    height: 75vh;
+  }
+  body .mv-container {
+    padding: 0 20px;
+  }
+  body .mv-container-title {
+    font-size: 30px;
+  }
+  body .mv-container-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  body .mv-container-text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  body .works-list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    /* Skill */
+    /* About */
+    /* フッター */
+    /* 下層ページ */
+  }
+  body .works-list .works-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  body .works-list .works-item .works-name {
+    font-size: 12px;
+  }
+  body .works-list .works-item .works-info {
+    margin-top: 3px;
+  }
+  body .works-list .skill-list {
+    display: block;
+    margin-bottom: 0;
+  }
+  body .works-list .skill-item {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  body .works-list .skill-item:last-child {
+    margin-bottom: 0;
+  }
+  body .works-list .skill-name {
+    margin-bottom: 5px;
+  }
+  body .works-list .skill-text {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  body .works-list .profile {
+    display: block;
+  }
+  body .works-list .profile-img {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  body .works-list .profile-body p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  body .works-list .profile-body p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  body .works-list .footer {
+    padding: 20px;
+  }
+  body .works-list .article {
+    padding: 50px 0;
+  }
+  body .works-list .article-body h3 {
+    font-size: 16px;
+    padding-left: 0.8em;
+  }
+  body .works-list .article-body h3:not(:first-child) {
+    margin-top: 30px;
+  }
+  body .works-list .article-body p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
