@@ -227,8 +227,15 @@ img {
 }
 
 .works-img {
-  max-height: 300px;
-  overflow: scroll;
+  height: 182px;
+  overflow: hidden;
+}
+
+@media (min-width: 1080px) {
+  .works-img {
+    width: 400px;
+    height: 300px;
+  }
 }
 
 .works-img img {
@@ -510,15 +517,6 @@ img {
   }
 
   /* Works */
-  .works-name {
-    font-size: 14px;
-  }
-
-  .works-info {
-    margin-top: 3px;
-
-  }
-
   .works-list {
     justify-content: space-between;
   }
@@ -527,14 +525,28 @@ img {
     flex: 0 0 48%;
     margin-right: 0;
     margin-bottom: 30px;
-    /* height: 300px; */
+    /* max-height: 164px; */
+  }
+
+  .works-img {
+    height: 134px;
   }
 
   .works-img img {
-    width: 400px;
-    height: 300px;
-    /* object-fit: cover; */
-    overflow: hidden;
+    background-color: #fff;
+
+  }
+
+  .works-img_9 {}
+
+
+  .works-name {
+    font-size: 14px;
+  }
+
+  .works-info {
+    margin-top: 3px;
+
   }
 
   /* Skill */
