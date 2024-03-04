@@ -1,11 +1,29 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 24px;
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: calc((100vw - 320px) / 140 + 16px);
+  }
+}
+
+
 body {
-  /* font-family: "Montserrat", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; */
   font-family: "Shippori Mincho", serif;
-
-
-  font-size: 15px;
+  /* font-size: 15px; */
+  font-size: 1rem;
   letter-spacing: .05em;
   color: #333;
+}
+
+ul {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: .9rem;
 }
 
 a {
@@ -152,15 +170,19 @@ img {
   justify-content: center;
   height: 85vh;
   text-align: center;
-  background: url();
+  background-image: url(/img/investment-5241253_1280.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .mv-container {
   padding: 0 40px;
+  color: #fff;
+  margin-bottom: 30px;
 }
 
 .mv-title {
-  font-size: 64px;
+  font-size: 56px;
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 5px;
@@ -168,7 +190,7 @@ img {
 }
 
 .mv-subtitle {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 40px;
@@ -176,7 +198,7 @@ img {
 }
 
 .mv-text {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -204,19 +226,23 @@ img {
   margin-right: 0;
 }
 
+.works-img {
+  max-height: 300px;
+  overflow: scroll;
+}
+
 .works-img img {
   border: 1px solid #e6e6e6;
-
 }
 
 .works-name {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
   margin-top: 8px;
 }
 
 .works-info {
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 5px;
 }
 
@@ -458,35 +484,39 @@ img {
   }
 
   /*  メインビジュアル */
+
   .mv {
-    height: 75vh;
+    background-size: cover;
+    background-position: left bottom;
   }
 
   .mv-container {
     padding: 0 20px;
+    margin-bottom: 350px;
   }
 
   .mv-title {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .mv-subtitle {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 20px;
   }
 
   .mv-text {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.7;
   }
 
   /* Works */
   .works-name {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .works-info {
     margin-top: 3px;
+
   }
 
   .works-list {
@@ -497,6 +527,14 @@ img {
     flex: 0 0 48%;
     margin-right: 0;
     margin-bottom: 30px;
+    /* height: 300px; */
+  }
+
+  .works-img img {
+    width: 400px;
+    height: 300px;
+    /* object-fit: cover; */
+    overflow: hidden;
   }
 
   /* Skill */
