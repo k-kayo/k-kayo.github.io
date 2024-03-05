@@ -87,43 +87,6 @@ img {
   margin-bottom: 30px;
 }
 
-
-/*--------------------------------
-jQuery・lazyloaded
----------------------------------*/
-/* lazyloaded */
-.works-image.fadein.lazyloaded {
-  opacity: 1;
-}
-
-/*--------------------------------
-モーダル
----------------------------------*/
-/*全て共通：hideエリアをはじめは非表示*/
-.hide-area {
-  display: none;
-}
-
-/*全て共通：モーダルのボタンの色を変更したい場合*/
-.modaal-close:after,
-.modaal-close:before {
-  background: #ccc;
-}
-
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before {
-  background: #666;
-}
-
-/*確認を促すモーダル：タイトルの色を変更したい場合*/
-#modaal-title {
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 0 0 20px 0;
-}
-
 /*--------------------------------
 ヘッダー
 ---------------------------------*/
@@ -248,7 +211,7 @@ jQuery・lazyloaded
 
 .works-item {
   width: 31.74603%;
-  margin-right: 1.5%;
+  margin-right: 1.58730%;
   margin-bottom: 40px;
   color: #333;
 }
@@ -262,18 +225,17 @@ jQuery・lazyloaded
 }
 
 .works-img {
-  height: 182px;
-  overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
   border-radius: 5px;
 }
 
-.works-img {
-  background-color: #f2f2f2;
-  width: 400px;
-  height: 300px;
-  overflow: hidden;
+.works-img img {
+  object-fit: cover;
+  aspect-ratio: 6 / 4;
+  object-position: top;
+
 }
+
 
 .works-name {
   font-size: 16px;
@@ -286,6 +248,46 @@ jQuery・lazyloaded
   margin-top: 5px;
 }
 
+/*--------------------------------
+jQuery・lazyloaded
+---------------------------------*/
+.box-fadein img {
+  opacity: 0;
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s;
+}
+
+.box-fadein.lazyloaded img.lazyloaded {
+  opacity: 1;
+}
+
+/*--------------------------------
+モーダル
+---------------------------------*/
+/*全て共通：hideエリアをはじめは非表示*/
+.hide-area {
+  display: none;
+}
+
+/*全て共通：モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ccc;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+/*確認を促すモーダル：タイトルの色を変更したい場合*/
+/* #modaal-title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 0 20px 0;
+} */
 
 /*--------------------------------
  Skill
@@ -462,7 +464,8 @@ jQuery・lazyloaded
   text-align: center;
 }
 
-/*media Queries 767
+/* ----------------------------------------------------
+  media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {
   body {
@@ -559,16 +562,17 @@ jQuery・lazyloaded
     flex: 0 0 48%;
     margin-right: 0;
     margin-bottom: 30px;
-    /* max-height: 164px; */
   }
 
   .works-img {
-    height: 134px;
+    /* max-width: 348px; */
+    /* max-height: 132px; */
+    /* width: 100%; */
   }
 
   .works-img img {
-    background-color: #fff;
-
+    /* background-color: #fff; */
+    /* object-fit: cover; */
   }
 
   .works-name {
@@ -629,16 +633,16 @@ jQuery・lazyloaded
     padding: 20px;
   }
 
-  .article-sp {
+  /* .article-sp {
     width: 50%;
     display: flex;
     margin: 0 auto;
   }
-
+ */
   .works-sp {
-    width: 60%;
-    display: flex;
-    margin: 0 auto;
+    /* width: 60%; */
+    /* display: flex;
+    margin: 0 auto; */
   }
 
 }

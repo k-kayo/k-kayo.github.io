@@ -29,7 +29,6 @@ $(".confirm").modaal({
   confirm_content: 'ログインが必要です。この画面はボタンを押さなければ閉じません。',//確認画面の内容
 });
 
-
 //3. 画像のモーダル
 $(".gallery").modaal({
 	type: 'image',

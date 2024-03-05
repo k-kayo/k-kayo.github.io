@@ -17,13 +17,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-  <!-- スタイルシート -->
+
+  <!-- リセットcss -->
   <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
 
   <!-- モーダルCSS -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
 
-  <!-- スタイルシート -->
+  <!-- スタイルcss -->
   <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
 
   <!-- 自作ロゴ -->
@@ -40,7 +41,6 @@
 
 <body>
   <div class="wrapper">
-
     <!-- header -->
     <header class="header ">
       <div class="container">
@@ -75,77 +75,98 @@
       <!-- /mv -->
 
       <!-- works -->
-      <section class="works section" id="works-1">
+      <section class="works section">
         <div class="container">
           <h2 class="title">WORKS</h2>
-          <div class="works-list gallery-list">
+          <div class="works-list gallery-list box-fadein lazyload">
             <a class="works-item" href="works-template.html">
-              <div class="works-img"><img src="img/works/Vessi-PC.jpg" alt="" /></div>
+              <div class="works-img" data-expand="-20">
+                <img data-src="img/works/Vessi-PC.jpg" alt="" class="works-image lazyloaded"
+                  src="img/works/Vessi-PC.jpg" />
+              </div>
               <p class="works-name">リニューアルサイト（架空）</p>
               <p class="works-info">Design (pc) / Figma</p>
             </a>
             <a class="works-item gallery" data-group="gallery" href="img/works/Vissiーsp.jpg">
-              <div class="works-img"><img src="img/works/Vissiーsp.jpg" alt="" class="works-sp" />
+              <div class="works-img box-fadein lazyload" data-expand="-20">
+                <img data-src="img/works/Vissiーsp.jpg" alt="" class="works-image lazyloaded works-sp"
+                  src="img/works/Vissiーsp.jpg" />
               </div>
               <p class="works-name">リニューアルサイト（架空）</p>
               <p class="works-info">Design (sp) / Figma</p>
             </a>
             <!------- バナー -------->
             <a class="works-item gallery" data-group="gallery" href="img/works/toeic-1_1.jpg">
-              <div class="works-img" data-expand="-20"><img src="img/works/toeic-1_1.jpg" alt="" />
+              <div class="works-img box-fadein lazyload" data-expand="-20">
+                <img data-src="img/works/toeic-1_1.jpg" alt="" class="works-image lazyloaded"
+                  src="img/works/toeic-1_1.jpg" />
               </div>
               <p class="works-name">オンライン英会話スクール（架空）</p>
               <p class="works-info">Banner Design / Photoshop</p>
             </a>
             <!------- バナー /母の日ギフト-------->
             <a class="works-item gallery" data-group="gallery" href="img/works/母の日花ギフト-バナー制作/Mothers　Day-2.jpg">
-              <div class="works-img" data-expand="-20"><img class="works-image fadein lazyloaded" alt=""
-                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-2.jpg" /></div>
+              <div class="works-img box-fadein lazyload" data-expand="-20">
+                <img data-src="img/works/母の日花ギフト-バナー制作/Mothers　Day-2.jpg" class="works-image lazyloaded" alt=""
+                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-2.jpg" />
+              </div>
               <p class="works-name">母の日花ギフト1（架空）</p>
               <p class="works-info">Banner Design / Photoshop</p>
             </a>
             <a class="works-item gallery" data-group="gallery" href="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_1.jpg">
-              <div class="works-img" data-expand="-20"><img class="works-image fadein lazyloaded" alt=""
-                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_1.jpg" /></div>
+              <div class="works-img box-fadein lazyload" data-expand="-20">
+                <img data-src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_1.jpg" alt="" class="works-image lazyloaded"
+                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_1.jpg" />
+              </div>
               <p class="works-name">母の日花ギフト2（架空）</p>
               <p class="works-info">Banner Design / Photoshop</p>
             </a>
             <a class="works-item gallery" data-group="gallery" href="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_2.jpg">
-              <div class="works-img" data-expand="-20"><img class="works-image fadein lazyloaded"
-                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_2.jpg" alt="" /></div>
+              <div class="works-img box-fadein lazyload" data-expand="-20">
+                <img data-src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_2.jpg" alt="" class="works-image lazyloaded"
+                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_2.jpg" />
+              </div>
               <p class="works-name">母の日花ギフト3（架空）</p>
               <p class="works-info">Banner Design / Photoshop</p>
             </a>
             <a class="works-item gallery" data-group="gallery" href="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_3.jpg">
-              <div class="works-img" data-expand="-20"><img class="works-image fadein lazyloaded"
-                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_3.jpg" alt="" /></div>
+              <div class="works-img box-fadein lazyload" data-expand="-20">
+                <img data-src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_3.jpg" alt="" class="works-image lazyloaded"
+                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_3.jpg" />
+              </div>
               <p class="works-name">母の日花ギフト4（架空）</p>
               <p class="works-info">Banner Design / Photoshop</p>
             </a>
             <a class="works-item gallery" data-group="gallery" href="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_4.jpg">
-              <div class="works-img" data-expand="-20"><img class="works-image fadein lazyloaded"
-                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_4.jpg" alt="" /></div>
+              <div class="works-img box-fadein lazyload" data-expand="-20">
+                <img data-src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_4.jpg" alt="" class="works-image lazyloaded"
+                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_4.jpg" />
+              </div>
               <p class="works-name">母の日花ギフト5（架空）</p>
               <p class="works-info">Banner Design / Photoshop</p>
             </a>
             <a class="works-item gallery" data-group="gallery" href="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_5.jpg">
-              <div class="works-img" data-expand="-20"><img class="works-image fadein lazyloaded"
-                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_5.jpg" alt="" /></div>
+              <div class="works-img box-fadein lazyload" data-expand="-20">
+                <img data-src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_5.jpg" alt="" class="works-image lazyloaded"
+                  src="img/works/母の日花ギフト-バナー制作/Mothers　Day-1_5.jpg" />
+              </div>
               <p class="works-name">母の日花ギフト6（架空）</p>
               <p class="works-info">Banner Design / Photoshop</p>
             </a>
             <!--------- 架空会社のロゴ -------->
             <a class="works-item gallery" data-group="gallery" href="img/works/logo/Miyukaロゴ.jpg">
-              <div class="works-img" data-expand="-20">
-                <img class="works-image fadein lazyloaded" src="img/works/logo/icon_skill.png" alt="" />
+              <div class="works-img box-fadein lazyload" data-expand="-20">
+                <img data-src="img/works/logo/icon_skill.png" alt="" class="works-image fadein lazyloaded"
+                  src="img/works/logo/icon_skill.png" />
               </div>
               <p class="works-name">架空企業のロゴ</p>
               <p class="works-info">logo Design / Illustrator</p>
             </a>
             <!--------- ショッピングアイコン -------->
             <a class="works-item gallery" data-group="gallery" href="img/works/ショッピングアイコン.png">
-              <div class="works-img" data-expand="-20">
-                <img class="works-image fadein lazyloaded" src="img/works/ショッピングアイコン.png" alt="" />
+              <div class="works-img box-fadein lazyload" data-expand="-20">
+                <img data-src="img/works/ショッピングアイコン.png" alt="" class="works-image lazyloaded"
+                  src="img/works/ショッピングアイコン.png" />
               </div>
               <p class=" works-name">ショッピングアイコン12種類</p>
               <p class="works-info">logo Design / Illustrator</p>
@@ -165,7 +186,7 @@
               <div class="skill-body">
                 <h3 class="skill-name">HTML5/CSS3</h3>
                 <p class="skill-text">
-                  scssでの記述、キーフレームアニメーションやトランジションを使用して、要素の移動、フェードイン/フェードアウト、回転などのアニメーションを制御。ドロワーメニューの作成も可能です。レスポンシブデザインの実装。学んだ期間がPhotoshop同様に長いです。
+                  キーフレームアニメーションやトランジションを使用して、要素の移動、フェードイン/フェードアウト、回転などのアニメーションを制御。ドロワーメニューの作成も可能です。レスポンシブデザインの実装。学んだ期間がPhotoshop同様に長いです。sassでの記述も可能です。
                 </p>
               </div>
             </div>
@@ -272,20 +293,21 @@
     </footer>
     <!-- /footer -->
 
-    <!-------- Script -------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!--  動くアイデア集-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
-    <!--自作のJS-->
-    <script src="js/9-6-3.js"></script>
-
-    <!-- lazysizes -->
-    <script src="lazysizes.min.js" async=""></script>
-    <script type="text/javascript" src="./js/script.js"></script>
   </div>
+
+  <!-------- Script -------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!--  モーダル-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+  <!--自作のJS-->
+  <!-- <script src="js/9-6-3.js"></script> -->
+
+  <!-- lazysizes -->
+  <script src="./js/lazysizes.min.js" async=""></script>
+  <script type="text/javascript" src="./js/script.js"></script>
 </body>
 
 </html>
