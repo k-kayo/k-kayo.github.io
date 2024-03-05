@@ -22,6 +22,10 @@ ul {
   font-size: 1.2rem;
 }
 
+li {
+  list-style: none;
+}
+
 p {
   font-size: .9rem;
 }
@@ -74,7 +78,7 @@ img {
  見出し
 ---------------------------------*/
 .title {
-  font-size: 34px;
+  font-size: 40px;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 40px;
@@ -87,6 +91,43 @@ img {
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 30px;
+}
+
+
+/*--------------------------------
+jQuery・lazyloaded
+---------------------------------*/
+/* lazyloaded */
+.works-image.fadein.lazyloaded {
+  opacity: 1;
+}
+
+/*--------------------------------
+モーダル
+---------------------------------*/
+/*全て共通：hideエリアをはじめは非表示*/
+.hide-area {
+  display: none;
+}
+
+/*全て共通：モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ccc;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+/*確認を促すモーダル：タイトルの色を変更したい場合*/
+#modaal-title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 0 20px 0;
 }
 
 /*--------------------------------
@@ -213,7 +254,7 @@ img {
 
 .works-item {
   width: 31.74603%;
-  margin-right: 1.58730%;
+  margin-right: 1.5%;
   margin-bottom: 40px;
   color: #333;
 }
@@ -229,17 +270,16 @@ img {
 .works-img {
   height: 182px;
   overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+  border-radius: 5px;
 }
 
-@media (min-width: 1080px) {
-  .works-img {
-    width: 400px;
-    height: 300px;
-  }
-}
+.works-img {
+  background-color: #cecece;
 
-.works-img img {
-  border: 1px solid #e6e6e6;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
 }
 
 .works-name {
@@ -252,6 +292,8 @@ img {
   font-size: 14px;
   margin-top: 5px;
 }
+
+
 
 /*--------------------------------
  Skill
@@ -537,9 +579,6 @@ img {
 
   }
 
-  .works-img_9 {}
-
-
   .works-name {
     font-size: 14px;
   }
@@ -609,7 +648,7 @@ img {
   }
 
   .article-body h3:not(:first-child) {
-    margin-top: 30px;
+    margin-top: 120px;
   }
 
   .article-body p {
@@ -617,4 +656,16 @@ img {
     line-height: 1.7;
     margin-bottom: 20px;
   }
+}
+
+.article-sp {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.works-sp {
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
 }
