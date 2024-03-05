@@ -22,10 +22,6 @@ ul {
   font-size: 1.2rem;
 }
 
-li {
-  list-style: none;
-}
-
 p {
   font-size: .9rem;
 }
@@ -42,8 +38,6 @@ img {
   vertical-align: bottom;
   border-style: none;
 }
-
-
 
 .pc-only {
   display: block;
