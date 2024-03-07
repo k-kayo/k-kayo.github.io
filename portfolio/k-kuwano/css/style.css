@@ -448,7 +448,7 @@ jQuery・lazyloaded
 .article-body_pc {
   width: 20%;
   display: flex;
-  margin: 80px auto 200px;
+  margin: 56px auto;
 }
 
 
@@ -677,24 +677,20 @@ jQuery・lazyloaded
     padding: 20px;
   }
 
-}
+  /*---- 下層ページ -----*/
+  .article {
+    padding: 50px 0;
+  }
 
-/*---- 下層ページ -----*/
-.article {
-  padding: 50px 0;
-}
+  .article-body h3 {
+    font-size: 16px;
+    padding-left: .8em;
+  }
 
-.article-body h3 {
-  font-size: 16px;
-  padding-left: .8em;
-}
 
-.article-body h3:not(:first-child) {
-  margin-top: 120px;
-}
-
-.article-body p {
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 20px;
+  .article-body p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
 }
