@@ -96,8 +96,8 @@ img {
   width: 100%;
   box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .1);
   /* すりガラス風 */
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   background: rgba(253, 239, 242, 0.75);
 }
 
@@ -236,7 +236,6 @@ img {
   object-position: top;
 
 }
-
 
 .works-name {
   font-size: 16px;
@@ -451,7 +450,6 @@ jQuery・lazyloaded
   margin: 56px auto;
 }
 
-
 .article-body_mockup {
   display: flex;
   justify-content: center;
@@ -461,7 +459,6 @@ jQuery・lazyloaded
   padding: 20px;
   margin-bottom: 20px;
 }
-
 
 .article-body h3 {
   position: relative;
