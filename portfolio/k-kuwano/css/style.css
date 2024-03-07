@@ -568,12 +568,10 @@ jQuery・lazyloaded
   }
 
   /*  メインビジュアル */
-
   .mv {
     background-size: cover;
     background-position: left 100px;
     margin: -160px 0 0;
-
   }
 
   .mv-container {
@@ -612,7 +610,6 @@ jQuery・lazyloaded
 
   .works-info {
     margin-top: 3px;
-
   }
 
   /* Skill */
@@ -674,7 +671,7 @@ jQuery・lazyloaded
     padding: 20px;
   }
 
-  /*---- 下層ページ -----*/
+  /*------------- 下層ページ ------------*/
   .article {
     padding: 50px 0;
   }
