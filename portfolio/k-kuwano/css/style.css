@@ -383,6 +383,7 @@ jQuery・lazyloaded
 
 }
 
+/* QRコード */
 .img-qr img {
   width: 8%;
 }
@@ -661,20 +662,24 @@ jQuery・lazyloaded
     margin-bottom: 20px;
   }
 
+  /* QRコード */
+  .img-qr img {
+    width: 30%;
+  }
+
+  .img-qr p {
+    font-size: 13px;
+  }
+
+
   /* フッター */
   .footer {
     padding: 20px;
   }
 
-  .works-sp {
-    /* width: 60%; */
-    /* display: flex;
-    margin: 0 auto; */
-  }
-
 }
 
-/* 下層ページ */
+/*---- 下層ページ -----*/
 .article {
   padding: 50px 0;
 }
