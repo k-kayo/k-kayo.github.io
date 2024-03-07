@@ -442,13 +442,12 @@ jQuery・lazyloaded
 .article-body {
   max-width: 720px;
   margin: 0 auto;
-  margin-bottom: 80px;
 }
 
 .article-body_pc {
   width: 20%;
   display: flex;
-  margin: 80px auto;
+  margin: 80px auto 200px;
 }
 
 
