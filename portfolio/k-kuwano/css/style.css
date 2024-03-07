@@ -691,7 +691,7 @@ jQuery・lazyloaded
     margin-bottom: 20px;
   }
 
-  .article-body img {
+  .article-body_sp img {
     width: 50%;
   }
 }
