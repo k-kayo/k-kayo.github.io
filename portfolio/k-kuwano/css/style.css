@@ -226,7 +226,7 @@ img {
 }
 
 .works-img {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+  /* box-shadow: 0 3px 10px rgba(0, 0, 0, .2); */
   border-radius: 5px;
 }
 
