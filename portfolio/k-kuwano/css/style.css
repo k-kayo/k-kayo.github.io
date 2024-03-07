@@ -690,4 +690,8 @@ jQuery・lazyloaded
     line-height: 1.7;
     margin-bottom: 20px;
   }
+
+  .article-body img {
+    width: 50%;
+  }
 }
