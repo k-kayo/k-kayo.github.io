@@ -165,7 +165,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: 100vh;
   text-align: center;
   background-image: url(../img/investment-5241253_1280.jpg);
   background-size: cover;
@@ -697,9 +697,21 @@ jQuery・lazyloaded
 /* 印刷プレビュー */
 @media print {
 
+  .skill section {
+    page-break-before: always;
+  }
+
+  .about section {
+    page-break-before: always;
+  }
+
   /*printで適用する内容*/
   .contact section {
     page-break-before: always;
     /* 直前で改ページさせる */
+  }
+
+  .article-body_pc {
+    page-break-before: always;
   }
 }
