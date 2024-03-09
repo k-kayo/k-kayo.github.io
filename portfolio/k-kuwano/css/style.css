@@ -692,3 +692,14 @@ jQuery・lazyloaded
     width: 50%;
   }
 }
+
+/* 印刷用CSS */
+/* 印刷プレビュー */
+@media print {
+
+  /*printで適用する内容*/
+  .contact section {
+    page-break-before: always;
+    /* 直前で改ページさせる */
+  }
+}
