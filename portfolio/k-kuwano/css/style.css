@@ -50,7 +50,7 @@ img {
  レイアウト
 ---------------------------------*/
 .wrapper {
-  padding-top: 73px;
+  padding-top: 35px;
 }
 
 .section {
@@ -534,7 +534,7 @@ jQuery・lazyloaded
 
   /* レイアウト */
   .wrapper {
-    padding-top: 57px;
+    /* padding-top: 35px; */
   }
 
   .section {
