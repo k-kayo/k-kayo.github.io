@@ -238,13 +238,13 @@ img {
 }
 
 .works-name {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin-top: 8px;
 }
 
 .works-info {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 5px;
 }
 
@@ -533,10 +533,6 @@ jQuery・lazyloaded
   }
 
   /* レイアウト */
-  .wrapper {
-    /* padding-top: 35px; */
-  }
-
   .section {
     padding: 60px 0;
   }
@@ -576,7 +572,6 @@ jQuery・lazyloaded
 
   .mv-container {
     padding: 0 20px;
-    /* margin-bottom: 150px; */
   }
 
   .mv-title {
