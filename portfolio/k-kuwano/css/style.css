@@ -23,6 +23,8 @@ ul {
 
 p {
   font-size: .9rem;
+  font-weight: normal;
+
 }
 
 a {
@@ -197,7 +199,7 @@ img {
 }
 
 .mv-text {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -315,8 +317,9 @@ jQuery・lazyloaded
 }
 
 .skill-text {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
+  font-weight: normal;
 }
 
 /*--------------------------------
@@ -350,8 +353,9 @@ jQuery・lazyloaded
 }
 
 .profile-body p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
+  font-weight: normal;
 }
 
 .profile-body p:not(:last-child) {
@@ -416,7 +420,7 @@ jQuery・lazyloaded
 }
 
 .copyright {
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
   color: #797979;
 }
@@ -462,7 +466,7 @@ jQuery・lazyloaded
 
 .article-body h3 {
   position: relative;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 5px;
   padding-left: 1em;
 }
@@ -483,7 +487,7 @@ jQuery・lazyloaded
 }
 
 .article-body p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.8;
   margin-bottom: 30px;
 }
@@ -691,6 +695,10 @@ jQuery・lazyloaded
 /* 印刷用CSS */
 /* 印刷プレビュー */
 @media print {
+  body {
+    font-size: 1.6rem;
+    font-weight: norml;
+  }
 
   .skill section {
     page-break-before: always;
