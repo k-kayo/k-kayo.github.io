@@ -11,9 +11,8 @@
   ],
   "liveSassCompile.settings.autoprefix": [],
   "liveSassCompile.settings.generateMap": false,
-  "liveSassCompile.settings.includeItems": [
-    
-  ]
+  "liveSassCompile.settings.includeItems": [],
+  "liveServer.settings.port": 5501
 }
 
 // "liveSassCompile.settings.formats": [

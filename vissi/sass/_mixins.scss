@@ -1,5 +1,24 @@
-@mixin mq {
-  @media screen and (min-width:768px) {
-    @content;
+// メディアクエリ
+@mixin mq($size) {
+  @if $size =='tb' {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $size =='pc' {
+    @media screen and (min-width: 992px) {
+      @content;
+    }
   }
 }
+
+// @if $size =='pc' {
+//   @media screen and (max-width: 1440px) {
+//     @content;
+//   }
+// }
+
+// @include mq(pc) {}
+
+// @include mq(tb) {}

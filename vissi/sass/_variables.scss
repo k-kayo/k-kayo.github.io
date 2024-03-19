@@ -1,12 +1,10 @@
 :root {
-  // --font-primary: "Radio Canada", "Noto-Sans JP" sans-serif;//
-  // ※👆フォントファミリーはここに記述する
-  // --text-color: #000;
-  //--primary:
-  // --secondary
-  // --bg-color: #fff;
-  // --txt-bg-color: #f8f8f8;
-  // --text-light-color: #3D4240;
-  // --easing: cubic-bezier(.17, .67, .83, .67) 
-  // 👈数値は未確認
+  --text-color: #2C2C2C;
+  --primary: #005864;
+  --secondary: #847485;
+  --bg-color: #E6E6E6;
+  --white: #fff;
+  --black: #000;
+
+  --easing: cubic-bezier(.69, 0, .18, 1);
 }

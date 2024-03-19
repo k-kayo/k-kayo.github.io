@@ -1,0 +1,184 @@
+@use "../mixins" as *;
+
+// ハンバーガーアイコン
+body.top {
+  .header-button {
+    .icon {
+      background-color: #eee;
+
+      &::before,
+      &::after {
+        background-color: #eee;
+      }
+    }
+  }
+
+  // body.top.open
+  &.open {
+    .header-button .icon {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        background-color: #000;
+      }
+    }
+  }
+} //body.top
+
+// メインビジュアル
+.hero {
+  background: url(../img/photo-hero.jpg) no-repeat center center / cover;
+  max-width: 1300px;
+  height: 420px;
+  margin: -70px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+
+  h1 {
+    font-size: 31px;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    color: #fff;
+  }
+
+  p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    margin-top: 0;
+  }
+
+  // 768~
+  @include mq(md) {
+    margin-top: 0;
+  }
+
+  // 992~
+  @include mq(lg) {
+    height: 600px;
+
+    h1 {
+      font-size: 60px;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25em;
+    }
+
+    p {
+      font-size: 24px;
+      letter-spacing: 0.04em;
+    }
+  }
+} //.hero
+
+// 特徴
+.top-feature {
+  text-align: center;
+
+  .top-feature_box {
+    padding: 0 30px 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  a {
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid var(--main-color);
+    font-size: 18px;
+  }
+
+  // 768~
+  @include mq(md) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    background-color: #f3f2e8;
+    margin-top: -50px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    &:last-of-type {
+      flex-direction: row-reverse;
+      padding-top: 50px;
+      padding-bottom: 80px;
+    }
+
+    .top-feature_box {
+      background-color: #fff;
+      max-width: 600px;
+      padding: 0 60px 30px 40px;
+    }
+
+    &:last-of-type .top-feature_box {
+      padding-right: 40px;
+      padding-left: 60px;
+    }
+
+    img {
+      margin-top: 40px;
+      margin-left: -30px;
+      max-width: 48vw;
+    }
+
+    &:last-of-type img {
+      margin-right: -30px;
+      margin-left: 0;
+      position: relative;
+    }
+  }
+} //.top-feature
+
+// News
+.top-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+
+  li {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 30px;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      flex: 0 1 90px;
+      // max-width: 90px;
+    }
+
+    .top-list_info {
+      margin-left: 20px;
+    }
+
+    time {
+      font-size: 14px;
+      color: var(--text-color);
+    }
+
+    .top-list_title {
+      margin-top: 0.25em;
+      line-height: 1.4;
+    }
+
+    @include mq(md) {
+      width: 50%;
+    }
+  } //li
+}

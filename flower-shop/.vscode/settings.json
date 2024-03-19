@@ -9,5 +9,6 @@
       "savePathReplacementPairs": null
     }
   ],
-  "liveSassCompile.settings.autoprefix": []
+  "liveSassCompile.settings.autoprefix": [],
+  "liveServer.settings.port": 5501
 }
