@@ -25,11 +25,6 @@ section {
   padding: 0 24px;
 }
 
-// h3 {}
-
-
-// h2 {}
-
 ul {
   font-size: 1.2rem;
   list-style: none;
@@ -58,7 +53,7 @@ h2 {
   width: 200px;
   color: var(--primary);
   background-color: var(--white);
-  // border: 0.1px solid var(--text-color);
+  border: 0.1px solid var(--text-color);
   border-radius: 100px;
   display: inline-block;
   text-align: center;
@@ -70,6 +65,9 @@ h2 {
   margin-bottom: 24px;
 }
 
+h3 {
+  color: var(--black);
+}
 
 
 /*=================================
@@ -477,7 +475,7 @@ section.concept {
       }
     }
 
-    // イメージ画像 //
+    // Concept＿イメージ画像 //
     .concept-image {
       margin: 48px auto;
       // display: flex;
@@ -538,7 +536,6 @@ section.concept {
 .slick-prev,
 .slick-next {
   position: absolute;
-  /*絶対配置にする*/
   z-index: 3;
   top: 43%;
   cursor: pointer;
@@ -563,6 +560,11 @@ section.concept {
   /*次へ矢印の位置と形状*/
   right: -4%;
   transform: rotate(45deg);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 0;
 }
 
 
@@ -606,23 +608,64 @@ section.concept {
   padding-top: 48px;
   background: var(--bg-color);
   width: 100vw;
+  padding: 24px;
 
-  .wrapper h3 {
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.13rem;
-    border: 1px solid var(--text-color);
-    border-radius: 100px;
-    display: inline;
-    background-color: var(--white);
-    padding: 3.5px 55.5px;
-    filter: drop-shadow(.1rem .1rem 0.1rem rgb(153, 153, 153));
+  .wrapper {
+
+    .limited_collection {
+
+      a img {
+        width: 85%;
+        margin: 0 auto;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.13rem;
+        border: 1px solid var(--text-color);
+        border-radius: 100px;
+        background-color: var(--white);
+        width: 180px;
+        height: 30px;
+        filter: drop-shadow(.1rem .1rem 0.1rem rgb(153, 153, 153));
+        text-align: center;
+        margin: 14px auto 24px;
+      }
+    }
   }
 }
 
 /*=================================
         機能｜function
 ===================================*/
+.function {
+  margin: 48px auto 0;
+  padding: 32px 0;
+
+  .wrapper {
+    padding: 0 24px;
+  }
+
+  .inner-function {
+    width: 100%;
+    background-size: cover;
+
+
+    img:first-child {
+      width: 100vw;
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      padding: 48px 7px 0;
+    }
+
+    p {
+      font-weight: bold;
+    }
+  }
+}
 
 
 /*=================================
