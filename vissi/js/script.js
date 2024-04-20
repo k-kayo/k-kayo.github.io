@@ -21,3 +21,12 @@ $(".slider").slick({
   pauseOnHover: false, //マウスホバーで一時停止を無効
   pauseOnDotsHover: false, //ドットナビゲーションをマウスホバーで一時停止を無効
 });
+
+$(document).on("ready", function () {
+  $(".regular_2").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  });
+});
