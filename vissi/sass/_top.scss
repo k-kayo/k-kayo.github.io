@@ -69,6 +69,21 @@ h3 {
   color: var(--black);
 }
 
+.btn {
+  display: flex;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 100px;
+  padding: 8px 37px;
+  border: none;
+  filter: drop-shadow(.1rem .1rem 0.1rem rgb(153, 153, 153));
+  text-align: center;
+  letter-spacing: 0.14rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 16px auto 0;
+  cursor: pointer;
+}
 
 /*=================================
             ヘッダー
@@ -306,7 +321,6 @@ nav {
           transform-origin: left top;
           /* 要素の座標の原点を設定*/
         }
-
       }
 
       a:hover::after {
@@ -409,7 +423,7 @@ section.concept {
       h2 {
         color: var(--primary);
         letter-spacing: 0.15rem;
-        font-size: 24px;
+        font-size: 1.45rem;
         border: none;
         filter: none;
         font-weight: 600;
@@ -875,6 +889,26 @@ section.concept {
       display: grid;
       grid-template-columns: repeat(2, 152px);
       gap: 24px;
+
+      .category-list_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+          display: inline;
+          background-color: var(--bg-color);
+          color: var(--black);
+          border-radius: 100px;
+          padding: 0px 14px;
+          font-weight: 600;
+          position: relative;
+          bottom: 20%;
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, .25);
+          letter-spacing: 0.04rem;
+        }
+
+      }
     }
   }
 }
@@ -1016,42 +1050,183 @@ section.review {
   .review-list_item {
     margin-top: 24px;
 
-    &_content {
-      display: inline-flex;
-      align-items: center;
-    }
-
     .customer {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
-
-
 
     p {
       font-weight: 600;
+
+      &.review-list_Item_text {
+        font-weight: normal;
+        line-height: 1.4rem;
+      }
     }
 
-    &.review-list_Item_text {
-      font-weight: normal;
-      line-height: 1.4rem;
-    }
+    .review-list_item_content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
+      .review-list_item_title {
+        margin-right: 8px;
+        font-size: 1rem;
+      }
+
+      img {
+        width: 30%;
+      }
+    }
   }
 }
-
 
 /*=================================
             よくある質問
 ===================================*/
+section.faq {
+  background-color: var(--bg-color);
+  padding: 48px 24px;
 
+  h2 {
+    display: inline;
+    padding: 6px 28px;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 0px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  /*アコーディオン全体*/
+  .accordion-area {
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    li {
+      border-bottom: 1.5px dashed var(--secondary);
+
+      &:first-child {
+        margin-top: 24px;
+      }
+    }
+
+
+    // .accordion-area li {
+    //   margin: 10px 0;
+    // }
+
+    // .accordion-area section {
+    //   border: 1px solid #ccc;
+    // }
+
+    /*アコーディオンタイトル*/
+    .faq-title {
+      /*+マークの位置基準とするためrelative指定*/
+      position: relative;
+      cursor: pointer;
+      transition: all .5s ease;
+      // font-size: 1rem;
+      // font-weight: normal;
+      // padding: 3% 3% 3% 50px;
+
+      /*アイコンの＋と×*/
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 2px;
+        background-color: var(--black);
+      }
+
+      &::before {
+        top: 48%;
+        right: 15px;
+        transform: rotate(0deg);
+      }
+
+      &::after {
+        top: 48%;
+        right: 15px;
+        transform: rotate(90deg);
+      }
+
+      /* closeというクラスがついたら形状変化 */
+      &.close::before {
+        transform: rotate(45deg);
+      }
+
+      &.close::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    /*アコーディオンで現れるエリア*/
+    .faq-box {
+      display: none;
+      /*はじめは非表示*/
+      background-color: var(--white);
+      margin: 0 3% 3% 3%;
+      padding: 3%;
+    }
+  }
+}
+
+// もっと見るボタン(小) //
+.btn {
+  padding: 8px 24px;
+  margin-top: 24px;
+}
 
 /*=================================
-        footer
+            footer
 ===================================*/
 
 footer {
-  // background-color:  ;
+  background-color: var(--primary);
 
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: var(--white);
+      font-weight: bold;
+    }
+
+    a {
+      transition: all .5s ease;
+      width: 24px;
+
+      /*アイコンの＋と×*/
+      &::before,
+      &::after {
+        position: relative;
+        content: '';
+        width: 15px;
+        height: 2px;
+        color: var(--white);
+      }
+
+      &::before {
+        top: 48%;
+        right: 15px;
+        transform: rotate(0deg);
+      }
+
+      &::after {
+        top: 48%;
+        right: 15px;
+        transform: rotate(90deg);
+      }
+    }
+  }
 
   .material-symbols-outlined {
     // position: fixed;
