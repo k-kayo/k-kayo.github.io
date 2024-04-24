@@ -59,3 +59,21 @@ $(".faq-title").on("click", function () {
 //     $(Box).slideDown(500); //アコーディオンを開く
 //   });
 // });
+
+/*=================================
+          トップへ戻るボタン
+===================================*/
+$(function () {
+  const pagetop = $("#page-top");
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 800) {
+      pagetop.fadeIn(300);
+    } else {
+      pagetop.fadeOut(300);
+    }
+  });
+  pagetop.click(function () {
+    $("body, html").animate({ scrollTop: 0 }, 500);
+    return false;
+  });
+});

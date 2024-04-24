@@ -72,7 +72,6 @@ h3 {
 .btn {
   display: flex;
   background-color: var(--primary);
-  color: var(--white);
   border-radius: 100px;
   padding: 8px 37px;
   border: none;
@@ -83,6 +82,7 @@ h3 {
   font-size: 0.8rem;
   margin: 16px auto 0;
   cursor: pointer;
+  color: var(--white);
 }
 
 /*=================================
@@ -280,7 +280,6 @@ nav {
     li {
       text-align: center;
       padding-bottom: 38px;
-
 
       a {
         color: var(--white);
@@ -1175,13 +1174,14 @@ section.faq {
       padding: 3%;
     }
   }
+
+  // もっと見るボタン(小) //
+  .btn {
+    padding: 8px 24px;
+    margin-top: 24px;
+  }
 }
 
-// もっと見るボタン(小) //
-.btn {
-  padding: 8px 24px;
-  margin-top: 24px;
-}
 
 /*=================================
             footer
@@ -1190,63 +1190,134 @@ section.faq {
 footer {
   background-color: var(--primary);
 
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    p {
-      color: var(--white);
-      font-weight: bold;
-    }
+  .footer-list li {
+    // display: flex;
+    align-items: center;
+    border-bottom: 0.01px solid var(--bg-color);
+    color: var(--white);
+    position: relative;
+    // display: block;
+    padding: 8px 0;
 
     a {
-      transition: all .5s ease;
-      width: 24px;
 
-      /*アイコンの＋と×*/
-      &::before,
-      &::after {
-        position: relative;
-        content: '';
-        width: 15px;
-        height: 2px;
+      // transition: all .5s ease;
+      // width: 100%;
+
+      p {
         color: var(--white);
-      }
+        font-size: 0.8rem;
+        margin-left: 16px;
+        letter-spacing: 0.1rem;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
 
-      &::before {
-        top: 48%;
-        right: 15px;
-        transform: rotate(0deg);
-      }
-
-      &::after {
-        top: 48%;
-        right: 15px;
-        transform: rotate(90deg);
+        // ＞アイコン
+        // &::before,
+        &::after {
+          content: '';
+          margin-top: auto;
+          margin-bottom: auto;
+          // display: block;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          color: var(--white);
+          border-top: 2px solid;
+          border-right: 2px solid;
+          transform: rotate(45deg);
+          top: 0;
+          right: 24px;
+          bottom: 0;
+        }
       }
     }
   }
 
-  .material-symbols-outlined {
-    // position: fixed;
-    right: 0;
-    display: flex;
-    z-index: 1;
-    justify-content: flex-end;
-    color: var(--white);
+  // SNS //
+  .footer-bottom {
+    .footer-sns {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 20px auto 24px;
+      gap: 24px;
+    }
+  }
+
+  // トップへ戻るボタン //
+  .footer-back_btn {
+    width: 100%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    right: 10%;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),
       0 2px 6px 2px rgba(60, 64, 67, .15);
-    font-size: 56px;
-    // text-align: end;
-    // display: block;
-    // fill: currentColor;
-    cursor: pointer;
+    z-index: 20;
+    margin-left: auto;
+    position: fixed;
+    bottom: 45px;
 
-    font-variation-settings:
-      'FILL' 1,
-      'wght' 300,
-      'GRAD' 0,
-      'opsz' 24
+    .material-symbols-outlined {
+      height: 48px;
+      font-size: 40px;
+      color: #5c5e62;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    img {
+      width: 25%;
+      aspect-ratio: 29 / 7;
+    }
+
+    .copyright {
+      color: var(--white);
+      font-size: 0.7rem;
+      letter-spacing: 0.08rem;
+      margin-top: 6px;
+    }
+  }
+
+  .terms {
+    position: relative;
+    // bottom: 10px;
+    left: 20px;
+    padding-bottom: 10px;
+
+    a {
+      display: flex;
+
+      .terms-1,
+      .terms-2 {
+        color: var(--white);
+        font-size: 0.6rem;
+        letter-spacing: 0.08rem;
+        font-weight: 350;
+      }
+
+      .terms-1 {
+        margin-bottom: -4px;
+      }
+    }
+
   }
 }
