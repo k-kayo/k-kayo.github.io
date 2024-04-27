@@ -1,4 +1,3 @@
-// 全体のスタイル調整//
 @use './mixins' as *;
 
 // リセット
@@ -94,13 +93,10 @@ h3 {
 header {
   position: fixed;
   z-index: 10;
-  max-width: 767px;
+  // max-width: 767px;
   width: 100%;
   top: 0;
-
-  @include mq(tb) {
-    max-width: 1199px;
-  }
+  left: 0;
 
   .header-info {
     height: 40px;
@@ -109,6 +105,9 @@ header {
     position: relative;
     text-align: center;
     transition: all .6s ease-in-out;
+
+    @include mq(tb) {}
+
 
     p {
       letter-spacing: 0.18rem;
@@ -124,22 +123,31 @@ header {
 
 // ヘッダー/ナビsp //
 .nav-header {
-  padding-right: 40px;
   background-color: var(--bg-color);
-  height: 72px;
   width: 100%;
+  // padding-right: 28px;
+  height: 72px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   justify-content: end;
+  gap: 32px;
+  // margin-right: auto;
 
-  // @include mq(tb) {
-  //   flex: 1;
-  // }
+
+  @include mq(tb) {
+    padding: 0;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    padding-left: 270px;
+  }
 
   .header-logo {
     width: 100px;
-    // margin-right: 20px;
+
+    @include mq(tb) {}
   }
 
   .header-shop {
@@ -147,33 +155,53 @@ header {
     background-color: var(--white);
     border-radius: 100px;
     height: 30px;
+    width: 100%;
+    display: flex;
     width: 100px;
-    margin-left: 26px;
+    padding: 0 12px;
+    vertical-align: middle;
+    margin-right: 8px;
+
+
+    @include mq(tb) {
+      position: relative;
+      margin-left: 100px;
+    }
 
     a {
-      display: flex;
+      display: inline-flex;
+      gap: 8px;
+      width: 100%;
+      align-items: center;
       justify-content: center;
 
       p {
-        font-size: 16px;
+        font-size: 0.9rem;
         color: var(--primary);
         font-weight: bold;
+        // &::after {
+        //   content: url(../img/icon/cart.svg);
+        //   padding-left: 6px;
+        //   vertical-align: sub;
+        // }
+      }
 
-
-        &::after {
-          content: url(../img/icon/cart.svg);
-          padding-left: 6px;
-          vertical-align: sub;
-        }
+      img {
+        width: 30%;
       }
     }
   }
 }
 
+
 .sp-only {
   display: block;
 
-  @include mq(tb, xl) {
+  @include mq(tb) {
+    display: none;
+  }
+
+  @include mq(xl) {
     display: none;
   }
 }
@@ -182,7 +210,11 @@ header {
 .pc-only {
   display: none;
 
-  @include mq(tb, xl) {
+  @include mq(tb) {
+    display: block;
+  }
+
+  @include mq(xl) {
     display: block;
   }
 }
@@ -1093,6 +1125,7 @@ section.review {
 section.faq {
   background-color: var(--bg-color);
   padding: 48px 24px;
+  display: none;
 
   h2 {
     display: inline;
@@ -1194,10 +1227,9 @@ section.faq {
 /*=================================
             footer
 ===================================*/
-
 footer {
   background-color: var(--primary);
-
+  position: relative;
 
   .footer-list li {
     // display: flex;
@@ -1210,8 +1242,6 @@ footer {
 
     a {
 
-      // transition: all .5s ease;
-      // width: 100%;
 
       p {
         color: var(--white);
@@ -1223,12 +1253,10 @@ footer {
         font-weight: 500;
 
         // ＞アイコン
-        // &::before,
         &::after {
           content: '';
           margin-top: auto;
           margin-bottom: auto;
-          // display: block;
           position: absolute;
           width: 10px;
           height: 10px;
@@ -1291,7 +1319,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 24px;
+    padding-bottom: 48px;
 
     img {
       width: 25%;
@@ -1303,13 +1331,16 @@ footer {
       font-size: 0.7rem;
       letter-spacing: 0.08rem;
       margin-top: 6px;
+      margin-bottom: 16px;
     }
   }
 
   .terms {
-    position: relative;
+    position: absolute;
     left: 20px;
     padding-bottom: 10px;
+    bottom: 0;
+    display: none;
 
     a {
       display: flex;
@@ -1326,6 +1357,5 @@ footer {
         margin-bottom: -4px;
       }
     }
-
   }
 }
