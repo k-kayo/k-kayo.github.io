@@ -6,19 +6,9 @@
     }
   }
 
-  @if $size =='pc' {
-    @media screen and (min-width: 992px) {
+  @if $size =='xl' {
+    @media screen and (min-width: 1200px) {
       @content;
     }
   }
 }
-
-// @if $size =='pc' {
-//   @media screen and (max-width: 1440px) {
-//     @content;
-//   }
-// }
-
-// @include mq(pc) {}
-
-// @include mq(tb) {}

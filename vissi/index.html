@@ -46,7 +46,8 @@
       </p>
     </div>
     <!--  ヘッダー/ナビsp-->
-    <nav>
+    <div class="wrapper"></div>
+    <nav class="nav-header">
       <h1 class="header-logo">
         <a href="#"><img src="./img/logo/emblem-top.png" alt="emblem"></a>
       </h1>
@@ -56,7 +57,6 @@
         </a>
       </div>
     </nav>
-
     <!-- ハンバーガーボタン -->
     <div class="sp-only">
       <div class="nav-toggle">
@@ -83,29 +83,29 @@
             <li><a href="#">Accessories</a></li>
             <li><a href="#">Sale</a></li>
           </ul>
-          <!-- gnav-footer -->
-          <div class="gnav-footer">
-            <div class="gnav-footer_btn">
+          <!-- gnav-head -->
+          <div class="gnav-heading">
+            <div class="gnav-heading_btn">
               <a href="#">ログイン</a>
               <a href="#">ヘルプ</a>
             </div>
-            <div class="gnav-footer_logo">
+            <div class="gnav-heading_logo">
               <img src="./img/logo/logo-V.png" alt="logo">
             </div>
           </div>
         </nav>
         <!-- ＰＣ ナビメニュー-->
-        <!-- <nav class="pc-only">
-      <ul class="nav-menu">
-        <li><a href="#magazine" class="underline">magazine</a></li>
-        <li><a href="#lifestyle" class="underline">lifestyle</a></li>
-        <li><a href="#culture" class="underline">culture</a></li>
-        <li><a href="#fashcultureion" class="underline">fashion</a></li>
-        <li><a href="#beauty" class="underline">beauty</a></li>
-        <li><a href="#food" class="underline">food</a></li>
-        <li><a href="#column" class="underline">column</a></li>
-      </ul>
-    </nav> -->
+        <nav class="pc-only">
+          <ul class="nav-menu">
+            <li><a href="#magazine" class="underline">magazine</a></li>
+            <li><a href="#lifestyle" class="underline">lifestyle</a></li>
+            <li><a href="#culture" class="underline">culture</a></li>
+            <li><a href="#fashcultureion" class="underline">fashion</a></li>
+            <li><a href="#beauty" class="underline">beauty</a></li>
+            <li><a href="#food" class="underline">food</a></li>
+            <li><a href="#column" class="underline">column</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
@@ -557,11 +557,13 @@
           </a>
         </li>
       </ul>
+      <!-- 戻るボタン -->
       <div class="footer-back_btn" id="page-top">
         <span class="material-symbols-outlined">
           arrow_upward_alt
         </span>
       </div>
+      <!-- フッターロゴ -->
       <div class="footer-logo">
         <img src="./img/logo/footer-Logos.svg" alt="Vessi Footwear" loading="lazy" decoding="async">
         <small class="copyright">&copy; 2024 Vessi Footwear Ltd. All Rights Reserved.</small>
