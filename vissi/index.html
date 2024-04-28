@@ -39,24 +39,63 @@
 
 <body>
   <!-- //----------------- ヘッダー ------------------// -->
-  <!-- インフォメーション｜slick・要確認 -->
   <header>
-    <div class="header-info">
-      <p>限定セール｜在庫残りわずか
-      </p>
-    </div>
-    <!--  ヘッダー/ナビsp-->
-    <nav class="nav-header">
-      <h1 class="header-logo">
-        <a href="#"><img src="./img/logo/emblem-top.png" alt="emblem"></a>
-      </h1>
-      <div class="header-shop">
+    <!-- インフォメーション｜slick・要確認 -->
+    <div class="header-info_inner">
+      <div class="header_info-center">
+        <p>限定セール｜在庫残りわずか</p>
+      </div>
+      <!-- ログイン -->
+      <div class="header_info-right">
         <a href="#">
-          <p>Shop</p>
-          <img src="./img/icon/cart.svg" alt="">
+          <p>ログイン</p>
+        </a>
+        <a href="#">
+          <p>ヘルプ</p>
         </a>
       </div>
-    </nav>
+    </div>
+    <!------  ヘッダー/ナビsp ------->
+    <div class="gnav">
+      <ul class="gnav-wrapper">
+        <!-- Vマーク -->
+        <li class="gnav-header_pclogo pc-only">
+          <img src="./img/logo/Secondary - Logo Icon/VessiLogo070919-01.png" alt="logo">
+        </li>
+        <!-- メニュー -->
+        <div class="gnav-menu pc-only">
+          <li><a href="#" class="underline">Women</a></li>
+          <li><a href="#" class="underline">Men</a></li>
+          <li><a href="#" class="underline">Kids</a></li>
+          <li><a href="#" class="underline">Accessories</a></li>
+          <li><a href="#" class="underline">Sale</a></li>
+        </div>
+        <!-- ロゴ -->
+        <li>
+          <h1 class="gnav-header_logo">
+            <a href="#"><img src="./img/logo/emblem-top.png" alt="emblem"></a>
+          </h1>
+        </li>
+        <!-- seacrhアイコン -->
+        <li class="header-search pc-only">
+          <img src="./img/icon/zoom-icon.svg" alt="">
+        </li>
+        <!-- shopアイコン｜SP -->
+        <li class="header-shop sp-only">
+          <a href="#">
+            <p>Shop</p>
+            <img src="./img/icon/cart.svg" alt="">
+          </a>
+        </li>
+        <!-- shopアイコン｜PC -->
+        <li class="header-shop_pc pc-only">
+          <a href="#">
+            <img src="./img/icon/cart.svg" alt="">
+            <p>Online Shop</p>
+          </a>
+        </li>
+      </ul>
+    </div>
     <!-- ハンバーガーボタン -->
     <div class="sp-only">
       <div class="nav-toggle">
@@ -64,46 +103,23 @@
         <label for="nav-input" id="nav-open"><span class="material-symbols-outlined">menu</span></label>
         <label for="nav-input" id="nav-close"><span class="material-symbols-outlined">close</span><span
             class="material-symbols-outlined"></span></label>
-
         <!--  ドロワーメニュー-->
-        <nav class="gnav" id="nav-content">
-          <div class="gnav-top">
-            <div class="gnav-top_logo">
+        <nav class="nav " id="nav-content">
+          <div class="nav-drawer">
+            <div class="nav-drawer_logo">
               <a href="#"><img src="./img/logo/header-sp_darowa.png" alt="logo"></a>
             </div>
-            <div class="gnav-top_shop">
+            <div class="nav-drawer_shop">
               <a href="#"><img src="./img/icon/zoom-icon.svg" alt=""></a>
               <a href="#"><img src="./img/icon/cart.svg" alt=""></a>
             </div>
           </div>
-          <ul>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Kids</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Sale</a></li>
-          </ul>
-          <!-- gnav-head -->
-          <div class="gnav-heading pc-only">
-            <div class="gnav-heading_btn">
-              <a href="#">ログイン</a>
-              <a href="#">ヘルプ</a>
-            </div>
-            <div class="gnav-heading_logo">
-              <img src="./img/logo/logo-V.png" alt="logo">
-            </div>
-          </div>
-        </nav>
-        <!-- ＰＣ ナビメニュー-->
-        <nav class="pc-only">
-          <ul class="nav-menu">
-            <li><a href="#magazine" class="underline">magazine</a></li>
-            <li><a href="#lifestyle" class="underline">lifestyle</a></li>
-            <li><a href="#culture" class="underline">culture</a></li>
-            <li><a href="#fashcultureion" class="underline">fashion</a></li>
-            <li><a href="#beauty" class="underline">beauty</a></li>
-            <li><a href="#food" class="underline">food</a></li>
-            <li><a href="#column" class="underline">column</a></li>
+          <ul class="nav-menu pc-only">
+            <li><a href="#" class="underline">Women</a></li>
+            <li><a href="#" class="underline">Men</a></li>
+            <li><a href="#" class="underline">Kids</a></li>
+            <li><a href="#" class="underline">Accessories</a></li>
+            <li><a href="#" class="underline">Sale</a></li>
           </ul>
         </nav>
       </div>
@@ -123,8 +139,15 @@
         <div><img src="./img/image/fv-5.jpg" alt=""></div>
         <div><img src="./img/image/fv-6.jpg" alt=""></div>
       </div>
-      <h1>100%防水スニーカー<br>
-        『Vessi』(ヴェッシー)上陸</h1>
+      <h1>
+        <p class="sp-only">
+          100%防水スニーカー<br>
+          『Vessi』(ヴェッシー)上陸</p>
+        <p class="pc-only">
+          100%防水<br>カナダ発 新世代スニーカー<br>
+          『Vessi』(ヴェッシー)上陸
+        </p>
+      </h1>
       <div class="mv-area_banner">
         <img src="./img/image/collection.png" alt="">
       </div>

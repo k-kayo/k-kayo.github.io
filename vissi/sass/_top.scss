@@ -93,21 +93,35 @@ h3 {
 header {
   position: fixed;
   z-index: 10;
-  // max-width: 767px;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
 
-  .header-info {
-    height: 40px;
-    background-color: var(--secondary);
-    color: var(--white);
-    position: relative;
+  @include mq(tb) {
+    max-width: 100%;
+  }
+}
+
+// ヘッダー｜インフォメーション //
+.header-info_inner {
+  display: flex;
+  height: 40px;
+  background-color: var(--secondary);
+  top: 0;
+  color: var(--white);
+  position: relative;
+
+
+
+  @include mq(tb) {
+    flex-direction: row-reverse;
+    width: 100%;
+
+  }
+
+  .header_info-center {
     text-align: center;
-    transition: all .6s ease-in-out;
-
-    @include mq(tb) {}
-
+    // transition: all .6s ease-in-out;
 
     p {
       letter-spacing: 0.18rem;
@@ -117,88 +131,241 @@ header {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
+      @include mq(tb) {
+        font-size: 0.75rem;
+
+      }
+    }
+  }
+
+  // ログイン｜ヘルプ //
+  .header_info-right {
+    display: none;
+
+    @include mq(tb xl) {
+
+      margin-left: auto;
+      padding-right: 24px;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        color: white;
+
+        &:not(:first-child)::before {
+          content: "|";
+          display: inline-block;
+          margin-right: 16px;
+        }
+
+        p {
+          font-size: 0.75rem;
+          letter-spacing: 0.08rem;
+
+          &:last-child {
+            margin-right: 8px;
+          }
+        }
+      }
     }
   }
 }
 
-// ヘッダー/ナビsp //
-.nav-header {
-  background-color: var(--bg-color);
+//------- ヘッダー/ナビsp ---------// {
+.gnav {
   width: 100%;
-  // padding-right: 28px;
   height: 72px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: end;
-  gap: 32px;
-  // margin-right: auto;
+  background-color: var(--bg-color);
 
-
-  @include mq(tb) {
-    padding: 0;
-    flex-wrap: nowrap;
+  &-wrapper {
+    height: 100%;
     display: flex;
-    justify-content: space-evenly;
-    position: absolute;
-    padding-left: 270px;
-  }
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
 
-  .header-logo {
-    width: 100px;
-
-    @include mq(tb) {}
-  }
-
-  .header-shop {
-    border: 1px solid var(--primary);
-    background-color: var(--white);
-    border-radius: 100px;
-    height: 30px;
-    width: 100%;
-    display: flex;
-    width: 100px;
-    padding: 0 12px;
-    vertical-align: middle;
-    margin-right: 8px;
-
-
-    @include mq(tb) {
-      position: relative;
-      margin-left: 100px;
-    }
-
-    a {
-      display: inline-flex;
-      gap: 8px;
-      width: 100%;
+    li {
+      display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      height: 100%;
+    }
 
-      p {
-        font-size: 0.9rem;
-        color: var(--primary);
-        font-weight: bold;
-        // &::after {
-        //   content: url(../img/icon/cart.svg);
-        //   padding-left: 6px;
-        //   vertical-align: sub;
-        // }
+    // Vマーク //
+    .gnav-header_pclogo {
+      display: none;
+
+      @include mq(tb) {
+        display: none;
+      }
+
+      @include mq(xl) {
+        display: block;
+        aspect-ratio: 1 / 1;
+        width: 15%;
+        position: absolute;
+        justify-content: start;
+        left: -16px;
+        top: 20px;
+        z-index: 15;
+        padding: 0;
+      }
+    }
+
+    // メニュー //
+    .gnav-menu {
+      display: none;
+
+      @include mq(tb) {
+        display: none;
+      }
+
+      @include mq(xl) {
+
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+
+        a {
+          color: var(--text-color);
+          font-size: 0.04re;
+        }
+      }
+    }
+
+    // vessiロゴ //
+    .gnav-header_logo {
+      padding-right: 32px;
+
+      @include mq(tb) {
+        height: 72px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 120px;
       }
 
       img {
-        width: 30%;
+        width: 100px;
+
+        @include mq(tb) {
+          width: 80%;
+
+        }
+      }
+    }
+
+    // shopアイコン｜SP
+    .header-shop {
+      border: 1px solid var(--primary);
+      background-color: var(--white);
+      border-radius: 100px;
+      height: 30px;
+      width: 100%;
+      display: flex;
+      width: 100px;
+      padding: 0 12px;
+      vertical-align: middle;
+      margin-right: 8px;
+
+      // shopアイコン｜SP
+      @include mq(tb) {
+        display: block;
+        margin-right: 24px;
+        width: 120px;
+        height: 35px;
+      }
+
+      @include mq(xl) {
+        display: none;
+      }
+
+
+      a {
+        display: inline-flex;
+        gap: 8px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        @include mq(tb) {
+          display: flex;
+          align-items: center;
+
+          @include mq(tb) {
+            transform: translateY(-8%);
+          }
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: var(--primary);
+          font-weight: bold;
+
+          @include mq(tb) {
+            font-size: 1rem;
+          }
+        }
+
+        img {
+          width: 30%;
+
+          @include mq(tb) {
+            // width: 50%;
+          }
+        }
+      }
+
+    }
+
+    // seacrhアイコン
+    .header-search {
+      display: none;
+
+      @include mq(tb) {
+        display: none;
+      }
+
+      @include mq(xl) {
+        display: block;
+      }
+    }
+
+    .header-shop_pc {
+      display: none;
+
+      @include mq(tb) {
+        display: none;
+
+        a {
+          display: flex;
+          flex-direction: row;
+
+          p {
+            font-size: 0.6rem;
+            color: var(--text-color);
+          }
+        }
+      }
+
+      @include mq(xl) {
+        display: block;
       }
     }
   }
 }
 
 
+
+// SPオープン、PCクローズ
 .sp-only {
   display: block;
 
   @include mq(tb) {
-    display: none;
+    display: block;
   }
 
   @include mq(xl) {
@@ -206,12 +373,12 @@ header {
   }
 }
 
-
+// SPクローズ、PCオープン
 .pc-only {
   display: none;
 
   @include mq(tb) {
-    display: block;
+    display: none;
   }
 
   @include mq(xl) {
@@ -227,8 +394,6 @@ header {
 .nav-toggle {
   position: fixed;
   top: 20px;
-  // right: 0;
-  // width: 60px;
   left: 0;
   z-index: 100;
 
@@ -245,7 +410,13 @@ header {
 
   .material-symbols-outlined {
     font-size: xx-large;
+
+    @include mq(tb) {
+      font-size: 2.5rem;
+      transform: translateY(-16%);
+    }
   }
+
 
   #nav-close {
     display: none;
@@ -274,7 +445,7 @@ header {
 }
 
 // ドロワーメニュー //
-.gnav {
+#nav-content {
   position: fixed;
   top: 40px;
   left: 0;
@@ -286,7 +457,7 @@ header {
   justify-content: center;
   transition: 0.8s var(--easing);
 
-  &-top {
+  .nav-drawer {
     background-color: var(--bg-color);
     height: 72px;
     position: absolute;
@@ -327,7 +498,7 @@ header {
         font-weight: 500;
         letter-spacing: 0.16rem;
 
-        // ホバーでアンダーラインf //
+        // ホバーでアンダーライン //
         padding-bottom: 5px;
         position: relative;
         /*::afterにabsoluteをかけるので設定*/
@@ -369,42 +540,45 @@ header {
       // ホバーでアンダーライン 以上
     }
   }
-
-  // これなに？？//
-  &-footer {
-    text-align: center;
-    margin-top: 0;
-    transform: translateY(-40px);
-
-    &_btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 28px;
-
-      a {
-        display: inline-block;
-        width: 120px;
-        border: 2px solid var(--white);
-        border-radius: 100px;
-        background-color: var(--secondary);
-        color: var(--white);
-        font-size: 1.2rem;
-        font-weight: bold;
-        padding: 4px 0;
-      }
-    }
-
-    &_logo {
-      margin-top: 50px;
-
-      img {
-        margin: 0 auto;
-        width: 40%;
-      }
-    }
-  }
 }
+
+
+// 間違えてここにフッター書いたの忘れたままだったかも
+// &-footer {
+//   text-align: center;
+//   margin-top: 0;
+//   transform: translateY(-40px);
+
+//   &_btn {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 28px;
+
+//     a {
+//       display: inline-block;
+//       width: 120px;
+//       border: 2px solid var(--white);
+//       border-radius: 100px;
+//       background-color: var(--secondary);
+//       color: var(--white);
+//       font-size: 1.2rem;
+//       font-weight: bold;
+//       padding: 4px 0;
+//     }
+//   }
+
+//   &_logo {
+//     margin-top: 50px;
+
+//     img {
+//       margin: 0 auto;
+//       width: 40%;
+//     }
+//   }
+// }
+
+// ドロワーメニューここまで //
 
 // ---- ヘッダーここまで ----//
 
@@ -415,17 +589,22 @@ header {
 ===================================*/
 .mv {
   position: relative;
-  top: 0;
   padding: 0;
-  margin-top: 112px;
+  padding-top: 112px;
+
+  @include mq(tb) {}
+
 
   &-area {
+
 
     img {
       width: 100%;
       height: 100%;
       aspect-ratio: 3 / 2;
+
     }
+
 
     &_banner {
       width: 50%;
@@ -435,21 +614,29 @@ header {
     }
   }
 
-  h1 {
+  h1 .sp-only {
     color: var(--white);
     position: absolute;
-    z-index: 1;
-    top: 14px;
+    z-index: 10;
+    top: 130px;
     left: 10px;
     line-height: 1.2rem;
     font-weight: 600;
     letter-spacing: 0.08rem;
     font-size: 0.9rem;
+
+    @include mq(tb) {
+      z-index: 10;
+      font-size: 1.3rem;
+      top: 152px;
+      line-height: 1.8rem;
+      left: 16px;
+    }
   }
 }
 
 /*=================================
-      Concept
+              Concept
 ===================================*/
 section.concept {
 
@@ -553,86 +740,10 @@ section.concept {
           }
         }
       }
-
     }
   }
 }
 
-// スライダー //
-.slider {
-  position: relative;
-  z-index: 1;
-}
-
-/*矢印の設定*/
-/*戻る、次へ矢印の位置*/
-.slick-prev,
-.slick-next {
-  position: absolute;
-  z-index: 3;
-  top: 43%;
-  cursor: pointer;
-  /*マウスカーソルを指マークに*/
-  outline: none;
-  /*クリックをしたら出てくる枠線を消す*/
-  border-top: 2px solid var(--secondary);
-  /*矢印の色*/
-  border-right: 2px solid var(--secondary);
-  /*矢印の色*/
-  height: 25px;
-  width: 25px;
-}
-
-.slick-prev {
-  /*戻る矢印の位置と形状*/
-  left: -1%;
-  transform: rotate(-135deg);
-}
-
-.slick-next {
-  /*次へ矢印の位置と形状*/
-  right: -4%;
-  transform: rotate(45deg);
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-size: 0;
-}
-
-
-/*ドットナビゲーションの設定*/
-.slick-dots {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  margin: -20px 0 0 0;
-  display: flex;
-  flex-direction: row;
-}
-
-.slick-dots li {
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.slick-dots button {
-  color: transparent;
-  outline: none;
-  width: 2px;
-  /*ドットボタンのサイズ*/
-  height: 2px;
-  /*ドットボタンのサイズ*/
-  display: block;
-  border-radius: 50%;
-  background: #ccc;
-  /*ドットボタンの色*/
-}
-
-.slick-dots .slick-active button {
-  background: var(--secondary);
-  /*ドットボタンの現在地表示の色*/
-}
 
 /*=================================
         期間限定コレクション
@@ -709,7 +820,7 @@ section.concept {
 }
 
 /*=================================
-            定番商品
+        ベストセラー｜定番商品
 ===================================*/
 .bestseller {
   background-color: var(--bg-color);
@@ -1125,7 +1236,6 @@ section.review {
 section.faq {
   background-color: var(--bg-color);
   padding: 48px 24px;
-  display: none;
 
   h2 {
     display: inline;
@@ -1230,6 +1340,7 @@ section.faq {
 footer {
   background-color: var(--primary);
   position: relative;
+  display: none;
 
   .footer-list li {
     // display: flex;
@@ -1293,7 +1404,7 @@ footer {
     right: 10%;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),
       0 2px 6px 2px rgba(60, 64, 67, .15);
-    z-index: 50;
+    z-index: 20;
     margin-left: auto;
     position: fixed;
     bottom: 95px;
@@ -1340,7 +1451,6 @@ footer {
     left: 20px;
     padding-bottom: 10px;
     bottom: 0;
-    display: none;
 
     a {
       display: flex;
