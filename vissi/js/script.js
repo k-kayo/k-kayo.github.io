@@ -1,3 +1,4 @@
+// mvのスライダー //
 $(".mv-area").slick({
   autoplay: true,
   autoplaySpeed: 4000,
@@ -6,6 +7,7 @@ $(".mv-area").slick({
   swipe: false, //👈 スマホでスワイプした時にスワイプしない
 });
 
+// Conceptと定番商品のスライダーの設定 //
 $(".slider").slick({
   autoplay: true, //自動的に動き出すか。初期値はfalse。
   autoplaySpeed: 3000, //次のスライドに切り替わる待ち時間
@@ -20,8 +22,24 @@ $(".slider").slick({
   pauseOnFocus: false, //フォーカスで一時停止を無効
   pauseOnHover: false, //マウスホバーで一時停止を無効
   pauseOnDotsHover: false, //ドットナビゲーションをマウスホバーで一時停止を無効
+
+  responsive: [
+    {
+      breakpoint: 992, // 768〜992px以下のサイズに適用
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 768, // 480〜767px以下のサイズに適用
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 });
 
+// 定番商品 //
 $(document).on("ready", function () {
   $(".regular_2").slick({
     dots: true,

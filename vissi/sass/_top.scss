@@ -86,144 +86,6 @@ h3 {
 }
 
 
-
-//--- （定番商品）２枚のスライダー ---//
-.sliderArea {
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.slick-prev,
-.slick-next {
-  z-index: 1;
-  position: absolute;
-  top: 30%;
-  cursor: pointer;
-  outline: none;
-  border-top: 4px solid var(--black);
-  border-right: 4px solid var(--black);
-  height: 15px;
-  width: 15px;
-}
-
-.slick-prev {
-  /*戻る矢印の位置と形状*/
-  left: -5%;
-  transform: rotate(-135deg);
-}
-
-.slick-next {
-  /*次へ矢印の位置と形状*/
-  right: 1%;
-  transform: rotate(45deg);
-}
-
-.slick-prev:before,
-.slick-next:before {
-  color: #000;
-}
-
-.slick-slide {
-  transition: all ease-in-out .3s;
-}
-
-// .slick-active {
-//   opacity: 1;
-// }
-
-// .slick-current {
-//   opacity: 1;
-// }
-
-// .thumb {
-//   margin: 120px 0 0;
-// }
-
-.thumb .slick-slide {
-  cursor: pointer;
-}
-
-// .thumb .slick-slide:hover {
-//   opacity: .7;
-// }
-
-// .section p._a .link {
-//   display: inline-block;
-//   color: #607D8B;
-//   padding-left: 1.3em;
-//   text-indent: -1.3em;
-// }
-
-// .section p._a .link:before {
-//   content: '';
-//   display: inline-block;
-//   width: 5px;
-//   height: 5px;
-//   border-top: 2px solid var(--black);
-//   border-right: 2px solid var(--black);
-//   -webkit-transform: rotate(45deg);
-//   transform: rotate(45deg);
-//   margin-right: 10px;
-// }
-
-.slick-dots button {
-  // color: var(--white);
-  // outline: none;
-  width: 2px;
-  /*ドットボタンのサイズ*/
-  height: 2px;
-  /*ドットボタンのサイズ*/
-  border-radius: 50%;
-  background: var(--white);
-  /*ドットボタンの色*/
-  border: 1px solid #000;
-}
-
-.slick-dots .slick-active button {
-  background: var(--black);
-  /*ドットボタンの現在地表示の色*/
-}
-
-/*ドットナビゲーションの設定*/
-// .slick-dots {
-//   position: relative;
-//   z-index: 3;
-//   text-align: center;
-//   margin: 0;
-//   display: flex;
-//   flex-direction: row;
-// }
-
-.slick-dots {
-  width: 64px;
-  height: auto;
-  background-color: var(--secondary);
-  border-radius: 100px;
-  position: absolute;
-  bottom: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    button {
-      width: 6px;
-      height: 6px;
-    }
-  }
-}
-
-// .slick-active button {
-//   width: 1px;
-//   height: 1px;
-// }
-
-
 /*=================================
             ヘッダー
 ===================================*/
@@ -731,19 +593,12 @@ header {
   padding: 0;
   padding-top: 112px;
 
-  @include mq(tb) {}
-
-
   &-area {
-
-
     img {
       width: 100%;
       height: 100%;
       aspect-ratio: 3 / 2;
-
     }
-
 
     &_banner {
       width: 50%;
@@ -777,136 +632,222 @@ header {
 /*=================================
               Concept
 ===================================*/
-section.concept {
+.concept {
 
-  .wrapper {
+  .inner {
+    margin-top: 48px;
+    flex-direction: column;
+    text-align: center;
 
-    .inner {
-      margin-top: 48px;
-      flex-direction: column;
-      text-align: center;
+    h2 {
+      color: var(--primary);
+      letter-spacing: 0.15rem;
+      font-size: 1.45rem;
+      border: none;
+      filter: none;
+      font-weight: 600;
+      display: inline;
+    }
 
-      h2 {
-        color: var(--primary);
-        letter-spacing: 0.15rem;
-        font-size: 1.45rem;
-        border: none;
-        filter: none;
-        font-weight: 600;
-        display: inline;
+    p {
+      padding-bottom: 6px;
+
+      @include mq(tb) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        width: 600px;
+        margin: 0 auto;
+
+        br.pc-only {
+          display: flex;
+          margin: 0 auto;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+
+      &.concept-subtitle {
+        letter-spacing: 0.1rem;
+        margin-bottom: 24px;
+        margin-top: -5px;
+        font-weight: 400;
+
+        // テキストの両サイドに棒線👇
+        display: flex;
+        align-items: center;
+
+        /* 縦位置の調整 */
+        &::before,
+        &::after {
+          content: '';
+          flex-grow: 1;
+          /* 余白を分け与える */
+          height: 1px;
+          background: #4C524C;
+        }
+
+        /* 見出しの文字と横棒の間隔を開ける */
+        &::before {
+          margin-right: 15px;
+        }
+
+        &::after {
+          margin-left: 15px;
+        }
+      }
+
+      &:not(:first-of-type) {
+        text-align: left;
+        font-weight: 500;
+      }
+
+      &:nth-child(3) {
+        padding-bottom: 24px;
+        letter-spacing: 0.1rem;
+      }
+
+      &:nth-child(4) {
+        letter-spacing: 0.12rem;
+      }
+
+      &:nth-child(7) {
+        padding-bottom: 32px;
 
       }
 
-      p {
-        padding-bottom: 6px;
+      &:nth-child(n+5) {
+        line-height: 1.5rem;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+
+  // Concept＿イメージ画像 //
+  .concept-image {
+    margin: 48px auto;
+    // display: grid;
+    // justify-content: center;
+    // justify-items: center;
+    // position: relative;
+
+    li {
+      display: flex;
+      left: 0;
+
+      @include mq(tb) {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+      }
+
+      a {
+        align-items: center;
+        display: flex;
+        aspect-ratio: 300 / 325;
+        width: 92%;
+        margin: 0 auto;
+        height: 100%;
 
         @include mq(tb) {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 0.8rem;
-          width: 600px;
-          margin: 0 auto;
+          flex-direction: row;
+        }
 
-          br.pc-only {
-            display: flex;
-            margin: 0 auto;
-            text-align: center;
-            justify-content: center;
+        img {
+          height: 100%;
+
+          @include mq(tb) {
+            height: 45%;
           }
-        }
-
-
-        &.concept-subtitle {
-          letter-spacing: 0.1rem;
-          margin-bottom: 24px;
-          margin-top: -5px;
-          font-weight: 400;
-
-          // テキストの両サイドに棒線👇
-          display: flex;
-          align-items: center;
-
-          /* 縦位置の調整 */
-          &::before,
-          &::after {
-            content: '';
-            flex-grow: 1;
-            /* 余白を分け与える */
-            height: 1px;
-            background: #4C524C;
-          }
-
-          /* 見出しの文字と横棒の間隔を開ける */
-          &::before {
-            margin-right: 15px;
-          }
-
-          &::after {
-            margin-left: 15px;
-          }
-        }
-
-        &:not(:first-of-type) {
-          text-align: left;
-          font-weight: 500;
-        }
-
-        &:nth-child(3) {
-          padding-bottom: 24px;
-          letter-spacing: 0.1rem;
-        }
-
-        &:nth-child(4) {
-          letter-spacing: 0.12rem;
-        }
-
-        &:nth-child(7) {
-          padding-bottom: 32px;
-
-        }
-
-        &:nth-child(n+5) {
-          line-height: 1.5rem;
-          letter-spacing: 0.1rem;
         }
       }
     }
 
     // Concept＿イメージ画像 //
-    .concept-image {
-      margin: 48px auto;
+    .slick-prev,
+    .slick-next {
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+
+      // outline: none;
+      // border-top: 4px solid var(--black);
+      // border-right: 4px solid var(--black);
+      // height: 15px;
+      // width: 15px;
+      &:before {
+        content: "";
+      }
+    }
+
+    .slick-prev {
+      /*戻る（左側）矢印の位置と形状*/
+      left: -3%;
+      // transform: rotate(-135deg);
+
+      @include mq(tb) {
+        left: 0;
+      }
+    }
+
+    .slick-next {
+      /*次へ（右側）矢印の位置と形状*/
+      right: -5%;
+      // transform: rotate(45deg);
+
+      @include mq(tb) {
+        right: 0%;
+      }
+    }
+
+    .slick-dots button {
+      // color: var(--white);
+      // outline: none;
+      width: 2px;
+      /*ドットボタンのサイズ*/
+      height: 2px;
+      /*ドットボタンのサイズ*/
+      border-radius: 50%;
+      background: var(--white);
+      /*ドットボタンの色*/
+      border: 1px solid #000;
+    }
+
+    .slick-dots .slick-active button {
+      background: var(--black);
+      /*ドットボタンの現在地表示の色*/
+    }
+
+    .slick-dots {
+      width: 100%;
+      height: auto;
+      background-color: var(--secondary);
+      border-radius: 100px;
+      position: absolute;
+      bottom: -32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
 
 
       li {
         display: flex;
-        left: 0;
+        align-items: center;
+        justify-content: center;
 
-        a {
-          align-items: center;
-          display: flex;
-          aspect-ratio: 300 / 325;
-          width: 92%;
-          margin: 0 auto;
-          height: 100%;
-
-          @include mq(tb) {
-            display: flex;
-            flex-direction: row;
-          }
-
-          img {
-            height: 100%;
-
-            @include mq(tb) {
-              height: 45%;
-            }
-          }
+        button {
+          width: 6px;
+          height: 6px;
         }
       }
     }
   }
 }
+
 
 
 /*=================================
@@ -1040,210 +981,350 @@ section.concept {
       padding-top: 14px;
     }
   }
+}
 
+//--- （定番商品）２枚のスライダー ---//
+.sliderArea {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-  /*=================================
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  position: absolute;
+  top: 30%;
+  cursor: pointer;
+  outline: none;
+  border-top: 4px solid var(--black);
+  border-right: 4px solid var(--black);
+  height: 15px;
+  width: 15px;
+
+  &::before {
+    content: "";
+  }
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: 1%;
+  transform: rotate(45deg);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+}
+
+// .slick-active {
+//   opacity: 1;
+// }
+
+// .slick-current {
+//   opacity: 1;
+// }
+
+// .thumb {
+//   margin: 120px 0 0;
+// }
+
+.thumb .slick-slide {
+  cursor: pointer;
+
+}
+
+// .thumb .slick-slide:hover {
+//   opacity: .7;
+// }
+
+// .section p._a .link {
+//   display: inline-block;
+//   color: #607D8B;
+//   padding-left: 1.3em;
+//   text-indent: -1.3em;
+// }
+
+// .section p._a .link:before {
+//   content: '';
+//   display: inline-block;
+//   width: 5px;
+//   height: 5px;
+//   border-top: 2px solid var(--black);
+//   border-right: 2px solid var(--black);
+//   -webkit-transform: rotate(45deg);
+//   transform: rotate(45deg);
+//   margin-right: 10px;
+// }
+
+.slick-dots button {
+  // color: var(--white);
+  // outline: none;
+  width: 2px;
+  /*ドットボタンのサイズ*/
+  height: 2px;
+  /*ドットボタンのサイズ*/
+  border-radius: 50%;
+  background: var(--white);
+  /*ドットボタンの色*/
+  border: 1px solid #000;
+}
+
+.slick-dots .slick-active button {
+  background: var(--black);
+  /*ドットボタンの現在地表示の色*/
+}
+
+/*ドットナビゲーションの設定*/
+// .slick-dots {
+//   position: relative;
+//   z-index: 3;
+//   text-align: center;
+//   margin: 0;
+//   display: flex;
+//   flex-direction: row;
+// }
+
+.slick-dots {
+  width: 100%;
+  height: auto;
+  background-color: var(--secondary);
+  border-radius: 100px;
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+// .slick-active button {
+//   width: 1px;
+//   height: 1px;
+// }
+/*=================================
             カテゴリー
 ===================================*/
-  .category {
-    margin: 48px auto;
+.category {
+  margin: 48px auto;
 
-    .wrapper {
-      .category-list {
-        display: grid;
-        grid-template-columns: repeat(2, 152px);
-        gap: 24px;
+  .wrapper {
+    .category-list {
+      display: grid;
+      grid-template-columns: repeat(2, 152px);
+      gap: 24px;
 
-        .category-list_box {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+      .category-list_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-          a {
-            display: inline;
-            background-color: var(--bg-color);
-            color: var(--black);
-            border-radius: 100px;
-            padding: 0px 14px;
-            font-weight: 600;
-            position: relative;
-            bottom: 20%;
-            box-shadow: 0px 3px 3px rgba(0, 0, 0, .25);
-            letter-spacing: 0.04rem;
-          }
-
+        a {
+          display: inline;
+          background-color: var(--bg-color);
+          color: var(--black);
+          border-radius: 100px;
+          padding: 0px 14px;
+          font-weight: 600;
+          position: relative;
+          bottom: 20%;
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, .25);
+          letter-spacing: 0.04rem;
         }
+
       }
     }
   }
+}
 
-  /*=================================
+/*=================================
             イメージ動画
 ===================================*/
-  .image-video {
-    margin: 96px auto 48px;
+.image-video {
+  margin: 96px auto 48px;
 
-    .image-video_box {
-      display: flex;
-      justify-content: center;
-      aspect-ratio: 328 /184;
-    }
-
-    iframe {
-      width: 100%;
-    }
+  .image-video_box {
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 328 /184;
   }
 
-  /*=================================
+  iframe {
+    width: 100%;
+  }
+}
+
+/*=================================
           安心とサービス
 ===================================*/
-  .service {
-    margin: 96px auto 48px;
+.service {
+  margin: 96px auto 48px;
 
-    .service-wrapper {
+  .service-wrapper {
 
-      .service-list {
-        display: flex;
-        justify-content: space-between;
+    .service-list {
+      display: flex;
+      justify-content: space-between;
 
-        &:nth-of-type(2) {
-          .service-list_box .service-list_box_text {
-            line-height: 1.4rem;
-          }
-        }
-
-        &:nth-of-type(3) {
-          .service-list_box .service-list_box_title {
-            font-size: 14px;
-            padding: 0px 7px;
-            letter-spacing: 0.06rem;
-          }
-
-          .service-list_box .service-list_box_text {
-            font-size: 14px;
-            line-height: 1.2rem;
-          }
-        }
-
-        img {
-          aspect-ratio: 116 / 110;
-          width: 116px;
-          height: 113px;
-        }
-
-        &:nth-of-type(n+2) {
-          margin-top: 24px;
-        }
-
-        .service-list_box {
-          width: 151px;
-          display: inline-flex;
-          flex-direction: column;
-          align-items: flex-start;
-
-          p {
-            font-weight: 600;
-            letter-spacing: 0.08rem;
-          }
-
-          .service-list_box_title {
-            border: 1px solid var(--black);
-            display: inline;
-            padding: 0px 8px;
-            font-size: 16px;
-            margin-top: 0;
-          }
-
-          .service-list_box_text {
-            font-size: 15px;
-            margin-top: 8px;
-            line-height: 1.4rem;
-          }
-        }
-      }
-    }
-  }
-
-  /*=================================
-            他製品との比較
-===================================*/
-  section.comparison {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    background-color: #84748580;
-
-    .wrapper {
-
-      h2 {
-        margin-bottom: 24px;
-      }
-
-      .inner-comparison {
-
-        p {
-          display: flex;
-          justify-content: center;
-
-          &.comparison-title {
-            font-weight: bold;
-            margin-bottom: 16px;
-          }
-
-          &.comparison-text {
-            font-weight: 500;
-            line-height: 1.2rem;
-            letter-spacing: 0.06rem;
-            margin-bottom: 6px;
-          }
-        }
-      }
-    }
-  }
-
-  /*=================================
-            商品レビュー
-===================================*/
-  section.review {
-    padding: 48px 24px;
-
-    h2 {
-      display: inline;
-      padding: 8px 16px;
-    }
-
-    .review-list_item {
-      margin-top: 24px;
-
-      .customer {
-        font-size: 0.7rem;
-      }
-
-      p {
-        font-weight: 600;
-
-        &.review-list_Item_text {
-          font-weight: normal;
+      &:nth-of-type(2) {
+        .service-list_box .service-list_box_text {
           line-height: 1.4rem;
         }
       }
 
-      .review-list_item_content {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        .review-list_item_title {
-          margin-right: 8px;
-          font-size: 1rem;
+      &:nth-of-type(3) {
+        .service-list_box .service-list_box_title {
+          font-size: 14px;
+          padding: 0px 7px;
+          letter-spacing: 0.06rem;
         }
 
-        img {
-          width: 30%;
+        .service-list_box .service-list_box_text {
+          font-size: 14px;
+          line-height: 1.2rem;
+        }
+      }
+
+      img {
+        aspect-ratio: 116 / 110;
+        width: 116px;
+        height: 113px;
+      }
+
+      &:nth-of-type(n+2) {
+        margin-top: 24px;
+      }
+
+      .service-list_box {
+        width: 151px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p {
+          font-weight: 600;
+          letter-spacing: 0.08rem;
+        }
+
+        .service-list_box_title {
+          border: 1px solid var(--black);
+          display: inline;
+          padding: 0px 8px;
+          font-size: 16px;
+          margin-top: 0;
+        }
+
+        .service-list_box_text {
+          font-size: 15px;
+          margin-top: 8px;
+          line-height: 1.4rem;
         }
       }
     }
   }
 }
+
+/*=================================
+            他製品との比較
+===================================*/
+section.comparison {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: #84748580;
+
+  .wrapper {
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    .inner-comparison {
+
+      p {
+        display: flex;
+        justify-content: center;
+
+        &.comparison-title {
+          font-weight: bold;
+          margin-bottom: 16px;
+        }
+
+        &.comparison-text {
+          font-weight: 500;
+          line-height: 1.2rem;
+          letter-spacing: 0.06rem;
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+}
+
+/*=================================
+            商品レビュー
+===================================*/
+section.review {
+  padding: 48px 24px;
+
+  h2 {
+    display: inline;
+    padding: 8px 16px;
+  }
+
+  .review-list_item {
+    margin-top: 24px;
+
+    .customer {
+      font-size: 0.7rem;
+    }
+
+    p {
+      font-weight: 600;
+
+      &.review-list_Item_text {
+        font-weight: normal;
+        line-height: 1.4rem;
+      }
+    }
+
+    .review-list_item_content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .review-list_item_title {
+        margin-right: 8px;
+        font-size: 1rem;
+      }
+
+      img {
+        width: 30%;
+      }
+    }
+  }
+}
+
 
 /*=================================
             よくある質問
