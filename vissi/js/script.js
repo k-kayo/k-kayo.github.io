@@ -28,6 +28,9 @@ $(".slider").slick({
       breakpoint: 992, // 768〜992px以下のサイズに適用
       settings: {
         slidesToShow: 2,
+        slidesToScroll: 2,
+        // centerMode: true,
+        // variableWidth: true,
       },
     },
     {

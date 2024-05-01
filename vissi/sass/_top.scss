@@ -57,12 +57,20 @@ h2 {
   border-radius: 100px;
   display: inline-block;
   text-align: center;
-  font-size: 16px;
+  font-size: 0.98rem;
   font-weight: 800;
   letter-spacing: 0.1rem;
   /* 1rem のぼかしで 3rem の広がりの赤っぽい影 */
   filter: drop-shadow(.1rem .1rem 0.1rem rgb(153, 153, 153));
   margin-bottom: 24px;
+
+  @include mq(tb) {
+    width: auto;
+    display: inline-block;
+    padding: 6px 32px;
+    font-size: 1.05rem;
+    margin: 54px auto;
+  }
 }
 
 h3 {
@@ -84,7 +92,6 @@ h3 {
   cursor: pointer;
   color: var(--white);
 }
-
 
 /*=================================
             ヘッダー
@@ -633,6 +640,9 @@ header {
               Concept
 ===================================*/
 .concept {
+  @include mq(tb) {
+    margin-bottom: 100px;
+  }
 
   .inner {
     margin-top: 48px;
@@ -725,130 +735,128 @@ header {
   }
 
   // Concept＿イメージ画像 //
-  .concept-image {
-    margin: 48px auto;
-    // display: grid;
-    // justify-content: center;
-    // justify-items: center;
-    // position: relative;
+  .wrapper-images {
+    @include mq(tb) {
+      position: relative;
+    }
 
-    li {
-      display: flex;
-      left: 0;
+    .concept-image {
+      margin: 48px auto;
 
       @include mq(tb) {
         display: flex;
-        flex-wrap: wrap;
-        flex: 1;
+        justify-content: center;
       }
-
-      a {
-        align-items: center;
-        display: flex;
-        aspect-ratio: 300 / 325;
-        width: 92%;
-        margin: 0 auto;
-        height: 100%;
-
-        @include mq(tb) {
-          display: flex;
-          flex-direction: row;
-        }
-
-        img {
-          height: 100%;
-
-          @include mq(tb) {
-            height: 45%;
-          }
-        }
-      }
-    }
-
-    // Concept＿イメージ画像 //
-    .slick-prev,
-    .slick-next {
-      z-index: 1;
-      position: absolute;
-      top: 50%;
-      cursor: pointer;
-
-      // outline: none;
-      // border-top: 4px solid var(--black);
-      // border-right: 4px solid var(--black);
-      // height: 15px;
-      // width: 15px;
-      &:before {
-        content: "";
-      }
-    }
-
-    .slick-prev {
-      /*戻る（左側）矢印の位置と形状*/
-      left: -3%;
-      // transform: rotate(-135deg);
-
-      @include mq(tb) {
-        left: 0;
-      }
-    }
-
-    .slick-next {
-      /*次へ（右側）矢印の位置と形状*/
-      right: -5%;
-      // transform: rotate(45deg);
-
-      @include mq(tb) {
-        right: 0%;
-      }
-    }
-
-    .slick-dots button {
-      // color: var(--white);
-      // outline: none;
-      width: 2px;
-      /*ドットボタンのサイズ*/
-      height: 2px;
-      /*ドットボタンのサイズ*/
-      border-radius: 50%;
-      background: var(--white);
-      /*ドットボタンの色*/
-      border: 1px solid #000;
-    }
-
-    .slick-dots .slick-active button {
-      background: var(--black);
-      /*ドットボタンの現在地表示の色*/
-    }
-
-    .slick-dots {
-      width: 100%;
-      height: auto;
-      background-color: var(--secondary);
-      border-radius: 100px;
-      position: absolute;
-      bottom: -32px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-
 
       li {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        left: 0;
 
-        button {
-          width: 6px;
-          height: 6px;
+        a {
+          align-items: center;
+          display: flex;
+          aspect-ratio: 300 / 325;
+          width: 92%;
+          margin: 0 auto;
+          height: 100%;
+
+          @include mq(tb) {
+            display: flex;
+            flex-direction: row;
+          }
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+
+      // Concept＿スライドショー //
+      .slick-prev,
+      .slick-next {
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+
+        // outline: none;
+        // border-top: 4px solid var(--black);
+        // border-right: 4px solid var(--black);
+        // height: 15px;
+        // width: 15px;
+        &:before {
+          content: "";
+        }
+      }
+
+      .slick-prev {
+        /*戻る（左側）矢印の位置と形状*/
+        left: -3%;
+        // transform: rotate(-135deg);
+
+        @include mq(tb) {
+          left: -1%;
+        }
+      }
+
+      .slick-next {
+        /*次へ（右側）矢印の位置と形状*/
+        right: -5%;
+        // transform: rotate(45deg);
+
+        @include mq(tb) {
+          right: -2%;
+        }
+      }
+
+      .slick-dots button {
+        // color: var(--white);
+        // outline: none;
+        width: 2px;
+        /*ドットボタンのサイズ*/
+        height: 2px;
+        /*ドットボタンのサイズ*/
+        border-radius: 50%;
+        background: var(--white);
+        /*ドットボタンの色*/
+        border: 1px solid #000;
+      }
+
+      .slick-dots .slick-active button {
+        background: var(--black);
+        /*ドットボタンの現在地表示の色*/
+      }
+
+      .slick-dots {
+        width: 100%;
+        height: auto;
+        background-color: var(--secondary);
+        border-radius: 100px;
+        position: absolute;
+        bottom: -32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mq(tb) {
+          width: auto;
+
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          button {
+            width: 6px;
+            height: 6px;
+          }
         }
       }
     }
   }
 }
-
-
 
 /*=================================
         期間限定コレクション
@@ -859,27 +867,55 @@ header {
   width: 100vw;
   padding: 24px;
 
+  @include mq(tb) {
+    padding-bottom: 40px;
+  }
+
   .wrapper {
+
 
     .limited_collection {
 
-      a img {
-        width: 85%;
-        margin: 0 auto;
-      }
+      a {
+        img {
+          width: 85%;
+          margin: 0 auto;
+        }
 
-      h3 {
-        font-size: 16px;
-        font-weight: 500;
-        letter-spacing: 0.13rem;
-        border: 1px solid var(--text-color);
-        border-radius: 100px;
-        background-color: var(--white);
-        width: 180px;
-        height: 30px;
-        filter: drop-shadow(.1rem .1rem 0.1rem rgb(153, 153, 153));
-        text-align: center;
-        margin: 14px auto 24px;
+        &:nth-child(-n+2) {
+          h3 {
+            @include mq(tb) {
+              margin-bottom: 48px;
+            }
+          }
+
+        }
+
+
+        h3 {
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 0.13rem;
+          border: 1px solid var(--text-color);
+          border-radius: 100px;
+          background-color: var(--white);
+          width: 180px;
+          height: 30px;
+          filter: drop-shadow(.1rem .1rem 0.1rem rgb(153, 153, 153));
+          text-align: center;
+          margin: 14px auto 24px;
+
+          @include mq(tb) {
+            font-size: 1.05rem;
+            text-align: center;
+            height: 100%;
+            margin-top: 16px;
+            width: 200px;
+
+          }
+
+        }
+
       }
     }
   }
@@ -889,11 +925,22 @@ header {
         機能｜function
 ===================================*/
 .function {
-  margin: 48px auto 0;
-  padding: 32px 0;
+  padding: 48px 0;
+
+  @include mq(tb) {
+    padding: 0;
+    margin: 0;
+  }
 
   .wrapper {
     padding: 0 24px;
+
+    .function-feature {
+      width: 75%;
+      display: flex;
+      margin: 0 auto;
+      margin-bottom: 16px;
+    }
   }
 
   .inner-function {
@@ -909,6 +956,11 @@ header {
       &:last-of-type {
         padding: 48px 7px;
       }
+
+      @include mq(tb) {
+        margin: 0 auto;
+        width: 65%;
+      }
     }
   }
 
@@ -920,6 +972,15 @@ header {
       letter-spacing: 0.09rem;
       font-size: 0.85rem;
       padding: 9px;
+
+      @include mq(tb) {
+        margin: 0 39px;
+      }
+    }
+
+    @include mq(tb) {
+
+      margin-bottom: 54px;
     }
   }
 }
@@ -1097,7 +1158,7 @@ header {
 // }
 
 .slick-dots {
-  width: 100%;
+  width: auto;
   height: auto;
   background-color: var(--secondary);
   border-radius: 100px;
