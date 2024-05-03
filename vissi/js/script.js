@@ -7,7 +7,6 @@ $(".mv-area").slick({
   swipe: false, //👈 スマホでスワイプした時にスワイプしない
 });
 
-// Conceptと定番商品のスライダーの設定 //
 $(".slider").slick({
   autoplay: true, //自動的に動き出すか。初期値はfalse。
   autoplaySpeed: 3000, //次のスライドに切り替わる待ち時間
@@ -28,15 +27,13 @@ $(".slider").slick({
       breakpoint: 992, // 768〜992px以下のサイズに適用
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
-        // centerMode: true,
-        // variableWidth: true,
+        slidesToScroll: 1,
       },
     },
     {
       breakpoint: 768, // 480〜767px以下のサイズに適用
       settings: {
-        slidesToShow: 1, // 画面に表示するスライドの数を設定します。
+        slidesToShow: 2, // 画面に表示するスライドの数を設定します。
         slidesToScroll: 1, // 1回のスクロールでスライドする数を設定します。
       },
     },
@@ -45,33 +42,39 @@ $(".slider").slick({
 
 // 定番商品 //
 // $(document).on("ready", function () {
-$(".regular_2").slick({
-  autoplay: true, //自動的に動き出すか。初期値はfalse。
-  dots: true,
-  infinite: true,
-  slidesToShow: 3, // 表示するスライド枚数
-  slidesToScroll: 1, // スライドする数
+$(document).ready(function () {
+  $(".slider2").slick({
+    autoplay: true, //自動的に動き出すか。初期値はfalse。
+    autoplaySpeed: 3000, //次のスライドに切り替わる待ち時間
+    speed: 1000, //スライドの動きのスピード。初期値は300。
+    infinite: true,
+    slidesToShow: 2, // 表示するスライド枚数
+    slidesToScroll: 1, // スライドする数
+    dots: true,
+    pauseOnFocus: false, //フォーカスで一時停止を無効
+    pauseOnHover: false, //マウスホバーで一時停止を無効
+    pauseOnDotsHover: false, //ドットナビゲーションをマウスホバーで一時停止を無効
 
-  responsive: [
-    {
-      breakpoint: 992, // 768〜992px以下のサイズに適用
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        // centerMode: true,
-        // variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 992, // 768〜992px以下のサイズに適用
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          // centerMode: true,
+          // variableWidth: true,
+        },
       },
-    },
-    {
-      breakpoint: 768, // 480〜767px以下のサイズに適用
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
+      {
+        breakpoint: 768, // 480〜767px以下のサイズに適用
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
       },
-    },
-  ],
+    ],
+  });
 });
-// });
 
 /*=================================
             アコーディオン
@@ -89,18 +92,6 @@ $(".faq-title").on("click", function () {
     $(this).addClass("close"); //クラス名closeを付与
   }
 });
-
-//ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
-// $(window).on("load", function () {
-//   $(".accordion-area li:first-of-type").addClass("open");
-//   $(".open").each(function (index, element) {
-//     //openクラスを取得
-//     var Title = $(element).children(".faq-title"); //openクラスの子要素のtitleクラスを取得
-//     $(Title).addClass("close"); //タイトルにクラス名closeを付与し
-//     var Box = $(element).children(".faq-box"); //openクラスの子要素boxクラスを取得
-//     $(Box).slideDown(500); //アコーディオンを開く
-//   });
-// });
 
 /*=================================
           トップへ戻るボタン
