@@ -44,32 +44,34 @@ $(".slider").slick({
 });
 
 // 定番商品 //
-$(document).on("ready", function () {
-  $(".regular_2").slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 992, // 768〜992px以下のサイズに適用
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          // centerMode: true,
-          // variableWidth: true,
-        },
+// $(document).on("ready", function () {
+$(".regular_2").slick({
+  autoplay: true, //自動的に動き出すか。初期値はfalse。
+  dots: true,
+  infinite: true,
+  slidesToShow: 3, // 表示するスライド枚数
+  slidesToScroll: 1, // スライドする数
+
+  responsive: [
+    {
+      breakpoint: 992, // 768〜992px以下のサイズに適用
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        // centerMode: true,
+        // variableWidth: true,
       },
-      {
-        breakpoint: 768, // 480〜767px以下のサイズに適用
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
+    },
+    {
+      breakpoint: 768, // 480〜767px以下のサイズに適用
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
-    ],
-  });
+    },
+  ],
 });
+// });
 
 /*=================================
             アコーディオン
