@@ -36,7 +36,8 @@ $(".slider").slick({
     {
       breakpoint: 768, // 480〜767px以下のサイズに適用
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 1, // 画面に表示するスライドの数を設定します。
+        slidesToScroll: 1, // 1回のスクロールでスライドする数を設定します。
       },
     },
   ],
@@ -49,6 +50,24 @@ $(document).on("ready", function () {
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 992, // 768〜992px以下のサイズに適用
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          // centerMode: true,
+          // variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 768, // 480〜767px以下のサイズに適用
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   });
 });
 
