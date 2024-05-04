@@ -99,14 +99,14 @@ $(".faq-title").on("click", function () {
 $(function () {
   const pagetop = $("#page-top");
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 800) {
-      pagetop.fadeIn(300);
+    if ($(this).scrollTop() > 100) {
+      pagetop.fadeIn();
     } else {
-      pagetop.fadeOut(300);
+      pagetop.fadeOut();
     }
   });
   pagetop.click(function () {
-    $("body, html").animate({ scrollTop: 0 }, 800);
+    $("body, html").animate({ scrollTop: 0 }, 500);
     return false;
   });
 });
