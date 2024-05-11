@@ -228,7 +228,6 @@ img {
 }
 
 .works-img {
-  /* box-shadow: 0 3px 10px rgba(0, 0, 0, .2); */
   border-radius: 5px;
 }
 
@@ -236,6 +235,7 @@ img {
   object-fit: cover;
   aspect-ratio: 6 / 4;
   object-position: top;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
 
 }
 
@@ -452,6 +452,39 @@ jQuery・lazyloaded
   width: 40%;
   display: flex;
   margin: 56px auto;
+}
+
+/* ul.article-body_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.article-body_box li {
+  list-style: none;
+}
+
+.article-body_box li img {
+  margin-left: auto;
+  margin-top: 0;
+}
+
+.article-body_box li p {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 16px;
+} */
+
+.article-body_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+.article-body_box img {
+  width: 40%;
+  margin: 0 16px;
 }
 
 .article-body_mockup {
