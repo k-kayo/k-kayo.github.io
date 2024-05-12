@@ -33,6 +33,10 @@ a {
   color: #1ca9e3;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -171,15 +175,22 @@ img {
   text-align: center;
   background-image: url(../img/investment-5241253_1280.jpg);
   background-size: cover;
-  background-position: center;
   margin: -75px 0 0;
   background-position: center;
+  aspect-ratio: 1280 / 853;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: 30%;
 }
 
 .mv-container {
-  padding: 0 40px;
   color: #fff;
   margin-bottom: 30px;
+  margin-right: 50px;
+  position: relative;
+  left: 100px;
 }
 
 .mv-title {
@@ -188,6 +199,7 @@ img {
   line-height: 1.2;
   margin-bottom: 5px;
   letter-spacing: .1em;
+  text-shadow: 4px 4px 4px #626060;
 }
 
 .mv-subtitle {
@@ -196,16 +208,53 @@ img {
   line-height: 1;
   margin-bottom: 40px;
   letter-spacing: .08em;
+  text-shadow: 3px 3px 2px #676666;
+
 }
 
 .mv-text {
   font-size: 18px;
   line-height: 1.8;
+  font-weight: bold;
+  /* background: rgba(185, 185, 185, 0.3); */
+  padding: 8px;
+  /* text-shadow: 0px 0px 0px #000000; */
+  text-shadow: 1px 1px 2px rgb(76, 76, 76), 0 0 1em rgb(66, 66, 88), 0 0 0.2em rgb(12, 12, 57);
 }
 
 /*--------------------------------
  Works
 ---------------------------------*/
+.works .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+
+h2:before, h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background-color: black;
+}
+
+h2:before {
+  left: 0;
+}
+
+h2:after {
+  right: 0;
+}
+
 .works-list {
   display: flex;
   flex-wrap: wrap;
@@ -287,6 +336,12 @@ jQuery・lazyloaded
 /*--------------------------------
  Skill
 ---------------------------------*/
+.skill .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .skill-list {
   display: flex;
   flex-wrap: wrap;
@@ -325,6 +380,12 @@ jQuery・lazyloaded
 /*--------------------------------
  About
 ---------------------------------*/
+.about .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about {
   background: url(/img/tesukiwashi-pattern-08.jpg);
 }
@@ -392,7 +453,8 @@ jQuery・lazyloaded
 }
 
 .img-qr p {
-  font-size: 14px;
+  font-size: 16px;
+  margin-top: 6px;
 }
 
 /*--------------------------------
@@ -454,26 +516,6 @@ jQuery・lazyloaded
   margin: 56px auto;
 }
 
-/* ul.article-body_box {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.article-body_box li {
-  list-style: none;
-}
-
-.article-body_box li img {
-  margin-left: auto;
-  margin-top: 0;
-}
-
-.article-body_box li p {
-  text-align: center;
-  margin-top: 8px;
-  margin-bottom: 16px;
-} */
 
 .article-body_box {
   display: flex;
@@ -605,23 +647,30 @@ jQuery・lazyloaded
     background-size: cover;
     background-position: left 100px;
     margin: -160px 0 0;
+    display: flex;
+
   }
 
   .mv-container {
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    bottom: 24px;
+    margin: 0;
   }
 
   .mv-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .mv-subtitle {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
 
   .mv-text {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.7;
   }
 
@@ -730,7 +779,7 @@ jQuery・lazyloaded
 @media print {
   body {
     font-size: 1.6rem;
-    font-weight: norml;
+    font-weight: normal;
   }
 
   .skill section {
