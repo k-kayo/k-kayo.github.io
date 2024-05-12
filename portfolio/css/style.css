@@ -497,11 +497,14 @@ jQuery・lazyloaded
   max-width: 1040px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .article-title {
   margin-bottom: 30px;
-  text-align: center;
 }
 
 .article-body {
@@ -759,14 +762,19 @@ jQuery・lazyloaded
     padding: 50px 0;
   }
 
+  .article-title {
+    display: flex;
+    justify-content: center;
+  }
+
   .article-body h3 {
-    font-size: 16px;
+    font-size: 18px;
     padding-left: .8em;
   }
 
 
   .article-body p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.7;
     margin-bottom: 20px;
   }
