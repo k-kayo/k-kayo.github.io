@@ -448,6 +448,7 @@ jQuery・lazyloaded
 /* QRコード */
 .img-qr img {
   width: 8%;
+  margin-top: 6px;
 }
 
 .img-qr p {
@@ -672,7 +673,7 @@ jQuery・lazyloaded
     line-height: 1.7;
     background-color: #bababa40;
     padding: 8px;
-    text-shadow: 0.5px 0.5px 1px #000000;
+    text-shadow: 1px 1px 1px #000000;
   }
 
   /* Works */
@@ -714,7 +715,7 @@ jQuery・lazyloaded
   }
 
   .skill-text {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.7;
   }
 
@@ -744,7 +745,7 @@ jQuery・lazyloaded
   }
 
   .img-qr p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
 
