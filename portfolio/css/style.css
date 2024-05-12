@@ -672,6 +672,9 @@ jQuery・lazyloaded
   .mv-text {
     font-size: 16px;
     line-height: 1.7;
+    background-color: rgba(186, 186, 186, 0.25);
+    padding: 8px;
+
   }
 
   /* Works */
