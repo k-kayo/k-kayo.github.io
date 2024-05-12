@@ -672,8 +672,7 @@ jQuery・lazyloaded
     line-height: 1.7;
     background-color: #bababa40;
     padding: 8px;
-    text-shadow: 1px 0px 1px #000000;
-
+    text-shadow: 0.5px 0.5px 1px #000000;
   }
 
   /* Works */
