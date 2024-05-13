@@ -746,6 +746,7 @@ jQuery・lazyloaded
   /* contact */
   .contact .lead {
     font-size: 1rem;
+    margin: 24px 0 32px;
   }
 
   .contact-list a {
