@@ -674,9 +674,10 @@ jQuery・lazyloaded
   .mv-text {
     font-size: 16px;
     line-height: 1.7;
-    background-color: #bababa40;
+    /* background-color: #bababa40; */
+    background-color: rgba(161, 160, 160, 0.3);
     padding: 8px;
-    text-shadow: 1px 1px 1px #000000;
+    text-shadow: 1px 1px 7px #4b4b4b;
   }
 
   /* Works */
@@ -734,12 +735,21 @@ jQuery・lazyloaded
   }
 
   .profile-body p {
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.7;
   }
 
   .profile-body p:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  /* contact */
+  .contact .lead {
+    font-size: 1rem;
+  }
+
+  .contact-list a {
+    font-size: 0.8rem;
   }
 
   /* QRコード */
@@ -748,7 +758,7 @@ jQuery・lazyloaded
   }
 
   .img-qr p {
-    font-size: 14px;
+    font-size: 0.8rem;
   }
 
 
