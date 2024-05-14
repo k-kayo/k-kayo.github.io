@@ -216,8 +216,7 @@ header {
       @include mq(xl) {
         display: block;
         aspect-ratio: 1 / 1;
-        // width: 15%;  コメントアウト外した方が良いか確認
-        height: auto;
+        width: 15%;
         object-fit: cover;
         position: absolute;
         justify-content: start;
@@ -519,7 +518,7 @@ header {
       a img {
         @include mq(tb) {
           aspect-ratio: 1 / 1;
-          // width: 40px; コメントアウト外した方が良いか確認
+          width: 40px;
           height: auto;
           object-fit: cover;
         }
@@ -817,7 +816,7 @@ header {
           align-items: center;
           display: flex;
           aspect-ratio: 300 / 325;
-          // width: 92%; コメントアウト外した方が良いか確認
+          width: 92%;
           margin: 0 auto;
           height: 100%;
           object-fit: cover;
@@ -1393,8 +1392,8 @@ header {
 
       img {
         aspect-ratio: 116 / 110;
-        // width: 116px;  ※左２つのコメントアウト外した方が良いか確認
-        // height: 113px;
+        width: 116px;
+        // height: 113px;　※コメントアウト外した方が良ければ外す
         border-radius: 16px;
         height: auto;
         object-fit: cover;
@@ -1769,7 +1768,7 @@ footer {
     padding-bottom: 48px;
 
     img {
-      // width: 25%; コメントアウト外した方が良いか確認
+      width: 25%;
       aspect-ratio: 29 / 7;
       height: auto;
       object-fit: cover;
