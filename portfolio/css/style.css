@@ -42,6 +42,7 @@ img {
   height: auto;
   vertical-align: bottom;
   border-style: none;
+  object-fit: cover;
 }
 
 .pc-only {
@@ -179,6 +180,7 @@ img {
   background-position: center;
   aspect-ratio: 1280 / 853;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,7 +285,8 @@ h2:after {
   aspect-ratio: 6 / 4;
   object-position: top;
   box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
-
+  height: 100%;
+  width: 100%;
 }
 
 .works-name {
