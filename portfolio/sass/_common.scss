@@ -1,0 +1,199 @@
+@use './mixins' as *;
+
+html {
+  scroll-behavior: smooth;
+  font-size: 24px;
+
+  @include mq(pc) {
+    font-size: calc((100vw - 320px) / 140 + 16px);
+  }
+}
+
+body {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1rem;
+  letter-spacing: .05em;
+  color: var(--text-color);
+}
+
+ul {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: .9rem;
+  font-weight: normal;
+}
+
+a {
+  transition: opacity .3s;
+  text-decoration: none;
+  color: var(--rink-color);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-style: none;
+  object-fit: cover;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+//=====================================
+//    レイアウト
+//=====================================
+.wrapper {
+  padding-top: 35px;
+}
+
+.section {
+  padding: 90px 0;
+
+  &:nth-of-type(odd) {
+    background-color: #fffdec;
+  }
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+//=====================================
+//    見出し
+//=====================================
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: .05em;
+  color: var(--text-color);
+}
+
+.lead {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+//=====================================
+//    ヘッダー
+//=====================================
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .1);
+  /* すりガラス風 */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(253, 239, 242, 0.75);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+
+    .header-logo {
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-right: 20px;
+      letter-spacing: .05em;
+
+      a {
+        color: var(--text-color);
+      }
+    }
+  }
+}
+
+.gnav {
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+    .gnav-item {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      a {
+        position: relative;
+        font-size: 20px;
+        font-weight: bold;
+        display: inline-block;
+        padding: 5px 0;
+        transition: .3s;
+        letter-spacing: .05em;
+        color: var(--text-color);
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 3px;
+          content: "";
+          transition: .3s;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background-color: var(--text-color);
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//=====================================
+//    ページトップ
+//=====================================
+.page-top {
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--bg-color);
+
+  .material-icons-outlined {
+    vertical-align: bottom;
+    color: var(--text-thin-color);
+  }
+}
+
+//=====================================
+//     フッター
+//=====================================
+.footer {
+  padding: 30px;
+  background-color: var(--accent-color);
+
+  .copyright {
+    font-size: 12px;
+    text-align: center;
+    color: var(--text-thin-color);
+  }
+}

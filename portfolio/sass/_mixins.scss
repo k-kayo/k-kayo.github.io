@@ -1,0 +1,14 @@
+// メディアクエリ
+@mixin mq($size) {
+  @if $size =='sp' {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $size =='pc' {
+    @media screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+}

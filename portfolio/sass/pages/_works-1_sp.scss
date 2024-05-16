@@ -1,0 +1,100 @@
+@use '../mixins' as *;
+
+/*--------------------------------
+ 下層：Worksページ/ＰＣ
+---------------------------------*/
+.article {
+  padding: 80px 0;
+}
+
+.article-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-title {
+  margin-bottom: 30px;
+}
+
+.article-body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.article-body_pc {
+  width: 40%;
+  display: flex;
+  margin: 56px auto;
+}
+
+
+.article-body_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+.article-body_box img {
+  width: 40%;
+  margin: 0 16px;
+}
+
+.article-body_mockup {
+  display: flex;
+  justify-content: center;
+}
+
+.article-body_mockup img {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.article-body h3 {
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding-left: 1em;
+}
+
+.article-body h3:not(:first-child) {
+  margin-top: 50px;
+}
+
+.article-body h3::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  content: "";
+  border-radius: 3px;
+  background-color: #333;
+}
+
+.article-body p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.article-body .article-body_sp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+.article-body_sp img {
+  width: 20%;
+  padding: 20px;
+}
+
+.home-link {
+  text-align: center;
+}
