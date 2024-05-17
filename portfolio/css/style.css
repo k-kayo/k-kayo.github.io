@@ -442,6 +442,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 .about .container .profile {
   display: -webkit-box;
@@ -449,7 +450,7 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -587,11 +588,6 @@ img {
   /* About */
   .profile {
     display: block;
-  }
-  .profile-img {
-    width: 150px;
-    margin: 0 auto;
-    margin-bottom: 25px;
   }
   .profile-body p {
     font-size: 1rem;
