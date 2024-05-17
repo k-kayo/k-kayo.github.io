@@ -271,3 +271,170 @@
     }
   }
 }
+
+//=====================================
+//    メディアクエリ 767以下／SP
+//=====================================
+@include mq(sp) {
+
+  /*  メインビジュアル */
+  .mv {
+    background-size: cover;
+    background-position: left 100px;
+    margin: -160px 0 0;
+    display: flex;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      left: 0;
+      bottom: 24px;
+      margin: 0;
+    }
+
+    &-title {
+      font-size: 32px;
+    }
+
+    &-subtitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      font-size: 16px;
+      line-height: 1.7;
+      /* background-color: #bababa40; */
+      background-color: rgba(161, 160, 160, 0.3);
+      padding: 8px;
+      text-shadow: 1px 1px 7px #4b4b4b;
+    }
+  }
+
+  /* Works */
+  .works {
+
+    &-list {
+      justify-content: space-between;
+
+      .works-item {
+        flex: 0 0 48%;
+        margin-right: 0;
+        margin-bottom: 30px;
+
+        .works-name-name {
+          font-size: 14px;
+        }
+
+        .works-info {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+
+  /* Skill */
+  .skill {
+
+    .container {
+
+      .skill-list {
+        display: block;
+        margin-bottom: 0;
+
+        .skill-item {
+          width: 100%;
+          margin-bottom: 35px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .skill-name {
+            margin-bottom: 5px;
+          }
+
+          .skill-text {
+            font-size: 15px;
+            line-height: 1.7;
+          }
+        }
+      }
+    }
+
+  }
+
+  /* About */
+  .profile {
+    display: block;
+
+    &-img {
+      width: 150px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
+
+    &-body p {
+      font-size: 1rem;
+      line-height: 1.7;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  /* contact */
+  .contact {
+    .container {
+
+      p.lead {
+        font-size: 1rem;
+        margin: 24px 0 32px;
+
+        &-list a {
+          font-size: 0.8rem;
+        }
+
+        /* QRコード */
+        .img-qr {
+          img {
+            width: 30%;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 印刷用CSS */
+/* 印刷プレビュー */
+@media print {
+  body {
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+
+  .skill section {
+    page-break-before: always;
+  }
+
+  .about section {
+    page-break-before: always;
+  }
+
+  /*printで適用する内容*/
+  .contact section {
+    page-break-before: always;
+    /* 直前で改ページさせる */
+  }
+
+  .article-body_pc {
+    page-break-before: always;
+  }
+}

@@ -1,100 +1,131 @@
 @use '../mixins' as *;
 
-/*--------------------------------
- 下層：Worksページ/ＰＣ
----------------------------------*/
+//=====================================
+//     下層：Worksページ
+//=====================================
 .article {
   padding: 80px 0;
+
+  &-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .article-title {
+      margin-bottom: 30px;
+      font-size: 1.25rem;
+    }
+
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+
+      &_mockup {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        img {
+          padding: 20px;
+          margin-bottom: 20px;
+        }
+      }
+
+      h3 {
+        position: relative;
+        font-size: 20px;
+        margin-bottom: 5px;
+        padding-left: 1em;
+
+        &:not(:first-child) {
+          margin-top: 50px;
+        }
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 4px;
+          height: 100%;
+          content: "";
+          border-radius: 3px;
+          background-color: var(--text-color);
+        }
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+
+        .article-body_pc {
+          width: 40%;
+          display: flex;
+          margin: 56px auto;
+        }
+      }
+
+      &_sp {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+
+        img {
+          width: 20%;
+          padding: 20px;
+        }
+      }
+
+      &_box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+
+        img {
+          width: 40%;
+          margin: 0 16px;
+        }
+      }
+
+      .home-link {
+        text-align: center;
+      }
+    }
+  }
 }
 
-.article-container {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+//=====================================
+//    メディアクエリ 767以下／sp
+//=====================================
+@include mq(sp) {
 
-.article-title {
-  margin-bottom: 30px;
-}
+  .article {
+    padding: 50px 0;
+    width: 100%;
 
-.article-body {
-  max-width: 720px;
-  margin: 0 auto;
-}
+    &-title {
+      display: flex;
+      justify-content: center;
+    }
 
-.article-body_pc {
-  width: 40%;
-  display: flex;
-  margin: 56px auto;
-}
+    &-body {
+      h3 {
+        font-size: 18px;
+        padding-left: .8em;
+      }
 
-
-.article-body_box {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: start;
-}
-
-.article-body_box img {
-  width: 40%;
-  margin: 0 16px;
-}
-
-.article-body_mockup {
-  display: flex;
-  justify-content: center;
-}
-
-.article-body_mockup img {
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.article-body h3 {
-  position: relative;
-  font-size: 20px;
-  margin-bottom: 5px;
-  padding-left: 1em;
-}
-
-.article-body h3:not(:first-child) {
-  margin-top: 50px;
-}
-
-.article-body h3::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  content: "";
-  border-radius: 3px;
-  background-color: #333;
-}
-
-.article-body p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-.article-body .article-body_sp {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: start;
-}
-
-.article-body_sp img {
-  width: 20%;
-  padding: 20px;
-}
-
-.home-link {
-  text-align: center;
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        font-weight: normal;
+      }
+    }
+  }
 }

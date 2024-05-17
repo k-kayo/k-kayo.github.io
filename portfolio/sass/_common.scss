@@ -136,32 +136,32 @@ img {
       &:not(:last-child) {
         margin-right: 20px;
       }
+    }
 
-      a {
-        position: relative;
-        font-size: 20px;
-        font-weight: bold;
-        display: inline-block;
-        padding: 5px 0;
+    a {
+      position: relative;
+      font-size: 20px;
+      font-weight: bold;
+      display: inline-block;
+      padding: 5px 0;
+      transition: .3s;
+      letter-spacing: .05em;
+      color: var(--text-color);
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 3px;
         transition: .3s;
-        letter-spacing: .05em;
-        color: var(--text-color);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-color: var(--text-color);
 
-        &::after {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0;
-          height: 3px;
-          content: "";
-          transition: .3s;
-          -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-          background-color: var(--text-color);
-
-          &:hover::after {
-            width: 100%;
-          }
+        &:hover::after {
+          width: 100%;
         }
       }
     }
@@ -196,4 +196,75 @@ img {
     text-align: center;
     color: var(--text-thin-color);
   }
+}
+
+//=====================================
+//    メディアクエリ 767px以下
+//=====================================
+@include mq(sp) {
+  body {
+    font-size: 14px;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  /* 見出し */
+  .title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .lead {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  /* レイアウト */
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  /* ヘッダー */
+  .header {
+
+    .container {
+      padding: 15px;
+
+      .header-logo {
+        font-size: 18px;
+        margin-right: 15px;
+      }
+
+      .gnav {
+
+        &-item:not(:last-child) {
+          margin-right: 10px;
+        }
+
+        a {
+          font-size: 12px;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* フッター */
+.footer {
+  padding: 20px;
 }
