@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="ポートフォリオのお問い合わせフォームです。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせフォーム</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="contact-page">
+    <div class="contact" id="form">
+      <h1 class="contact-title">Contact</h1>
+      <!----- form ----->
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd_OMYyDyJgwGRxejU6_yv33egdk1vFn5L8BiM67RJ9pkf6nA/formResponse">
+        <table class="contact-table">
+          <tr>
+            <th class="contact-item">名前</th>
+            <td class="contact-body">
+              <input type="text" name="entry.396652" class="form-text" />
+            </td>
+          </tr>
+          <tr>
+            <th class="contact-item">性別</th>
+            <td class="contact-body">
+              <label class="contact-sex">
+                <input type="radio" name="性別" />
+                <span class="contact-sex-txt">男</span>
+              </label>
+              <label class="contact-sex">
+                <input type="radio" name="性別" />
+                <span class="contact-sex-txt">女</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th class="contact-item">メールアドレス</th>
+            <td class="contact-body">
+              <input type="mail" name="entry.1934980" class="form-text" />
+            </td>
+          </tr>
+          <tr>
+            <th class="contact-item">電話</th>
+            <td class="contact-body">
+              <input type="tel" name="電話" class="form-text" />
+            </td>
+          </tr>
+          <tr>
+            <th class="contact-item">職業</th>
+            <td class="contact-body">
+              <select name="職業" class="form-select">
+                <option>選択</option>
+                <option>学生</option>
+                <option>主婦</option>
+                <option>会社員</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th class="contact-item">スキル</th>
+            <td class="contact-body">
+              <label class="contact-skill">
+                <input type="checkbox" name="スキル" />
+                <span class="contact-skill-txt">HTML,CSS</span>
+              </label>
+              <label class="contact-skill">
+                <input type="checkbox" name="スキル" />
+                <span class="contact-skill-txt">JavaScript</span>
+              </label>
+              <label class="contact-skill">
+                <input type="checkbox" name="スキル" />
+                <span class="contact-skill-txt">WordPress</span>
+              </label>
+              <label class="contact-skill">
+                <input type="checkbox" name="スキル" />
+                <span class="contact-skill-txt">その他</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th class="contact-item">お問い合わせ内容</th>
+            <td class="contact-body">
+              <textarea name="問い合わせ" class="form-textarea"></textarea>
+            </td>
+          </tr>
+        </table>
+
+        <input class="contact-submit" type="submit" value="送信" />
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </body>
+</html>

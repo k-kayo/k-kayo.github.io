@@ -1,0 +1,713 @@
+@use "color";
+@use "breakpoints";
+
+// index.htmlとcontact.htmlのみ
+.index-page {
+  font-family: "Oswald", "Noto Sans JP", sans-serif;
+  color: color.$cl-black;
+
+  &.is-fixed {
+    overflow: hidden;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px 6px 30px;
+  width: 160px;
+  margin: 0 auto;
+
+  &--bg {
+    background-color: color.$white;
+
+    .button_text {
+      color: color.$bg-dark;
+    }
+  }
+
+  &--border {
+    border: 1px solid color.$white;
+
+    .button_text {
+      color: color.$white;
+    }
+  }
+
+  &_icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  &_icon-path {
+    fill: color.$white;
+
+    &--contact {
+      fill: color.$bg-dark;
+    }
+  }
+
+  &_text {
+    margin-left: 10px;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: color.$white;
+  }
+}
+
+// header
+.header {
+  background-color: color.$emerald-green;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  &_container {
+    width: 100%;
+    position: relative;
+  }
+
+  &_logo {
+    display: inline-block;
+    padding: 14px 24px;
+    font-size: 20px;
+    color: color.$white;
+  }
+
+  &_menu-button {
+    border: none;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 30px;
+    height: 36px;
+    overflow: hidden;
+    color: transparent;
+    background: url(../img/bg_menu.png) center center no-repeat;
+    background-size: 100% auto;
+
+    &.is-checked {
+      background: url(../img/bg_menu-close.png) center center no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &_contents {
+    display: none;
+    height: calc(100vh - 80px);
+    border-top: 1px solid color.$white;
+    padding-top: 60px;
+  }
+
+  &_nav-item {
+    &+& {
+      margin-top: 24px;
+    }
+  }
+}
+
+//  ＦＶ
+.fv {
+  position: relative;
+  height: 550px;
+
+
+  &_img-sp {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &_contents {
+    position: absolute;
+    bottom: 26px;
+    left: 0;
+    width: 100%;
+    height: 209px;
+    background: url(../img/sp/bg_fv.png) center center no-repeat;
+    background-size: 100% auto;
+    padding: 32px;
+  }
+
+  &_heading-main {
+    display: block;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+  }
+
+  &_heading-sub {
+    margin-top: 12px;
+    display: block;
+    font-size: 14px;
+  }
+}
+
+// section（共通パーツ）
+.section {
+  padding: 48px 0;
+
+  &_inner {
+    padding: 0 32px;
+  }
+
+  &_head {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &_head-main {
+    font-size: 40px;
+    letter-spacing: 0.1em;
+  }
+
+  &_head-sub {
+    font-size: 11px;
+  }
+
+  &_lead-text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  &_contents {
+    margin-top: 40px;
+  }
+}
+
+// service
+.service {
+  &_item {
+    &+& {
+      margin-top: 40px;
+    }
+  }
+
+  &_item-img {
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  &_item-img-pc {
+    display: none;
+  }
+
+  // &_item {
+  //   text-align: center;
+  //   padding: 6px;
+  // }
+
+  &_item-name {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+  }
+
+  &_item-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+//  works
+.works {
+  background-color: color.$bg-light;
+
+  &_item {
+    &+& {
+      margin-top: 40px;
+    }
+  }
+
+  &_item-img {
+    margin-bottom: 12px;
+
+    img {
+      box-shadow: 0 4px 15px 0 rgba(color.$black, 0.15);
+    }
+  }
+
+  &_item-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  &_item-link {
+    text-decoration: underline;
+    font-size: 14px;
+  }
+}
+
+//  about
+.about {
+  &_img {
+    margin-bottom: 32px;
+
+    img {
+      box-shadow: 0 4px 15px 0 rgb(color.$black, 0.15);
+    }
+  }
+
+  &_text {
+    font-size: 16px;
+    line-height: 1.6;
+
+    &+& {
+      margin-top: 1em;
+    }
+  }
+}
+
+//  flow
+.flow {
+  background-color: color.$bg-light;
+
+  &_list {
+    margin-top: 64px;
+  }
+
+  &_item {
+    position: relative;
+    border: 1px solid color.$cl-border;
+    padding: 46px 16px 24px;
+
+    &+& {
+      margin-top: 46px;
+    }
+  }
+
+  &_item-num {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background-color: color.$bg-dark;
+    color: color.$white;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_item-img {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &_item-name {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &_item-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+//  message
+.message {
+  &_img {
+    margin-bottom: 32px;
+
+    img {
+      box-shadow: 0 4px 15px 0 rgb(color.$black, 0.15);
+    }
+  }
+
+  &_text {
+    font: 16px;
+    line-height: 1.6;
+  }
+}
+
+// page-bottom
+.page-bottom {
+  color: color.$white;
+
+  &_item {
+    padding: 40px;
+
+    &--contact {
+      background-color: color.$bg-gray-l;
+    }
+
+    &--twitter {
+      background-color: color.$bg-dark;
+    }
+  }
+}
+
+// footer
+.footer {
+  text-align: center;
+  padding: 10px;
+
+  &_copy {
+    font-size: 11px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+}
+
+/*---------------------------------
+// お問い合わせ
+---------------------------------*/
+.end-message {
+  display: none;
+}
+
+.false-message {
+  display: none;
+}
+
+.contact-page {
+  box-sizing: border-box;
+  color: color.$cl-black;
+
+  .contact {
+    width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  .contact-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .contact-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid color.$cl-border;
+  }
+
+  .contact-item,
+  .contact-body {
+    padding: 20px;
+    border: 1px solid color.$cl-border;
+  }
+
+  .contact-item {
+    text-align: left;
+    width: 30%;
+    background-color: color.$bg-dark;
+    letter-spacing: 0.4em;
+    vertical-align: middle;
+  }
+
+  .contact-body {
+    width: 70%;
+    letter-spacing: 0.1em;
+  }
+
+  .form-text {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid color.$cl-border;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 400px;
+  }
+
+  .contact-sex+.contact-sex {
+    margin-left: 10px;
+  }
+
+  .contact-sex-txt {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  .form-select {
+    width: 180px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid color.$cl-border;
+    border-radius: 5px;
+  }
+
+  .contact-skill {
+    display: block;
+  }
+
+  .contact-skill+.contact-skill {
+    margin-top: 10px;
+  }
+
+  .contact-skill-txt {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  .form-textarea {
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid color.$cl-border;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .contact-submit {
+    width: 250px;
+    background-color: color.$cl-border;
+    color: color.$white;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 100vh;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: color.$white;
+      /* ホバー時に背景色を変更 */
+      color: color.$cl-border;
+      /* ホバー時にテキスト色を変更 */
+      border: 1px solid color.$cl-border;
+      transition: background 0.3s, color 0.3s, opacity 0.3s;
+    }
+  }
+}
+
+/*---------------------------------
+// PC (下記はPCの場合)
+---------------------------------*/
+
+@include breakpoints.mq(pc) {
+  .wrapper {
+    display: flex;
+  }
+
+  .main {
+    flex-basis: 79.2%;
+    margin-top: 0;
+  }
+
+  .header {
+    position: relative;
+    flex-basis: 20.8%;
+    padding: 50px 20px;
+
+    &_container {
+      width: 160px;
+      margin: 0 auto;
+      position: sticky;
+      top: 50px;
+    }
+
+    &_logo {
+      font-size: 30px;
+      letter-spacing: 0.12em;
+      line-height: 1;
+    }
+
+    &_menu-button {
+      display: none;
+    }
+
+    &_contents {
+      border: none;
+      display: block;
+    }
+  }
+
+  .button {
+    transition: background 0.3s, color 0.3s, opacity 0.3s;
+
+    &:hover {
+      background-color: color.$white;
+
+      .button_icon-path {
+        fill: color.$bg-dark;
+      }
+
+      .button_text {
+        color: color.$bg-dark;
+      }
+    }
+
+    &--bg {
+      color: color.$bg-dark;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .section {
+    &_inner {
+      max-width: calc(880px + 32px * 2);
+      // ↑32pxは左右の幅。×２にしている
+      margin: 0 auto;
+    }
+
+    &_head {
+      margin-bottom: 24px;
+    }
+
+    &_head-main {
+      font-size: 60px;
+    }
+  }
+
+  .fv {
+    &_contents {
+      background: url(../img/bg_fv.png) center center no-repeat;
+      background-size: 100% auto;
+      bottom: 100px;
+      left: 0;
+      max-width: 627px;
+      height: 174px;
+      padding-top: 24px;
+      padding-left: 96px;
+    }
+  }
+
+  .service {
+    &_list {
+      display: flex;
+      align-items: end;
+      // display: grid;
+      // grid-template-columns: repeat(3, 1fr);
+      //  ↑ 同じ幅のアイテムを３つ繰り返す／※display: flex;でも良い
+      gap: 8%;
+    }
+
+    &_item {
+      &+& {
+        margin-top: 0;
+      }
+
+      // 下記２点それぞれ追記した分です↓
+      // &_-img-soudan {
+      //   margin-top: 0;
+      // }
+
+      // &-img-syuusei {
+      //   margin-top: 40px;
+      //   text-align: center;
+      // }
+    }
+  }
+
+  .works {
+    &_list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8%;
+    }
+
+    // 上下共にserviceからのコピペ
+    &_item {
+      &+& {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .about {
+    &_container {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 40px;
+    }
+  }
+
+  .flow {
+    &_list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    &_item {
+      &+& {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .message {
+    &_container {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 40px;
+    }
+  }
+
+  .page-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &_item {
+      padding: 54px 10px;
+    }
+  }
+}
+
+/*---------------------------------
+// tb
+---------------------------------*/
+@include breakpoints.mq(tb) {
+  .section {
+    &_head-main {
+      font-size: 54px;
+    }
+  }
+
+  .fv {
+    &_contents {
+      bottom: 30%;
+      transform: translateY(50%);
+    }
+  }
+
+  .service_list {
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    align-items: baseline;
+  }
+
+  .service_item-name {
+    white-space: nowrap;
+  }
+
+  .flow {
+    &_list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 16px;
+    }
+  }
+
+  .message_container {
+    display: flex;
+    align-items: center;
+  }
+}
