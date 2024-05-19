@@ -76,7 +76,9 @@ ol {
       }
     }
   }
-} //.site-header
+}
+
+//.site-header
 
 // ナビゲーションコンテナ
 .site-nav-container {
@@ -88,7 +90,7 @@ ol {
   transform: translateX(100%);
   transition: 0.8s var(--easing);
 
-  .site-nav-checkbox:checked ~ & {
+  .site-nav-checkbox:checked~& {
     transform: translateX(0);
   }
 
@@ -176,7 +178,9 @@ ol {
       padding-bottom: 30px;
     }
   }
-} //.site-nav-container
+}
+
+//.site-nav-container
 
 // ハンバーガーボタン
 .site-nav-toggle {
@@ -208,18 +212,21 @@ ol {
   &::before {
     top: calc(50% - 8px);
   }
+
   &::after {
     top: calc(50% + 8px);
   }
 
-  .site-nav-checkbox:checked ~ & {
+  .site-nav-checkbox:checked~& {
     span {
       transform: scaleX(0);
     }
+
     &::before {
       top: 50%;
       transform: rotate(45deg);
     }
+
     &::after {
       top: 50%;
       transform: rotate(-45deg);
@@ -230,7 +237,9 @@ ol {
   @include mq {
     display: none;
   }
-} //.site-nav-toggle
+}
+
+//.site-nav-toggle
 
 .site-nav-checkbox {
   display: none;
@@ -263,7 +272,7 @@ main {
     align-items: flex-start;
 
     // .クラス名 > span
-    > span {
+    >span {
       // display: inline-block;
       background-color: #fff;
       margin-bottom: 8px;
@@ -275,16 +284,17 @@ main {
       overflow: hidden;
     }
 
-    > span span {
+    >span span {
       animation: mv-title-inside 1s 1s both var(--easing);
       display: block;
     }
 
-    > span:first-of-type {
+    >span:first-of-type {
       font-size: 1.2rem;
     }
-    > span:nth-of-type(2),
-    > span:nth-of-type(3) {
+
+    >span:nth-of-type(2),
+    >span:nth-of-type(3) {
       font-size: 2rem;
     }
   }
@@ -293,6 +303,7 @@ main {
     0% {
       transform: scaleX(0);
     }
+
     100% {
       transform: scaleX(1);
     }
@@ -302,6 +313,7 @@ main {
     0% {
       transform: translateY(100%);
     }
+
     100% {
       transform: translateY(0);
     }
@@ -322,10 +334,13 @@ main {
       width: auto;
     }
   }
-} //.main-visual
+}
+
+//.main-visual
 
 // バックナンバー
 .backnumbers {
+
   // 見出し
   &__title {
     font-size: 0.8rem;
@@ -344,7 +359,9 @@ main {
     display: flex;
     flex-wrap: wrap;
   }
-} //.backnumbers
+}
+
+//.backnumbers
 
 // バックナンバーアイテム
 .backnumber-item {
@@ -376,6 +393,7 @@ main {
       font-weight: 300;
       margin-bottom: 8px;
     }
+
     span:nth-of-type(3) {
       font-size: 1.4rem;
     }
@@ -386,24 +404,31 @@ main {
     width: 50%;
     // flex-basis: 50%;
   }
-} //.backnumber-item
+}
+
+//.backnumber-item
 
 .backnumber {
   &-101 {
     background-color: #ecf4f9;
   }
+
   &-100 {
     background-color: #fbf3d2;
   }
+
   &-99 {
     background-color: #f9f2eb;
   }
+
   &-98 {
     background-color: #fae8c2;
   }
+
   &-97 {
     background-color: #e2efe7;
   }
+
   &-96 {
     background-color: #f2f5fb;
   }
