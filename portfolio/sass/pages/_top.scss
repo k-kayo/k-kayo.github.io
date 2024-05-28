@@ -26,68 +26,70 @@
     background-position: left left;
     background-size: auto 100%;
   }
+}
 
-  &-container {
-    color: var(--white);
-    margin-bottom: 30px;
-    margin-right: 50px;
-    // position: relative;
-    left: 100px;
+.mv-container {
+  color: var(--white);
+  margin-bottom: 30px;
+  margin-right: 50px;
+  position: relative;
+  left: 100px;
 
-    @include mq(sp) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      left: 0;
-      bottom: 24px;
-      margin: 0;
-    }
-  }
-
-  &-title {
-    font-size: 56px;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 5px;
-    letter-spacing: .1em;
-    text-shadow: 4px 4px 4px #626060;
-
-    @include mq(sp) {
-      font-size: 32px;
-    }
-  }
-
-  &-subtitle {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1;
-    margin-bottom: 40px;
-    letter-spacing: .08em;
-    text-shadow: 3px 3px 2px #676666;
-
-    @include mq(sp) {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-  }
-
-  &-text {
-    font-size: 18px;
-    line-height: 1.8;
-    font-weight: bold;
-    padding: 8px;
-    background-color: rgba(161, 160, 160, 0.3);
-    text-shadow: 1px 1px 2px rgb(76, 76, 76), 0 0 1em rgb(66, 66, 88), 0 0 0.2em rgb(12, 12, 57);
-
-    @include mq(sp) {
-      font-size: 1rem;
-      line-height: 1.7;
-      background-color: rgba(161, 160, 160, 0.3);
-      padding: 8px;
-      text-shadow: 1px 1px 7px #4b4b4b;
-    }
+  @include mq(sp) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    bottom: 24px;
+    margin: 0;
   }
 }
+
+.mv-title {
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  letter-spacing: .1em;
+  text-shadow: 4px 4px 4px #626060;
+
+  @include mq(sp) {
+    font-size: 32px;
+  }
+}
+
+.mv-subtitle {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  letter-spacing: .08em;
+  text-shadow: 3px 3px 2px #676666;
+
+  @include mq(sp) {
+    font-size: 18px;
+    margin-bottom: 20px;
+    letter-spacing: 0.3em;
+  }
+}
+
+.mv-text {
+  font-size: 20px;
+  line-height: 1.8;
+  font-weight: bold;
+  padding: 20px;
+  background-color: rgba(161, 160, 160, 0.3);
+  text-shadow: 1px 1px 2px rgb(76, 76, 76), 0 0 1em rgb(66, 66, 88), 0 0 0.2em rgb(12, 12, 57);
+
+  @include mq(sp) {
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: rgba(161, 160, 160, 0.3);
+    padding: 8px;
+    text-shadow: 1px 1px 7px #4b4b4b;
+  }
+}
+
 
 
 

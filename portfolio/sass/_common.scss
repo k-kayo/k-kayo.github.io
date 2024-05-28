@@ -125,48 +125,47 @@ img {
   }
 }
 
-.gnav {
+.gnav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
 
-  &-list {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-
-    .gnav-item {
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
+  .gnav-item {
+    &:not(:last-child) {
+      margin-right: 32px;
     }
+  }
 
-    a {
-      position: relative;
-      font-size: 20px;
-      font-weight: bold;
-      display: inline-block;
-      padding: 5px 0;
+  a {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 0;
+    transition: .3s;
+    letter-spacing: 0.1rem;
+    color: var(--text-color);
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 3px;
       transition: .3s;
-      letter-spacing: .05em;
-      color: var(--text-color);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-color: var(--text-color);
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 0;
-        height: 3px;
-        transition: .3s;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-        background-color: var(--text-color);
-
-        &:hover::after {
-          width: 100%;
-        }
+      &:hover::after {
+        width: 100%;
       }
     }
   }
 }
+
 
 //=====================================
 //    ページトップ

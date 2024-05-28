@@ -142,18 +142,19 @@ img {
   list-style: none;
 }
 .gnav-list .gnav-item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 32px;
 }
 .gnav-list a {
   position: relative;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   display: inline-block;
   padding: 5px 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1rem;
   color: var(--text-color);
+  text-decoration: none;
 }
 .gnav-list a::after {
   content: "";
@@ -275,10 +276,12 @@ img {
     background-size: auto 100%;
   }
 }
+
 .mv-container {
   color: var(--white);
   margin-bottom: 30px;
   margin-right: 50px;
+  position: relative;
   left: 100px;
 }
 @media screen and (max-width: 767px) {
@@ -298,6 +301,7 @@ img {
     margin: 0;
   }
 }
+
 .mv-title {
   font-size: 56px;
   font-weight: bold;
@@ -311,6 +315,7 @@ img {
     font-size: 32px;
   }
 }
+
 .mv-subtitle {
   font-size: 16px;
   font-weight: bold;
@@ -321,21 +326,23 @@ img {
 }
 @media screen and (max-width: 767px) {
   .mv-subtitle {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 20px;
+    letter-spacing: 0.3em;
   }
 }
+
 .mv-text {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.8;
   font-weight: bold;
-  padding: 8px;
+  padding: 20px;
   background-color: rgba(161, 160, 160, 0.3);
   text-shadow: 1px 1px 2px rgb(76, 76, 76), 0 0 1em rgb(66, 66, 88), 0 0 0.2em rgb(12, 12, 57);
 }
 @media screen and (max-width: 767px) {
   .mv-text {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.7;
     background-color: rgba(161, 160, 160, 0.3);
     padding: 8px;
