@@ -7,18 +7,21 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: none;
   font: inherit;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 a {
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   color: var(--link-color);
 }
@@ -52,9 +55,15 @@ body {
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   left: 0;
   top: 0;
@@ -81,10 +90,17 @@ body {
   position: fixed;
   right: 0;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none;
   background-color: transparent;
   width: 75px;
@@ -104,6 +120,7 @@ body {
   width: 24px;
   height: 3px;
   margin: 0 auto;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 .header-button span::before, .header-button span::after {
@@ -113,6 +130,7 @@ body {
   left: 0;
   width: 100%;
   height: 3px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: inherit;
 }
@@ -135,18 +153,29 @@ body.open .header-button span::before, body.open .header-button span::after {
   background-color: var(--text-color);
 }
 body.open .header-button span::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 body.open .header-button span::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .header-nav {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   right: 0;
   top: 0;
@@ -156,18 +185,27 @@ body.open .header-button span::after {
   font-family: var(--text-jp);
   font-size: 20px;
   font-weight: 900;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 body.open .header-nav {
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 @media screen and (min-width: 768px) {
   .header-nav {
     position: static;
-    flex-direction: row;
-    transform: none;
-    justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     width: auto;
     height: auto;
     background: transparent;
@@ -264,7 +302,8 @@ body.top .header-button span {
   font-size: 8vw;
   font-weight: 900;
   white-space: nowrap;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 768px) {
   .top-title {
@@ -310,10 +349,19 @@ body.top .header-button span {
 }
 
 .profile main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 0;
   left: 0;

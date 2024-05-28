@@ -8,32 +8,44 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
   text-align: center;
   background-image: url(../img/investment-5241253_1280.jpg);
   background-size: cover;
-  margin: -75px 0 0;
+  margin-top: -35px;
   background-position: 30%;
   aspect-ratio: 1280 / 853;
-  width: 100%;
+  object-fit: cover;
+
+  @include mq(tab) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   @include mq(sp) {
-    margin: -73px 0;
-    aspect-ratio: 768 / 500;
-    max-width: 100%;
-    height: 100%;
-    height: 100vh;
+    // margin-top: -73px;
+    // max-width: 100%;
+    // height: 100%;
+    height: 600px;
     padding-top: 100px;
-    background-position: left left;
-    background-size: auto 100%;
+    background-position: 20%;
+    // background-size: auto 100%;
   }
+
+  @include mq(xs) {
+    background-position: 20%;
+    height: 600px;
+    padding-top: 100px;
+  }
+
 }
 
 .mv-container {
   color: var(--white);
   margin-bottom: 30px;
-  margin-right: 50px;
+  // margin-right: 50px;
   position: relative;
-  left: 100px;
+  // left: 100px;
 
   @include mq(sp) {
     display: flex;
@@ -54,9 +66,19 @@
   text-shadow: 4px 4px 4px #626060;
   font-family: var(--font-base);
 
+  @include mq(tab) {
+    font-size: 40px;
+  }
+
   @include mq(sp) {
     font-size: 32px;
   }
+
+  @include mq(xs) {
+    font-size: 32px;
+    letter-spacing: 0.04rem;
+  }
+
 }
 
 .mv-subtitle {
@@ -68,11 +90,20 @@
   text-shadow: 3px 3px 2px #676666;
   font-family: var(--font-base);
 
+  @include mq(tab) {
+    font-size: 22px;
+  }
+
   @include mq(sp) {
     font-size: 18px;
     margin-bottom: 32px;
     letter-spacing: 0.3em;
   }
+
+  @include mq(xs) {
+    font-size: 18px;
+  }
+
 }
 
 .mv-text {
@@ -86,12 +117,20 @@
   font-feature-settings: "palt";
   font-family: var(--font-base);
 
+  @include mq(tab) {
+    font-size: 18px;
+  }
+
   @include mq(sp) {
     font-size: 16px;
     line-height: 1.7;
     background-color: rgba(161, 160, 160, 0.3);
     padding: 8px;
     text-shadow: 1px 1px 7px #4b4b4b;
+  }
+
+  @include mq(xs) {
+    font-size: 14px;
   }
 }
 
@@ -141,6 +180,10 @@
       @include mq(sp) {
         justify-content: space-between;
       }
+
+      @include mq(xs) {
+        justify-content: space-between;
+      }
     }
   }
 }
@@ -160,6 +203,12 @@
   }
 
   @include mq(sp) {
+    flex: 0 0 48%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  @include mq(xs) {
     flex: 0 0 48%;
     margin-right: 0;
     margin-bottom: 30px;
@@ -190,6 +239,10 @@
   @include mq(sp) {
     font-size: 14px;
   }
+
+  @include mq(xs) {
+    font-size: 14px;
+  }
 }
 
 .works-info {
@@ -199,6 +252,10 @@
   font-feature-settings: "palt";
 
   @include mq(sp) {
+    margin-top: 3px;
+  }
+
+  @include mq(xs) {
     margin-top: 3px;
   }
 }
@@ -225,6 +282,11 @@
     display: block;
     margin-bottom: 0;
   }
+
+  @include mq(xs) {
+    display: block;
+    // margin-bottom: 0;
+  }
 }
 
 .skill-item {
@@ -235,6 +297,15 @@
   margin-bottom: 50px;
 
   @include mq(sp) {
+    width: 100%;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mq(xs) {
     width: 100%;
     margin-bottom: 35px;
 
@@ -260,6 +331,12 @@
 
   @include mq(sp) {
     margin-bottom: 5px;
+    font-size: 22px;
+  }
+
+  @include mq(xs) {
+    margin-bottom: 5px;
+    font-size: 22px;
   }
 }
 
@@ -270,6 +347,11 @@
   font-family: var(--font-text);
 
   @include mq(sp) {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  @include mq(xs) {
     font-size: 15px;
     line-height: 1.7;
   }
@@ -315,6 +397,14 @@
       font-feature-settings: "palt";
       letter-spacing: 0.08rem;
 
+      @include mq(sp) {
+        font-size: 16px;
+      }
+
+      @include mq(xs) {
+        font-size: 16px;
+      }
+
       span {
         font-weight: bold;
       }
@@ -332,10 +422,6 @@
         margin-top: 40px;
       }
 
-      @include mq(sp) {
-        font-size: 1rem;
-        line-height: 1.7;
-      }
     }
   }
 
@@ -358,8 +444,9 @@
       font-family: var(--font-base);
 
       @include mq(sp) {
-        font-size: 1rem;
+        font-size: 18px;
         margin: 24px 0 32px;
+        letter-spacing: normal;
       }
     }
   }
@@ -374,6 +461,10 @@
 .contact-item {
   font-size: 18px;
   font-family: var(--font-base);
+
+  @include mq(sp) {
+    font-size: 16px;
+  }
 
   &:not(:last-child) {
     margin-right: 10px;
@@ -398,7 +489,7 @@
     font-family: var(--font-base);
 
     @include mq(sp) {
-      font-size: 0.8rem;
+      font-size: 16px;
     }
   }
 }

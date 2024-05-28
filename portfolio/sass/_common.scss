@@ -58,9 +58,18 @@ img {
 .sp-only {
   display: none;
 
+  @include mq(tab) {
+    display: block;
+  }
+
   @include mq(sp) {
     display: block;
   }
+
+  @include mq(xs) {
+    display: block;
+  }
+
 }
 
 //=====================================
@@ -105,7 +114,12 @@ img {
   color: var(--text-color);
 
   @include mq(sp) {
-    font-size: 26px;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  @include mq(xs) {
+    font-size: 28px;
     margin-bottom: 20px;
   }
 }
@@ -160,6 +174,10 @@ img {
       margin-right: 20px;
       letter-spacing: .05em;
 
+      @include mq(tab) {
+        font-size: 32px;
+      }
+
       @include mq(sp) {
         font-size: 18px;
         margin-right: 15px;
@@ -176,17 +194,32 @@ img {
   }
 }
 
-
 .gnav-list {
   display: flex;
   justify-content: space-between;
   list-style: none;
+  align-items: center;
 
   .gnav-item {
+    display: flex;
+    align-items: center;
+
+    @include mq(sp) {
+      display: block;
+    }
+
+    @include mq(xs) {
+      display: block;
+    }
+
     &:not(:last-child) {
       margin-right: 32px;
 
       @include mq(sp) {
+        margin-right: 8px;
+      }
+
+      @include mq(xs) {
         margin-right: 8px;
       }
     }
@@ -203,6 +236,10 @@ img {
     color: var(--text-color);
     text-decoration: none;
 
+    @include mq(tab) {
+      font-size: 22px;
+    }
+
     @include mq(sp) {
       font-size: 12px;
       letter-spacing: 0.05rem;
@@ -210,6 +247,7 @@ img {
 
     @include mq(xs) {
       font-size: 11px;
+      letter-spacing: 0.05rem;
     }
 
     &::after {
