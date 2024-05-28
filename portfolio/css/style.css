@@ -7,6 +7,8 @@
   --text-thin-color: #797979;
   --white: #fff;
   --black: #000;
+  --font-title: Shippori Mincho;
+  --font-text: serif;
 }
 
 html {
@@ -263,7 +265,6 @@ img {
 }
 @media screen and (max-width: 767px) {
   .mv {
-    margin: 0;
     margin: -73px 0;
     aspect-ratio: 768/500;
     max-width: 100%;
@@ -669,7 +670,12 @@ img {
   }
 }
 .article {
-  padding: 80px 0;
+  padding: 136px 0;
+}
+@media screen and (max-width: 767px) {
+  .article {
+    padding-top: 74px;
+  }
 }
 .article-container {
   max-width: 1040px;
@@ -689,15 +695,17 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
-.article-container .article-title {
+
+.article-title {
   margin-bottom: 30px;
   font-size: 1.25rem;
 }
-.article-container .article-body {
+
+.article-body {
   max-width: 720px;
   margin: 0 auto;
 }
-.article-container .article-body_mockup {
+.article-body_mockup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -706,20 +714,21 @@ img {
           justify-content: center;
   width: 100%;
 }
-.article-container .article-body_mockup img {
+.article-body_mockup img {
   padding: 20px;
   margin-bottom: 20px;
 }
-.article-container .article-body h3 {
+
+h3 {
   position: relative;
   font-size: 20px;
   margin-bottom: 5px;
   padding-left: 1em;
 }
-.article-container .article-body h3:not(:first-child) {
+h3:not(:first-child) {
   margin-top: 50px;
 }
-.article-container .article-body h3::before {
+h3::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -729,19 +738,21 @@ img {
   border-radius: 3px;
   background-color: var(--text-color);
 }
-.article-container .article-body p {
+
+p {
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 30px;
 }
-.article-container .article-body p .article-body_pc {
+p .article-body_pc {
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 56px auto;
 }
-.article-container .article-body_sp {
+
+.article-body_sp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -756,11 +767,12 @@ img {
       -ms-flex-align: start;
           align-items: start;
 }
-.article-container .article-body_sp img {
+.article-body_sp img {
   width: 20%;
   padding: 20px;
 }
-.article-container .article-body_box {
+
+.article-body_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -775,19 +787,16 @@ img {
       -ms-flex-align: start;
           align-items: start;
 }
-.article-container .article-body_box img {
+.article-body_box img {
   width: 40%;
   margin: 0 16px;
 }
-.article-container .article-body .home-link {
+
+.home-link {
   text-align: center;
 }
 
 @media screen and (max-width: 767px) {
-  .article {
-    padding: 50px 0;
-    width: 100%;
-  }
   .article-title {
     display: -webkit-box;
     display: -ms-flexbox;
