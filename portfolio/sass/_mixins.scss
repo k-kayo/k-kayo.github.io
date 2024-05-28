@@ -1,5 +1,12 @@
 // メディアクエリ
 @mixin mq($size) {
+
+  @if $size =='xs' {
+    @media screen and (max-width: 374px) {
+      @content;
+    }
+  }
+
   @if $size =='sp' {
     @media screen and (max-width: 767px) {
       @content;

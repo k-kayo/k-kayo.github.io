@@ -52,6 +52,7 @@
   margin-bottom: 5px;
   letter-spacing: .1em;
   text-shadow: 4px 4px 4px #626060;
+  font-family: var(--font-base);
 
   @include mq(sp) {
     font-size: 32px;
@@ -59,27 +60,31 @@
 }
 
 .mv-subtitle {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 40px;
-  letter-spacing: .08em;
+  letter-spacing: .2em;
   text-shadow: 3px 3px 2px #676666;
+  font-family: var(--font-base);
 
   @include mq(sp) {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     letter-spacing: 0.3em;
   }
 }
 
 .mv-text {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.8;
   font-weight: bold;
   padding: 20px;
   background-color: rgba(161, 160, 160, 0.3);
   text-shadow: 1px 1px 2px rgb(76, 76, 76), 0 0 1em rgb(66, 66, 88), 0 0 0.2em rgb(12, 12, 57);
+  letter-spacing: 0.18rem;
+  font-feature-settings: "palt";
+  font-family: var(--font-base);
 
   @include mq(sp) {
     font-size: 16px;
@@ -178,6 +183,9 @@
   font-size: 18px;
   font-weight: bold;
   margin-top: 8px;
+  margin-bottom: 0;
+  font-family: var(--font-text);
+  font-feature-settings: "palt";
 
   @include mq(sp) {
     font-size: 14px;
@@ -187,6 +195,8 @@
 .works-info {
   font-size: 16px;
   margin-top: 5px;
+  font-family: var(--font-text);
+  font-feature-settings: "palt";
 
   @include mq(sp) {
     margin-top: 3px;
@@ -242,6 +252,7 @@
 
 .skill-body {
   flex: 1;
+  font-size: 22px;
 }
 
 .skill-name {
@@ -256,6 +267,7 @@
   font-size: 16px;
   line-height: 1.8;
   font-weight: normal;
+  font-family: var(--font-text);
 
   @include mq(sp) {
     font-size: 15px;
@@ -280,7 +292,6 @@
 .profile {
   display: flex;
   flex-wrap: wrap;
-  // max-width: 800px;
   max-width: 600px;
   margin: 0 auto;
   flex-direction: column;
@@ -290,21 +301,30 @@
     margin-right: 30px;
     border-radius: 50%;
     margin: 0 auto;
+    overflow: hidden;
   }
 
   &-body {
     flex: 1;
 
     p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.8;
       font-weight: normal;
+      font-family: var(--font-text);
+      font-feature-settings: "palt";
+      letter-spacing: 0.08rem;
+
+      span {
+        font-weight: bold;
+      }
 
       &:not(:last-child) {
         margin-bottom: 30px;
 
         @include mq(sp) {
           margin-bottom: 20px;
+          font-size: 16px;
         }
       }
 
@@ -333,7 +353,9 @@
 
   .container {
     .lead {
-      font-size: 18px;
+      font-size: 20px;
+      font-feature-settings: "palt";
+      font-family: var(--font-base);
 
       @include mq(sp) {
         font-size: 1rem;
@@ -350,7 +372,8 @@
 }
 
 .contact-item {
-  font-size: 16px;
+  font-size: 18px;
+  font-family: var(--font-base);
 
   &:not(:last-child) {
     margin-right: 10px;
@@ -369,39 +392,13 @@
   }
 
   p {
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 6px;
+    font-feature-settings: "palt";
+    font-family: var(--font-base);
 
     @include mq(sp) {
       font-size: 0.8rem;
     }
-  }
-}
-
-//=====================================
-//    印刷用CSS
-//=====================================
-@media print {
-  body {
-    font-size: 1.6rem;
-    font-weight: normal;
-  }
-
-  .skill section {
-    page-break-before: always;
-  }
-
-  .about section {
-    page-break-before: always;
-  }
-
-  /*printで適用する内容*/
-  .contact section {
-    page-break-before: always;
-    /* 直前で改ページさせる */
-  }
-
-  .article-body_pc {
-    page-break-before: always;
   }
 }

@@ -10,10 +10,14 @@ html {
 }
 
 body {
-  font-family: "Shippori Mincho", serif;
+  font-family: var(--font-base);
   font-size: 1rem;
   letter-spacing: .05em;
   color: var(--text-color);
+
+  @include mq(sp) {
+    font-size: 14px;
+  }
 }
 
 ul {
@@ -45,10 +49,18 @@ img {
 
 .pc-only {
   display: block;
+
+  @include mq(sp) {
+    display: none;
+  }
 }
 
 .sp-only {
   display: none;
+
+  @include mq(sp) {
+    display: block;
+  }
 }
 
 //=====================================
@@ -61,6 +73,10 @@ img {
 .section {
   padding: 90px 0;
 
+  @include mq(sp) {
+    padding: 60px 0;
+  }
+
   &:nth-of-type(odd) {
     background-color: #fffdec;
   }
@@ -70,6 +86,10 @@ img {
   max-width: 1340px;
   margin: 0 auto;
   padding: 0 40px;
+
+  @include mq(sp) {
+    padding: 0 20px;
+  }
 }
 
 //=====================================
@@ -83,12 +103,23 @@ img {
   text-align: center;
   letter-spacing: .05em;
   color: var(--text-color);
+
+  @include mq(sp) {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
 }
 
 .lead {
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 30px;
+
+  @include mq(sp) {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
 }
 
 //=====================================
@@ -105,11 +136,22 @@ img {
   -webkit-backdrop-filter: blur(6px);
   background: rgba(253, 239, 242, 0.75);
 
+  @include mq(sp) {}
+
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
+
+    @include mq(sp) {
+      padding: 15px;
+    }
+
+    @include mq(xs) {
+      width: 320px;
+      justify-content: center;
+    }
 
     .header-logo {
       font-size: 40px;
@@ -118,12 +160,22 @@ img {
       margin-right: 20px;
       letter-spacing: .05em;
 
+      @include mq(sp) {
+        font-size: 18px;
+        margin-right: 15px;
+      }
+
+      @include mq(xs) {
+        font-size: 16px;
+      }
+
       a {
         color: var(--text-color);
       }
     }
   }
 }
+
 
 .gnav-list {
   display: flex;
@@ -133,6 +185,10 @@ img {
   .gnav-item {
     &:not(:last-child) {
       margin-right: 32px;
+
+      @include mq(sp) {
+        margin-right: 8px;
+      }
     }
   }
 
@@ -147,6 +203,15 @@ img {
     color: var(--text-color);
     text-decoration: none;
 
+    @include mq(sp) {
+      font-size: 12px;
+      letter-spacing: 0.05rem;
+    }
+
+    @include mq(xs) {
+      font-size: 11px;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -159,13 +224,16 @@ img {
       transform: translateX(-50%);
       background-color: var(--text-color);
 
+      @include mq(sp) {
+        display: none;
+      }
+
       &:hover::after {
         width: 100%;
       }
     }
   }
 }
-
 
 //=====================================
 //    ページトップ
@@ -190,80 +258,13 @@ img {
   padding: 30px;
   background-color: var(--accent-color);
 
+  @include mq(sp) {
+    padding: 20px;
+  }
+
   .copyright {
     font-size: 12px;
     text-align: center;
     color: var(--text-thin-color);
   }
-}
-
-//=====================================
-//    メディアクエリ 767px以下
-//=====================================
-@include mq(sp) {
-  body {
-    font-size: 14px;
-  }
-
-  .pc-only {
-    display: none;
-  }
-
-  .sp-only {
-    display: block;
-  }
-
-  /* 見出し */
-  .title {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-
-  .lead {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-
-  /* レイアウト */
-  .section {
-    padding: 60px 0;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
-
-  /* ヘッダー */
-  .header {
-
-    .container {
-      padding: 15px;
-
-      .header-logo {
-        font-size: 18px;
-        margin-right: 15px;
-      }
-
-      .gnav {
-
-        &-item:not(:last-child) {
-          margin-right: 10px;
-        }
-
-        a {
-          font-size: 12px;
-
-          &::after {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-
-/* フッター */
-.footer {
-  padding: 20px;
 }

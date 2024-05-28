@@ -24,6 +24,11 @@
 .article-title {
   margin-bottom: 30px;
   font-size: 1.25rem;
+
+  @include mq(sp) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .article-body {
@@ -40,13 +45,42 @@
       margin-bottom: 20px;
     }
   }
+
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-family: var(--font-text);
+
+    @include mq(sp) {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+
+    .article-body_pc {
+      width: 40%;
+      display: flex;
+      margin: 56px auto;
+    }
+  }
 }
 
-h3 {
+.article-body__text {
   position: relative;
   font-size: 20px;
   margin-bottom: 5px;
   padding-left: 1em;
+  font-family: var(--font-text);
+  letter-spacing: 0.08rem;
+
+  @include mq(sp) {
+    letter-spacing: 0.05rem;
+    font-size: 18px;
+    padding-left: .8em;
+  }
 
   &:not(:first-child) {
     margin-top: 50px;
@@ -61,18 +95,6 @@ h3 {
     content: "";
     border-radius: 3px;
     background-color: var(--text-color);
-  }
-}
-
-p {
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-
-  .article-body_pc {
-    width: 40%;
-    display: flex;
-    margin: 56px auto;
   }
 }
 
@@ -102,37 +124,19 @@ p {
 
 .home-link {
   text-align: center;
+
+  a {
+    font-size: inherit; // 既存のフォントサイズを継承
+
+    @include mq(sp) {
+      font-size: 16px;
+    }
+  }
 }
 
+.footer {
 
-
-
-//=====================================
-//    メディアクエリ 767以下／sp
-//=====================================
-@include mq(sp) {
-
-  .article {
-
-
-
-    &-title {
-      display: flex;
-      justify-content: center;
-    }
-
-    &-body {
-      h3 {
-        font-size: 18px;
-        padding-left: .8em;
-      }
-
-      p {
-        font-size: 16px;
-        line-height: 1.7;
-        margin-bottom: 20px;
-        font-weight: normal;
-      }
-    }
+  .copyright {
+    font-size: 14px !important;
   }
 }
