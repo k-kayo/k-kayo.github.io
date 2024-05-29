@@ -762,13 +762,13 @@ jQuery・lazyloaded
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
   .skill-text {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.7;
   }
 }
 @media screen and (max-width: 374px) {
   .skill-text {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.7;
   }
 }
