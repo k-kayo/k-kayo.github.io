@@ -23,13 +23,9 @@
   }
 
   @include mq(sp) {
-    // margin-top: -73px;
-    // max-width: 100%;
-    // height: 100%;
     height: 600px;
     padding-top: 100px;
     background-position: 20%;
-    // background-size: auto 100%;
   }
 
   @include mq(xs) {
@@ -43,9 +39,7 @@
 .mv-container {
   color: var(--white);
   margin-bottom: 30px;
-  // margin-right: 50px;
   position: relative;
-  // left: 100px;
 
   @include mq(sp) {
     display: flex;
@@ -63,7 +57,7 @@
   line-height: 1.2;
   margin-bottom: 5px;
   letter-spacing: .1em;
-  text-shadow: 4px 4px 4px #626060;
+  text-shadow: 4px 0px 4px #626060;
   font-family: var(--font-base);
 
   @include mq(tab) {

@@ -117,7 +117,7 @@ img {
 }
 
 .title {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 40px;
@@ -223,9 +223,6 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   list-style: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .gnav-list .gnav-item {
   display: -webkit-box;
@@ -269,6 +266,7 @@ img {
   letter-spacing: 0.1rem;
   color: var(--text-color);
   text-decoration: none;
+  text-align: center;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .gnav-list a {
@@ -441,7 +439,7 @@ jQuery・lazyloaded
   line-height: 1.2;
   margin-bottom: 5px;
   letter-spacing: 0.1em;
-  text-shadow: 4px 4px 4px #626060;
+  text-shadow: 4px 0px 4px #626060;
   font-family: var(--font-base);
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
