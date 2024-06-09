@@ -1,0 +1,419 @@
+@use "./mixins" as *;
+
+$width-inner: 1200px;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: var(--font-size-base);
+  // font-size: clamp(var(--font-size-base), 0.958rem + 0.21vw, 1.125rem);
+  font-family: var(--font-primary);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+  background: var(--color-base);
+}
+
+.hidden-sp {
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.hidden-pc {
+  @include mq(pc) {
+    display: none;
+  }
+}
+
+.inline-block {
+  font-weight: inherit;
+  display: inline-block;
+}
+
+section {
+  margin-bottom: 96px;
+
+  @include mq(pc) {
+    margin-bottom: 160px;
+  }
+}
+
+.inner {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include mq(pc) {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: calc($width-inner + 40px * 2);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// 共通クラス
+.heading {
+  text-align: center;
+  // font-size: 1.875rem;
+  font-size: clamp(1.875rem, 1.667rem + 1.04vw, 2.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 46px;
+
+  @include mq(pc) {
+    gap: 30px;
+    padding-top: 4px;
+    margin-bottom: 64px;
+  }
+
+  &::after {
+    content: '';
+    border-bottom: 2px solid var(--color-primary);
+    width: 60px;
+    border-radius: 3px;
+  }
+}
+
+.button {
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  padding: calc(10px - 2px) calc(30px - 2px);
+  display: inline-block;
+  border-radius: 60px;
+  border: 2px solid currentColor;
+  // background-color: var(--color-base);
+  // background-color: var(--color-primary);
+  //   color: var(--color-base);
+  font-size: 16px;
+  line-height: 1.7;
+  min-width: 150px;
+  text-align: center;
+  transition: background-color 0.3s ease-in,
+    color 0.3s ease-in;
+}
+
+a:hover {
+  cursor: pointer;
+  opacity: 0.6;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+  }
+}
+
+// &--type2 {
+//   background-color: #111;
+//   color: #fff;
+
+//   &:hover {
+//     background-color: #fff;
+//     color: #111;
+//     //borderにcurrentColorが付与されているので、文字色（color）と同じ色に自動的に変わる
+//   }
+// }
+
+//=====================================
+//    ヘッダー
+//=====================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: var(--color-base);
+  z-index: 10;
+
+  @include mq(pc) {
+    height: 70px;
+  }
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 15px;
+
+  @include mq(pc) {
+    padding: 22px 40px;
+  }
+}
+
+.header-logo {
+  margin-top: -5px;
+
+  a {
+    img {
+      width: 120px;
+    }
+  }
+}
+
+.header__nav {
+  display: none;
+
+  @include mq(pc) {
+    display: flex;
+    align-items: flex-start;
+    gap: 46px;
+  }
+}
+
+.header__link {
+  font-weight: 700;
+  color: var(--text-color);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.005rem;
+
+
+  &:hover {
+    color: var(--color-primary);
+    opacity: 1;
+    transition: color 0.3s ease-in;
+  }
+}
+
+.header__open {
+
+  @include mq(pc) {
+    display: none;
+  }
+}
+
+// ハンバーガーアイコン
+.drawer-icon {
+  width: 30px;
+  height: 18px;
+  position: relative;
+  z-index: 51;
+
+  &.is-checked {
+    .drawer-icon__bar {
+
+      &:nth-of-type(1) {
+        top: 10px;
+        transform: rotate(30deg);
+      }
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+
+      &:nth-of-type(3) {
+        top: 10px;
+        transform: rotate(-30deg);
+      }
+    }
+  }
+}
+
+.drawer-icon__bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  border-radius: 6px;
+  background: var(--color-primary);
+  transition: transform 0.3s linear, top 0.3s linear;
+
+  &:nth-of-type(1) {}
+
+  &:nth-of-type(2) {
+    top: 8px;
+  }
+
+  &:nth-of-type(3) {
+    top: 16px;
+  }
+}
+
+//=====================================
+//    ドロワーコンテンツ
+//=====================================
+.drawer-content {
+  width: 270px;
+  height: 100%;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  background: var(--color-primary);
+  z-index: 50;
+  padding: 40px 15px;
+  transform: translateX(100%);
+  transition: transform 0.3s linear;
+
+  &.is-checked {
+    transform: translateX(0);
+  }
+}
+
+.drawer-content__menu {}
+
+.drawer-content__link {
+  display: block;
+  text-align: right;
+  color: var(--color-base);
+  font-weight: var(--font-weight-light);
+  margin-bottom: 32px;
+  font-size: 1.125rem;
+}
+
+//=====================================
+//    MV
+//=====================================
+
+
+.mv {
+  max-width: calc(100% - 15px * 2);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+
+  @include mq(pc) {
+    max-width: calc(100% - 40px);
+    margin-left: 0;
+    margin-right: 40px;
+    margin-top: 70px;
+  }
+}
+
+.mv__inner {
+  @include mq(pc) {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+}
+
+.mv__image {
+  width: 345px;
+  height: 414px;
+  width: 100%;
+
+  @include mq(pc) {
+    width: 990px;
+    height: 660px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 74%;
+    vertical-align: bottom;
+
+    @include mq(pc) {
+      width: 990px;
+      height: 660px;
+    }
+  }
+
+}
+
+.mv__title {
+
+  @include mq(pc) {
+    width: 367px;
+    padding: 80px 40px;
+    background: var(--font-size-base);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--color-base);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+}
+
+.mv__lead1 {
+  font-size: 1.625rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color);
+  margin-top: 30px;
+  text-align: left;
+
+  @include mq(pc) {
+    margin-top: 0;
+  }
+}
+
+.mv__lead2 {
+  font-weight: var(--font-weight-light);
+  margin-top: 16px;
+  color: var(--text-color);
+  width: 287px;
+  margin-right: auto;
+
+}
+
+//=====================================
+//    Concept
+//=====================================
+.concept {}
+
+.concept__inner {
+
+  @include mq(pc) {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 80px;
+
+  }
+}
+
+.concept__image {
+
+  img {
+    min-width: 345px;
+    min-height: 230px;
+    aspect-ratio: 3 / 2;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    @include mq(pc) {
+      max-width: 600px;
+      max-height: 400px;
+    }
+  }
+}
+
+.concept__box {
+  margin-top: 34px;
+
+
+  @include mq(pc) {
+    display: grid;
+    gap: 17px;
+    margin-top: 0;
+  }
+}
+
+.concept__box-title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.concept__box-text {
+  margin-top: 22px;
+  font-weight: var(--font-weight-light);
+
+  @include mq(pc) {
+    width: 520px;
+  }
+}
