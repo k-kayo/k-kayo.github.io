@@ -105,27 +105,13 @@ section {
     cursor: pointer;
     color: var(--color-base);
     background: var(--color-primary);
+    opacity: 0.6;
 
-
-    // opacity: 0.6;
-
-    // &:focus-visible {
-    //   outline: 2px solid var(--color-primary);
-    // }
+    &:focus-visible {
+      outline: 1px solid var(--color-primary);
+    }
   }
 }
-
-
-// &--type2 {
-//   background-color: #111;
-//   color: #fff;
-
-//   &:hover {
-//     background-color: #fff;
-//     color: #111;
-//     //borderにcurrentColorが付与されているので、文字色（color）と同じ色に自動的に変わる
-//   }
-// }
 
 //=====================================
 //    ヘッダー
@@ -149,7 +135,9 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 21px 15px;
-  width: calc(100% - 21px);
+  // width: calc(100% - 21px);
+  width: calc(100% - 21px *2);
+  // max-width: 100%;
 
   @include mq(pc) {
     width: calc($width-inner + 40px * 2);
@@ -290,8 +278,6 @@ section {
 //=====================================
 //    MV
 //=====================================
-
-
 .mv {
   max-width: calc(100% - 15px * 2);
   margin-left: auto;
@@ -307,8 +293,6 @@ section {
 }
 
 .mv__inner {
-  
-
   @include mq(pc) {
     display: flex;
     flex-direction: row-reverse;
@@ -340,7 +324,6 @@ section {
     @include mq(pc) {
       width: 990px;
       height: 660px;
-
     }
   }
 }
@@ -348,9 +331,9 @@ section {
 .mv__title {
 
   @include mq(pc) {
-    width: 367px;
+    width: 366px;
+    // height: 318px;
     padding: 80px 40px;
-    background: var(--font-size-base);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -360,7 +343,6 @@ section {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-
   }
 }
 
@@ -380,10 +362,11 @@ section {
   font-weight: var(--font-weight-light);
   margin-top: 16px;
   color: var(--text-color);
-  // width: 287px;
+  width: 287px;
   margin-right: auto;
 
 }
+
 
 //=====================================
 //    Concept
@@ -399,14 +382,16 @@ section {
     align-items: center;
     flex-direction: row;
     gap: 80px;
+    justify-content: center;
   }
 }
 
 .concept__image {
 
   img {
-    width: 345px;
-    height: 230px;
+    // width: 345px;
+    // height: 230px;
+    width: 100%;
 
     @include mq(pc) {
       max-width: 600px;
@@ -427,7 +412,7 @@ section {
 }
 
 .concept__box-title {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: var(--font-weight-bold);
   // font-feature-settings: "palt" on;
 }
@@ -877,6 +862,23 @@ section {
     width: 320px;
     height: 40px;
   }
+
+  &:checked {
+    +.form-checkbox__text {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:focus {
+    +.form-checkbox__text {
+      &::before {
+        border-color: var(--color-primary);
+      }
+    }
+  }
+
 }
 
 .form-field__radios {

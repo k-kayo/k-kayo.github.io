@@ -1,11 +1,5 @@
 {
-  "cSpell.words": [
-    "backnumber",
-    "backnumbers",
-    "Kissaten",
-    "pathmove",
-    "scrolldown"
-  ],
+  "cSpell.words": ["backnumber", "backnumbers", "Kissaten", "palt", "pathmove", "scrolldown"],
   "liveSassCompile.settings.formats": [
     {
       "format": "expanded",

@@ -120,6 +120,10 @@ section {
   cursor: pointer;
   color: var(--color-base);
   background: var(--color-primary);
+  opacity: 0.6;
+}
+.button:hover:focus-visible {
+  outline: 1px solid var(--color-primary);
 }
 
 .header {
@@ -148,7 +152,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   padding: 21px 15px;
-  width: calc(100% - 21px);
+  width: calc(100% - 42px);
 }
 @media screen and (min-width: 768px) {
   .header-inner {
@@ -337,9 +341,8 @@ section {
 
 @media screen and (min-width: 768px) {
   .mv__title {
-    width: 367px;
+    width: 366px;
     padding: 80px 40px;
-    background: var(--font-size-base);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -379,6 +382,7 @@ section {
   font-weight: var(--font-weight-light);
   margin-top: 16px;
   color: var(--text-color);
+  width: 287px;
   margin-right: auto;
 }
 
@@ -399,12 +403,14 @@ section {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 80px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 .concept__image img {
-  width: 345px;
-  height: 230px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .concept__image img {
@@ -426,7 +432,7 @@ section {
 }
 
 .concept__box-title {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: var(--font-weight-bold);
 }
 
@@ -930,6 +936,12 @@ section {
     width: 320px;
     height: 40px;
   }
+}
+.form-text:checked + .form-checkbox__text::after {
+  opacity: 1;
+}
+.form-text:focus + .form-checkbox__text::before {
+  border-color: var(--color-primary);
 }
 
 .form-field__radios {
