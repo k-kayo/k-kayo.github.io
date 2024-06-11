@@ -55,7 +55,7 @@ section {
 }
 @media screen and (min-width: 768px) {
   .inner {
-    max-width: 1280px;
+    max-width: 2000px;
     padding-left: 40px;
     padding-right: 40px;
     margin-left: auto;
@@ -77,9 +77,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   gap: 26px;
   margin-bottom: 46px;
-  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .heading {
@@ -89,7 +89,7 @@ section {
 }
 .heading::after {
   content: "";
-  border-bottom: 2px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
   width: 60px;
   border-radius: 3px;
 }
@@ -100,8 +100,6 @@ section {
   min-width: 158px;
   -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
-  background: var(--color-primary);
-  color: var(--color-base);
   font-size: 0.875rem;
   font-weight: var(--font-weight-light);
   letter-spacing: 0.00125rem;
@@ -115,6 +113,8 @@ section {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  cursor: pointer;
+  position: relative;
 }
 .button:hover {
   cursor: pointer;
@@ -130,7 +130,6 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 60px;
   background: var(--color-base);
   z-index: 10;
@@ -156,7 +155,7 @@ section {
 }
 @media screen and (min-width: 768px) {
   .header-inner {
-    width: 1280px;
+    width: 2000px;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 22px;
@@ -484,6 +483,9 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 90px;
   }
 }
@@ -893,12 +895,6 @@ section {
             clip-path: polygon(0 0%, 97% 0%, 100% 50%, 97% 100%, 0 100%);
   }
 }
-@media screen and (min-width: 768px) {
-  .form-field__label::before {
-    background-image: url(../img/bg.svg) no-repeat center center/contain;
-  }
-}
-
 .form-field__tag {
   padding-left: 4px;
   color: #E7728E;

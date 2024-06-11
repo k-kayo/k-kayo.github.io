@@ -1,6 +1,7 @@
 @use "./mixins" as *;
 
-$width-inner: 1200px;
+// $width-inner: 1200px;
+$width-inner: 1920px;
 
 html {
   scroll-behavior: smooth;
@@ -8,7 +9,6 @@ html {
 
 body {
   font-size: var(--font-size-base);
-  // font-size: clamp(var(--font-size-base), 0.958rem + 0.21vw, 1.125rem);
   font-family: var(--font-primary);
   line-height: var(--line-height-base);
   color: var(--text-color);
@@ -57,27 +57,25 @@ section {
 
 // 共通クラス
 .heading {
-  // font-size: 1.875rem;
   font-size: clamp(1.875rem, 1.667rem + 1.04vw, 2.5rem);
   font-weight: var(--font-weight-bold);
   line-height: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 26px;
   margin-bottom: 46px;
-  text-align: center;
+  // display: inline-block;
 
   @include mq(pc) {
-    // gap: 30px;
-    // padding-top: 4px;
     margin-bottom: 64px;
     gap: 24px;
   }
 
   &::after {
     content: '';
-    border-bottom: 2px solid var(--color-primary);
+    border: 2px solid var(--color-primary);
     width: 60px;
     border-radius: 3px;
   }
@@ -89,8 +87,6 @@ section {
   min-width: 158px;
   transition: background-color 0.3s ease-in,
     color 0.3s ease-in;
-  background: var(--color-primary);
-  color: var(--color-base);
   font-size: 0.875rem;
   font-weight: var(--font-weight-light);
   letter-spacing: 0.00125rem;
@@ -100,6 +96,8 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
+  position: relative;
 
   &:hover {
     cursor: pointer;
@@ -120,7 +118,6 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 60px;
   background: var(--color-base);
   z-index: 10;
@@ -332,7 +329,6 @@ section {
 
   @include mq(pc) {
     width: 366px;
-    // height: 318px;
     padding: 80px 40px;
     display: flex;
     flex-direction: column;
@@ -442,10 +438,11 @@ section {
   gap: 50px;
   align-self: stretch;
   width: 100%;
-
+  
   @include mq(pc) {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 90px;
   }
 }
@@ -824,7 +821,7 @@ section {
 
   &::before {
     @include mq(pc) {
-      background-image: url(../img/bg.svg)no-repeat center center / contain;
+      // background-image: url(../img/bg.svg)no-repeat center center / contain;
     }
   }
 }
