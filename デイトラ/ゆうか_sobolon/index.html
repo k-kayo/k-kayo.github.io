@@ -27,7 +27,7 @@
 
   <!-- スタイルCSS -->
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
@@ -35,6 +35,12 @@
     <div class="header-inner">
       <div class="header-logo">
         <a href="#"><img src="./img/logo.png" alt="sobolon"></a>
+        <!-- スマホ ハンバーガー -->
+        <button id="js-drawer-icon" class="header__icon drawer-icon" aria-label="メニューを開く">
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
       </div>
       <!-- ナビゲーションメニュー -->
       <nav class="header__nav">
@@ -44,12 +50,6 @@
         <a href="#news" class="header__link">News</a>
         <a href="#contact" class="header__link">Contact</a>
       </nav>
-      <!-- スマホ ハンバーガー -->
-      <button id="js-drawer-icon" class="header__open drawer-icon" aria-label="メニューを開く">
-        <span class="drawer-icon__bar"></span>
-        <span class="drawer-icon__bar"></span>
-        <span class="drawer-icon__bar"></span>
-      </button>
     </div>
     <!-- ドロワーコンテンツ -->
     <div id="js-drawer-content" class="drawer-content">

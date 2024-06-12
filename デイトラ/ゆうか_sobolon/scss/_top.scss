@@ -186,7 +186,7 @@ section {
   }
 }
 
-.header__open {
+.header__icon {
 
   @include mq(pc) {
     display: none;
@@ -438,7 +438,7 @@ section {
   gap: 50px;
   align-self: stretch;
   width: 100%;
-  
+
   @include mq(pc) {
     display: flex;
     flex-direction: row;
