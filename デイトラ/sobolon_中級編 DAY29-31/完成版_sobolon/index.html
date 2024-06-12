@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex" />
+  <title>sobolon</title>
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-inner inner">
+      <h1 class="header__logo">
+        <a href="/"><img src="./img/logo.png" alt="sobolon"></a>
+      </h1>
+      <button id="js-drawer-button" type="button" class="header__icon drawer-icon">
+        <span class="drawer-icon__bar"></span>
+        <span class="drawer-icon__bar"></span>
+        <span class="drawer-icon__bar"></span>
+      </button>
+      <nav id="js-drawer-content" class="header__nav">
+        <ul class="header__lists">
+          <li class="header__list"><a href="#concept" class="header__link">Concept</a></li>
+          <li class="header__list"><a href="#feature" class="header__link">Feature</a></li>
+          <li class="header__list"><a href="#products" class="header__link">Products</a></li>
+          <li class="header__list"><a href="#news" class="header__link">News</a></li>
+          <li class="header__list"><a href="#contact" class="header__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <div class="fv">
+      <div class="fv__inner inner">
+        <picture class="fv__image">
+          <source media="(min-width: 768px)" srcset="./img/top-pc.jpg">
+          <img src="./img/sp/top-sp.jpg" alt="">
+        </picture>
+        <div class="fv__message">
+          <p class="fv__title">“可愛い” で<br>
+            地球を守る！</p>
+          <p class="fv__text">海洋マイクロプラスチックを素材とした<br>
+            ハンドメイドアクセサリー「sobolon」</p>
+        </div>
+      </div>
+    </div>
+    <section class="concept section">
+      <div class="concept__inner inner">
+        <h2 class="heading section__head">Concept</h2>
+        <div class="concept__content section__contetnt">
+          <div class="concept__image"><img src="./img/concept-1.jpg" alt=""></div>
+          <div class="concept__message">
+            <p class="concept__title">可愛くてステキなのは当たり前。<br>地球にやさしくあるのも当たり前。</p>
+            <p class="concept__text">「sobolon」は、海洋汚染の要因であるマイクロプラスチックを回収し、それらを素材としたハンドメイドアクセサリーを製作しているブランドです。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature">
+      <div class="feature__inner inner">
+        <h2 class="heading section__head">Feature</h2>
+        <div class="feature__cards section__conten">
+          <div class="feature__card feature-card">
+            <div class="feature-card__image">
+              <img src="./img/feature-1.jpg" alt="">
+            </div>
+            <p class="feature-card__body">素材は海で採れた<br>マイクロプラスチック</p>
+          </div>
+          <div class="feature__card feature-card">
+            <div class="feature-card__image">
+              <img src="./img/feature-2.jpg" alt="">
+            </div>
+            <p class="feature-card__body">個性あふれる<br>“可愛い”デザイン</p>
+          </div>
+          <div class="feature__card feature-card">
+            <div class="feature-card__image">
+              <img src="./img/feature-3.jpg" alt="">
+            </div>
+            <p class="feature-card__body">世界にひとつだけの<br>一点物アクセサリー</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <!-------- Script -------->
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
