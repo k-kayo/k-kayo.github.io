@@ -28,13 +28,37 @@ body {
   font-weight: 300;
 }
 
+@include mq(sm) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@include mq(md) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+@include mq(lg) {
+  .hidden-lg {
+    display: none;
+  }
+}
+
+@include mq(xl) {
+  .hidden-xl {
+    display: none;
+  }
+}
+
 .inner {
   padding-inline: 15px; //inlineは左右の余白を一括で指定できる
 
   @include mq(md) {
     max-width: calc(1200px + 40px * 2);
-    margin-inline: auto; //👈左右の余白を一括指定できる
-    padding-inline: 40px;
+    margin-inline: auto;
+    padding-inline: 40px; //👈左右の余白を一括指定できる
   }
 }
 
@@ -42,7 +66,7 @@ body {
 
 .section__head {}
 
-.section__contetnt {
+.section__content {
   margin-top: 46px;
 
   @include mq(md) {
@@ -249,7 +273,7 @@ body {
 
   @include mq(md) {
     position: absolute;
-    inset-block: 0;
+    inset-block: 0; //上下中央揃え
     margin-block: auto;
     //👆上下左右に中央揃え
     left: 0;
@@ -328,10 +352,9 @@ body {
 }
 
 .concept__text {
-  margin-top: 20px;
+  margin-top: 22px;
 
   @include mq(md) {
-    font-weight: ;
     margin-top: 40px;
   }
 }
@@ -347,6 +370,14 @@ body {
 
   @include mq(md) {
     flex-direction: row;
+    gap: 40px;
+  }
+
+  @include mq(lg) {
+    gap: 60px;
+  }
+
+  @include mq(xl) {
     gap: 90px;
   }
 }
@@ -371,3 +402,142 @@ body {
   text-align: center;
   padding: 26px;
 }
+
+.about {
+  background: url(../img/sp/mask-sp.jpg) no-repeat top center / cover;
+  position: relative;
+  padding-block: 180px 50px; //背景に対してではなく、あくまでaboutの中のpaddingなので、実際はテキストとタイトル部分の余白を設定していることになる
+
+  @include mq(md) {
+    background-image: url(../img/mask-pc.jpg);
+    padding-block: 123px 122px;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.12);
+    z-index: 1;
+  }
+}
+
+.about__inner {}
+
+.about__content {
+  position: relative;
+  z-index: 2; //文字をbackgroundのカラーより、一番前に持ってくるため
+  color: #fff;
+
+  @include mq(md) {
+    width: calc(600px / 1200px * 100%); //テキスト全体の幅が600pxで、調べると600pxと600pxの合計1200pxの幅の半分として計算された配置だったので左記の計算方式になった模様
+  }
+}
+
+.about__title {
+  font-size: 20px;
+  font-weight: 600;
+
+  @include mq(md) {
+    font-size: 22px;
+  }
+}
+
+.about__text {
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 600;
+
+  @include mq(md) {
+    font-size: 16px;
+  }
+}
+
+.products {}
+
+.products__inner {
+  padding-inline: 56px;
+
+  @include mq(md) {
+    max-width: calc(940px + 40px * 2);
+    padding-inline: 40px;
+  }
+}
+
+.products__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include mq(md) {
+    flex-direction: row;
+    gap: 50px;
+
+    @include mq(lg) {
+      gap: 80px;
+
+    }
+  }
+}
+
+.products__card {}
+
+.products__button {
+  text-align: center;
+  margin-top: 42px;
+
+  @include mq(md) {
+    margin-top: 44px;
+  }
+}
+
+.products-card {
+  // text-align: center;
+}
+
+.products-card__image {
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.products-card__body {
+  margin-top: 20px;
+
+  @include mq(md) {
+    margin-top: 18px;
+  }
+}
+
+.products-card__title {
+  font-size: 14px;
+}
+
+.products-card__price {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #989898;
+}
+
+.news {}
+
+.news__inner {}
+
+.news__cards {}
+
+.news__card {}
+
+.news-card {}
+
+.news-card__image {}
+
+.news-card__time {}
+
+.news-card__title {}
+
+.news-card__text {}

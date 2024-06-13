@@ -512,7 +512,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 80px;
-    padding-left: calc(170px - 40px);
+    padding-left: calc(170px - 40px); //innerで設定している幅40pxから、productsの幅170pxを引いた
     padding-right: calc(170px - 40px);
   }
 }
