@@ -89,7 +89,7 @@ section {
 }
 .heading::after {
   content: "";
-  border: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
   width: 60px;
   border-radius: 3px;
 }
@@ -130,6 +130,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   height: 60px;
   background: var(--color-base);
   z-index: 10;
@@ -151,7 +152,8 @@ section {
       -ms-flex-align: center;
           align-items: center;
   padding: 21px 15px;
-  width: calc(100% - 42px);
+  max-width: 100%;
+  width: calc(100% + 30px);
 }
 @media screen and (min-width: 768px) {
   .header-inner {

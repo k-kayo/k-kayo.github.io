@@ -1,7 +1,7 @@
 @use "./mixins" as *;
 
-// $width-inner: 1200px;
-$width-inner: 1920px;
+$width-inner: 1200px;
+// $width-inner: 1920px;
 
 html {
   scroll-behavior: smooth;
@@ -75,7 +75,7 @@ section {
 
   &::after {
     content: '';
-    border: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
     width: 60px;
     border-radius: 3px;
   }
@@ -118,6 +118,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   height: 60px;
   background: var(--color-base);
   z-index: 10;
@@ -132,9 +133,8 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 21px 15px;
-  // width: calc(100% - 21px);
-  width: calc(100% - 21px *2);
-  // max-width: 100%;
+  max-width: 100%;
+  width: calc(100% + 15px * 2);
 
   @include mq(pc) {
     width: calc($width-inner + 40px * 2);
