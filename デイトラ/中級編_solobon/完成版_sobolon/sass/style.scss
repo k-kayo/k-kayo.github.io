@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $main-color: #3EA1D1;
 $text-color: #333333;
 
@@ -15,8 +17,17 @@ $breakpoints: (
 );
 
 @mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
+  @media #{map.get($breakpoints, $breakpoint)} {
     @content;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $header-height-sp; //スクロール時に上から60px下に移動してくれる
+
+  @include mq(md) {
+    scroll-padding-top: $header-height-pc;
   }
 }
 
@@ -53,7 +64,8 @@ body {
 }
 
 .inner {
-  padding-inline: 15px; //inlineは左右の余白を一括で指定できる
+  padding-inline: 15px;
+  //inlineは左右の余白を一括で指定できる
 
   @include mq(md) {
     max-width: calc(1200px + 40px * 2);
@@ -79,7 +91,7 @@ body {
   font-weight: 600;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 27px;
   align-items: center;
   line-height: 100%;
 
@@ -116,13 +128,18 @@ body {
 
 .header {
   height: $header-height-sp;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  background: #fff;
 
   @include mq(md) {
     height: $header-height-pc;
   }
 }
 
-.header-inner {
+.header__inner {
   height: inherit; //親要素のものを継承
   display: flex;
   justify-content: space-between;
@@ -139,6 +156,7 @@ body {
 }
 
 .header__icon {
+
   @include mq(md) {
     display: none;
   }
@@ -153,7 +171,7 @@ body {
   top: $header-height-sp;
   padding: calc(40px - 8px) 15px;
   transform: translateX(100%);
-  transition: transformX 0.4s;
+  transition: transform 0.4s;
 
   &.is-checked {
     transform: translateX(0);
@@ -173,12 +191,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: calc(32px - 8px * 2); //👈ボタンを押す時に余裕を持たせてあげたいため、上下に8pxのpaddingを付けために差し引きされている
+  gap: calc(32px - 8px * 2);
+  //👆ボタンを押す時に余裕を持たせてあげたいため、上下に8pxのpaddingを付けために差し引きされている
 
   @include mq(md) {
     flex-direction: row;
     align-items: center;
-    gap: 46px;
+    gap: 47px;
   }
 }
 
@@ -243,6 +262,12 @@ body {
   &:nth-child(3) {
     top: 16px;
   }
+
+  &.is-checked {
+    &:nth-child(2) {
+      top: 8px;
+    }
+  }
 }
 
 .main {
@@ -250,7 +275,7 @@ body {
   gap: 96px;
 
   @include mq(md) {
-    gap: 160px;
+    display: none;
   }
 }
 
@@ -299,7 +324,6 @@ body {
 
 .fv__text {
   margin-top: 16px;
-
 }
 
 .concept {}
@@ -316,7 +340,6 @@ body {
     align-items: center;
     gap: calc(80px / 1200px * 100%);
   }
-
 }
 
 .concept__image {
@@ -352,7 +375,7 @@ body {
 }
 
 .concept__text {
-  margin-top: 22px;
+  margin-top: 21px;
 
   @include mq(md) {
     margin-top: 40px;
@@ -366,7 +389,7 @@ body {
 .feature__cards {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 48px;
 
   @include mq(md) {
     flex-direction: row;
@@ -452,6 +475,7 @@ body {
   font-weight: 600;
 
   @include mq(md) {
+    margin-top: 23px;
     font-size: 16px;
   }
 }
@@ -471,7 +495,7 @@ body {
 .products__cards {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 41px;
 
   @include mq(md) {
     flex-direction: row;
@@ -484,7 +508,9 @@ body {
   }
 }
 
-.products__card {}
+.products__card {
+  flex: 1;
+}
 
 .products__button {
   text-align: center;
@@ -526,14 +552,16 @@ body {
 .news {}
 
 .news__inner {
-  max-width: calc(1040px + 40px * 2);
-  padding-inline: 40px;
+  @include mq(md) {
+    max-width: calc(1040px + 40px * 2);
+    padding-inline: 40px;
+  }
 }
 
 .news__cards {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 27px;
 
   @include mq(md) {
     gap: 24px;
@@ -630,7 +658,6 @@ body {
   }
 }
 
-
 .concept2__image {
   text-align: center;
 
@@ -675,5 +702,309 @@ body {
   @include mq(md) {
     margin-top: 36px;
     font-size: 16px;
+  }
+}
+
+.contact {
+  padding-block: 56px;
+  background: url(../img/contact-bg.jpg) no-repeat center center / cover;
+
+  @include mq(md) {
+    padding-block: 80px;
+  }
+}
+
+.contact__inner {
+  @include mq(md) {
+    max-width: calc(510px + 40px * 2);
+    padding-inline: 40px;
+  }
+}
+
+.contact__head {
+  color: $main-color;
+}
+
+.contact__form {}
+
+.contact__text {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+
+  .is-required {
+    color: #E7728E;
+  }
+}
+
+.contact__items {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include mq(md) {
+    margin-top: 19px;
+  }
+}
+
+.contact__item {}
+
+.contact__footer {
+  margin-top: 28px;
+
+  @include mq(md) {
+    margin-top: 32px;
+  }
+}
+
+.contact__Privacy {
+  text-align: center;
+}
+
+.contact__submit {
+  margin-top: 24px;
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: 44px;
+  }
+}
+
+
+.contact-control {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  @include mq(md) {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+.contact-control__head {
+  @include mq(md) {
+    width: 180px;
+    flex-shrink: 0;
+  }
+}
+
+.contact-control__input {
+
+  @include mq(md) {
+    flex-grow: 1;
+  }
+}
+
+.contact-control__radios {
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  display: inline-flex;
+  background: rgba($main-color, 0.7);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 4px;
+  align-items: center;
+  padding: 4px 16px;
+
+  @include mq(md) {
+    width: 100%;
+    justify-content: center;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    padding-inline: 4px;
+    clip-path: polygon(0% 0%, 97% 0, 100% 50%, 97% 100%, 0% 100%);
+  }
+}
+
+.form-label__required {
+  color: #E7728E;
+  font-size: 10px;
+  font-weight: 600;
+
+  @include mq(md) {
+    font-size: 12px;
+  }
+}
+
+.form-text {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  font-size: 16px;
+  background: #FFF;
+  box-shadow: 5px 6px 16px 0px rgba(96, 96, 96, 0.16);
+}
+
+.form-radio {
+  position: relative;
+}
+
+.form-radio__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+
+  &:checked+.form-radio__text {
+    background-color: $main-color;
+    color: #fff;
+  }
+}
+
+.form-radio__text {
+  font-size: 16px;
+  letter-spacing: 0.026px;
+  color: $main-color;
+  border: 1px solid #FFF;
+  background: #FFF;
+  width: 80px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 122px;
+  background: #FFF;
+  box-shadow: 5px 6px 16px 0px rgba(96, 96, 96, 0.16);
+  resize: vertical;
+  font-size: 16px;
+  border: 0;
+}
+
+.form-checkbox {
+  position: relative;
+  text-align: center;
+}
+
+.form-checkbox__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+
+  &:checked+.form-checkbox__text {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.form-checkbox__text {
+  font-size: 16px;
+  padding-left: 30px;
+
+  a {
+    text-decoration-line: underline;
+    color: $main-color;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    transform: translateY(2px);
+    left: 0;
+    inset-block: 0;
+    margin-block: auto;
+  }
+
+  &::before {
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border: 1px solid $main-color;
+  }
+
+  &::after {
+    opacity: 0;
+    width: 19.414px;
+    height: 14.621px;
+    left: 1.29px;
+    background: url(../img/icon.png) no-repeat center center / contain;
+  }
+}
+
+.footer {
+  padding-block: 40px 7px;
+  background: #F7F7F7;
+
+  @include mq(md) {
+    padding-bottom: 14px;
+  }
+}
+
+.footer__inner {}
+
+.footer__logo {
+  a {
+    img {
+      width: 120px;
+      display: block;
+      margin-inline: auto;
+    }
+  }
+}
+
+
+.footer__menu-items {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+}
+
+.footer__menu-item {
+  font-size: 12px;
+}
+
+.footer__menu-link {}
+
+.footer__sns-items {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  @include mq(md) {
+    margin-top: 20px;
+  }
+
+}
+
+.footer__sns-item {}
+
+.footer__sns-link {}
+
+.footer__copyright {
+  font-size: 12px;
+  margin-top: 24px;
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: 28px;
+  }
+
+  small {
+    color: #888;
+    font-size: inherit;
   }
 }
