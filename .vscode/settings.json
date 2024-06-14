@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["backnumber", "backnumbers", "Kissaten", "palt", "pathmove", "scrolldown"],
+  "cSpell.words": ["backnumber", "backnumbers", "Kissaten", "palt", "pathmove", "scrolldown", "sobolon"],
   "liveSassCompile.settings.formats": [
     {
       "format": "expanded",
@@ -8,5 +8,6 @@
       "savePathReplacementPairs": null
     }
   ],
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "cSpell.enableFiletypes": ["html"]
 }

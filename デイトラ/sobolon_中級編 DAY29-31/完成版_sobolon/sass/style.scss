@@ -462,6 +462,7 @@ body {
   padding-inline: 56px;
 
   @include mq(md) {
+    //1280px時はinnerが940pxなので。mdでもxlの1200pxでも変わらないようにしているのかも
     max-width: calc(940px + 40px * 2);
     padding-inline: 40px;
   }
@@ -477,7 +478,7 @@ body {
     gap: 50px;
 
     @include mq(lg) {
-      gap: 80px;
+      gap: 80px; //デザインカンプ1280px時がgap80pxになるように設定している模様
 
     }
   }
@@ -605,5 +606,74 @@ body {
 
   @include mq(md) {
     margin-top: 10px;
+  }
+}
+
+.concept2 {}
+
+.concept2__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include mq(md) {
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+
+  @include mq(lg) {
+    gap: 60px;
+  }
+
+  @include mq(xl) {
+    gap: 80px;
+  }
+}
+
+
+.concept2__image {
+  text-align: center;
+
+  @include mq(md) {
+    width: calc(600px / 1200px * 100%);
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.concept2__message {
+  @include mq(md) {
+    flex-grow: 1;
+  }
+}
+
+.concept2__title {
+  font-size: 20px;
+  font-weight: 600;
+
+  @include mq(md) {
+    font-size: 22px;
+  }
+
+  @include mq(lg) {
+    font-size: 25px;
+  }
+
+  @include mq(xl) {
+    font-size: 28px;
+  }
+}
+
+.concept2__text {
+  margin-top: 22px;
+  font-size: 14px;
+
+  @include mq(md) {
+    margin-top: 36px;
+    font-size: 16px;
   }
 }
