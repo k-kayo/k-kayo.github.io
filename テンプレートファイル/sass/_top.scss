@@ -1,0 +1,61 @@
+@use "./mixins" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "";
+  color: var(--font-color);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-base);
+  font-size: var(--font-size-base);
+}
+
+// 共通パーツ
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: ;
+  padding-right: ;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  @include mq(pc) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1rem;
+  line-height: 1;
+  transition: 0.3s;
+  min-width: 200px;
+  text-align: center;
+
+  &-primary {
+    background-color: var(--primary);
+    color: #;
+
+    &:hover {
+      background-color: var(--secondary);
+      color: #;
+    }
+  }
+
+  &-primary-line {
+    border: 1px solid #;
+    color: var(--primary);
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+}
