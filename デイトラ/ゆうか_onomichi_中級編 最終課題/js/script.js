@@ -14,11 +14,11 @@ document.querySelectorAll('#js-drawer-content a[href^="#"]').forEach(function (l
 });
 
 // jQueryの場合 --ドロワーコンテンツ
-jQuery("#js-drawer-icon").on("click", function (e) {
-  e.preventDefault();
-  jQuery("#js-drawer-icon").toggleClass("is-checked");
-  jQuery("#js-drawer-content").toggleClass("is-checked");
-});
+// jQuery("#js-drawer-icon").on("click", function (e) {
+//   e.preventDefault();
+//   jQuery("#js-drawer-icon").toggleClass("is-checked");
+//   jQuery("#js-drawer-content").toggleClass("is-checked");
+// });
 
 // JavaScriptの場合 --ドロワーコンテンツ
 // const drawerIcon = document.querySelector("#js-drawer-icon");

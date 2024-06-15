@@ -32,43 +32,81 @@
   <header class="header">
     <div class="header__inner inner">
       <h1 class="header__logo">
-        <a href="/"><img src="./img/OGP.jpg" alt="#見つけて尾道レトロキャンペーン！"></a>
+        <a href="/"><img src="./img/logo.png" alt="#見つけて尾道レトロキャンペーン！"></a>
       </h1>
-      <button id="js-drawer-button" type="button" class="header__icon drawer-icon">
-        <span class="drawer-icon__bar"></span>
-        <span class="drawer-icon__bar"></span>
-        <span class="drawer-icon__bar"></span>
-        <span class="drawer-icon__bar"></span>
-      </button>
-      <nav id="js-drawer-content" class="header__nav">
+      <nav class="sp-only">
+        <button id="js-drawer-button" type="button" class="drawer-icon">
+          <span class="drawer-icon__bar visually-hidden"></span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+        <!-- SP ドロワーメニュー -->
+        <div id="js-drawer-content" class="drawer__nav">
+          <ul class="drawer__lists">
+            <li class="drawer__list">
+              <a href="#about" class="drawer__link">キャンペーンについて</a>
+            </li>
+            <li class="drawer__list">
+              <a href="#prizes" class="drawer__link">キャンペーン特典</a>
+            </li>
+            <li class="drawer__list">
+              <a href="#spots" class="drawer__link">おすすめスポット</a>
+            </li>
+            <li class="drawer__list">
+              <a href="#faq" class="drawer__link">よくある質問</a>
+            </li>
+            <li class="drawer__list">
+              <a href="#information" class="drawer__link">参加要項</a>
+            </li>
+            <li class="drawer__list">
+              <a href="#contact" class="drawer__link">お問い合わせ</a>
+            </li>
+          </ul>
+          <div class="drawer-content__button">
+            <a href="#step" class="button">応募してみる</a>
+          </div>
+        </div>
+      </nav>
+      <!-- PC ナビゲーションメニュー -->
+      <nav id="js-drawer-content" class="header__nav pc-only">
         <ul class="header__lists">
           <li class="header__list">
-            <a href="#concept" class="header__link">キャンペーンについて</a>
+            <a href="#about" class="header__link">キャンペーンについて</a>
           </li>
           <li class="header__list">
-            <a href="#feature" class="header__link">キャンペーン特典</a>
+            <a href="#prizes" class="header__link">特典</a>
           </li>
           <li class="header__list">
-            <a href="#products" class="header__link">おすすめスポット</a>
+            <a href="#spots" class="header__link">おすすめスポット</a>
           </li>
           <li class="header__list">
-            <a href="#news" class="header__link">よくある質問</a>
+            <a href="#faq" class="header__link">よくある質問</a>
           </li>
           <li class="header__list">
-            <a href="#contact" class="header__link">参加要項</a>
+            <a href="#information" class="header__link">参加要項</a>
           </li>
-          <li class="header__list">
-            <a href="#contact" class="header__link">お問い合わせ</a>
-          </li>
-          <div class="drawer-content__button">
-            <a href="#contact" class="button">応募してみる</a>
-          </div>
-
         </ul>
+        <div class="drawer-content__button">
+          <a href="#step" class="button">応募してみる</a>
+        </div>
       </nav>
     </div>
   </header>
-  <main class="main">
+
+  <!-------- main --------->
+  <main>
+    <div class="fv"></div>
+    <section id="about" class="about"></section>
+    <section id="step" class="step"></section>
+    <section id="prizes" class="prizes"></section>
+    <section id="spots" class="spots"></section>
+    <section id="faq" class="faq"></section>
+    <section id="information" class="information"></section>
+    <section id="contact" class="contact"></section>
+    <footer></footer>
+  </main>
+  <!-- <main class="main">
     <div class="fv">
       <div class="fv__inner inner">
         <picture class="fv__image">
@@ -296,8 +334,8 @@
         </form>
       </div>
     </section>
-  </main>
-  <footer class="footer">
+  </main> -->
+  <!-- <footer class="footer">
     <div class="footer__inner inner">
       <div class="footer__logo">
         <a href=""><img src="./img/logo.png" alt=""></a>
@@ -325,9 +363,10 @@
         <small>© 2020 sobolon All rights reserved</small>
       </p>
     </div>
-  </footer>
+  </footer> -->
+
   <!-- 戻るボタン -->
-  <a href="#" class="pagetop" id="js-pagetop"><img src="./img/pagetop-img.png" alt="" /></a>
+  <!-- <a href="#" class="pagetop" id="js-pagetop"><img src="./img/pagetop-img.png" alt="" /></a> -->
 
   <!-------- Script -------->
   <script src="./js/lib/swiper-bundle.min.js"></script>
