@@ -22,6 +22,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Javanese:wght@400..700&display=swap" rel="stylesheet">
+
   <!-- スタイルCSS -->
   <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/reset.css">
@@ -30,7 +32,7 @@
 
 <body>
   <header class="header">
-    <div class="header__inner inner">
+    <div class="header__inner">
       <h1 class="header__logo">
         <a href="/"><img src="./img/logo.png" alt="#見つけて尾道レトロキャンペーン！"></a>
       </h1>
@@ -59,8 +61,8 @@
             <a href="#information" class="header__link">参加要項</a>
           </li>
         </ul>
-        <div class="drawer-content__button">
-          <a href="#step" class="button">応募してみる</a>
+        <div class="header-content__button">
+          <a href="#step" class="button-sm">応募してみる</a>
         </div>
       </nav>
     </div>
@@ -87,15 +89,120 @@
         <a href="#contact" class="drawer__link">お問い合わせ</a>
       </li>
     </ul>
-    <div class="drawer-content__button">
-      <a href="#step" class="button">応募してみる</a>
+    <div class="sp-only">
+      <a href="#step" class="button drawer-content__button">応募してみる</a>
     </div>
   </nav>
 
   <!-------- main --------->
   <main>
-    <div class="fv"></div>
-    <section id="about" class="about"></section>
+    <!-- fv -->
+    <div class="fv">
+      <picture class="fv__image">
+        <source media="(min-width: 600px)" srcset="./img/fv/fv_onomichi-pc.jpg" class="fv__image-pc">
+        <img src="./img/sp/onomichi.jpg" alt="ファーストビュー" class="fv__image-sp">
+      </picture>
+      <div class="fv__inner inner">
+        <div class="fv__message">
+          <p class="fv__message-desc">あなたの見つけたレトロな尾道の一枚を<br>Instagramに投稿しよう</p>
+          <div class="fv__message-title">
+            <img src="./img/sp/fv-title.png" alt="" class="fv__message-title1">
+            <img src="./img/sp/fv-title-2.png" alt="" class="fv__message-title2">
+          </div>
+        </div>
+        <div class="fv__wrapper">
+          <div class="fv_fukidashi">
+            <span class="fv_fukidashi-text">Share<br>a moment<br>in a snap!</span>
+            <img src="./img/fv/fukidashi_yellow_Vector 6.svg" alt="吹き出し画像" class="fv_fukidashi-decoration">
+          </div>
+          <div class="fv__present">
+            <div class="fv__present-boxes">
+              <p class="fv__present-box1">尾道ギフトを</p>
+              <p class="fv__present-box2"><span class="fv__present-text1">100</span><span
+                  class="fv__present-text2">名様</span><span class="fv__present-text3">に</span><span
+                  class="fv__present-text4"><br>プレゼント</span>
+              </p>
+            </div>
+          </div>
+          <div class="fv__smartphone">
+            <picture class="fv__smartphone-device">
+              <source media="(min-width: 768px)" srcset="./img/fv/smartphone-pc.png">
+              <img src="./img/sp/smartphone-sp.png" alt="スマートフォン本体" decoding="async">
+            </picture>
+            <div class="fv__smartphone-cards">
+              <div class="fv__smartphone-card-head">
+                <p class="fv__card-text">#見つけて尾道レトロ</p>
+              </div>
+              <div class="fv__smartphone-card-items">
+                <p class="fv__smartphone-card-item1">応募期間</p>
+                <p class="fv__smartphone-card-item2">2022/8/1(月)〜9/30(金)</p>
+                <div class="drawer-content__button">
+                  <a href="#step" class="button">応募してみる</a>
+                </div>
+              </div>
+            </div>
+            <div class="fv__decoration-food">
+              <img src="./img/fv/img_food.png" alt="食べ物の画像">
+            </div>
+            <img src="./img/fv/cats_black.png" alt="黒色の猫" class="fv__decoration-cat-black">
+            <img src="./img/fv/cats_brown.png" alt="ブラウン色の猫" class="fv__decoration-cat-brown">
+          </div>
+          <!-- </div> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- about -->
+    <section id="about" class="about">
+      <div class="about__container">
+        <!-- <img src="./img/about/photo_L.jpg" alt="" class="about__bg-left">
+        <img src="./img/about/photo_R.jpg" alt="" class="about__bg-right"> -->
+        <div class="about__inner inner">
+          <div class="about__heading heading">
+            <img src="" alt="拡声器" class="heading-icon">
+            <h2 class="about__title heading-title">Products</h2>
+          </div>
+          <div class="about__content">
+            <div class="about__bg-left">
+              <img src="" alt="" class="about__bg-left-photoL">
+              <img src="" alt="" class="about__bg-hill">
+            </div>
+            <div class="about__bg-right">
+              <img src="" alt="" class="about__bg-pawpads">
+              <img src="" alt="" class="about__bg-right-photoR">
+              <img src="" alt="" class="about__bg-goods1">
+              <img src="" alt="" class="about__bg-goods2">
+              <div class="about__bg-wavyline">
+                <img src="" alt="" class="about__bg-wave-top">
+                <img src="" alt="" class="about__bg-wave-bottom">
+              </div>
+            </div>
+            <p class="about__content-title"></p>
+            <p class="about__content-text"></p>
+            <strong class="about__content-info">尾道のギフトを100名様にプレゼント！</strong>
+            <div class="about__content-btn"><a href="" class="button-lg">参加の仕方はこちら</a></div>
+          </div>
+        </div>
+        <img src="" alt="" class="about__bg-goods1">
+        <img src="" alt="" class="about__bg-goods2">
+      </div>
+      <div class="about__bottom">
+        <img src="" alt="" class="logp-onomichi">
+        <div class="about__scroll">
+          <img src="" alt="" class="about__scroll-1">
+          <img src="" alt="" class="about__scroll-2">
+          <img src="" alt="" class="about__scroll-3">
+          <img src="" alt="" class="about__scroll-4">
+          <img src="" alt="" class="about__scroll-5">
+          <img src="" alt="" class="about__scroll-6">
+          <img src="" alt="" class="about__scroll-7">
+          <img src="" alt="" class="about__scroll-8">
+          <img src="" alt="" class="about__scroll-9">
+          <img src="" alt="" class="about__scroll-10">
+        </div>
+      </div>
+    </section>
+    <!---- step ---->
     <section id="step" class="step"></section>
     <section id="prizes" class="prizes"></section>
     <section id="spots" class="spots"></section>
@@ -106,7 +213,7 @@
   </main>
 
   <!-- 戻るボタン -->
-  <a href="#" class="pagetop" id="js-pagetop"><img src="./" alt="トップへ戻るボタン"></a>
+  <!-- <a href="#" class="pagetop" id="js-pagetop"><img src="./" alt="トップへ戻るボタン" aria-label="トップへ戻る"></a> -->
 
   <!-------- Script -------->
   <script defer src="./js/lib/swiper-bundle.min.js"></script>
