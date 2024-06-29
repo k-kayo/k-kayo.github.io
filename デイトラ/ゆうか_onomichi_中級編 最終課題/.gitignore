@@ -1,5 +1,5 @@
 .vscode/**
 .DS_Store
-js/aos/**
-js/slick/**
 js/jquery/**
+js/lib/swiper/**
+Thumbs.db

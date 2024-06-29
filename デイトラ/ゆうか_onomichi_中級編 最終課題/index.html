@@ -90,7 +90,7 @@
       </li>
     </ul>
     <div class="sp-only">
-      <a href="#step" class="button drawer-content__button">応募してみる</a>
+      <a href="#step" class="button-sm drawer-content__button">応募してみる</a>
     </div>
   </nav>
 
@@ -99,8 +99,8 @@
     <!-- fv -->
     <div class="fv">
       <picture class="fv__image">
-        <source media="(min-width: 600px)" srcset="./img/fv/fv_onomichi-pc.jpg" class="fv__image-pc">
-        <img src="./img/sp/onomichi.jpg" alt="ファーストビュー" class="fv__image-sp">
+        <source media="(min-width: 600px)" srcset="./img/fv/fv_onomichi-pc.webp" class="fv__image-pc">
+        <img src="./img/sp/fv-onomichi.webp" alt="ファーストビュー" class="fv__image-sp">
       </picture>
       <div class="fv__inner inner">
         <div class="fv__message">
@@ -126,8 +126,8 @@
           </div>
           <div class="fv__smartphone">
             <picture class="fv__smartphone-device">
-              <source media="(min-width: 768px)" srcset="./img/fv/smartphone-pc.png">
-              <img src="./img/sp/smartphone-sp.png" alt="スマートフォン本体" decoding="async">
+              <source media="(min-width: 768px)" srcset="./img/fv/smartphone-pc.webp">
+              <img src="./img/sp/smartphone-sp.webp" alt="スマートフォン本体" decoding="async">
             </picture>
             <div class="fv__smartphone-cards">
               <div class="fv__smartphone-card-head">
@@ -137,7 +137,7 @@
                 <p class="fv__smartphone-card-item1">応募期間</p>
                 <p class="fv__smartphone-card-item2">2022/8/1(月)〜9/30(金)</p>
                 <div class="fv__smartphone-card-button">
-                  <a href="#step" class="button">応募してみる</a>
+                  <a href="#step" class="button-s">応募してみる</a>
                 </div>
               </div>
             </div>
@@ -147,8 +147,6 @@
             <img src="./img/fv/cats_black.png" alt="黒色の猫" class="fv__decoration-cat-black">
             <img src="./img/fv/cats_brown.png" alt="ブラウン色の猫" class="fv__decoration-cat-brown">
           </div>
-          <!-- </div> -->
-          <!-- </div> -->
         </div>
       </div>
     </div>
@@ -161,72 +159,135 @@
             <img src="./img/about/pic2.jpg" alt="" class="about__content-pic2">
           </div>
           <div class="about__content-box">
+
             <div class="about__heading heading">
               <img src="./img/about/icon.png" alt="拡声器">
               <h2 class="about__title-en heading-en">About</h2>
               <p class="heading-title">キャンペーンについて</p>
             </div>
-            <p class="about__content-box-title">あなたの心が動いた尾道の瞬間を<br>＼ おしえてください！ ／</p>
+            <p class="about__content-box-title sp-only">あなたの心が動いた尾道の瞬間を<br>＼ おしえてください！ ／
+            </p>
+            <p class="about__content-box-title pc-only">＼あなたの心が動いた尾道の瞬間を、おしえてください！ ／</p>
             <p class="about__content-box-text1">風情あふれる坂道に、静かに佇むお寺。<br>
-              路地裏の角をまがれば<br>
+              路地裏の角をまがれば<br class="sp-only">
               気ままにお昼寝する猫に出会え、<br>
               ふと振り返れば、美しい瀬戸内の海が。</p>
             <p class="about__content-box-text2">
-              数々の映画の舞台にもなってきたこの街には<br>心がほどけるような、<br>レトロでやさしい風景が広がっています。</p>
+              数々の映画の舞台にもなってきたこの街には<br>心がほどけるような、<br class="sp-only">レトロでやさしい風景が広がっています。</p>
             <p class="about__content-box-text3">あなたの見つけた尾道のなつかしい景色を、<br>ぜひおしえてください。</p>
             <p class="about__content-box-text4">尾道観光部（<a href="/"
-                class="about__content-box-link">@onomichi_retro</a>）を<br>フォロー&尾道で撮影した写真を、<br>
-              ハッシュタグ「<span class="about__content-box-tag">#見つけて尾道レトロ
-              </span>」を<br>
-              つけてInstagramに投稿いただいた方の中から
+                class="about__content-box-link">@onomichi_retro</a>）を<br class="sp-only">フォロー&<br
+                class="pc-only">尾道で撮影した写真を、<br class="sp-only">ハッシュタグ「<span
+                class="about__content-box-tag">#見つけて尾道レトロ</span>」を<br class="sp-only">つけて<br
+                class="pc-only">Instagramに投稿いただいた方の中から
             </p>
             <strong class="about__content-box-info">尾道のギフトを100名様にプレゼント！</strong>
             <div class="about__content-box-btn">
-              <a href="" class="button">参加の仕方はこちら</a>
+              <a href="" class="button-lg">参加の仕方はこちら</a>
             </div>
           </div>
         </div>
         <div class="about__bg">
           <div class="about__bg-left">
-            <img src="./img/about/photo_L.jpg" alt="" class="about__bg-left-photoL">
-            <img src="./img/about/slope.jpg" alt="" class="about__bg-hill">
+            <img src="./img/about/diagonal_pattern.png" alt="" class="about__bg-left-pattern pc-only">
+            <picture class="about__bg-left-photoL">
+              <source media="(min-width: 900px)" srcset="./img/about/photo_L.jpg">
+              <img src="./img/sp/photo-left.webp" alt="" decoding="async">
+            </picture>
+            <picture class="about__bg-hill">
+              <source media="(min-width: 900px)" srcset="./img/about/slope.webp">
+              <img src="./img/sp/slope..png" alt="" decoding="async">
+            </picture>
           </div>
           <div class="about__bg-right">
             <img src="./img/about/bg-pawpads.png" alt="" class="about__bg-pawpads">
-            <!-- <img src="./img/about/photo_R.jpg" alt="" class="about__bg-right-photoR"> -->
-            <!-- <img src="./img/about/goods1.png" alt="" class="about__bg-goods1">
-            <img src="./img/about/goods2.png" alt="" class="about__bg-goods2"> -->
-            <!-- <div class="about__bg-wavyline"> -->
-            <!-- <img src="./img/about/wave.png" alt="" class="about__bg-wave"> -->
-            <!-- </div> -->
+            <picture class="about__bg-right-photoR">
+              <source media="(min-width: 768px)" srcset="./img/about/photo_R.jpg">
+              <img src="./img/sp/photo-right.webp" alt="" decoding="async">
+            </picture>
+            <img src="./img/about/goods1.png" alt="" class="about__bg-goods1">
+            <img src="./img/about/goods2.png" alt="" class="about__bg-goods2">
+            <div class="about__bg-wavyline">
+              <img src="./img/about/wave.png" alt="" class="about__bg-wave sp-only">
+            </div>
           </div>
         </div>
         <img src="./img/about/arrow.png" alt="" class="about__arrow">
       </div>
       <div class="about__bottom">
-        <img src="" alt="" class="logp-onomichi">
-        <div class="about__scroll">
-          <img src="" alt="" class="about__scroll-1">
-          <img src="" alt="" class="about__scroll-2">
-          <img src="" alt="" class="about__scroll-3">
-          <img src="" alt="" class="about__scroll-4">
-          <img src="" alt="" class="about__scroll-5">
-          <img src="" alt="" class="about__scroll-6">
-          <img src="" alt="" class="about__scroll-7">
-          <img src="" alt="" class="about__scroll-8">
-          <img src="" alt="" class="about__scroll-9">
-          <img src="" alt="" class="about__scroll-10">
+        <img src="./img/about/onomichi-stroke.png" alt="" class="logp-onomichi">
+
+        <!-- swiper -->
+        <div id="js-swiper" class="swiper about__swiper">
+          <div id="js-swiper-wrap" class="swiper-wrapper about__swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/about/scroll/scroll1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/about/scroll/scroll2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/about/scroll/scroll3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/about/scroll/scroll4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/about/scroll/scroll5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/about/scroll/scroll6.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/about/scroll/scroll7.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/about/scroll/scroll8.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/about/scroll/scroll9.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/about/scroll/scroll10.jpg" alt=""></div>
+          </div>
         </div>
       </div>
     </section>
     <!---- step ---->
-    <section id="step" class="step"></section>
-    <section id="prizes" class="prizes"></section>
+    <!-- <section id="step" class="step">
+      <div class="step__inner">
+        <div class="step__bg">
+          <img src="" alt="">
+          <img src="" alt="" class="step__bg-brouwn">
+          <img src="" alt="" class="step__bg-black">
+          <img src="" alt="" class="step__bg-pawpads-top">
+          <img src="" alt="" class="step__bg-pawpads-middle">
+          <img src="" alt="" class="step__bg-pawpads-bottom">
+        </div>
+        <div class="step__heading heading">
+          <img src="./img" alt="拡声器">
+          <h2 class="step__title-en heading-en">How to Enter</h2>
+          <p class="heading-title step__title-ja">応募の仕方</p>
+        </div>
+        <ul class="step__list">
+          <li class="step__list-item1">
+            <img src="" alt="">
+            <p class="step__list-item1-title"></p>
+            <p class="step__list-item1-text"></p>
+            <a href="">
+              <img src="" alt="">
+              <p class="step__list-item1-link"></p>
+            </a>
+          </li>
+          <li class="step__list-item2">
+            <img src="" alt="">
+            <p class="step__list-item2-title"></p>
+            <p class="step__list-item2-text"></p>
+            <a href="">
+              <img src="" alt="">
+              <p class="step__list-item2-link"></p>
+            </a>
+          </li>
+          <li class="step__list-item3">
+            <img src="" alt="">
+            <p class="step__list-item3-title"></p>
+            <p class="step__list-item3-text"></p>
+            <a href="">
+              <img src="" alt="">
+              <p class="step__list-item3-link"></p>
+            </a>
+            <button class="step__btn button"></button>
+          </li>
+        </ul>
+      </div>
+    </section> -->
+    <!-- <section id="prizes" class="prizes"></section>
     <section id="spots" class="spots"></section>
     <section id="faq" class="faq"></section>
     <section id="information" class="information"></section>
     <section id="contact" class="contact"></section>
-    <footer></footer>
+    <footer></footer> -->
   </main>
 
   <!-- 戻るボタン -->
