@@ -96,6 +96,10 @@ body {
 .sp-only {
   display: block;
 
+  @include mq(lg) {
+    display: none;
+  }
+
   @include mq(xl) {
     display: none;
   }
@@ -160,6 +164,15 @@ a {
     gap: 7px;
     // align-items: flex-start;
   }
+
+  @include mq(lg) {
+    gap: 8px;
+  }
+
+  @include mq(xl) {
+    // gap: 8px;
+    gap: 7px;
+  }
 }
 
 .heading-en {
@@ -192,6 +205,15 @@ a {
     font-family: $font-secondary-jp;
     font-size: 32px;
     font-feature-settings: 'pwid' on;
+  }
+
+  @include mq(lg) {
+    padding-bottom: 6px;
+  }
+
+  @include mq(xl) {
+    // margin-top: 8px;
+    // padding-bottom: 8px;
   }
 }
 
@@ -312,8 +334,6 @@ a {
   color: $text-color;
   font-size: 20px;
   font-weight: 700;
-  padding-bottom: 4px;
-
 
   &:hover {
     background: $accent-color-Yellow;
@@ -337,7 +357,7 @@ a {
 .header {
   height: $header-height;
   // position: fixed;
-  position: sticky;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 100;
@@ -355,7 +375,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  // position: relative;
   padding: 16px 20px;
   // width: 375px;
   // height: 64px;
@@ -397,6 +417,8 @@ a {
 }
 
 .header__nav {
+  display: none;
+
   @include mq(xl) {
 
     display: flex;
@@ -445,7 +467,6 @@ a {
 .drawer__nav {
   background: $color-white;
   position: absolute;
-  position: fixed;
   width: 100%;
   height: 100%;
   left: 0;
@@ -508,6 +529,10 @@ a {
   height: calc(24px + 3.6px + 0.4px);
   position: relative;
   z-index: 50;
+
+  @include mq(xl) {
+    display: none;
+  }
 
   &.is-checked {
     .drawer-icon__bar {
@@ -1195,16 +1220,17 @@ a {
     // display: inline-flex;
   }
 
-  @include mq(md) {
-    padding: 40px 114px;
+  @include mq(lg) {
+    padding: 40px 20px 36px;
     // gap: 32px;
-    width: calc(620px + 114px * 2);
-    height: calc(749px + 40px * 2);
+    width: calc(620px - 20px * 2);
+    height: calc(749px + 40px + 36px);
   }
 
-  @include mq(lg) {
+  @include mq(xl) {
     font-weight: 700;
     text-align: center;
+    width: calc(620px + 114px * 2);
     // font-feature-settings: 'pref' on;
 
 
@@ -1221,7 +1247,13 @@ a {
   justify-content: space-between;
   align-items: flex-start;
 
-  @include mq(md) {
+  @include mq(lg) {
+    width: 620px;
+    height: 124.325px;
+    left: 0;
+  }
+
+  @include mq(xl) {
     // right: 84.304px;
     // top: 40.351px;
     width: 678.696px;
@@ -1236,7 +1268,17 @@ a {
   height: 72px;
 
 
-  @include mq(md) {
+  @include mq(lg) {
+    // width: 134px;
+    width: 147px;
+    // height: 100px;
+    height: 118px;
+    position: absolute;
+    left: -50px;
+    top: 9px;
+  }
+
+  @include mq(xl) {
     // width: 134px;
     width: 147px;
     // height: 100px;
@@ -1259,7 +1301,19 @@ a {
     border: 3px solid $color-Gray;
   }
 
-  @include mq(md) {
+  @include mq(lg) {
+    position: absolute;
+    // top: 40.351px;
+    // right: 84.304px;
+    // width: 134px;
+    // height: 100px;
+    top: 9px;
+    right: -16.696px;
+    width: 147px;
+    height: 118px;
+  }
+
+  @include mq(xl) {
     position: absolute;
     // top: 40.351px;
     // right: 84.304px;
@@ -1280,8 +1334,7 @@ a {
   text-align: center;
 
   @include mq(md) {
-    // gap: 32px;
-    gap: 34px;
+    gap: 32px;
   }
 }
 
@@ -1299,6 +1352,7 @@ a {
   @include mq(md) {
     font-feature-settings: 'pref' on;
     font-size: 16px;
+    padding-top: 2px;
   }
 }
 
@@ -1361,20 +1415,50 @@ a {
   width: 655px;
   height: 934px;
   z-index: -1;
+
+  @include mq(md) {
+    position: relative;
+    right: -566px;
+    width: 2416px;
+    height: 1218px;
+    top: -826px;
+  }
 }
 
 .about__bg-left {
   width: 278px;
   height: 529px;
   position: absolute;
+
+  @include mq(lg) {
+    // width: 662px;
+    // height: 1158px;
+    // right: calc(50% + 339px);
+    // top: -5px;
+  }
+
+  @include mq(xl) {
+    right: calc(50% + 339px);
+    top: -5px;
+  }
 }
 
 .about__bg-left-pattern {
-  width: 250px;
-  height: 250px;
-  border-radius: 24px;
-  position: absolute;
-  top: -20px;
+
+  @include mq(md) {
+    width: 250px;
+    height: 250px;
+    border-radius: 24px;
+    position: absolute;
+    top: -20px;
+
+  }
+
+  @include mq(lg) {
+    // left: 138px;
+    top: calc(-80px + 60px);
+    // right: -803px;
+  }
 }
 
 .about__bg-left-photoL {

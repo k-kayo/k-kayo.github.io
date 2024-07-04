@@ -34,16 +34,16 @@
   <header class="header">
     <div class="header__inner">
       <h1 class="header__logo">
-        <a href="/"><img src="./img/logo.png" alt="#見つけて尾道レトロキャンペーン！"></a>
+        <a href="/"><img src="./img/logo.png" alt="#見つけて尾道レトロキャンペーン！" width="366" height="48px"></a>
       </h1>
-      <button id="js-drawer-button" type="button" class="drawer-icon sp-only" aria-label="ドロワーメニューを開く">
+      <button id="js-drawer-button" type="button" class="drawer-icon" aria-label="ドロワーメニューを開く">
         <span class="drawer-icon__bar visually-hidden"></span>
         <span class="drawer-icon__bar"></span>
         <span class="drawer-icon__bar"></span>
         <span class="drawer-icon__bar"></span>
       </button>
       <!-- PC ナビゲーションメニュー -->
-      <nav class="header__nav pc-only" aria-label="メインメニュー">
+      <nav class="header__nav" aria-label="グローバルナビゲーション">
         <ul class="header__lists">
           <li class="header__list">
             <a href="#about" class="header__link">キャンペーンについて</a>
@@ -99,21 +99,23 @@
     <!-- fv -->
     <div class="fv">
       <picture class="fv__image">
-        <source media="(min-width: 600px)" srcset="./img/fv/fv_onomichi-pc.webp" class="fv__image-pc">
-        <img src="./img/sp/fv-onomichi.webp" alt="ファーストビュー" class="fv__image-sp">
+        <source media="(min-width: 600px)" srcset="./img/fv/fv_onomichi-pc.webp" class="fv__image-pc" width="3024"
+          height="1480">
+        <img src="./img/sp/fv-onomichi.webp" alt="背景写真:尾道を上から見下ろした風景" class="fv__image-sp" width="1199" height="740">
       </picture>
       <div class="fv__inner inner">
         <div class="fv__message">
           <p class="fv__message-desc">あなたの見つけたレトロな尾道の一枚を<br>Instagramに投稿しよう</p>
           <div class="fv__message-title">
-            <img src="./img/sp/fv-title.png" alt="" class="fv__message-title1">
-            <img src="./img/sp/fv-title-2.png" alt="" class="fv__message-title2">
+            <img src="./img/sp/fv-title.png" alt="文字：#見つけて尾道レトロ" class="fv__message-title1" width="520" height="81">
+            <img src="./img/sp/fv-title-2.png" alt="文字：キャンペーン！" class="fv__message-title2" width="356" height="57">
           </div>
         </div>
         <div class="fv__wrapper">
           <div class="fv_fukidashi">
             <span class="fv_fukidashi-text">Share<br>a moment<br>in a snap!</span>
-            <img src="./img/fv/fukidashi_yellow_Vector 6.svg" alt="吹き出し画像" class="fv_fukidashi-decoration">
+            <img src="./img/fv/fukidashi_yellow_Vector 6.svg" alt="吹き出し画像" class="fv_fukidashi-decoration" width="240"
+              height="131">
           </div>
           <div class="fv__present">
             <div class="fv__present-boxes">
@@ -127,7 +129,7 @@
           <div class="fv__smartphone">
             <picture class="fv__smartphone-device">
               <source media="(min-width: 768px)" srcset="./img/fv/smartphone-pc.webp">
-              <img src="./img/sp/smartphone-sp.webp" alt="スマートフォン本体" decoding="async">
+              <img src="./img/sp/smartphone-sp.webp" alt="スマートフォン本体" decoding="async" width="500" height="1020">
             </picture>
             <div class="fv__smartphone-cards">
               <div class="fv__smartphone-card-head">
@@ -142,10 +144,12 @@
               </div>
             </div>
             <div class="fv__decoration-food">
-              <img src="./img/fv/img_food.png" alt="食べ物の画像">
+              <img src="./img/fv/img_food.png" alt="食べ物の画像" width="425" height="664" decoding="async">
             </div>
-            <img src="./img/fv/cats_black.png" alt="黒色の猫" class="fv__decoration-cat-black">
-            <img src="./img/fv/cats_brown.png" alt="ブラウン色の猫" class="fv__decoration-cat-brown">
+            <img src="./img/fv/cats_black.png" alt="黒色の猫" class="fv__decoration-cat-black" width="340" height="380"
+              decoding="async">
+            <img src="./img/fv/cats_brown.png" alt="ブラウン色の猫" class="fv__decoration-cat-brown" width="466" height="348"
+              decoding="async">
           </div>
         </div>
       </div>
@@ -155,13 +159,15 @@
       <div class="about__inner inner">
         <div class="about__content">
           <div class="about__content-pic">
-            <img src="./img/about/pic1.jpg" alt="" class="about__content-pic1">
-            <img src="./img/about/pic2.jpg" alt="" class="about__content-pic2">
+            <img src="./img/about/pic-1.png" alt="写真:街を見下ろしています。天寧寺 海雲塔や、たくさんの家や、海と山が写っています。"
+              class="about__content-pic1" width="269" height="201" loading="lazy" decoding="async">
+            <img src="./img/about/pic-2.png" alt="海と海岸、ベンチが写っています。" class="about__content-pic2" width="269" height="201"
+              loading="lazy" decoding="async">
           </div>
           <div class="about__content-box">
 
             <div class="about__heading heading">
-              <img src="./img/about/icon.png" alt="拡声器">
+              <img src="./img/about/icon.png" alt="拡声器" width="96" height="96">
               <h2 class="about__title-en heading-en">About</h2>
               <p class="heading-title">キャンペーンについて</p>
             </div>
@@ -189,33 +195,34 @@
         </div>
         <div class="about__bg">
           <div class="about__bg-left">
-            <img src="./img/about/diagonal_pattern.png" alt="" class="about__bg-left-pattern pc-only">
+            <img src="./img/about/diagonal_pattern.png" alt="装飾:四角い縞模様" class="about__bg-left-pattern pc-only"
+              loading="lazy" decoding="async">
             <picture class="about__bg-left-photoL">
               <source media="(min-width: 900px)" srcset="./img/about/photo_L.jpg">
-              <img src="./img/sp/photo-left.webp" alt="" decoding="async">
+              <img src="./img/sp/photo-left.webp" alt="" loading="lazy" decoding="async">
             </picture>
             <picture class="about__bg-hill">
               <source media="(min-width: 900px)" srcset="./img/about/slope.webp">
-              <img src="./img/sp/slope..png" alt="" decoding="async">
+              <img src="./img/sp/slope..png" alt="" loading="lazy" decoding="async">
             </picture>
           </div>
           <div class="about__bg-right">
-            <img src="./img/about/bg-pawpads.png" alt="" class="about__bg-pawpads">
+            <img src="./img/about/bg-pawpads.png" alt="" class="about__bg-pawpads" loading="lazy" decoding="async">
             <picture class="about__bg-right-photoR">
               <source media="(min-width: 768px)" srcset="./img/about/photo_R.jpg">
-              <img src="./img/sp/photo-right.webp" alt="" decoding="async">
+              <img src="./img/sp/photo-right.webp" alt="" loading="lazy" decoding="async">
             </picture>
-            <img src="./img/about/goods1.png" alt="" class="about__bg-goods1">
-            <img src="./img/about/goods2.png" alt="" class="about__bg-goods2">
+            <img src="./img/about/goods1.png" alt="" class="about__bg-goods1" loading="lazy" decoding="async">
+            <img src="./img/about/goods2.png" alt="" class="about__bg-goods2" loading="lazy" decoding="async">
             <div class="about__bg-wavyline">
               <img src="./img/about/wave.png" alt="" class="about__bg-wave sp-only">
             </div>
           </div>
         </div>
-        <img src="./img/about/arrow.png" alt="" class="about__arrow">
+        <img src="./img/about/arrow.png" alt="" class="about__arrow" width="201" height="73">
       </div>
       <div class="about__bottom">
-        <img src="./img/about/onomichi-stroke.png" alt="" class="logp-onomichi">
+        <img src="./img/about/onomichi-stroke.png" alt="文字:ONOMICHI" width="1812" height="300" class="logp-onomichi">
 
         <!-- swiper -->
         <div id="js-swiper" class="swiper about__swiper">
