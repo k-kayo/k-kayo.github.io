@@ -1461,12 +1461,6 @@ a:hover {
     top: -5px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .about__bg-left {
-    right: calc(50% + 339px);
-    top: -5px;
-  }
-}
 
 @media screen and (min-width: 768px) {
   .about__bg-left-pattern {
@@ -1502,37 +1496,17 @@ a:hover {
 }
 
 .about__bg-hill-sp {
-  position: absolute;
+  position: fixed;
   width: 138px;
-  bottom: 0;
-  right: calc(50% - 139px);
-  border-radius: 24px;
-}
-@media screen and (min-width: 600px) {
-  .about__bg-hill-sp {
-    left: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .about__bg-hill-sp {
-    left: 0;
-  }
-}
-@media screen and (min-width: 900px) {
-  .about__bg-hill-sp {
-    left: 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .about__bg-hill-sp {
-    left: 0;
-  }
+  bottom: 45px;
+  left: 0;
 }
 
 .about__bg-right {
   width: 330px;
   height: 837.003px;
   position: absolute;
+  right: 0%;
 }
 
 .about__bg-pawpads {

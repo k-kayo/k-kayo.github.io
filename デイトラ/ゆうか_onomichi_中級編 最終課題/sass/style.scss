@@ -1436,13 +1436,10 @@ a {
   width: 278px;
   height: 529px;
   position: absolute;
-<<<<<<< HEAD
   top: 395px;
+
   // height: auto;
   // height: 100%;
-=======
->>>>>>> b464b0a0bae726dc5f43e609a75a98994207d60c
-
   @include mq(lg) {
     // width: 662px;
     // height: 1158px;
@@ -1497,42 +1494,25 @@ a {
 .about__bg-hill-pc {}
 
 .about__bg-hill-sp {
-  position: absolute;
+  position: fixed;
   width: 138px;
   // height: 215px;
-  bottom: 0;
+  bottom: 45px;
   // left: calc(100% + 23px);
-  // left: 0;
+  left: 0;
   // left: 23px;
   // right: 23px;
   // padding-left: 23px;
   // margin-left: 141px;
   // padding-left: 141px;
-  right: calc(50% + -139px);
-  border-radius: 24px;
-
-  @include mq(sm) {
-    left: 0;
-  }
-
-  @include mq(md) {
-    left: 0;
-  }
-
-  @include mq(lg) {
-    left: 0;
-  }
-
-  @include mq(xl) {
-    left: 0;
-  }
+  // left: calc(50% + 1px);
 }
 
 .about__bg-right {
   width: 330px;
   height: 837.003px;
   position: absolute;
-  // right: -25%;
+  right: 0%;
 }
 
 .about__bg-pawpads {
