@@ -150,7 +150,7 @@ a {
     width: 37.333px;
     height: 37.333px;
 
-    @include mq(md) {
+    @include mq(lg) {
       width: 48px;
       height: 48px;
     }
@@ -181,9 +181,14 @@ a {
   text-align: center;
 
   @include mq(md) {
+    font-size: 16px;
+  }
+
+  @include mq(lg) {
     font-family: $font-base-en;
     font-size: 20px;
   }
+
 }
 
 .heading-title {
@@ -200,15 +205,14 @@ a {
   padding-bottom: 6px;
 
   @include mq(md) {
-    display: flex;
     // padding-bottom: 16px;
-    border-bottom: 8px solid $accent-color-Yellow;
-    font-family: $font-secondary-jp;
-    font-size: 32px;
-    font-feature-settings: 'pwid' on;
   }
 
   @include mq(lg) {
+    display: flex;
+    // font-feature-settings: 'pwid' on;
+    border-bottom: 8px solid $accent-color-Yellow;
+    font-size: 32px;
     padding-bottom: 6px;
   }
 
@@ -298,11 +302,6 @@ a {
   font-size: 16px;
   font-feature-settings: 'pref' on;
 
-
-  &:hover {
-    background: $accent-color-Yellow;
-  }
-
   @include mq(md) {
     // height: 56px;
     // padding: calc(10px - 3px) (40px - 3px) (12px - 3px) (40px - 3px);
@@ -314,12 +313,18 @@ a {
     // font-weight: 700;
   }
 
-  // @include mq(xl) {
-  //   height: 36px;
-  //   width: 132px;
-  //   font-weight: 700;
-  //   font-size: 14px;
-  // }
+  @include mq(xl) {
+    // height: calc(56px - 1px * 2);
+    height: 56px;
+    padding: calc(10px - 3px) (40px - 3px) (12px - 3px) (40px - 3px);
+    border: 3px solid $text-color;
+    box-shadow: 0px 4px 0px 0px $text-color;
+    font-size: 20px;
+  }
+
+  &:hover {
+    background: $accent-color-Yellow;
+  }
 }
 
 .button-lg {
@@ -357,8 +362,8 @@ a {
 //=====================================
 .header {
   height: $header-height;
-  // position: fixed;
-  position: relative;
+  // position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
@@ -601,6 +606,7 @@ a {
   position: relative;
   top: 0;
   height: 710px;
+  margin-top: 64px;
 
   @include mq(lg) {
     height: 900px;
@@ -608,36 +614,46 @@ a {
   }
 }
 
-.fv__image-sp {
-  // left: 0;
-  // height: 554px;
-  // width: 100%;
+.fv__image {
+  display: block;
+  height: 554px;
 
-  // img {
-  border-radius: 0px 0px 24px 24px;
-  height: 100%;
-  max-height: 554px;
-  // object-fit: cover;
 
   @include mq(lg) {
-    display: none; // PC表示時にSP画像を非表示
-  }
-}
-
-.fv__image-pc {
-  display: none; // デフォルトで非表示
-
-  @include mq(lg) {
-    display: block;
+    // display: block;
     height: 740px;
     border-radius: 0px 0px 40px 40px;
-    width: 100%;
+    // object-fit: cover;
     // height: 100%;
-    object-fit: cover; // 画像のアスペクト比を保持しつつ、指定したサイズにフィット
+    // width: 100%;
   }
 
-  // }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px 0px 24px 24px;
+  }
 }
+
+// .fv__image-sp {
+//   border-radius: 0px 0px 24px 24px;
+//   height: 100%;
+//   max-height: 554px;
+//   object-fit: cover;
+// }
+
+// .fv__image-pc {
+
+//   @include mq(lg) {
+//     height: 740px;
+//     border-radius: 0px 0px 40px 40px;
+//     object-fit: cover;
+//     height: 100%;
+//     width: 100%;
+//   }
+
+// }
 
 .fv__inner {
   // position: absolute;
@@ -1211,7 +1227,9 @@ a {
   display: flex;
   position: relative;
   width: 335px;
+  height: calc(628px + 40px * 2);
   padding: 40px 12px;
+  // padding-inline: 12px;
   border-radius: 24px;
   background: $color-white;
   flex-direction: column;
@@ -1221,9 +1239,9 @@ a {
 
   @include mq(sm) {
     padding: 40px 20px 36px;
-    border-radius: 40px;
-    width: calc(420px + 20px * 2);
+    width: calc(500px - 20px * 2);
     // display: inline-flex;
+
   }
 
   @include mq(lg) {
@@ -1237,9 +1255,13 @@ a {
     font-weight: 700;
     text-align: center;
     width: calc(620px + 114px * 2);
+    top: -50px;
+    // justify-content: center;
+    // align-items: center;
+    // padding-top: 0;
+    // padding-inline: 20px;
+    // padding-bottom: 36px;
     // font-feature-settings: 'pref' on;
-
-
   }
 }
 
@@ -1253,6 +1275,10 @@ a {
   justify-content: space-between;
   align-items: flex-start;
 
+  @include mq(sm) {
+    right: 84px;
+  }
+
   @include mq(lg) {
     width: 620px;
     height: 124.325px;
@@ -1260,10 +1286,13 @@ a {
   }
 
   @include mq(xl) {
-    // right: 84.304px;
-    // top: 40.351px;
     width: 678.696px;
     height: 124.325px;
+    position: absolute;
+    // right: 84.3px;
+    // left: 150px;
+    left: 84.3px;
+    top: 40.351px;
   }
 }
 
@@ -1272,6 +1301,8 @@ a {
   width: 87px;
   // height: 60px;
   height: 72px;
+
+
 
 
   @include mq(lg) {
@@ -1290,8 +1321,8 @@ a {
     // height: 100px;
     height: 118px;
     position: absolute;
-    left: -65px;
-    top: 9px;
+    left: 0;
+    top: 0;
   }
 }
 
@@ -1325,10 +1356,11 @@ a {
     // right: 84.304px;
     // width: 134px;
     // height: 100px;
-    top: 15.351px;
     right: 64.304px;
     width: 147px;
     height: 118px;
+    right: -1px;
+    top: 7px;
   }
 }
 
@@ -1336,11 +1368,17 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 24.5px;
   text-align: center;
 
-  @include mq(md) {
+  @include mq(md) {}
+
+  @include mq(lg) {
     gap: 32px;
+  }
+
+  @include mq(xl) {
+    gap: 33px;
   }
 }
 
@@ -1371,6 +1409,10 @@ a {
   text-align: center;
 
   @include mq(md) {
+    font-size: 14px;
+  }
+
+  @include mq(lg) {
     font-size: 16px;
   }
 }
@@ -1390,9 +1432,9 @@ a {
 }
 
 .about__content-box-info {
-  align-self: stretch;
+  // align-self: stretch;
   text-align: center;
-  display: flex;
+  display: inline-block;
   padding-block: 7px;
   border-bottom: 2px dashed $main-color;
   justify-content: center;
@@ -1400,7 +1442,7 @@ a {
   font-size: 14px;
   font-weight: 700;
 
-  @include mq(md) {
+  @include mq(lg) {
     flex-direction: column;
     align-items: center;
     padding: 12px 0px;
@@ -1409,8 +1451,11 @@ a {
 }
 
 .about__content-box-btn {
-  // margin-top: 6px;
+  margin-top: -8px;
+  padding-top: 6px;
+  padding-bottom: 4px;
 
+  @include mq(sm) {}
 }
 
 .about__bg {
@@ -1424,12 +1469,17 @@ a {
   height: 934px;
   z-index: -1;
 
-  @include mq(md) {
-    position: relative;
-    right: -566px;
+  @include mq(lg) {
+    // position: relative;
+    position: absolute;
+    // right: -566px;
     width: 2416px;
     height: 1218px;
-    top: -826px;
+  }
+
+  @include mq(xl) {
+    // right: -566px;
+    top: -50px;
   }
 }
 
@@ -1451,8 +1501,11 @@ a {
   }
 
   @include mq(xl) {
-    right: calc(50% + 339px);
-    top: -5px;
+    width: 662px;
+    height: 1158px;
+    // right: calc(50% + 339px);
+    left: 122px;
+    top: -20px;
   }
 }
 
@@ -1471,6 +1524,11 @@ a {
     // left: 138px;
     top: calc(-80px + 60px);
     // right: -803px;
+  }
+
+  @include mq(xl) {
+    right: 103px;
+    top: 0;
   }
 }
 

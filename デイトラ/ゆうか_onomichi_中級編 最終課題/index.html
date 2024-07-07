@@ -34,7 +34,7 @@
   <header class="header">
     <div class="header__inner">
       <h1 class="header__logo">
-        <a href="/"><img src="./img/logo.png" alt="#見つけて尾道レトロキャンペーン！" width="366" height="48px"></a>
+        <a href="/"><img src="./img/logo.png" alt="#見つけて尾道レトロキャンペーン！" width="366" height="48"></a>
       </h1>
       <button id="js-drawer-button" type="button" class="drawer-icon" aria-label="ドロワーメニューを開く">
         <span class="drawer-icon__bar visually-hidden"></span>
@@ -97,11 +97,11 @@
   <!-------- main --------->
   <main>
     <!-- fv -->
-    <div class="fv">
+    <section class="fv">
       <picture class="fv__image">
-        <source srcset="./img/sp/" media="(min-width: 600px)" class="fv__image-pc" width="3024"
-          height="1480">
-        <img src="./img/sp/fv-onomichi.webp" alt="背景写真:尾道を上から見下ろした風景" class="fv__image-sp" width="1199" height="740">
+        <source srcset="./img/fv/onomichi.webp" media="(min-width:600px)" class="fv__image-pc" width="3024"
+          height="1480" />
+        <img src="img/sp/onomichi.webp" alt="背景写真:尾道を上から見下ろした風景" class="fv__image-sp" width="1541" height="554">
       </picture>
       <div class="fv__inner inner">
         <div class="fv__message">
@@ -114,8 +114,8 @@
         <div class="fv__wrapper">
           <div class="fv_fukidashi">
             <span class="fv_fukidashi-text">Share<br>a moment<br>in a snap!</span>
-            <img src="./img/fv/fukidashi_yellow_Vector 6.svg" alt="吹き出し画像" class="fv_fukidashi-decoration" width="240"
-              height="131">
+            <img src="./img/fv/fukidashi_yellow_Vector 6.svg" alt="" class="fv_fukidashi-decoration" width="240"
+              height="131" aria-hidden="true">
           </div>
           <div class="fv__present">
             <div class="fv__present-boxes">
@@ -146,14 +146,14 @@
             <div class="fv__decoration-food">
               <img src="./img/fv/img_food.png" alt="食べ物の画像" width="425" height="664" decoding="async">
             </div>
-            <img src="./img/fv/cats_black.png" alt="黒色の猫" class="fv__decoration-cat-black" width="340" height="380"
+            <img src="./img/fv/cats_black.png" alt="黒猫のイラスト" class="fv__decoration-cat-black" width="340" height="380"
               decoding="async">
-            <img src="./img/fv/cats_brown.png" alt="ブラウン色の猫" class="fv__decoration-cat-brown" width="466" height="348"
+            <img src="./img/fv/cats_brown.png" alt="茶色の猫のイラスト" class="fv__decoration-cat-brown" width="466" height="348"
               decoding="async">
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- about -->
     <section id="about" class="about">
       <div class="about__inner inner">
@@ -196,7 +196,7 @@
         <div class="about__bg">
           <div class="about__bg-left">
             <img src="./img/about/diagonal_pattern.png" alt="装飾:四角い縞模様" class="about__bg-left-pattern pc-only"
-              loading="lazy" decoding="async">
+              loading="lazy" decoding="async" width="250" height="250">
             <picture class="about__bg-left-photoL">
               <source media="(min-width: 900px)" srcset="./img/about/photo_L.jpg">
               <img src="./img/sp/photo-left.webp" alt="ロープウェイからの街並みを見下ろす写真" loading="lazy" decoding="async" width="400"

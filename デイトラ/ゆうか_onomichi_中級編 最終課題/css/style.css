@@ -83,7 +83,7 @@ a:hover {
   width: 37.333px;
   height: 37.333px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .heading img {
     width: 48px;
     height: 48px;
@@ -114,6 +114,11 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .heading-en {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .heading-en {
     font-family: "Courgette", cursive;
     font-size: 20px;
   }
@@ -128,20 +133,13 @@ a:hover {
   border-bottom: 6px solid #FFEE56;
   padding-bottom: 6px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .heading-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     border-bottom: 8px solid #FFEE56;
-    font-family: "Kiwi Maru", serif;
     font-size: 32px;
-    -webkit-font-feature-settings: "pwid" on;
-            font-feature-settings: "pwid" on;
-  }
-}
-@media screen and (min-width: 900px) {
-  .heading-title {
     padding-bottom: 6px;
   }
 }
@@ -250,9 +248,20 @@ a:hover {
   -webkit-font-feature-settings: "pref" on;
           font-feature-settings: "pref" on;
 }
+@media screen and (min-width: 1200px) {
+  .button {
+    height: 56px;
+    padding: 7px 37px 9px 37px;
+    border: 3px solid #4A3636;
+    -webkit-box-shadow: 0px 4px 0px 0px #4A3636;
+            box-shadow: 0px 4px 0px 0px #4A3636;
+    font-size: 20px;
+  }
+}
 .button:hover {
   background: #FFEE56;
 }
+
 .button-lg {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -288,7 +297,7 @@ a:hover {
 
 .header {
   height: 64px;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
@@ -552,6 +561,7 @@ a:hover {
   position: relative;
   top: 0;
   height: 710px;
+  margin-top: 64px;
 }
 @media screen and (min-width: 900px) {
   .fv {
@@ -559,29 +569,22 @@ a:hover {
   }
 }
 
-.fv__image-sp {
-  border-radius: 0px 0px 24px 24px;
-  height: 100%;
-  max-height: 554px;
+.fv__image {
+  display: block;
+  height: 554px;
 }
 @media screen and (min-width: 900px) {
-  .fv__image-sp {
-    display: none;
-  }
-}
-
-.fv__image-pc {
-  display: none;
-}
-@media screen and (min-width: 900px) {
-  .fv__image-pc {
-    display: block;
+  .fv__image {
     height: 740px;
     border-radius: 0px 0px 40px 40px;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
+}
+.fv__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px 0px 24px 24px;
 }
 
 .fv__inner {
@@ -1229,6 +1232,7 @@ a:hover {
   display: flex;
   position: relative;
   width: 335px;
+  height: 708px;
   padding: 40px 12px;
   border-radius: 24px;
   background: #ffffff;
@@ -1245,7 +1249,6 @@ a:hover {
 @media screen and (min-width: 600px) {
   .about__content {
     padding: 40px 20px 36px;
-    border-radius: 40px;
     width: 460px;
   }
 }
@@ -1261,6 +1264,7 @@ a:hover {
     font-weight: 700;
     text-align: center;
     width: 848px;
+    top: -50px;
   }
 }
 
@@ -1280,6 +1284,11 @@ a:hover {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+@media screen and (min-width: 600px) {
+  .about__content-pic {
+    right: 84px;
+  }
+}
 @media screen and (min-width: 900px) {
   .about__content-pic {
     width: 620px;
@@ -1291,6 +1300,9 @@ a:hover {
   .about__content-pic {
     width: 678.696px;
     height: 124.325px;
+    position: absolute;
+    left: 84.3px;
+    top: 40.351px;
   }
 }
 
@@ -1312,8 +1324,8 @@ a:hover {
     width: 147px;
     height: 118px;
     position: absolute;
-    left: -65px;
-    top: 9px;
+    left: 0;
+    top: 0;
   }
 }
 
@@ -1338,10 +1350,11 @@ a:hover {
 @media screen and (min-width: 1200px) {
   .about__content-pic2 {
     position: absolute;
-    top: 15.351px;
     right: 64.304px;
     width: 147px;
     height: 118px;
+    right: -1px;
+    top: 7px;
   }
 }
 
@@ -1356,12 +1369,17 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 24px;
+  gap: 24.5px;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .about__content-box {
     gap: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__content-box {
+    gap: 33px;
   }
 }
 
@@ -1391,6 +1409,14 @@ a:hover {
   .about__content-box-text2,
   .about__content-box-text3,
   .about__content-box-text4 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .about__content-box-text1,
+  .about__content-box-text2,
+  .about__content-box-text3,
+  .about__content-box-text4 {
     font-size: 16px;
   }
 }
@@ -1410,12 +1436,8 @@ a:hover {
 }
 
 .about__content-box-info {
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   padding-block: 7px;
   border-bottom: 2px dashed #9ED0E0;
   -webkit-box-pack: center;
@@ -1427,7 +1449,7 @@ a:hover {
   font-size: 14px;
   font-weight: 700;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .about__content-box-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1441,19 +1463,27 @@ a:hover {
   }
 }
 
+.about__content-box-btn {
+  margin-top: -8px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+}
 .about__bg {
   position: absolute;
   width: 655px;
   height: 934px;
   z-index: -1;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .about__bg {
-    position: relative;
-    right: -566px;
+    position: absolute;
     width: 2416px;
     height: 1218px;
-    top: -826px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__bg {
+    top: -50px;
   }
 }
 
@@ -1471,8 +1501,10 @@ a:hover {
 }
 @media screen and (min-width: 1200px) {
   .about__bg-left {
-    right: calc(50% + 339px);
-    top: -5px;
+    width: 662px;
+    height: 1158px;
+    left: 122px;
+    top: -20px;
   }
 }
 
@@ -1488,6 +1520,12 @@ a:hover {
 @media screen and (min-width: 900px) {
   .about__bg-left-pattern {
     top: -20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__bg-left-pattern {
+    right: 103px;
+    top: 0;
   }
 }
 
