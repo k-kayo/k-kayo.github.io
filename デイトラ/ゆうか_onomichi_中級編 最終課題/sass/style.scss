@@ -602,41 +602,41 @@ a {
   top: 0;
   height: 710px;
 
-  @include mq(md) {
+  @include mq(lg) {
     height: 900px;
+    // height: 740px;
   }
 }
 
 .fv__image-sp {
   // left: 0;
   // height: 554px;
-  width: 100%;
+  // width: 100%;
 
   // img {
   border-radius: 0px 0px 24px 24px;
   height: 100%;
-  height: 554px;
-  object-fit: cover;
+  max-height: 554px;
+  // object-fit: cover;
 
-  // @include mq(lg) {
-  //   height: 740px;
-  // }
-
-  // }
+  @include mq(lg) {
+    display: none; // PC表示時にSP画像を非表示
+  }
 }
 
 .fv__image-pc {
-  // width: 100%;
-  // object-fit: cover;
-
+  display: none; // デフォルトで非表示
 
   @include mq(lg) {
+    display: block;
     height: 740px;
     border-radius: 0px 0px 40px 40px;
-    // width: 100%;
+    width: 100%;
     // height: 100%;
-    object-fit: cover;
+    object-fit: cover; // 画像のアスペクト比を保持しつつ、指定したサイズにフィット
   }
+
+  // }
 }
 
 .fv__inner {
@@ -1174,8 +1174,8 @@ a {
   max-width: 100%;
   overflow: hidden;
 
-  @include mq(md) {
-    // padding-top: 80px;
+  @include mq(xl) {
+    padding-top: 80px;
     margin-top: -14px;
     // align-self: stretch;
     // padding-top: 17.2px;
@@ -1553,7 +1553,8 @@ a {
   position: absolute;
   top: 273px;
   // right: -140px;
-  right: -344px;
+  // right: -344px;
+  right: 0;
 
   img {
     border-radius: 24px;
@@ -1566,16 +1567,17 @@ a {
   width: 48px;
   height: 48px;
   position: absolute;
-  right: -184px;
-  bottom: 68px;
+  // right: -184px;
+  left: 121px;
+  bottom: 69px;
 }
 
 .about__bg-goods2 {
   width: 133px;
   height: 65.003px;
   position: absolute;
-  right: -148px;
-  bottom: 9px;
+  // right: -148px;
+  bottom: 10px;
   // display: flex;
   // justify-content: center;
   // align-items: center;
