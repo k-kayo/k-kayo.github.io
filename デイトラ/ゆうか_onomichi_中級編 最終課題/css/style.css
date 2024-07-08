@@ -1186,10 +1186,16 @@ a:hover {
   max-width: 100%;
   overflow: hidden;
 }
+@media screen and (min-width: 900px) {
+  .about {
+    margin-top: -10px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .about {
     padding-top: 80px;
     margin-top: -14px;
+    height: 1287px;
   }
 }
 
@@ -1207,6 +1213,11 @@ a:hover {
   position: absolute;
   height: 744px;
 }
+@media screen and (min-width: 600px) {
+  .about__inner {
+    height: 765.58px;
+  }
+}
 @media screen and (min-width: 768px) {
   .about__inner {
     width: 2180px;
@@ -1219,7 +1230,7 @@ a:hover {
   width: 100px;
   height: 36px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .about__arrow {
     width: 140px;
     height: 50px;
@@ -1250,6 +1261,8 @@ a:hover {
   .about__content {
     padding: 40px 20px 36px;
     width: 460px;
+    height: 770.68px;
+    height: 765.58px;
   }
 }
 @media screen and (min-width: 900px) {
@@ -1342,7 +1355,7 @@ a:hover {
   .about__content-pic2 {
     position: absolute;
     top: 9px;
-    right: -16.696px;
+    right: -15px;
     width: 147px;
     height: 118px;
   }
@@ -1388,7 +1401,7 @@ a:hover {
   font-weight: 700;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .about__content-box-title {
     -webkit-font-feature-settings: "pref" on;
             font-feature-settings: "pref" on;
@@ -1404,7 +1417,7 @@ a:hover {
   font-size: 12px;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .about__content-box-text1,
   .about__content-box-text2,
   .about__content-box-text3,
@@ -1474,6 +1487,11 @@ a:hover {
   height: 934px;
   z-index: -1;
 }
+@media screen and (min-width: 768px) {
+  .about__bg {
+    max-width: 100%;
+  }
+}
 @media screen and (min-width: 900px) {
   .about__bg {
     position: absolute;
@@ -1493,10 +1511,16 @@ a:hover {
   position: absolute;
   top: 395px;
 }
+@media screen and (min-width: 600px) {
+  .about__bg-left {
+    right: 85%;
+    max-width: 220px;
+  }
+}
 @media screen and (min-width: 900px) {
   .about__bg-left {
-    right: calc(50% + 339px);
     top: -5px;
+    right: calc(50% + 291px);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1520,11 +1544,12 @@ a:hover {
 @media screen and (min-width: 900px) {
   .about__bg-left-pattern {
     top: -20px;
+    left: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
   .about__bg-left-pattern {
-    right: 103px;
+    left: 309px;
     top: 0;
   }
 }
@@ -1533,30 +1558,76 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 24px;
   width: 200px;
 }
 .about__bg-left-photoL img {
   border-radius: 24px;
 }
-
-.about__bg-hill {
-  width: 138px;
-  height: 215px;
-  text-align: left;
+@media screen and (min-width: 600px) {
+  .about__bg-left-photoL {
+    left: 70px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .about__bg-left-photoL {
+    width: 480px;
+    height: 480px;
+    top: 80px;
+    left: -330px;
+  }
+  .about__bg-left-photoL img {
+    border-radius: 40px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__bg-left-photoL {
+    left: -8px;
+    top: 94px;
+  }
 }
 
-.about__bg-hill-sp {
-  position: absolute;
+.about__bg-hill {
   position: sticky;
-  width: 138px;
-  height: 215px;
+  display: block;
   left: 0;
   margin-right: auto;
-  -moz-text-align-last: left;
-       text-align-last: left;
   -webkit-transform: translateY(146%);
           transform: translateY(146%);
+  width: 138px;
+  height: 215px;
+  z-index: -2;
+}
+@media screen and (min-width: 600px) {
+  .about__bg-hill {
+    position: sticky;
+    display: block;
+    width: 200px;
+    height: 311.59px;
+    right: 0;
+    -webkit-transform: translate(65%, 90%);
+            transform: translate(65%, 90%);
+  }
+}
+@media screen and (min-width: 900px) {
+  .about__bg-hill {
+    position: absolute;
+    width: 427px;
+    height: 817px;
+    left: -65px;
+    -webkit-transform: translateY(36%);
+            transform: translateY(36%);
+    text-align: left;
+  }
+  .about__bg-hill img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__bg-hill {
+    top: -419px;
+    left: 227px;
+  }
 }
 
 .about__bg-right {
