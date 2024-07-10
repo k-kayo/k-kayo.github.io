@@ -21,8 +21,9 @@ const swiper = new Swiper(".about__swiper", {
   breakpoints: {
     // ブレークポイント
     900: {
-      // 画面幅600px以上で適用
+      slidesPerView: 5,
       slidesPerView: "auto",
+      spaceBetween: 20,
     },
   },
 
