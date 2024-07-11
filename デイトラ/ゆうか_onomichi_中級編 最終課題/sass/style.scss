@@ -622,6 +622,7 @@ a {
 
   @include mq(lg) {
     height: 900px;
+    height: calc(900px - 64px);
     // height: 740px;
   }
 }
@@ -685,6 +686,11 @@ a {
     // height: calc(846px + 34px - 44px);
     // display: inline-flex;
     // flex-direction: column;
+    top: 34px;
+    // height: 846px;
+    height: calc(846px - 44px);
+    width: 100%;
+    padding-block: 0;
   }
 }
 
@@ -702,7 +708,8 @@ a {
     // width: 520px;
     // height: 242px;
     gap: 24px;
-    top: 34px;
+    // top: 34px;
+    top: 0;
   }
 }
 
@@ -773,6 +780,8 @@ a {
 
   @include mq(lg) {
     width: 848px;
+    height: 603px;
+    top: 158px;
   }
 }
 
@@ -998,6 +1007,7 @@ a {
     height: 510px;
     top: 121px;
   }
+
 }
 
 .fv__smartphone-device {
@@ -1214,7 +1224,7 @@ a {
   }
 
   @include mq(lg) {
-    margin-top: -78px;
+    margin-top: -77px;
     padding-top: 90px;
     // padding-bottom: 120px;
     // margin-bottom: 120px;
@@ -1222,12 +1232,15 @@ a {
     height: calc(1287px + 87px);
   }
 
-
   @include mq(xl) {
-    padding-top: 80px;
-    margin-top: -14px;
-    // align-self: stretch;
-    // padding-top: 17.2px;
+    // padding-top: 80px;
+    margin-top: 80px;
+    // margin-top: 0;
+    padding-top: 0;
+    // padding-top: 80px;
+    height: calc(1287px + 80px);
+    top: 0px;
+    z-index: 1;
   }
 }
 
@@ -1235,16 +1248,20 @@ a {
   @include mq(lg) {
     // border-radius: 24px;
     position: absolute;
-    left: -80px;
+    right: calc(50% + 280px);
     top: 72px;
-
   }
 
   @include mq(xl) {
     // right: 103px;
-    left: 309px;
+    left: calc(50% + 309px);
     top: 0;
     border-radius: 24px;
+  }
+
+  @include mq(xl) {
+    left: calc(50% - 778px);
+    top: 4px;
   }
 }
 
@@ -1269,8 +1286,16 @@ a {
     width: 70px;
     height: 154px;
     top: 24px;
-    right: 79px;
+    right: calc(50% - 372px);
   }
+
+  @include mq(xl) {
+    right: calc(50% - 582px);
+    top: -70px;
+    width: 100px;
+    height: 220px;
+  }
+
 }
 
 .about__bg-left-photoL {
@@ -1295,11 +1320,13 @@ a {
     width: 480px;
     height: 480px;
     top: 168px;
-    left: -389px;
+    left: calc(50% + -839px);
 
     img {
       border-radius: 40px;
       width: 100%;
+      // width: 480px;
+      // height: 480px;
     }
   }
 
@@ -1479,7 +1506,7 @@ a {
     z-index: -1;
     width: 874px;
     height: 47.88px;
-    bottom: 656px;
+    bottom: 654px;
     left: calc(50% + 130px);
 
     img {
@@ -1508,6 +1535,7 @@ a {
 
   @include mq(lg) {
     max-height: 1287px;
+    top: 0px;
   }
 }
 
@@ -1552,7 +1580,7 @@ a {
     padding: 40px 20px 36px;
     // gap: 32px;
     width: calc(620px - 20px * 2);
-    height: calc(749px + 40px + 36px);
+    height: calc(749px + 40px + 40px);
     border-radius: 40px;
   }
 
@@ -1560,7 +1588,8 @@ a {
     font-weight: 700;
     text-align: center;
     width: calc(620px + 114px * 2);
-    top: -50px;
+    top: 0;
+    // top: -50px;
     // justify-content: center;
     // align-items: center;
     // padding-top: 0;
@@ -1795,7 +1824,7 @@ a {
     // justify-content: center;
     // align-items: center;
     // padding-bottom: 65px;
-    margin-bottom: 65px;
+    margin-bottom: 15px;
     bottom: 0;
   }
 }
@@ -1862,7 +1891,14 @@ a {
     // height: 100px;
     // height: 100%;]
     height: auto;
+
+    // @include mq(sm) {
+    //   width: 100%;
+    // }
   }
+
+  @include mq(lg) {}
+
 }
 
 // .swiper-wrapper {
@@ -1872,31 +1908,32 @@ a {
 .about__swiper-wrapper {
   // width: 600px;
   // height: 150px;
+  width: 100%;
+  height: 100%;
   transition-timing-function: linear;
 
 }
 
-
+// // 
 .about__swiper-slide {
-  width: 100px;
-  height: 100%;
-  // height: 100px;
-
-
+  // width: 100px;
+  // height: 100%;
+  width: fit-content;
 
   img {
     border-radius: 12px;
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
 
-    // width: 100px;
-    // height: 100px;
+
+    width: 100px;
+    height: 100px;
     // height: auto;
     // object-fit: cover;
 
     @include mq(sm) {
-      width: 100px;
-      height: 100px;
+      // width: 100px;
+      // height: 100px;
     }
 
 
@@ -1904,6 +1941,14 @@ a {
       border-radius: 24px;
       width: 200px;
       height: 200px;
+
+      img {
+        // width: 100%; // 画像の幅をスライドの幅に合わせる
+        // height: 100%; // 画像の高さをスライドの高さに合わせる
+        // width: fit-content;
+        // object-fit: cover;
+
+      }
     }
   }
 }

@@ -27,7 +27,7 @@ const swiper = new Swiper(".about__swiper", {
     },
 
     900: {
-      slidesPerView: 5,
+      slidesPerView: 4,
       // centeredSlides: true,
       slidesPerView: "auto",
       spaceBetween: 20,
