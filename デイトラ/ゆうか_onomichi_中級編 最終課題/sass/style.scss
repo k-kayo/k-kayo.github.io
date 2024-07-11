@@ -1193,7 +1193,7 @@ a {
   position: relative;
   // height: calc(1000px + (32px * 2) + 17.2px);
   // height: calc(1000px + 50px + 32px);
-  height: calc(1000px + 50px);
+  height: calc(1000px + 32px);
   // height: 1000px;
   // padding-block: 32px;
   // margin-top: 32px;
@@ -1208,11 +1208,20 @@ a {
   max-width: 100%;
   overflow: hidden;
 
+  @include mq(sm) {
+    height: calc(1042.66px + 32px);
+    // height: calc(1000px + 32px * 2);
+  }
+
   @include mq(lg) {
     margin-top: -78px;
     padding-top: 90px;
-    max-height: 1287px;
+    // padding-bottom: 120px;
+    // margin-bottom: 120px;
+    height: 1287px;
+    height: calc(1287px + 87px);
   }
+
 
   @include mq(xl) {
     padding-top: 80px;
@@ -1227,7 +1236,7 @@ a {
     // border-radius: 24px;
     position: absolute;
     left: -80px;
-    top: 67px;
+    top: 72px;
 
   }
 
@@ -1259,8 +1268,8 @@ a {
   @include mq(lg) {
     width: 70px;
     height: 154px;
-    top: 30px;
-    right: 77px;
+    top: 24px;
+    right: 79px;
   }
 }
 
@@ -1269,7 +1278,7 @@ a {
   width: 200px;
   height: 200px;
   left: -140px;
-  bottom: 423px;
+  bottom: 406px;
   border-radius: 24px;
 
   @include mq(sm) {
@@ -1278,14 +1287,14 @@ a {
   }
 
   @include mq(md) {
-    left: calc(50% - 379px);
-    top: 421px;
+    left: calc(50% - 380px);
+    top: 430px;
   }
 
   @include mq(lg) {
     width: 480px;
     height: 480px;
-    top: 160px;
+    top: 168px;
     left: -389px;
 
     img {
@@ -1325,13 +1334,14 @@ a {
   }
 
   @include mq(md) {
-    left: calc(50% + 177px);
+    left: calc(50% + 180px);
+    top: 309px;
   }
 
   @include mq(lg) {
     width: 480px;
     height: 480px;
-    top: 164px;
+    top: 165px;
     left: calc(50% + 360px);
 
     img {
@@ -1352,7 +1362,7 @@ a {
   // transform: translateY(146%);
   width: 138px;
   height: 215px;
-  bottom: 94px;
+  bottom: 75px;
   z-index: -2;
 
 
@@ -1360,11 +1370,12 @@ a {
     width: 200px;
     height: 311.59px;
     right: 0;
-    bottom: 37px;
+    // bottom: 37px;
+    bottom: 60px;
   }
 
   @include mq(md) {
-    bottom: -10px;
+    bottom: 57px;
   }
 
   @include mq(lg) {
@@ -1373,8 +1384,10 @@ a {
     height: 817px;
     // top: -875px;
     left: -125px;
-    transform: translateY(25%);
-    text-align: left;
+    // transform: translateY(-11%);
+    // transform: translateY(0%);
+    transform: translateY(-13%);
+    // text-align: left;
 
     img {
       width: 100%;
@@ -1406,23 +1419,25 @@ a {
   height: 48px;
   position: absolute;
   right: calc(50% + -166px);
-  bottom: 250px;
+  bottom: 232px;
 
   @include mq(sm) {
     width: 80px;
     height: 80px;
     right: -60px;
-    bottom: 192px;
+    // bottom: 192px;
+    bottom: 220px;
   }
 
   @include mq(md) {
-    right: calc(50% - 359px);
+    right: calc(50% - 360px);
+    bottom: 213px;
 
     @include mq(lg) {
       width: 101px;
       height: 100px;
       right: calc(50% - 402px);
-      bottom: 208px;
+      bottom: 588px;
     }
   }
 }
@@ -1432,21 +1447,27 @@ a {
   width: 133px;
   height: 65.003px;
   position: absolute;
-  bottom: 191px;
+  bottom: 173px;
   right: calc(50% + -130px);
 
   @include mq(sm) {
     width: 200px;
     height: 98.5px;
-    bottom: 132px;
+    // bottom: 132px;
+    bottom: 155px;
     right: calc(50% - 297px);
+  }
+
+  @include mq(md) {
+    bottom: 153px;
   }
 
   @include mq(lg) {
     width: 308px;
     height: 151px;
-    bottom: -60px;
-    right: calc(50% - 436px);
+    // bottom: 230px;
+    bottom: 315px;
+    right: calc(50% - 428px);
   }
 }
 
@@ -1458,7 +1479,7 @@ a {
     z-index: -1;
     width: 874px;
     height: 47.88px;
-    bottom: 276px;
+    bottom: 656px;
     left: calc(50% + 130px);
 
     img {
@@ -1552,7 +1573,7 @@ a {
 .about__content-pic {
   position: absolute;
   right: 19.779px;
-  top: 30px;
+  top: 28px;
   width: 282.221px;
   height: 72.416px;
   display: flex;
@@ -1567,6 +1588,7 @@ a {
     width: 620px;
     height: 124.325px;
     left: 0;
+    top: 26px;
   }
 
   @include mq(xl) {
@@ -1626,9 +1648,9 @@ a {
     // right: 84.304px;
     // width: 134px;
     // height: 100px;
-    top: 9px;
+    top: 17px;
     // right: -16.696px;
-    right: -15px;
+    right: -10px;
     width: 147px;
     height: 118px;
   }
@@ -1741,103 +1763,27 @@ a {
   @include mq(sm) {}
 }
 
-// .about__bg {
-//   position: absolute;
-//   position: relative;
-//   z-index: -1;
-//   top: 0;
-//   // left: -160px;
-//   // left: calc(50% + 78px);
-//   // right: 78px;
-//   // bottom: -189px;
-//   // max-width: 655px;
-//   // width: 655px;
-//   // width: 100vw;
-//   // height: 934px;
-
-//   @include mq(md) {
-//     // max-width: 100%;
-//   }
-
-//   @include mq(lg) {
-//     // position: relative;
-//     // position: absolute;
-//     // right: -566px;
-//     // width: 2416px;
-//     // height: 1218px;
-//   }
-
-//   @include mq(xl) {
-//     // right: -566px;
-//     // top: -50px;
-//   }
-// }
-
-// .about__bg-left {
-//   // width: 278px;
-//   // height: 529px;
-//   // position: absolute;
-//   position: relative;
-//   top: 0;
-//   // overflow: hidden;
-//   // transform: translate(0, 0);
-
-//   // height: auto;
-//   // height: 100%;
-
-//   @include mq(sm) {
-//     // right: 85%;
-//     // width: 220px;
-//     left: -56px;
-//     // left: 0;
-//     // background-color: #000;
-//   }
-
-//   @include mq(md) {
-//     // max-width: 220px;
-//     // right: 85%;
-//     // left: -122px;
-//     // text-align: left;
-//   }
-
-
-// @include mq(lg) {
-//   // width: 662px;
-//   // height: 1158px;
-//   top: -5px;
-//   right: calc(50% + 291px);
-//   // right: 62%;
-// }
-
-// @include mq(xl) {
-//   width: 662px;
-//   height: 1158px;
-//   // right: calc(50% + 339px);
-//   left: 122px;
-//   top: -20px;
-// }
-// }
-
-
 .about__bottom {
   position: absolute;
-  // right: -358px;
-  // bottom: -17.2px;
-  bottom: 0px;
-  // bottom: -166px;
-  // bottom: 83px;
-  // bottom: 0;
+  bottom: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: auto;
-  padding-bottom: 32.8px;
+  // padding-bottom: 32.8px;
   width: 100%;
 
   @include mq(sm) {
-    bottom: -60px;
-    // padding-bottom: calc(32.8px + 60px)
-    padding-bottom: 32.8px;
+    // bottom: -100px;
+    bottom: 0px;
+    // padding-bottom: 64.8px;
+    // margin-bottom: 32px;
+    // padding-bottom: 98px;
+    // transform: translateY(39%);
+    // padding-bottom: 0px;
+    // padding-bottom: 75px;
+    // margin-bottom: 65px;  z-index: 2;
+
   }
 
   // @include mq(md) {
@@ -1845,9 +1791,12 @@ a {
   // }
 
   @include mq(lg) {
-    display: inline-flex;
-    justify-content: center;
-
+    // display: inline-flex;
+    // justify-content: center;
+    // align-items: center;
+    // padding-bottom: 65px;
+    margin-bottom: 65px;
+    bottom: 0;
   }
 }
 
@@ -1857,33 +1806,63 @@ a {
   align-items: center;
   width: 355px;
   height: 37.2px;
+  // position: relative;
 
   img {
-    width: 354.642px;
-    height: 37.2px;
+    // width: 354.642px;
+    // height: 37.2px;
   }
 
   // position: absolute;
   // bottom: 0;
   // padding-left: 9.68px;
   // padding-left: 3.68px;
-  @include mq(lg) {
-    width: 890.604px;
-    height: 97px;
+  @include mq(sm) {
+    // width: 363px;
+    // height: 60.09px;
+    // max-width: 100%;
+
+    img {
+      // display: block;
+      // width: 100%;
+    }
   }
 
   @include mq(lg) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: 891px;
     width: 770px;
-    height: 127.47px;
+    height: 100%;
+    // height: 127.47px;
+
+    img {
+      height: 97px;
+      // width: 770px;
+      width: 100%;
+      height: 100%;
+
+
+
+    }
   }
 }
 
 //---- scroll ----//
+.swiper {}
+
 .about__swiper {
   width: 100%;
-  // height: 100px;
-  // height: 100%;
-  // height: 100px;
+  overflow: visible;
+
+  @include mq(sm) {
+    // height: 100px;
+    // height: 100%;]
+    height: auto;
+  }
 }
 
 // .swiper-wrapper {
@@ -1894,31 +1873,37 @@ a {
   // width: 600px;
   // height: 150px;
   transition-timing-function: linear;
+
 }
 
 
 .about__swiper-slide {
   width: 100px;
-  height: 100px;
+  height: 100%;
+  // height: 100px;
 
-  // @include mq(lg) {
-  //   width: 200px;
-  //   height: 200px;
-  // }
+
 
   img {
     border-radius: 12px;
+    width: 100%;
+    height: 100%;
 
-    // width: 100%;
-    // height: 100%;
     // width: 100px;
     // height: 100px;
     // height: auto;
     // object-fit: cover;
+
+    @include mq(sm) {
+      width: 100px;
+      height: 100px;
+    }
+
+
     @include mq(lg) {
+      border-radius: 24px;
       width: 200px;
       height: 200px;
-      border-radius: 24px;
     }
   }
 }
@@ -1927,10 +1912,22 @@ a {
 //    step
 //=====================================
 .step {
-  // padding-top: 32px;
-  margin-top: 65px;
+  padding-top: 32px;
+  // margin-top: 65px;
 
   @include mq(sm) {
-    margin-top: 65px;
+    padding-top: 65px;
+    // margin-top: 65px;
+    // padding-top: 0px;
+    // display: flex;
+    // position: relative;
+    // width: 1440px;
+    // flex-direction: column;
+    // align-items: center;
+  }
+
+  @include mq(lg) {
+    padding-top: 120px;
+    // margin-top: 120px;
   }
 }

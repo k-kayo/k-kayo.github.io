@@ -20,8 +20,15 @@ const swiper = new Swiper(".about__swiper", {
 
   breakpoints: {
     // ブレークポイント
+    600: {
+      slidesPerView: 6,
+      // centeredSlides: true,
+      slidesPerView: "auto",
+    },
+
     900: {
       slidesPerView: 5,
+      // centeredSlides: true,
       slidesPerView: "auto",
       spaceBetween: 20,
     },
