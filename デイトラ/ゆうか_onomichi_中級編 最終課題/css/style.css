@@ -602,6 +602,11 @@ a:hover {
      object-fit: cover;
   border-radius: 0px 0px 24px 24px;
 }
+@media screen and (min-width: 1200px) {
+  .fv__image {
+    z-index: 1;
+  }
+}
 
 .fv__inner {
   position: absolute;
@@ -1211,7 +1216,7 @@ a:hover {
           align-items: center;
   top: 0;
   max-width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 600px) {
   .about {
@@ -1228,11 +1233,11 @@ a:hover {
 }
 @media screen and (min-width: 1200px) {
   .about {
-    margin-top: 80px;
+    top: 0px;
+    padding-top: 80px;
     padding-top: 0;
     height: 1367px;
-    top: 0px;
-    z-index: 1;
+    overflow: visible;
   }
 }
 
@@ -1286,9 +1291,12 @@ a:hover {
 @media screen and (min-width: 1200px) {
   .about__bg-pawpads {
     right: calc(50% - 582px);
-    top: -70px;
+    top: 0;
+    top: -75px;
     width: 100px;
     height: 220px;
+    overflow: visible;
+    z-index: 10;
   }
 }
 
@@ -1365,7 +1373,6 @@ a:hover {
     border-radius: 40px;
   }
 }
-
 .about__bg-hill {
   position: absolute;
   left: 0;
@@ -1404,6 +1411,7 @@ a:hover {
   .about__bg-hill {
     top: -419px;
     left: 227px;
+    top: 400px;
   }
 }
 
@@ -1509,6 +1517,11 @@ a:hover {
   .about__inner {
     max-height: 1287px;
     top: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__inner {
+    height: 749px;
   }
 }
 
