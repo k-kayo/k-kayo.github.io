@@ -57,8 +57,12 @@ body {
   line-height: 1.6;
   font-weight: 400;
   background: $sub-color-LBlue;
+  max-width: 100%;
 }
 
+.aria-hidden {
+  overflow: hidden;
+}
 
 //--- 共通クラス ----//
 // @include mq(sm) {
@@ -381,19 +385,20 @@ a {
   // @include mq(md) {
   //   height: $header-height;
   // }
+  @include mq(xl) {}
 }
 
 
 .header__inner {
-  height: inherit; //親要素のものを継承
+  height: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
   // position: relative;
   padding: 16px 20px;
+  max-width: 100%;
+  // width: 100%;
 
-  // width: 375px;
-  // height: 64px;
   @include mq(lg) {
     padding: 16px 24px;
   }
@@ -406,9 +411,7 @@ a {
     // top: 50;
     position: relative;
     // margin-inline: auto;
-    width: 100%;
     padding-inline: 24px;
-
   }
 }
 
@@ -428,7 +431,6 @@ a {
       @include mq(lg) {
         width: 183px;
         height: 24px;
-        // overflow: hidden;
       }
     }
   }
@@ -619,6 +621,7 @@ a {
   top: 0;
   height: 710px;
   margin-top: 64px;
+  max-width: 100%;
 
   @include mq(lg) {
     height: 900px;
@@ -652,25 +655,6 @@ a {
     z-index: 1;
   }
 }
-
-// .fv__image-sp {
-//   border-radius: 0px 0px 24px 24px;
-//   height: 100%;
-//   max-height: 554px;
-//   object-fit: cover;
-// }
-
-// .fv__image-pc {
-
-//   @include mq(lg) {
-//     height: 740px;
-//     border-radius: 0px 0px 40px 40px;
-//     object-fit: cover;
-//     height: 100%;
-//     width: 100%;
-//   }
-
-// }
 
 .fv__inner {
   position: absolute;
@@ -755,8 +739,6 @@ a {
     width: 520px;
     height: 82px;
     padding-bottom: 0.885px;
-    // overflow: hidden;
-    // background: var(--LP-White, #FFF);
   }
 }
 
@@ -771,7 +753,6 @@ a {
     height: 60px;
     padding: 0.908px 0.156px 0.767px 0.036px;
     height: 58.325px;
-    // overflow: hidden;
     // width: 355.808px;
   }
 }
@@ -1004,8 +985,6 @@ a {
   left: 50%;
   transform: translateX(-50%);
 
-  // overflow: hidden;
-  // object-fit: cover;
   @include mq(lg) {
     width: 250px;
     height: 510px;
@@ -1211,7 +1190,6 @@ a {
   align-items: center;
   top: 0;
   max-width: 100%;
-  overflow-x: hidden;
 
   @include mq(sm) {
     height: calc(1042.66px + 32px);
@@ -1225,21 +1203,21 @@ a {
   }
 
   @include mq(xl) {
+    // position: absolute;
     top: 0px;
     // padding-top: 80px;
-    // margin-top: 80px;
-    // margin-top: 0;
-    padding-top: 80px;
+    margin-top: 80px;
     // margin-top: 0;
     padding-top: 0;
     // padding-top: 80px;
+    // margin-top: 0;
+    // padding-top: 80px;
     height: calc(1287px + 80px);
+    // height: 1287px;
+    // top: 80px;
     // top: 160px;
-    overflow: visible;
-    // z-index: 10;
-    // img {
-
-    // }
+    // overflow-x: hidden; // 横方向のオーバーフローを非表示にする
+    // overflow: visible; // 縦方向のオーバーフローは表示させる（ただし、この設定は予期しない挙動を引き起こす可能性がある）
   }
 }
 
@@ -1259,8 +1237,8 @@ a {
   }
 
   @include mq(xl) {
-    left: calc(50% - 778px);
-    top: 4px;
+    left: calc(50% - 781px);
+    top: -19px;
   }
 }
 
@@ -1289,18 +1267,16 @@ a {
   }
 
   @include mq(xl) {
-    right: calc(50% - 582px);
-    top: 0;
+    position: absolute;
+    // right: calc(50% - 582px);
+    right: calc(50% - 589px);
+    // left: calc(50% - 582px);
+    // top: 0;
     top: -75px;
     width: 100px;
     height: 220px;
-    overflow: visible;
-    z-index: 10;
-    // overflow-y: visible;
 
   }
-
-
 }
 
 .about__bg-left-photoL {
@@ -1330,16 +1306,12 @@ a {
     img {
       border-radius: 40px;
       width: 100%;
-      // width: 480px;
-      // height: 480px;
     }
   }
 
   @include mq(xl) {
-    // right: 180px;
-    // left: 180px;
-    left: -8px;
-    top: calc(74px + 20px);
+    left: calc(50% + -1098px);
+    top: 74px;
 
     // img {
     //   border-radius: 40px;
@@ -1382,7 +1354,10 @@ a {
     }
   }
 
-  @include mq(xl) {}
+  @include mq(xl) {
+    top: 73px;
+    left: calc(50% + 556px);
+  }
 }
 
 .about__bg-hill {
@@ -1429,22 +1404,10 @@ a {
   }
 
   @include mq(xl) {
-    // position: absolute;
-    // width: 427px;
-    // height: 817px;
-    // top: -875px;
-    top: -419px;
-    left: 227px;
-    // left: 0;
-    // bottom: -821px;
-    // bottom: 0;
-    top: 400px;
-    // text-align: right;
-
-    // img {
-    //   width: 100%;
-    //   height: auto;
-    // }
+    // left: calc(50% - 856px);
+    // top: 440px;
+    left: calc(50% - 863px);
+    top: 427px;
   }
 }
 
@@ -1466,13 +1429,18 @@ a {
   @include mq(md) {
     right: calc(50% - 360px);
     bottom: 213px;
+  }
 
-    @include mq(lg) {
-      width: 101px;
-      height: 100px;
-      right: calc(50% - 402px);
-      bottom: 588px;
-    }
+  @include mq(lg) {
+    width: 101px;
+    height: 100px;
+    right: calc(50% - 402px);
+    bottom: 588px;
+  }
+
+  @include mq(xl) {
+    right: calc(50% - 602px);
+    bottom: 665px;
   }
 }
 
@@ -1503,8 +1471,12 @@ a {
     bottom: 315px;
     right: calc(50% - 428px);
   }
-}
 
+  @include mq(xl) {
+    bottom: 459px;
+    right: calc(50% - 678px);
+  }
+}
 
 .about__bg-wave {
 
@@ -1519,6 +1491,11 @@ a {
     img {
       width: 100%;
     }
+  }
+
+  @include mq(xl) {
+    left: calc(50% + 445px);
+    bottom: 713px;
   }
 }
 
@@ -1541,15 +1518,17 @@ a {
   }
 
   @include mq(lg) {
-    max-height: 1287px;
+    // max-height: 1287px;
+    height: 1287px;
     top: 0px;
   }
 
   @include mq(xl) {
-    height: calc(669px + 40px * 2);
+    // height: calc(669px + 40px * 2);
     // height: calc(669px + 40px + 60px);
-    // padding-top: 60px;
-    // top: -60px;
+    // padding-top: 80px;
+    // top: -80px;
+    top: 0;
   }
 }
 
@@ -1640,7 +1619,7 @@ a {
     position: absolute;
     // right: 84.3px;
     // left: 150px;
-    left: 84.3px;
+    left: 80.3px;
     top: 40.351px;
   }
 }
@@ -1727,6 +1706,7 @@ a {
 
   @include mq(xl) {
     gap: 33px;
+    margin-right: 7px;
   }
 }
 
@@ -1763,6 +1743,11 @@ a {
   @include mq(lg) {
     font-size: 16px;
   }
+}
+
+.about__content-box-text1 {
+  margin-right: 2px;
+  margin-top: -3px;
 }
 
 .about__content-box-text2,
@@ -1829,10 +1814,6 @@ a {
 
   }
 
-  // @include mq(md) {
-  //   bottom: -200px;
-  // }
-
   @include mq(lg) {
     // display: inline-flex;
     // justify-content: center;
@@ -1840,6 +1821,10 @@ a {
     // padding-bottom: 65px;
     margin-bottom: 15px;
     bottom: 0;
+  }
+
+  @include mq(xl) {
+    bottom: 60px;
   }
 }
 
@@ -1851,33 +1836,16 @@ a {
   height: 37.2px;
   // position: relative;
 
-  img {
-    // width: 354.642px;
-    // height: 37.2px;
-  }
-
-  // position: absolute;
-  // bottom: 0;
-  // padding-left: 9.68px;
-  // padding-left: 3.68px;
   @include mq(sm) {
     // width: 363px;
     // height: 60.09px;
-    // max-width: 100%;
-
-    img {
-      // display: block;
-      // width: 100%;
-    }
+    // max-width: 100%
   }
 
   @include mq(lg) {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    // margin-left: auto;
-    // margin-right: auto;
-    // width: 891px;
     width: 770px;
     height: 100%;
     // height: 127.47px;
@@ -1887,10 +1855,13 @@ a {
       // width: 770px;
       width: 100%;
       height: 100%;
-
-
-
     }
+  }
+
+  @include mq(xl) {
+    // width: 891px;
+    width: 891px;
+    margin-left: -14px;
   }
 }
 
@@ -1899,7 +1870,10 @@ a {
 
 .about__swiper {
   width: 100%;
-  overflow: visible;
+  // padding-top: -80px;
+  // padding-bottom: 50px;
+  // margin-bottom: 50px;
+  margin-top: -5px;
 
   @include mq(sm) {
     // height: 100px;
@@ -1926,9 +1900,10 @@ a {
   height: 100%;
   transition-timing-function: linear;
 
+  @include mq(xl) {}
 }
 
-// // 
+
 .about__swiper-slide {
   // width: 100px;
   // height: 100%;
@@ -1961,7 +1936,6 @@ a {
         // height: 100%; // 画像の高さをスライドの高さに合わせる
         // width: fit-content;
         // object-fit: cover;
-
       }
     }
   }
