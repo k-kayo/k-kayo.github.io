@@ -1945,22 +1945,124 @@ a {
 //    step
 //=====================================
 .step {
+  display: inline-flex;
+  position: relative;
   padding-top: 32px;
-  // margin-top: 65px;
+  flex-direction: column;
+  align-items: center;
 
   @include mq(sm) {
     padding-top: 65px;
-    // margin-top: 65px;
-    // padding-top: 0px;
-    // display: flex;
-    // position: relative;
-    // width: 1440px;
-    // flex-direction: column;
-    // align-items: center;
+
   }
 
   @include mq(lg) {
     padding-top: 120px;
-    // margin-top: 120px;
   }
 }
+
+.step__bg {}
+
+.step__bg-map {}
+
+.step__bg-brouwn {}
+
+.step__bg-black {}
+
+.step__bg-pawpads-right {}
+
+.step__bg-pawpads-left {}
+
+.step__bg-pawpads-right-bottom {}
+
+.step__heading {
+  // display: flex;
+  // justify-content: center;
+  // align-items: flex-start;
+
+}
+
+.step__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.step__boxes {
+  width: 335px;
+  height: 1243px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.step__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 395px;
+  padding-bottom: 16px;
+  gap: 16px;
+  // align-self: stretch;
+  // flex-shrink: 0;
+  // margin-left: auto;
+  // margin-right: auto;
+
+  img {
+    position: relative;
+    height: 210px;
+    // width: 196px;
+  }
+}
+
+.step__box-1,
+.step__box-2 {
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: url(../img/step/img_line.svg);
+    width: 34px;
+    height: 7px;
+    transform: rotate(90deg);
+  }
+}
+
+.step__box-title {
+  padding-bottom: 16px;
+}
+
+.step__box-text {
+  padding-bottom: 16px;
+}
+
+.step__box-1-link {}
+
+.step__box-2 {}
+
+.step__box-2-title {}
+
+.step__box-2-text {}
+
+.step__box-3 {}
+
+.step__box-3-title {}
+
+.step__box-3-text {}
+
+.about__content-box-btn {}
+
+.step__btn {}
+
+.button {}

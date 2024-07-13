@@ -1920,7 +1920,18 @@ a:hover {
 }
 
 .step {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
   padding-top: 32px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (min-width: 600px) {
   .step {
@@ -1931,4 +1942,85 @@ a:hover {
   .step {
     padding-top: 120px;
   }
+}
+
+.step__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+}
+
+.step__boxes {
+  width: 335px;
+  height: 1243px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.step__boxes img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 395px;
+  padding-bottom: 16px;
+  gap: 16px;
+}
+.step__box img {
+  position: relative;
+  height: 210px;
+}
+
+.step__box-1::after,
+.step__box-2::after {
+  content: "";
+  display: block;
+  background-image: url(../img/step/img_line.svg);
+  width: 34px;
+  height: 7px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.step__box-title {
+  padding-bottom: 16px;
+}
+
+.step__box-text {
+  padding-bottom: 16px;
 }/*# sourceMappingURL=style.css.map */
