@@ -163,6 +163,11 @@ img {
   -webkit-backdrop-filter: blur(6px);
   background: rgba(253, 239, 242, 0.75);
 }
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .header {
+    padding: 15px;
+  }
+}
 .header .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1076,4 +1081,4 @@ jQuery・lazyloaded
 
 .footer .copyright {
   font-size: 14px !important;
-}/*# sourceMappingURL=style.css.map */
+}

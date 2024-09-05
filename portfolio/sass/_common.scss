@@ -149,6 +149,10 @@ img {
   -webkit-backdrop-filter: blur(6px);
   background: rgba(253, 239, 242, 0.75);
 
+  @include mq(sp) {
+    padding: 15px;
+  }
+
 
   .container {
     display: flex;
