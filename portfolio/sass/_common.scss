@@ -150,7 +150,8 @@ img {
   background: rgba(253, 239, 242, 0.75);
 
   @include mq(sp) {
-    padding: 15px;
+    // padding: 15px;
+    padding: 15px 0; // 左右のパディングを削除
   }
 
 
@@ -161,12 +162,16 @@ img {
     padding: 20px 40px;
 
     @include mq(sp) {
-      padding: 15px 0;
+      // padding: 15px;
+      padding: 15px 20px; // 左右のパディングを追加
+      width: 100%; // 幅を100%に設定
     }
 
     @include mq(xs) {
       width: 320px;
       justify-content: center;
+      width: 100%; // 320pxから100%に変更
+      padding: 15px; // パディングを調整
     }
 
     .header-logo {
