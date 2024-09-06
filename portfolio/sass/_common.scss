@@ -114,12 +114,12 @@ img {
 
   @include mq(sp) {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   @include mq(xs) {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 }
 
@@ -152,6 +152,10 @@ img {
   @include mq(sp) {
     // padding: 15px;
     padding: 15px 0; // 左右のパディングを削除
+  }
+
+  .inner {
+    padding-inline: 15px; //inlineは左右の余白を一括で指定できる
   }
 
 

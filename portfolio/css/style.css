@@ -128,13 +128,13 @@ img {
 @media screen and (min-width: 375px) and (max-width: 767px) {
   .title {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 }
 @media screen and (max-width: 374px) {
   .title {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 }
 
@@ -167,6 +167,9 @@ img {
   .header {
     padding: 15px 0;
   }
+}
+.header .inner {
+  padding-inline: 15px;
 }
 .header .container {
   display: -webkit-box;
@@ -812,18 +815,38 @@ jQuery・lazyloaded
           flex-direction: column;
 }
 .profile-img {
-  width: 40%;
-  margin-right: 30px;
-  border-radius: 50%;
+  width: 280px;
+  height: 280px;
   margin: 0 auto;
+  padding-bottom: 48px;
   overflow: hidden;
 }
-.profile-body {
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .profile-img {
+    padding-bottom: 0px;
+  }
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .profile-img img {
+    display: block;
+    margin: 0 auto;
+    width: 240px;
+    height: 240px;
+  }
+}
+.profile-img-body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
-.profile-body p {
+.profile-img-body p {
   font-size: 18px;
   line-height: 1.8;
   font-weight: normal;
@@ -833,32 +856,32 @@ jQuery・lazyloaded
   letter-spacing: 0.08rem;
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
-  .profile-body p {
+  .profile-img-body p {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 374px) {
-  .profile-body p {
+  .profile-img-body p {
     font-size: 16px;
   }
 }
-.profile-body p span {
+.profile-img-body p span {
   font-weight: bold;
 }
-.profile-body p:not(:last-child) {
+.profile-img-body p:not(:last-child) {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
-  .profile-body p:not(:last-child) {
+  .profile-img-body p:not(:last-child) {
     margin-bottom: 20px;
     font-size: 16px;
   }
 }
-.profile-body p:first-child {
+.profile-img-body p:first-child {
   margin-top: 40px;
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
-  .profile {
+  .profile-img {
     display: block;
   }
 }
