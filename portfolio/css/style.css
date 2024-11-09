@@ -41,6 +41,10 @@ p {
   font-size: 0.8rem;
   font-weight: normal;
 }
+p.about-p {
+  margin-top: 24px;
+  /* spanタグの後のpタグに上マージンを追加 */
+}
 
 a {
   -webkit-transition: opacity 0.3s;
@@ -880,8 +884,11 @@ jQuery・lazyloaded
 .profile-img-body p:first-child {
   margin-top: 40px;
 }
+.profile-img-body p .about-p {
+  gap: 40px;
+}
 @media screen and (min-width: 375px) and (max-width: 767px) {
-  .profile-img {
+  .profile {
     display: block;
   }
 }

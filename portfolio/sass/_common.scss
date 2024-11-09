@@ -27,6 +27,13 @@ ul {
 p {
   font-size: .8rem;
   font-weight: normal;
+
+  &.about-p {
+    margin-top: 24px;
+    /* spanタグの後のpタグに上マージンを追加 */
+  }
+
+
 }
 
 a {
