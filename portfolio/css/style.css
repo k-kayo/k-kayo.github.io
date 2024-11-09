@@ -1108,3 +1108,80 @@ jQuery・lazyloaded
 .footer .copyright {
   font-size: 14px !important;
 }
+
+.specific-page {
+  text-align: center;
+  /* 中央寄せ */
+}
+
+.custom-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .custom-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* 1列表示に変更 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* 中央揃え */
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .custom-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* 1列表示に変更 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* 中央揃え */
+    gap: 32px;
+  }
+}
+
+.custom-reel {
+  width: calc(25% - 10px);
+  height: 500px;
+  margin: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .custom-reel {
+    width: 100%;
+    /* 幅を100%に設定 */
+    max-width: 300px;
+    /* 動画の最大幅を指定 */
+  }
+}
+@media screen and (max-width: 374px) {
+  .custom-reel {
+    width: 100%;
+    /* 幅を100%に設定 */
+    max-width: 300px;
+    /* 動画の最大幅を指定 */
+  }
+}

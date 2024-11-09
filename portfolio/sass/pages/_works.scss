@@ -140,3 +140,61 @@
     font-size: 14px !important;
   }
 }
+
+//=====================================
+//    reel
+//=====================================
+.specific-page {
+  text-align: center;
+  /* 中央寄せ */
+}
+
+.custom-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 0;
+  box-sizing: border-box;
+
+  @include mq(sp) {
+    flex-direction: column;
+    /* 1列表示に変更 */
+    align-items: center;
+    /* 中央揃え */
+    gap: 32px;
+  }
+
+  @include mq(xs) {
+    flex-direction: column;
+    /* 1列表示に変更 */
+    align-items: center;
+    /* 中央揃え */
+    gap: 32px;
+  }
+}
+
+.custom-reel {
+  width: calc(25% - 10px);
+  // height: auto;
+  height: 500px;
+  margin: 5px;
+  box-sizing: border-box;
+
+  @include mq(sp) {
+    width: 100%;
+    /* 幅を100%に設定 */
+    max-width: 300px;
+    /* 動画の最大幅を指定 */
+  }
+
+  @include mq(xs) {
+    width: 100%;
+    /* 幅を100%に設定 */
+    max-width: 300px;
+    /* 動画の最大幅を指定 */
+  }
+}
