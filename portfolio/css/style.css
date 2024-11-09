@@ -38,7 +38,7 @@ ul {
 }
 
 p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: normal;
 }
 
@@ -818,8 +818,8 @@ jQuery・lazyloaded
   width: 280px;
   height: 280px;
   margin: 0 auto;
-  padding-bottom: 48px;
   overflow: hidden;
+  padding-bottom: 40px;
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
   .profile-img {
