@@ -2,6 +2,7 @@ import requests
 import csv
 import os
 from dotenv import load_dotenv
+import time
 
 # .envファイルから環境変数を読み込む
 load_dotenv()
@@ -9,23 +10,81 @@ load_dotenv()
 # NETSEAのアクセストークン
 NETSEA_ACCESS_TOKEN = os.getenv("NETSEA_ACCESS_TOKEN")  # .envに設定されたNETSEAトークン
 
+# BASEのアクセストークン
+BASE_ACCESS_TOKEN = os.getenv("BASE_ACCESS_TOKEN")  # .envに設定されたBASEトークン
+
+# BASEアクセストークンの有効期限（UNIXタイム）
+ACCESS_TOKEN_EXPIRES_AT = float(os.getenv("ACCESS_TOKEN_EXPIRES_AT", 0))
+
 # ヘッダー（NETSEA APIに必要なAuthorizationヘッダー）
 headers = {
     "Authorization": f"Bearer {NETSEA_ACCESS_TOKEN}"
 }
 
-# 商品ID（テスト用）
-direct_item_id = "19794119-2"  # テスト用のダイレクト商品IDに変更
-
-# BASEのアクセストークン
-BASE_ACCESS_TOKEN = os.getenv("BASE_ACCESS_TOKEN")  # .envに設定されたBASEトークン
-
-# NETSEA APIのエンドポイントURL (NETSEA)
-url = "https://api.netsea.jp/buyer/v1/items/stock"
-
 # BASE APIのURL (在庫情報を更新するため)
 BASE_API_URL = "https://api.thebase.in/v1/products/{product_id}"
 
+# トークンの確認と更新
+def check_and_refresh_access_token():
+    global BASE_ACCESS_TOKEN, ACCESS_TOKEN_EXPIRES_AT
+    if time.time() >= ACCESS_TOKEN_EXPIRES_AT:
+        # アクセストークンが期限切れ
+        print("アクセストークンが期限切れです。更新を行います。")
+        get_new_access_token()
+    else:
+        print("アクセストークンは有効です。")
+
+def get_new_access_token():
+    global BASE_ACCESS_TOKEN, ACCESS_TOKEN_EXPIRES_AT
+    # リフレッシュトークンを使って新しいアクセストークンを取得する処理
+    data = {
+        "grant_type": "refresh_token",
+        "client_id": os.getenv("CLIENT_ID"),
+        "client_secret": os.getenv("CLIENT_SECRET"),
+        "refresh_token": os.getenv("BASE_REFRESH_TOKEN"),
+    }
+    response = requests.post("https://api.thebase.in/1/oauth/token", data=data)
+
+    if response.status_code == 200:
+        token_data = response.json()
+        BASE_ACCESS_TOKEN = token_data["access_token"]
+        expires_in = token_data["expires_in"]
+        ACCESS_TOKEN_EXPIRES_AT = time.time() + expires_in
+
+        # トークンを.envに保存
+        update_env_file("BASE_ACCESS_TOKEN", BASE_ACCESS_TOKEN)
+        update_env_file("ACCESS_TOKEN_EXPIRES_AT", ACCESS_TOKEN_EXPIRES_AT)
+
+        print("新しいアクセストークンを取得しました:", BASE_ACCESS_TOKEN)
+    else:
+        print("アクセストークンの更新に失敗しました。エラー:", response.status_code, response.text)
+
+# .envファイルの更新
+def update_env_file(variable_name, value):
+    key_found = False
+    with open(".env", "r", encoding="utf-8") as file:
+        lines = file.readlines()
+
+    with open(".env", "w", encoding="utf-8") as file:
+        for line in lines:
+            if line.startswith(variable_name + "="):
+                file.write(f"{variable_name}={value}\n")
+                key_found = True
+            else:
+                file.write(line)
+        if not key_found:
+            file.write(f"{variable_name}={value}\n")
+
+
+
+
+
+# 商品ID（テスト用）
+direct_item_id = "19794119-2"  # テスト用のダイレクト商品IDに変更
+
+
+# NETSEA APIのエンドポイントURL (NETSEA)
+url = "https://api.netsea.jp/buyer/v1/items/stock"
 
 
 # NETSEA APIリクエスト
@@ -66,7 +125,11 @@ def get_base_products():
 
 
 # NETSEAの商品情報を取得し、BASEの商品情報と照らし合わせる関数
+# # 商品情報取得関数にトークン確認を追加
 def update_inventory_from_netsea():
+    # アクセストークンが有効か確認
+    check_and_refresh_access_token()
+
     # BASEの商品情報を取得
     base_products = get_base_products()
 
@@ -76,13 +139,13 @@ def update_inventory_from_netsea():
             direct_item_id = row[0]  # 商品IDが1列目にあると仮定
             print(f"読み込んだ商品ID: {direct_item_id}")
 
-
             # NETSEA APIから商品情報を取得
             params = {
                 "direct_item_ids": direct_item_id  # リスト形式で渡す場合は、["ID1", "ID2"]
                 # "direct_item_ids": [direct_item_id]  # リスト形式
             }
-            response = requests.get(url, headers=headers, params=params)
+            # response = requests.get(url, headers=headers, params=params)
+            response = requests.get("https://api.netsea.jp/buyer/v1/items", headers=headers, params=params)
 
             if response.status_code == 200:
                 data = response.json()  # JSON形式のレスポンスデータを取得
@@ -106,7 +169,6 @@ def update_inventory_from_netsea():
                     netsea_product_code = data['product_id']
                     netsea_product_branch_code = data['branch_code']
 
-
                     # BASEの商品と照らし合わせる
                     for base_product in base_products:
                         if (netsea_product_code == base_product.get('identifier') and
@@ -122,6 +184,8 @@ def update_inventory_from_netsea():
 
 
 def update_base_product_stock(product_id, variation_identifier, stock_status):
+    check_and_refresh_access_token()  # 在庫更新前にトークンを確認
+
     data = {
         "variation_identifier": variation_identifier,
         "variation_stock": stock_status  # バリエーションごとの在庫を更新
