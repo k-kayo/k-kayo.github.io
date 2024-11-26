@@ -1,0 +1,205 @@
+2024-11-26 03:48:08,880 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2024-11-26 03:48:08,882 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-26 03:48:08,888 - INFO -  * Restarting with stat
+2024-11-26 03:48:10,592 - WARNING -  * Debugger is active!
+2024-11-26 03:48:10,596 - INFO -  * Debugger PIN: 999-192-416
+2024-11-26 03:50:53,295 - INFO - 127.0.0.1 - - [26/Nov/2024 03:50:53] "GET / HTTP/1.1" 200 -
+2024-11-26 03:50:53,962 - INFO - 127.0.0.1 - - [26/Nov/2024 03:50:53] "[33mGET /js/plugins/uploadifive/uploadifive.css HTTP/1.1[0m" 404 -
+2024-11-26 03:50:55,606 - INFO - 127.0.0.1 - - [26/Nov/2024 03:50:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-26 04:04:05,448 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2024-11-26 04:04:05,449 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-26 04:04:05,453 - INFO -  * Restarting with stat
+2024-11-26 04:04:07,109 - WARNING -  * Debugger is active!
+2024-11-26 04:04:07,114 - INFO -  * Debugger PIN: 999-192-416
+2024-11-26 04:13:40,395 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2024-11-26 04:13:40,397 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-26 04:13:40,400 - INFO -  * Restarting with stat
+2024-11-26 04:13:42,055 - WARNING -  * Debugger is active!
+2024-11-26 04:13:42,059 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:10:08,030 - my_logger - INFO - This is a log message
+2024-11-27 02:10:08,082 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2024-11-27 02:10:08,083 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 02:10:08,085 - INFO -  * Restarting with stat
+2024-11-27 02:10:08,765 - my_logger - INFO - This is a log message
+2024-11-27 02:10:08,786 - WARNING -  * Debugger is active!
+2024-11-27 02:10:08,788 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:14:25,890 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:14:25,957 - INFO -  * Restarting with stat
+2024-11-27 02:14:26,637 - my_logger - INFO - This is a log message
+2024-11-27 02:14:26,658 - WARNING -  * Debugger is active!
+2024-11-27 02:14:26,660 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:16:57,324 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:16:57,470 - INFO -  * Restarting with stat
+2024-11-27 02:16:58,182 - my_logger - INFO - This is a log message
+2024-11-27 02:16:58,203 - WARNING -  * Debugger is active!
+2024-11-27 02:16:58,205 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:26:37,780 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\update_inventory.py', reloading
+2024-11-27 02:26:37,830 - INFO -  * Restarting with stat
+2024-11-27 02:26:38,562 - my_logger - INFO - This is a log message
+2024-11-27 02:26:38,583 - WARNING -  * Debugger is active!
+2024-11-27 02:26:38,586 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:26:54,667 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:26:54,718 - INFO -  * Restarting with stat
+2024-11-27 02:26:55,418 - my_logger - INFO - This is a log message
+2024-11-27 02:26:55,438 - WARNING -  * Debugger is active!
+2024-11-27 02:26:55,441 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:26:57,462 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:26:57,518 - INFO -  * Restarting with stat
+2024-11-27 02:26:58,206 - my_logger - INFO - This is a log message
+2024-11-27 02:26:58,227 - WARNING -  * Debugger is active!
+2024-11-27 02:26:58,229 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:27:01,252 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:27:01,306 - INFO -  * Restarting with stat
+2024-11-27 02:27:02,020 - my_logger - INFO - This is a log message
+2024-11-27 02:27:02,041 - WARNING -  * Debugger is active!
+2024-11-27 02:27:02,043 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:29:28,688 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:29:28,736 - INFO -  * Restarting with stat
+2024-11-27 02:29:29,451 - my_logger - INFO - This is a log message
+2024-11-27 02:29:29,476 - WARNING -  * Debugger is active!
+2024-11-27 02:29:29,479 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:30:01,629 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:30:01,677 - INFO -  * Restarting with stat
+2024-11-27 02:30:02,378 - my_logger - INFO - This is a log message
+2024-11-27 02:30:02,400 - WARNING -  * Debugger is active!
+2024-11-27 02:30:02,402 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:30:10,447 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:30:10,507 - INFO -  * Restarting with stat
+2024-11-27 02:30:11,201 - my_logger - INFO - This is a log message
+2024-11-27 02:30:11,221 - WARNING -  * Debugger is active!
+2024-11-27 02:30:11,224 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:30:37,350 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:30:37,398 - INFO -  * Restarting with stat
+2024-11-27 02:30:38,109 - my_logger - INFO - This is a log message
+2024-11-27 02:30:38,130 - WARNING -  * Debugger is active!
+2024-11-27 02:30:38,132 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:30:47,182 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:30:47,230 - INFO -  * Restarting with stat
+2024-11-27 02:30:47,926 - my_logger - INFO - This is a log message
+2024-11-27 02:30:47,950 - WARNING -  * Debugger is active!
+2024-11-27 02:30:47,952 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:31:23,107 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:31:23,156 - INFO -  * Restarting with stat
+2024-11-27 02:31:23,852 - my_logger - INFO - This is a log message
+2024-11-27 02:31:23,873 - WARNING -  * Debugger is active!
+2024-11-27 02:31:23,875 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:32:03,048 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:32:03,101 - INFO -  * Restarting with stat
+2024-11-27 02:32:03,811 - my_logger - INFO - This is a log message
+2024-11-27 02:32:03,832 - WARNING -  * Debugger is active!
+2024-11-27 02:32:03,834 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:32:21,920 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:32:21,970 - INFO -  * Restarting with stat
+2024-11-27 02:32:22,667 - my_logger - INFO - This is a log message
+2024-11-27 02:32:22,687 - WARNING -  * Debugger is active!
+2024-11-27 02:32:22,690 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:32:25,715 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:32:25,765 - INFO -  * Restarting with stat
+2024-11-27 02:32:26,467 - my_logger - INFO - This is a log message
+2024-11-27 02:32:26,489 - WARNING -  * Debugger is active!
+2024-11-27 02:32:26,491 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:32:47,593 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:32:47,640 - INFO -  * Restarting with stat
+2024-11-27 02:32:48,334 - my_logger - INFO - This is a log message
+2024-11-27 02:32:48,355 - WARNING -  * Debugger is active!
+2024-11-27 02:32:48,357 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:33:27,535 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:33:27,584 - INFO -  * Restarting with stat
+2024-11-27 02:33:28,298 - my_logger - INFO - This is a log message
+2024-11-27 02:33:28,319 - WARNING -  * Debugger is active!
+2024-11-27 02:33:28,322 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:33:29,338 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:33:29,386 - INFO -  * Restarting with stat
+2024-11-27 02:33:30,076 - my_logger - INFO - This is a log message
+2024-11-27 02:33:30,097 - WARNING -  * Debugger is active!
+2024-11-27 02:33:30,099 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:33:31,115 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:33:31,164 - INFO -  * Restarting with stat
+2024-11-27 02:33:31,857 - my_logger - INFO - This is a log message
+2024-11-27 02:33:31,878 - WARNING -  * Debugger is active!
+2024-11-27 02:33:31,880 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:33:34,903 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:33:34,965 - INFO -  * Restarting with stat
+2024-11-27 02:33:35,664 - my_logger - INFO - This is a log message
+2024-11-27 02:33:35,685 - WARNING -  * Debugger is active!
+2024-11-27 02:33:35,688 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:33:37,707 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:33:37,758 - INFO -  * Restarting with stat
+2024-11-27 02:33:38,453 - my_logger - INFO - This is a log message
+2024-11-27 02:33:38,474 - WARNING -  * Debugger is active!
+2024-11-27 02:33:38,476 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:34:02,591 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:34:02,639 - INFO -  * Restarting with stat
+2024-11-27 02:34:03,330 - my_logger - INFO - This is a log message
+2024-11-27 02:34:03,351 - WARNING -  * Debugger is active!
+2024-11-27 02:34:03,353 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:34:28,472 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:34:28,519 - INFO -  * Restarting with stat
+2024-11-27 02:34:29,215 - my_logger - INFO - This is a log message
+2024-11-27 02:34:29,235 - WARNING -  * Debugger is active!
+2024-11-27 02:34:29,238 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:34:50,342 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:34:50,394 - INFO -  * Restarting with stat
+2024-11-27 02:34:51,092 - my_logger - INFO - This is a log message
+2024-11-27 02:34:51,112 - WARNING -  * Debugger is active!
+2024-11-27 02:34:51,114 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:35:22,254 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\stock_check.py', reloading
+2024-11-27 02:35:22,302 - INFO -  * Restarting with stat
+2024-11-27 02:35:22,997 - my_logger - INFO - This is a log message
+2024-11-27 02:35:23,018 - WARNING -  * Debugger is active!
+2024-11-27 02:35:23,021 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:41:54,685 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:41:54,742 - INFO -  * Restarting with stat
+2024-11-27 02:41:55,644 - __main__ - INFO - This is a log message
+2024-11-27 02:41:55,671 - WARNING -  * Debugger is active!
+2024-11-27 02:41:55,673 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:42:41,873 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:42:41,920 - INFO -  * Restarting with stat
+2024-11-27 02:42:42,602 - __main__ - INFO - This is a log message
+2024-11-27 02:42:42,624 - WARNING -  * Debugger is active!
+2024-11-27 02:42:42,626 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:43:02,725 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:43:02,785 - INFO -  * Restarting with stat
+2024-11-27 02:43:03,479 - __main__ - INFO - This is a log message
+2024-11-27 02:43:03,500 - WARNING -  * Debugger is active!
+2024-11-27 02:43:03,502 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:44:22,852 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:44:22,899 - INFO -  * Restarting with stat
+2024-11-27 02:44:23,591 - __main__ - INFO - ƒƒO‚ÌƒeƒXƒg
+2024-11-27 02:44:23,591 - __main__ - INFO - This is a log message
+2024-11-27 02:44:23,612 - WARNING -  * Debugger is active!
+2024-11-27 02:44:23,614 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:45:06,816 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:45:06,861 - INFO -  * Restarting with stat
+2024-11-27 02:45:07,561 - __main__ - INFO - ƒƒO‚ÌƒeƒXƒg
+2024-11-27 02:45:07,582 - WARNING -  * Debugger is active!
+2024-11-27 02:45:07,584 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:46:41,011 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:46:41,057 - INFO -  * Restarting with stat
+2024-11-27 02:46:41,750 - __main__ - INFO - ƒƒO‚ÌƒeƒXƒg
+2024-11-27 02:46:41,771 - WARNING -  * Debugger is active!
+2024-11-27 02:46:41,774 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:48:16,835 - __main__ - INFO - ƒƒO‚ÌƒeƒXƒg
+2024-11-27 02:48:16,879 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2024-11-27 02:48:16,879 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 02:48:16,881 - INFO -  * Restarting with stat
+2024-11-27 02:48:17,709 - __main__ - INFO - ƒƒO‚ÌƒeƒXƒg
+2024-11-27 02:48:17,730 - WARNING -  * Debugger is active!
+2024-11-27 02:48:17,733 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:51:53,651 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:51:53,709 - INFO -  * Restarting with stat
+2024-11-27 02:51:54,419 - __main__ - INFO - ƒƒO‚ÌƒeƒXƒg
+2024-11-27 02:51:54,440 - WARNING -  * Debugger is active!
+2024-11-27 02:51:54,442 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:52:05,501 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:52:05,554 - INFO -  * Restarting with stat
+2024-11-27 02:52:06,251 - __main__ - INFO - ƒƒO‚ÌƒeƒXƒg
+2024-11-27 02:52:06,272 - WARNING -  * Debugger is active!
+2024-11-27 02:52:06,274 - INFO -  * Debugger PIN: 999-192-416
+2024-11-27 02:52:11,305 - INFO -  * Detected change in 'D:\\hiroka‚Ìƒtƒ@ƒCƒ‹\\ƒCƒ“ƒ^[ƒvƒ‰ƒ“ITƒXƒN[ƒ‹iE‹ÆŒP—ûj\\HTML&CSS\\GitHub š\\github_2024_01\\k-kayo.github.io\\İŒÉŠÇ—iNETSEA—pj\\app.py', reloading
+2024-11-27 02:52:11,353 - INFO -  * Restarting with stat

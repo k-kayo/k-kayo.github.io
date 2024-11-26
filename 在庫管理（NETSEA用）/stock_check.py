@@ -3,7 +3,7 @@ import csv
 import os
 from dotenv import load_dotenv
 import time
-
+pip install waitress
 # .envファイルから環境変数を読み込む
 load_dotenv()
 
@@ -22,11 +22,15 @@ headers = {
 }
 
 # BASE APIのURL (在庫情報を更新するため)
-BASE_API_URL = "https://api.thebase.in/v1/products/{product_id}"
+# base_api_url = os.getenv('BASE_API_URL')
+BASE_API_URL = os.getenv('BASE_API_URL')
 
 # トークンの確認と更新
 def check_and_refresh_access_token():
     global BASE_ACCESS_TOKEN, ACCESS_TOKEN_EXPIRES_AT
+    """
+    アクセストークンの有効期限を確認し、期限切れなら更新
+    """
     if time.time() >= ACCESS_TOKEN_EXPIRES_AT:
         # アクセストークンが期限切れ
         print("アクセストークンが期限切れです。更新を行います。")
@@ -35,16 +39,20 @@ def check_and_refresh_access_token():
         print("アクセストークンは有効です。")
 
 def get_new_access_token():
-    global BASE_ACCESS_TOKEN, ACCESS_TOKEN_EXPIRES_AT
+    global BASE_ACCESS_TOKEN, BASE_REFRESH_TOKEN, ACCESS_TOKEN_EXPIRES_AT
     # リフレッシュトークンを使って新しいアクセストークンを取得する処理
     data = {
+        # "grant_type": "refresh_token",
+        # "client_id": os.getenv("CLIENT_ID"),
+        # "client_secret": os.getenv("CLIENT_SECRET"),
+        # "refresh_token": os.getenv("BASE_REFRESH_TOKEN"),
         "grant_type": "refresh_token",
-        "client_id": os.getenv("CLIENT_ID"),
-        "client_secret": os.getenv("CLIENT_SECRET"),
-        "refresh_token": os.getenv("BASE_REFRESH_TOKEN"),
+        "client_id": CLIENT_ID,
+        "client_secret": CLIENT_SECRET,
+        "refresh_token": BASE_REFRESH_TOKEN,
     }
-    response = requests.post("https://api.thebase.in/1/oauth/token", data=data)
-
+    # response = requests.post("https://api.thebase.in/1/oauth/token", data=data)
+    response = requests.post(TOKEN_URL, data=data)
     if response.status_code == 200:
         token_data = response.json()
         BASE_ACCESS_TOKEN = token_data["access_token"]
@@ -53,11 +61,14 @@ def get_new_access_token():
 
         # トークンを.envに保存
         update_env_file("BASE_ACCESS_TOKEN", BASE_ACCESS_TOKEN)
+        update_env_file("BASE_REFRESH_TOKEN", BASE_REFRESH_TOKEN)
         update_env_file("ACCESS_TOKEN_EXPIRES_AT", ACCESS_TOKEN_EXPIRES_AT)
-
         print("新しいアクセストークンを取得しました:", BASE_ACCESS_TOKEN)
     else:
-        print("アクセストークンの更新に失敗しました。エラー:", response.status_code, response.text)
+        print("リフレッシュトークンが期限切れです。再認証を行います。")
+        # 認証フローに戻る処理
+        return redirect(url_for('authorize'))  # 認証ページにリダイレクト
+
 
 # .envファイルの更新
 def update_env_file(variable_name, value):
@@ -75,27 +86,31 @@ def update_env_file(variable_name, value):
         if not key_found:
             file.write(f"{variable_name}={value}\n")
 
+# トークンエラーを処理する関数
+def handle_token_error(error_response):
+    if error_response.get('error_code') == 'invalid_token':
+        print("無効なトークンが検出されました。再認証を実行します。")
+        prompt_user_to_reauthenticate()
 
-
-
+# 再認証処理を促す関数
+def prompt_user_to_reauthenticate():
+    # ユーザーに再認証を促す処理（例：新しいトークンを取得する）
+    print("ユーザーに再認証を促す処理を行います。")
 
 # 商品ID（テスト用）
 direct_item_id = "19794119-2"  # テスト用のダイレクト商品IDに変更
 
-
 # NETSEA APIのエンドポイントURL (NETSEA)
 url = "https://api.netsea.jp/buyer/v1/items/stock"
 
-
 # NETSEA APIリクエスト
 # NETSEA_API_URL = "https://api.netsea.jp/v1/items"  # 実際のAPIエンドポイントに変更
-NETSEA_API_URL = "https://api.netsea.jp/buyer/v1/items"
-
+netsea_api_url = os.getenv('NETSEA_API_URL')
+# NETSEA_API_URL = os.getenv('NETSEA_API_URL')
 
 params = {
     "direct_item_ids": direct_item_id  # 単一の商品IDを指定
 }
-
 
 def get_base_products():
     base_product_list = []
@@ -123,12 +138,11 @@ def get_base_products():
             break
     return base_product_list
 
-
 # NETSEAの商品情報を取得し、BASEの商品情報と照らし合わせる関数
 # # 商品情報取得関数にトークン確認を追加
 def update_inventory_from_netsea():
     # アクセストークンが有効か確認
-    check_and_refresh_access_token()
+    check_and_refresh_access_token()  # トークン確認
 
     # BASEの商品情報を取得
     base_products = get_base_products()
@@ -149,7 +163,7 @@ def update_inventory_from_netsea():
 
             if response.status_code == 200:
                 data = response.json()  # JSON形式のレスポンスデータを取得
-                print("レスポンスデータ:", data)  # 取得したデータ全体を確認
+                # print("レスポンスデータ:", data)  # 取得したデータ全体を確認
 
                 # 必須データが存在するかチェック
                 if 'product_id' in data and 'branch_code' in data and 'set_num' in data:
@@ -207,6 +221,7 @@ def update_base_product_stock(product_id, variation_identifier, stock_status):
 # 実行
 update_inventory_from_netsea()
 
+# //テスト目的であった場合//
 import requests
 
 def test_base_endpoint():
@@ -225,3 +240,4 @@ def test_base_endpoint():
 # エンドポイントをテストする関数を呼び出し
 test_base_endpoint()
 
+# //ここまでをテスト後に消す

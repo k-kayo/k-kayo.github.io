@@ -10,9 +10,16 @@ load_dotenv()
 # 環境変数
 NETSEA_ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
 BASE_ACCESS_TOKEN = os.getenv("BASE_ACCESS_TOKEN")
-BASE_API_URL = "https://api.thebase.in/v1/products/{product_id}"
-NETSEA_API_URL = "https://api.netsea.jp/buyer/v1/items/stock"
+# BASE_API_URL = "https://api.thebase.in/v1/products/{product_id}"
+BASE_API_URL = os.getenv('BASE_API_URL')
+# NETSEA_API_URL = "https://api.netsea.jp/buyer/v1/items/stock"
+# netsea_api_url = os.getenv('NETSEA_API_URL')
+NETSEA_API_URL = os.getenv('NETSEA_API_URL')
 LOG_FILE = "sync_log.txt"  # ログファイルの名前
+print(f"BASE_API_URL: {base_api_url}")
+
+print(f"NETSEA_API_URL: {os.getenv('NETSEA_API_URL')}")
+
 
 # ログ記録用関数
 def log_message(message):
