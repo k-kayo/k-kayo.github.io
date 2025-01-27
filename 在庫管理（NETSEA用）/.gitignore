@@ -1,0 +1,18 @@
+# Pythonの仮想環境フォルダ
+venv/
+
+# ログファイルを無視
+logs/
+*.log
+
+# 機密情報のファイル
+access_token.json
+
+# 環境変数ファイル
+.env
+
+# Pythonのバイトコードファイル
+*.pyc
+
+# Pythonのキャッシュディレクトリ
+__pycache__/

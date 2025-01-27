@@ -1,3 +1,31 @@
 {
-  "cSpell.words": ["csvfile", "dotenv", "itemdata", "jsonify", "netsea"]
+  "cSpell.words": [
+    "certifi",
+    "cffi",
+    "colorama",
+    "csvfile",
+    "dotenv",
+    "Fernet",
+    "fromtimestamp",
+    "gunicorn",
+    "idna",
+    "itemdata",
+    "itsdangerous",
+    "jsonify",
+    "levelname",
+    "mdurl",
+    "mypy",
+    "netsea",
+    "pathspec",
+    "platformdirs",
+    "pycparser",
+    "Pygments",
+    "setuptools",
+    "subcode",
+    "timedelta",
+    "urllib",
+    "VAPI",
+    "venv",
+    "Werkzeug"
+  ]
 }
