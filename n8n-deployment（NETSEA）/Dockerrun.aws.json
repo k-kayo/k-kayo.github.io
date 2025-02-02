@@ -1,0 +1,13 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "n8nio/n8n:latest",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "5678"
+    }
+  ],
+  "Logging": "/data"
+}
