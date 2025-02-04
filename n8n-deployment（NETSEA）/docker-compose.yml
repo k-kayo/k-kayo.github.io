@@ -1,7 +1,6 @@
 version: "3.8"
 services:
   n8n:
-    # image: n8nio/n8n
     image: n8nio/n8n:latest
     container_name: n8n
     ports:
@@ -10,19 +9,16 @@ services:
       - N8N_HOST=0.0.0.0
       - N8N_PORT=5678
       - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER=<your-username>
-      - N8N_BASIC_AUTH_PASSWORD=<your-password>
-      - DB_TYPE=postgresdb # 必要に応じてDBの設定
-      - DB_POSTGRESDB_HOST=<postgres_host>
+      - N8N_BASIC_AUTH_USER=${N8N_BASIC_AUTH_USER}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_BASIC_AUTH_PASSWORD}
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=${DB_POSTGRESDB_HOST}
       - DB_POSTGRESDB_PORT=5432
-      - DB_POSTGRESDB_DATABASE=<your-database-name>
-      - DB_POSTGRESDB_USER=<your-db-username>
-      - DB_POSTGRESDB_PASSWORD=<your-db-password>
-      # - GENERIC_TIMEZONE=Asia/Tokyo
+      - DB_POSTGRESDB_DATABASE=${DB_POSTGRESDB_DATABASE}
+      - DB_POSTGRESDB_USER=${DB_POSTGRESDB_USER}
+      - DB_POSTGRESDB_PASSWORD=${DB_POSTGRESDB_PASSWORD}
     volumes:
       - n8n-data:/home/node/.n8n # n8nの永続化データ
-      - ./ssl/n8n.key:/home/node/.n8n/n8n.key # ホストの証明書ファイルをコンテナにマウント
-      - ./ssl/n8n.crt:/home/node/.n8n/n8n.crt # ホストの証明書ファイルをコンテナにマウント
 
 volumes:
   n8n-data:
